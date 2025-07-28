@@ -28,13 +28,23 @@
             border: 1px solid #ddd;
             border-radius: 5px;
         }
-        input[type="url"], input[type="file"] {
+        .hidden-playlist-section {
+            margin-bottom: 20px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        input[type="url"], input[type="file"], input[type="text"] {
             width: 100%;
             padding: 10px;
             margin: 5px 0;
             border: 1px solid #ccc;
             border-radius: 4px;
             box-sizing: border-box;
+        }
+        .code-input {
+            font-family: monospace;
         }
         button {
             background-color: #007bff;
@@ -102,6 +112,14 @@
     <div class="container">
         <h1>M3U8 Player Web</h1>
         
+        <!-- Seção de Playlist Oculta -->
+        <div class="hidden-playlist-section">
+            <h3>Acessar Playlist Oculta</h3>
+            <label for="codeInput">Insira o código de acesso:</label>
+            <input type="text" id="codeInput" class="code-input" placeholder="Digite o código aqui">
+            <button onclick="loadHiddenPlaylist()">Carregar Playlist</button>
+        </div>
+
         <div class="input-section">
             <label for="urlInput">Cole a URL da Playlist M3U8:</label>
             <input type="url" id="urlInput" placeholder="https://exemplo.com/playlist.m3u8">
@@ -135,6 +153,13 @@
         let currentChannel = 0;
         let hls = null;
 
+        // Dicionário de playlists ocultas (substitua com seus códigos e URLs)
+        const HIDDEN_PLAYLISTS = {
+            "tvmista171": "https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/tvmisto.m3u8",
+            "premium456": "https://raw.githubusercontent.com/seu-usuario/seu-repo/main/playlists/premium.m3u8",
+            "esportes789": "https://raw.githubusercontent.com/seu-usuario/seu-repo/main/playlists/sports.m3u8"
+        };
+
         function showMessage(message, type = 'error') {
             const messageDiv = document.getElementById('message');
             messageDiv.textContent = message;
@@ -143,6 +168,23 @@
                 messageDiv.textContent = '';
                 messageDiv.className = '';
             }, 5000);
+        }
+
+        function loadHiddenPlaylist() {
+            const code = document.getElementById('codeInput').value.trim();
+            
+            if (!code) {
+                showMessage('Por favor, insira um código de acesso.');
+                return;
+            }
+
+            if (HIDDEN_PLAYLISTS[code]) {
+                document.getElementById('urlInput').value = HIDDEN_PLAYLISTS[code];
+                loadPlaylist();
+                showMessage('Playlist oculta carregada com sucesso!', 'success');
+            } else {
+                showMessage('Código inválido. Verifique e tente novamente.');
+            }
         }
 
         function loadPlaylist() {
@@ -178,7 +220,7 @@
                 })
                 .catch(error => {
                     console.error('Erro ao carregar URL:', error);
-                    showMessage('Erro ao carregar a playlist da URL. Verifique se a URL está correta e acessível.');
+                    showMessage('Erro ao carregar a playlist. Verifique se a URL está correta e acessível.');
                 });
         }
 
@@ -260,25 +302,21 @@
             const video = document.getElementById('video');
             const channel = channels[index];
 
-            // Remove active class from all channels
+            // Atualizar classe ativa
             document.querySelectorAll('.channel').forEach(ch => ch.classList.remove('active'));
-            
-            // Add active class to current channel
             document.querySelectorAll('.channel')[index].classList.add('active');
 
-            // Destruir HLS anterior se existir
+            // Limpar player anterior
             if (hls) {
                 hls.destroy();
                 hls = null;
             }
-
-            // Limpar source anterior
             video.src = '';
             video.load();
 
             showMessage(`Tentando reproduzir: ${channel.title}`, 'success');
 
-            // Verificar se é um stream M3U8/HLS
+            // Verificar se é HLS
             if (channel.url.includes('.m3u8') || channel.url.includes('m3u8')) {
                 loadHLSStream(video, channel);
             } else {
@@ -288,7 +326,6 @@
 
         function loadHLSStream(video, channel) {
             if (Hls.isSupported()) {
-                // Usar HLS.js para navegadores que não suportam HLS nativamente
                 hls = new Hls({
                     enableWorker: true,
                     lowLatencyMode: true,
@@ -299,11 +336,9 @@
                 hls.attachMedia(video);
                 
                 hls.on(Hls.Events.MANIFEST_PARSED, function() {
-                    video.play().then(() => {
-                        showMessage(`Reproduzindo: ${channel.title}`, 'success');
-                    }).catch(error => {
-                        console.log('Erro ao reproduzir com HLS:', error);
-                        showMessage(`Erro ao reproduzir ${channel.title}. Clique no vídeo para tentar reproduzir.`);
+                    video.play().catch(error => {
+                        console.log('Erro ao reproduzir:', error);
+                        showMessage(`Clique no vídeo para iniciar a reprodução.`);
                     });
                 });
 
@@ -312,92 +347,57 @@
                     if (data.fatal) {
                         switch(data.type) {
                             case Hls.ErrorTypes.NETWORK_ERROR:
-                                showMessage(`Erro de rede ao carregar ${channel.title}. Tentando recuperar...`);
                                 hls.startLoad();
                                 break;
                             case Hls.ErrorTypes.MEDIA_ERROR:
-                                showMessage(`Erro de mídia em ${channel.title}. Tentando recuperar...`);
                                 hls.recoverMediaError();
                                 break;
                             default:
-                                showMessage(`Erro fatal em ${channel.title}. Tentando método alternativo...`);
-                                hls.destroy();
-                                hls = null;
                                 loadDirectStream(video, channel);
                                 break;
                         }
                     }
                 });
             } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
-                // Safari suporta HLS nativamente
                 video.src = channel.url;
                 video.addEventListener('loadedmetadata', function() {
-                    video.play().then(() => {
-                        showMessage(`Reproduzindo: ${channel.title}`, 'success');
-                    }).catch(error => {
-                        console.log('Erro reprodução nativa:', error);
-                        showMessage(`Erro ao reproduzir ${channel.title}. Clique no vídeo para tentar reproduzir.`);
+                    video.play().catch(error => {
+                        console.log('Erro reprodução:', error);
                     });
                 });
             } else {
-                showMessage(`HLS não suportado neste navegador para ${channel.title}. Use Chrome, Firefox ou Safari.`);
+                showMessage('Seu navegador não suporta este tipo de stream.');
             }
         }
 
         function loadDirectStream(video, channel) {
             video.src = channel.url;
             video.load();
-            
-            video.play().then(() => {
-                showMessage(`Reproduzindo: ${channel.title}`, 'success');
-            }).catch(error => {
-                console.log('Erro stream direto:', error);
-                showMessage(`${channel.title}: Clique no botão play do vídeo para reproduzir manualmente.`);
+            video.play().catch(error => {
+                console.log('Erro ao reproduzir:', error);
+                showMessage('Clique no botão play para iniciar manualmente.');
             });
         }
 
         // Event listeners
         document.getElementById('urlInput').addEventListener('keypress', function(e) {
-            if (e.key === 'Enter') {
-                loadPlaylist();
-            }
+            if (e.key === 'Enter') loadPlaylist();
         });
 
-        document.getElementById('video').addEventListener('error', function(e) {
-            const channel = channels[currentChannel];
-            if (channel) {
-                showMessage(`Erro no stream ${channel.title}. Pode ser um problema de CORS ou compatibilidade do navegador.`);
-            }
+        document.getElementById('codeInput').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') loadHiddenPlaylist();
         });
 
-        document.getElementById('video').addEventListener('loadstart', function() {
-            showMessage('Carregando stream...', 'success');
-        });
-
-        document.getElementById('video').addEventListener('canplay', function() {
-            const messageDiv = document.getElementById('message');
-            if (messageDiv.textContent.includes('Carregando stream') || messageDiv.textContent.includes('Tentando reproduzir')) {
-                messageDiv.textContent = '';
-                messageDiv.className = '';
-            }
-        });
-
-        // Adicionar suporte para tentar novamente
         document.addEventListener('keydown', function(e) {
             if (e.key === 'r' || e.key === 'R') {
                 if (channels.length > 0 && currentChannel >= 0) {
-                    const channel = channels[currentChannel];
-                    showMessage(`Tentando novamente: ${channel.title}`, 'success');
                     playChannel(currentChannel);
                 }
             }
         });
 
-        // Cleanup ao sair da página
         window.addEventListener('beforeunload', function() {
-            if (hls) {
-                hls.destroy();
-            }
+            if (hls) hls.destroy();
         });
     </script>
 </body>
