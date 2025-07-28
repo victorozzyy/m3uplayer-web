@@ -3,25 +3,552 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>M3U Player</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>M3U8 Player</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        #app {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            width: 100%;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+            font-size: 2.5em;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #555;
+        }
+
+        input[type="text"], input[type="file"] {
+            width: 100%;
+            padding: 12px 16px;
+            border: 2px solid #e1e5e9;
+            border-radius: 10px;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            background: white;
+        }
+
+        input[type="text"]:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+
+        button {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            border: none;
+            padding: 14px 28px;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-bottom: 20px;
+            width: 100%;
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+        }
+
+        button:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        #video-container {
+            margin: 20px 0;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            display: none;
+        }
+
+        video {
+            width: 100%;
+            height: auto;
+            min-height: 300px;
+            background: #000;
+        }
+
+        #playlist-container {
+            margin-top: 20px;
+            max-height: 200px;
+            overflow-y: auto;
+            border: 2px solid #e1e5e9;
+            border-radius: 10px;
+            padding: 15px;
+            background: white;
+            display: none;
+        }
+
+        .playlist-item {
+            padding: 10px 15px;
+            margin: 5px 0;
+            background: #f8f9fa;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border-left: 4px solid #667eea;
+        }
+
+        .playlist-item:hover {
+            background: #e9ecef;
+            transform: translateX(5px);
+        }
+
+        .playlist-item.active {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+        }
+
+        .status {
+            padding: 15px;
+            border-radius: 10px;
+            margin: 15px 0;
+            font-weight: 500;
+        }
+
+        .status.success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+
+        .status.error {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+
+        .status.info {
+            background: #d1ecf1;
+            color: #0c5460;
+            border: 1px solid #bee5eb;
+        }
+
+        .loading {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid #f3f3f3;
+            border-top: 3px solid #667eea;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin-right: 10px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        @media (max-width: 600px) {
+            #app {
+                padding: 20px;
+                margin: 10px;
+            }
+            
+            h1 {
+                font-size: 2em;
+            }
+        }
+    </style>
 </head>
 <body>
     <div id="app">
-        <h1>M3U Player Web</h1>
+        <h1>M3U8 Player Web</h1>
         <main id="main-content">
             <div class="form-group">
-                <label for="playlist-url">Cole a URL da Playlist:</label>
-                <input type="text" id="playlist-url" placeholder="http://exemplo.com/playlist.m3u8">
+                <label for="playlist-url">Cole a URL da Playlist M3U8:</label>
+                <input type="text" id="playlist-url" placeholder="https://exemplo.com/playlist.m3u8">
             </div>
             <div class="form-group">
-                <label for="playlist-file">Ou selecione um arquivo M3U:</label>
+                <label for="playlist-file">Ou selecione um arquivo M3U/M3U8:</label>
                 <input type="file" id="playlist-file" accept=".m3u,.m3u8">
             </div>
-            <button onclick="carregarPlaylist()">Carregar</button>
-            <pre id="output"></pre>
+            <button onclick="carregarPlaylist()" id="load-btn">Carregar Playlist</button>
+            
+            <div id="status"></div>
+            
+            <div id="video-container">
+                <video id="video-player" controls>
+                    Seu navegador não suporta o elemento de vídeo.
+                </video>
+            </div>
+            
+            <div id="playlist-container">
+                <h3>Lista de Reprodução:</h3>
+                <div id="playlist-items"></div>
+            </div>
         </main>
     </div>
-    <script src="js/main.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/hls.js/1.4.10/hls.min.js"></script>
+    <script>
+        let currentPlaylist = [];
+        let currentIndex = 0;
+        let hls = null;
+        
+        function showStatus(message, type = 'info') {
+            const statusDiv = document.getElementById('status');
+            statusDiv.innerHTML = `<div class="status ${type}">${message}</div>`;
+        }
+        
+        function showLoading(message) {
+            const statusDiv = document.getElementById('status');
+            statusDiv.innerHTML = `<div class="status info"><span class="loading"></span>${message}</div>`;
+        }
+        
+        async function carregarPlaylist() {
+            const urlInput = document.getElementById('playlist-url').value.trim();
+            const fileInput = document.getElementById('playlist-file').files[0];
+            const loadBtn = document.getElementById('load-btn');
+            
+            if (!urlInput && !fileInput) {
+                showStatus('Por favor, informe uma URL ou selecione um arquivo.', 'error');
+                return;
+            }
+            
+            loadBtn.disabled = true;
+            showLoading('Carregando playlist...');
+            
+            try {
+                let content = '';
+                
+                if (urlInput) {
+                    // Para URLs, tentamos fazer o fetch
+                    try {
+                        const response = await fetch(urlInput);
+                        if (!response.ok) {
+                            throw new Error(`Erro HTTP: ${response.status}`);
+                        }
+                        content = await response.text();
+                    } catch (error) {
+                        // Se falhar o fetch devido a CORS, tentamos reproduzir diretamente
+                        if (urlInput.includes('.m3u8') || urlInput.includes('.m3u')) {
+                            reproduzirDiretamente(urlInput);
+                            return;
+                        }
+                        throw error;
+                    }
+                } else {
+                    // Para arquivos locais
+                    content = await lerArquivo(fileInput);
+                }
+                
+                const urls = parseM3U(content);
+                
+                if (urls.length === 0) {
+                    showStatus('Nenhum link válido encontrado na playlist.', 'error');
+                    return;
+                }
+                
+                currentPlaylist = urls;
+                currentIndex = 0;
+                
+                mostrarPlaylist(urls);
+                reproduzirVideo(urls[0].url);
+                
+                showStatus(`Playlist carregada com sucesso! ${urls.length} itens encontrados.`, 'success');
+                
+            } catch (error) {
+                console.error('Erro ao carregar playlist:', error);
+                showStatus(`Erro ao carregar playlist: ${error.message}`, 'error');
+            } finally {
+                loadBtn.disabled = false;
+            }
+        }
+        
+        function lerArquivo(file) {
+            return new Promise((resolve, reject) => {
+                const reader = new FileReader();
+                reader.onload = e => resolve(e.target.result);
+                reader.onerror = () => reject(new Error('Erro ao ler o arquivo'));
+                reader.readAsText(file);
+            });
+        }
+        
+        function parseM3U(text) {
+            const lines = text.split(/\r?\n/);
+            const urls = [];
+            let currentTitle = null;
+            
+            for (let i = 0; i < lines.length; i++) {
+                const line = lines[i].trim();
+                
+                // Pula linhas vazias
+                if (!line) {
+                    continue;
+                }
+                
+                // Se é uma linha EXTINF, extrai o título
+                if (line.startsWith('#EXTINF:')) {
+                    currentTitle = extractTitle(line);
+                    continue;
+                }
+                
+                // Pula outros comentários que não são EXTINF
+                if (line.startsWith('#')) {
+                    continue;
+                }
+                
+                // Verifica se é uma URL válida (HTTP ou HTTPS)
+                if (line.startsWith('http://') || line.startsWith('https://')) {
+                    urls.push({
+                        url: line,
+                        title: currentTitle || `Stream ${urls.length + 1}`
+                    });
+                    currentTitle = null; // Reset do título para o próximo
+                }
+            }
+            
+            return urls;
+        }
+        
+        function extractTitle(line) {
+            if (!line || !line.startsWith('#EXTINF:')) {
+                return null;
+            }
+            
+            // Procura por vírgula que separa os metadados do título
+            const commaIndex = line.indexOf(',');
+            if (commaIndex === -1) {
+                return null;
+            }
+            
+            // Extrai tudo após a vírgula como título
+            const title = line.substring(commaIndex + 1).trim();
+            return title || null;
+        }
+        
+        function mostrarPlaylist(items) {
+            const container = document.getElementById('playlist-container');
+            const itemsDiv = document.getElementById('playlist-items');
+            
+            itemsDiv.innerHTML = '';
+            
+            items.forEach((item, index) => {
+                const div = document.createElement('div');
+                div.className = 'playlist-item';
+                div.textContent = item.title;
+                div.onclick = () => {
+                    currentIndex = index;
+                    reproduzirVideo(item.url);
+                    atualizarPlaylistAtiva();
+                };
+                itemsDiv.appendChild(div);
+            });
+            
+            container.style.display = 'block';
+            atualizarPlaylistAtiva();
+        }
+        
+        function atualizarPlaylistAtiva() {
+            const items = document.querySelectorAll('.playlist-item');
+            items.forEach((item, index) => {
+                item.classList.toggle('active', index === currentIndex);
+            });
+        }
+        
+        function reproduzirVideo(url) {
+            const videoContainer = document.getElementById('video-container');
+            const video = document.getElementById('video-player');
+            
+            // Garantir que url é uma string
+            const videoUrl = typeof url === 'string' ? url : url.url;
+            
+            // Limpar HLS anterior se existir
+            if (hls) {
+                hls.destroy();
+                hls = null;
+            }
+            
+            // Verificar se é M3U8 ou stream genérico
+            if (videoUrl.includes('.m3u8') || videoUrl.includes('playlist.m3u8')) {
+                if (Hls.isSupported()) {
+                    // Usar HLS.js para streams M3U8
+                    hls = new Hls({
+                        debug: false,
+                        enableWorker: true,
+                        lowLatencyMode: true,
+                        backBufferLength: 90
+                    });
+                    
+                    hls.loadSource(videoUrl);
+                    hls.attachMedia(video);
+                    
+                    hls.on(Hls.Events.MANIFEST_PARSED, () => {
+                        showStatus('Stream M3U8 carregado com sucesso!', 'success');
+                        video.play().catch(e => {
+                            showStatus('Clique no botão play para iniciar o vídeo', 'info');
+                        });
+                    });
+                    
+                    hls.on(Hls.Events.ERROR, (event, data) => {
+                        console.error('HLS Error:', data);
+                        if (data.fatal) {
+                            switch (data.type) {
+                                case Hls.ErrorTypes.NETWORK_ERROR:
+                                    showStatus('Erro de rede ao carregar o stream. Verifique a URL.', 'error');
+                                    break;
+                                case Hls.ErrorTypes.MEDIA_ERROR:
+                                    showStatus('Erro de mídia. Tentando recuperar...', 'error');
+                                    hls.recoverMediaError();
+                                    break;
+                                default:
+                                    showStatus(`Erro fatal no HLS: ${data.type}`, 'error');
+                                    break;
+                            }
+                        }
+                    });
+                    
+                } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+                    // Safari nativo suporta HLS
+                    video.src = videoUrl;
+                    showStatus('Usando suporte nativo do Safari para HLS', 'info');
+                } else {
+                    showStatus('Seu navegador não suporta streams HLS/M3U8', 'error');
+                    return;
+                }
+            } else {
+                // Para outros tipos de stream (pode ser HLS sem extensão .m3u8)
+                // Primeiro tenta com HLS.js caso seja um stream
+                if (Hls.isSupported()) {
+                    hls = new Hls({
+                        debug: false,
+                        enableWorker: true,
+                        lowLatencyMode: true,
+                        backBufferLength: 90
+                    });
+                    
+                    hls.loadSource(videoUrl);
+                    hls.attachMedia(video);
+                    
+                    hls.on(Hls.Events.MANIFEST_PARSED, () => {
+                        showStatus('Stream carregado com sucesso!', 'success');
+                        video.play().catch(e => {
+                            showStatus('Clique no botão play para iniciar o vídeo', 'info');
+                        });
+                    });
+                    
+                    hls.on(Hls.Events.ERROR, (event, data) => {
+                        console.error('HLS Error:', data);
+                        if (data.fatal) {
+                            // Se falhar com HLS, tenta como vídeo direto
+                            if (hls) {
+                                hls.destroy();
+                                hls = null;
+                            }
+                            video.src = videoUrl;
+                            showStatus('Tentando reproduzir como vídeo direto...', 'info');
+                        }
+                    });
+                } else {
+                    // Fallback para vídeo direto
+                    video.src = videoUrl;
+                }
+            }
+            
+            videoContainer.style.display = 'block';
+            
+            // Event listeners
+            video.onloadstart = () => {
+                showStatus('Carregando vídeo...', 'info');
+            };
+            
+            video.oncanplay = () => {
+                showStatus('Vídeo pronto para reproduzir', 'success');
+            };
+            
+            video.onended = () => {
+                if (currentIndex < currentPlaylist.length - 1) {
+                    currentIndex++;
+                    reproduzirVideo(currentPlaylist[currentIndex].url);
+                    atualizarPlaylistAtiva();
+                }
+            };
+            
+            video.onerror = (e) => {
+                const error = video.error;
+                let errorMsg = 'Erro desconhecido';
+                
+                if (error) {
+                    switch (error.code) {
+                        case 1:
+                            errorMsg = 'Reprodução abortada pelo usuário';
+                            break;
+                        case 2:
+                            errorMsg = 'Erro de rede ao baixar o vídeo';
+                            break;
+                        case 3:
+                            errorMsg = 'Erro de decodificação do vídeo';
+                            break;
+                        case 4:
+                            errorMsg = 'Formato de vídeo não suportado';
+                            break;
+                    }
+                }
+                
+                showStatus(`Erro ao reproduzir: ${errorMsg}. URL: ${videoUrl}`, 'error');
+                console.error('Video error:', error, 'URL:', videoUrl);
+            };
+            
+            // Log para debug
+            console.log('Tentando reproduzir:', videoUrl);
+        }
+        
+        function reproduzirDiretamente(url) {
+            currentPlaylist = [{url: url, title: 'Stream Direto'}];
+            currentIndex = 0;
+            reproduzirVideo(url);
+            showStatus('Tentando reproduzir URL diretamente...', 'info');
+        }
+        
+        // Permite carregar ao pressionar Enter
+        document.getElementById('playlist-url').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                carregarPlaylist();
+            }
+        });
+    </script>
 </body>
 </html>
