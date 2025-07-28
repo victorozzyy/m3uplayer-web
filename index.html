@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M3U Player Web</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="app">
+        <h1>M3U Player Web</h1>
+        <main id="main-content">
+            <div class="form-group">
+                <label for="playlist-url">Cole a URL da Playlist:</label>
+                <input type="text" id="playlist-url" placeholder="http://exemplo.com/playlist.m3u8">
+            </div>
+            <div class="form-group">
+                <label for="playlist-file">Ou selecione um arquivo M3U:</label>
+                <input type="file" id="playlist-file" accept=".m3u,.m3u8">
+            </div>
+            <button onclick="carregarPlaylist()">Carregar</button>
+            <pre id="output"></pre>
+        </main>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+</html>
