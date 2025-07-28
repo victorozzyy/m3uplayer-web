@@ -3,550 +3,400 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>M3U8 Player</title>
+    <title>M3U8 Player Web</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f0f0f0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        .input-section {
+            margin-bottom: 20px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        input[type="url"], input[type="file"] {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
             box-sizing: border-box;
         }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-        }
-
-        #app {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            border-radius: 20px;
-            padding: 30px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-            max-width: 800px;
-            width: 100%;
-        }
-
-        h1 {
-            text-align: center;
-            color: #333;
-            margin-bottom: 30px;
-            font-size: 2.5em;
-            background: linear-gradient(45deg, #667eea, #764ba2);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .form-group {
-            margin-bottom: 20px;
-        }
-
-        label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 600;
-            color: #555;
-        }
-
-        input[type="text"], input[type="file"] {
-            width: 100%;
-            padding: 12px 16px;
-            border: 2px solid #e1e5e9;
-            border-radius: 10px;
-            font-size: 16px;
-            transition: all 0.3s ease;
-            background: white;
-        }
-
-        input[type="text"]:focus {
-            outline: none;
-            border-color: #667eea;
-            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
-        }
-
         button {
-            background: linear-gradient(45deg, #667eea, #764ba2);
+            background-color: #007bff;
             color: white;
+            padding: 10px 20px;
             border: none;
-            padding: 14px 28px;
-            border-radius: 10px;
-            font-size: 16px;
-            font-weight: 600;
+            border-radius: 4px;
             cursor: pointer;
-            transition: all 0.3s ease;
-            margin-bottom: 20px;
-            width: 100%;
+            margin: 5px;
         }
-
         button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+            background-color: #0056b3;
         }
-
-        button:disabled {
-            opacity: 0.6;
-            cursor: not-allowed;
-            transform: none;
-        }
-
-        #video-container {
-            margin: 20px 0;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-            display: none;
-        }
-
-        video {
+        #video {
             width: 100%;
-            height: auto;
-            min-height: 300px;
-            background: #000;
+            max-width: 800px;
+            height: 450px;
+            margin: 20px 0;
+            border: 1px solid #ddd;
         }
-
-        #playlist-container {
-            margin-top: 20px;
-            max-height: 200px;
+        .playlist {
+            display: flex;
+            gap: 20px;
+        }
+        .playlist-section {
+            flex: 1;
+        }
+        #playlist {
+            border: 1px solid #ddd;
+            max-height: 400px;
             overflow-y: auto;
-            border: 2px solid #e1e5e9;
-            border-radius: 10px;
-            padding: 15px;
-            background: white;
-            display: none;
+            background: #f9f9f9;
         }
-
-        .playlist-item {
-            padding: 10px 15px;
-            margin: 5px 0;
-            background: #f8f9fa;
-            border-radius: 8px;
+        .channel {
+            padding: 10px;
+            border-bottom: 1px solid #eee;
             cursor: pointer;
-            transition: all 0.3s ease;
-            border-left: 4px solid #667eea;
         }
-
-        .playlist-item:hover {
-            background: #e9ecef;
-            transform: translateX(5px);
+        .channel:hover {
+            background-color: #e0e0e0;
         }
-
-        .playlist-item.active {
-            background: linear-gradient(45deg, #667eea, #764ba2);
+        .channel.active {
+            background-color: #007bff;
             color: white;
         }
-
-        .status {
-            padding: 15px;
-            border-radius: 10px;
-            margin: 15px 0;
-            font-weight: 500;
+        .error {
+            color: red;
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #ffe6e6;
+            border: 1px solid #ff9999;
+            border-radius: 4px;
         }
-
-        .status.success {
-            background: #d4edda;
-            color: #155724;
-            border: 1px solid #c3e6cb;
-        }
-
-        .status.error {
-            background: #f8d7da;
-            color: #721c24;
-            border: 1px solid #f5c6cb;
-        }
-
-        .status.info {
-            background: #d1ecf1;
-            color: #0c5460;
-            border: 1px solid #bee5eb;
-        }
-
-        .loading {
-            display: inline-block;
-            width: 20px;
-            height: 20px;
-            border: 3px solid #f3f3f3;
-            border-top: 3px solid #667eea;
-            border-radius: 50%;
-            animation: spin 1s linear infinite;
-            margin-right: 10px;
-        }
-
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-
-        @media (max-width: 600px) {
-            #app {
-                padding: 20px;
-                margin: 10px;
-            }
-            
-            h1 {
-                font-size: 2em;
-            }
+        .success {
+            color: green;
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #e6ffe6;
+            border: 1px solid #99ff99;
+            border-radius: 4px;
         }
     </style>
 </head>
 <body>
-    <div id="app">
+    <div class="container">
         <h1>M3U8 Player Web</h1>
-        <main id="main-content">
-            <div class="form-group">
-                <label for="playlist-url">Cole a URL da Playlist M3U8:</label>
-                <input type="text" id="playlist-url" placeholder="https://exemplo.com/playlist.m3u8">
-            </div>
-            <div class="form-group">
-                <label for="playlist-file">Ou selecione um arquivo M3U/M3U8:</label>
-                <input type="file" id="playlist-file" accept=".m3u,.m3u8">
-            </div>
-            <button onclick="carregarPlaylist()" id="load-btn">Carregar Playlist</button>
+        
+        <div class="input-section">
+            <label for="urlInput">Cole a URL da Playlist M3U8:</label>
+            <input type="url" id="urlInput" placeholder="https://exemplo.com/playlist.m3u8">
             
-            <div id="status"></div>
+            <label for="fileInput">Ou selecione um arquivo M3U/M3U8:</label>
+            <input type="file" id="fileInput" accept=".m3u,.m3u8">
             
-            <div id="video-container">
-                <video id="video-player" controls>
-                    Seu navegador não suporta o elemento de vídeo.
-                </video>
-            </div>
-            
-            <div id="playlist-container">
+            <button onclick="loadPlaylist()">Carregar Playlist</button>
+            <small style="color: #666; display: block; margin-top: 10px;">
+                Dica: Se um canal não reproduzir, pressione 'R' para tentar novamente. Para streams M3U8, use Chrome ou Firefox.
+            </small>
+        </div>
+
+        <div id="message"></div>
+
+        <video id="video" controls>
+            Seu navegador não suporta o elemento de vídeo.
+        </video>
+
+        <div class="playlist">
+            <div class="playlist-section">
                 <h3>Lista de Reprodução:</h3>
-                <div id="playlist-items"></div>
+                <div id="playlist"></div>
             </div>
-        </main>
+        </div>
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/hls.js/1.4.10/hls.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/hls.js/1.4.12/hls.min.js"></script>
     <script>
-        let currentPlaylist = [];
-        let currentIndex = 0;
+        let channels = [];
+        let currentChannel = 0;
         let hls = null;
-        
-        function showStatus(message, type = 'info') {
-            const statusDiv = document.getElementById('status');
-            statusDiv.innerHTML = `<div class="status ${type}">${message}</div>`;
+
+        function showMessage(message, type = 'error') {
+            const messageDiv = document.getElementById('message');
+            messageDiv.textContent = message;
+            messageDiv.className = type;
+            setTimeout(() => {
+                messageDiv.textContent = '';
+                messageDiv.className = '';
+            }, 5000);
         }
-        
-        function showLoading(message) {
-            const statusDiv = document.getElementById('status');
-            statusDiv.innerHTML = `<div class="status info"><span class="loading"></span>${message}</div>`;
-        }
-        
-        async function carregarPlaylist() {
-            const urlInput = document.getElementById('playlist-url').value.trim();
-            const fileInput = document.getElementById('playlist-file').files[0];
-            const loadBtn = document.getElementById('load-btn');
+
+        function loadPlaylist() {
+            const urlInput = document.getElementById('urlInput');
+            const fileInput = document.getElementById('fileInput');
             
-            if (!urlInput && !fileInput) {
-                showStatus('Por favor, informe uma URL ou selecione um arquivo.', 'error');
+            if (urlInput.value.trim()) {
+                loadFromUrl(urlInput.value.trim());
+            } else if (fileInput.files.length > 0) {
+                loadFromFile(fileInput.files[0]);
+            } else {
+                showMessage('Por favor, insira uma URL ou selecione um arquivo.');
+            }
+        }
+
+        function loadFromUrl(url) {
+            if (!isValidUrl(url)) {
+                showMessage('URL inválida. Por favor, insira uma URL válida.');
                 return;
             }
+
+            showMessage('Carregando playlist...', 'success');
             
-            loadBtn.disabled = true;
-            showLoading('Carregando playlist...');
-            
-            try {
-                let content = '';
-                
-                if (urlInput) {
-                    // Para URLs, tentamos fazer o fetch
-                    try {
-                        const response = await fetch(urlInput);
-                        if (!response.ok) {
-                            throw new Error(`Erro HTTP: ${response.status}`);
-                        }
-                        content = await response.text();
-                    } catch (error) {
-                        // Se falhar o fetch devido a CORS, tentamos reproduzir diretamente
-                        if (urlInput.includes('.m3u8') || urlInput.includes('.m3u')) {
-                            reproduzirDiretamente(urlInput);
-                            return;
-                        }
-                        throw error;
+            fetch(url)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error(`Erro HTTP: ${response.status}`);
                     }
-                } else {
-                    // Para arquivos locais
-                    content = await lerArquivo(fileInput);
-                }
-                
-                const urls = parseM3U(content);
-                
-                if (urls.length === 0) {
-                    showStatus('Nenhum link válido encontrado na playlist.', 'error');
-                    return;
-                }
-                
-                currentPlaylist = urls;
-                currentIndex = 0;
-                
-                mostrarPlaylist(urls);
-                reproduzirVideo(urls[0].url);
-                
-                showStatus(`Playlist carregada com sucesso! ${urls.length} itens encontrados.`, 'success');
-                
-            } catch (error) {
-                console.error('Erro ao carregar playlist:', error);
-                showStatus(`Erro ao carregar playlist: ${error.message}`, 'error');
-            } finally {
-                loadBtn.disabled = false;
+                    return response.text();
+                })
+                .then(data => {
+                    parseM3U(data);
+                })
+                .catch(error => {
+                    console.error('Erro ao carregar URL:', error);
+                    showMessage('Erro ao carregar a playlist da URL. Verifique se a URL está correta e acessível.');
+                });
+        }
+
+        function loadFromFile(file) {
+            if (!file.name.toLowerCase().endsWith('.m3u') && !file.name.toLowerCase().endsWith('.m3u8')) {
+                showMessage('Por favor, selecione um arquivo .m3u ou .m3u8');
+                return;
+            }
+
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                parseM3U(e.target.result);
+            };
+            reader.onerror = function() {
+                showMessage('Erro ao ler o arquivo.');
+            };
+            reader.readAsText(file);
+        }
+
+        function isValidUrl(string) {
+            try {
+                const url = new URL(string);
+                return url.protocol === 'http:' || url.protocol === 'https:';
+            } catch (_) {
+                return false;
             }
         }
-        
-        function lerArquivo(file) {
-            return new Promise((resolve, reject) => {
-                const reader = new FileReader();
-                reader.onload = e => resolve(e.target.result);
-                reader.onerror = () => reject(new Error('Erro ao ler o arquivo'));
-                reader.readAsText(file);
-            });
-        }
-        
-        function parseM3U(text) {
-            const lines = text.split(/\r?\n/);
-            const urls = [];
-            let currentTitle = null;
-            
+
+        function parseM3U(data) {
+            channels = [];
+            const lines = data.split('\n');
+            let currentChannel = null;
+
             for (let i = 0; i < lines.length; i++) {
                 const line = lines[i].trim();
                 
-                // Pula linhas vazias
-                if (!line) {
-                    continue;
-                }
-                
-                // Se é uma linha EXTINF, extrai o título
                 if (line.startsWith('#EXTINF:')) {
-                    currentTitle = extractTitle(line);
-                    continue;
-                }
-                
-                // Pula outros comentários que não são EXTINF
-                if (line.startsWith('#')) {
-                    continue;
-                }
-                
-                // Verifica se é uma URL válida (HTTP ou HTTPS)
-                if (line.startsWith('http://') || line.startsWith('https://')) {
-                    urls.push({
-                        url: line,
-                        title: currentTitle || `Stream ${urls.length + 1}`
-                    });
-                    currentTitle = null; // Reset do título para o próximo
+                    const titleMatch = line.match(/,(.*)$/);
+                    currentChannel = {
+                        title: titleMatch ? titleMatch[1].trim() : 'Canal sem nome',
+                        url: null
+                    };
+                } else if (line && !line.startsWith('#') && currentChannel) {
+                    currentChannel.url = line;
+                    channels.push(currentChannel);
+                    currentChannel = null;
                 }
             }
-            
-            return urls;
-        }
-        
-        function extractTitle(line) {
-            if (!line || !line.startsWith('#EXTINF:')) {
-                return null;
+
+            if (channels.length === 0) {
+                showMessage('Nenhum canal encontrado na playlist. Verifique o formato do arquivo.');
+                return;
             }
-            
-            // Procura por vírgula que separa os metadados do título
-            const commaIndex = line.indexOf(',');
-            if (commaIndex === -1) {
-                return null;
-            }
-            
-            // Extrai tudo após a vírgula como título
-            const title = line.substring(commaIndex + 1).trim();
-            return title || null;
+
+            displayPlaylist();
+            showMessage(`Playlist carregada com sucesso! ${channels.length} canais encontrados.`, 'success');
         }
-        
-        function mostrarPlaylist(items) {
-            const container = document.getElementById('playlist-container');
-            const itemsDiv = document.getElementById('playlist-items');
-            
-            itemsDiv.innerHTML = '';
-            
-            items.forEach((item, index) => {
-                const div = document.createElement('div');
-                div.className = 'playlist-item';
-                div.textContent = item.title;
-                div.onclick = () => {
-                    currentIndex = index;
-                    reproduzirVideo(item.url);
-                    atualizarPlaylistAtiva();
-                };
-                itemsDiv.appendChild(div);
-            });
-            
-            container.style.display = 'block';
-            atualizarPlaylistAtiva();
-        }
-        
-        function atualizarPlaylistAtiva() {
-            const items = document.querySelectorAll('.playlist-item');
-            items.forEach((item, index) => {
-                item.classList.toggle('active', index === currentIndex);
+
+        function displayPlaylist() {
+            const playlistDiv = document.getElementById('playlist');
+            playlistDiv.innerHTML = '';
+
+            channels.forEach((channel, index) => {
+                const channelDiv = document.createElement('div');
+                channelDiv.className = 'channel';
+                channelDiv.textContent = channel.title;
+                channelDiv.onclick = () => playChannel(index);
+                playlistDiv.appendChild(channelDiv);
             });
         }
-        
-        function reproduzirVideo(url) {
-            const videoContainer = document.getElementById('video-container');
-            const video = document.getElementById('video-player');
+
+        function playChannel(index) {
+            if (index < 0 || index >= channels.length) {
+                showMessage('Canal inválido.');
+                return;
+            }
+
+            currentChannel = index;
+            const video = document.getElementById('video');
+            const channel = channels[index];
+
+            // Remove active class from all channels
+            document.querySelectorAll('.channel').forEach(ch => ch.classList.remove('active'));
             
-            // Garantir que url é uma string
-            const videoUrl = typeof url === 'string' ? url : url.url;
-            
-            // Limpar HLS anterior se existir
+            // Add active class to current channel
+            document.querySelectorAll('.channel')[index].classList.add('active');
+
+            // Destruir HLS anterior se existir
             if (hls) {
                 hls.destroy();
                 hls = null;
             }
-            
-            // Verificar se é M3U8 ou stream genérico
-            if (videoUrl.includes('.m3u8') || videoUrl.includes('playlist.m3u8')) {
-                if (Hls.isSupported()) {
-                    // Usar HLS.js para streams M3U8
-                    hls = new Hls({
-                        debug: false,
-                        enableWorker: true,
-                        lowLatencyMode: true,
-                        backBufferLength: 90
-                    });
-                    
-                    hls.loadSource(videoUrl);
-                    hls.attachMedia(video);
-                    
-                    hls.on(Hls.Events.MANIFEST_PARSED, () => {
-                        showStatus('Stream M3U8 carregado com sucesso!', 'success');
-                        video.play().catch(e => {
-                            showStatus('Clique no botão play para iniciar o vídeo', 'info');
-                        });
-                    });
-                    
-                    hls.on(Hls.Events.ERROR, (event, data) => {
-                        console.error('HLS Error:', data);
-                        if (data.fatal) {
-                            switch (data.type) {
-                                case Hls.ErrorTypes.NETWORK_ERROR:
-                                    showStatus('Erro de rede ao carregar o stream. Verifique a URL.', 'error');
-                                    break;
-                                case Hls.ErrorTypes.MEDIA_ERROR:
-                                    showStatus('Erro de mídia. Tentando recuperar...', 'error');
-                                    hls.recoverMediaError();
-                                    break;
-                                default:
-                                    showStatus(`Erro fatal no HLS: ${data.type}`, 'error');
-                                    break;
-                            }
-                        }
-                    });
-                    
-                } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
-                    // Safari nativo suporta HLS
-                    video.src = videoUrl;
-                    showStatus('Usando suporte nativo do Safari para HLS', 'info');
-                } else {
-                    showStatus('Seu navegador não suporta streams HLS/M3U8', 'error');
-                    return;
-                }
+
+            // Limpar source anterior
+            video.src = '';
+            video.load();
+
+            showMessage(`Tentando reproduzir: ${channel.title}`, 'success');
+
+            // Verificar se é um stream M3U8/HLS
+            if (channel.url.includes('.m3u8') || channel.url.includes('m3u8')) {
+                loadHLSStream(video, channel);
             } else {
-                // Para outros tipos de stream (pode ser HLS sem extensão .m3u8)
-                // Primeiro tenta com HLS.js caso seja um stream
-                if (Hls.isSupported()) {
-                    hls = new Hls({
-                        debug: false,
-                        enableWorker: true,
-                        lowLatencyMode: true,
-                        backBufferLength: 90
+                loadDirectStream(video, channel);
+            }
+        }
+
+        function loadHLSStream(video, channel) {
+            if (Hls.isSupported()) {
+                // Usar HLS.js para navegadores que não suportam HLS nativamente
+                hls = new Hls({
+                    enableWorker: true,
+                    lowLatencyMode: true,
+                    backBufferLength: 90
+                });
+                
+                hls.loadSource(channel.url);
+                hls.attachMedia(video);
+                
+                hls.on(Hls.Events.MANIFEST_PARSED, function() {
+                    video.play().then(() => {
+                        showMessage(`Reproduzindo: ${channel.title}`, 'success');
+                    }).catch(error => {
+                        console.log('Erro ao reproduzir com HLS:', error);
+                        showMessage(`Erro ao reproduzir ${channel.title}. Clique no vídeo para tentar reproduzir.`);
                     });
-                    
-                    hls.loadSource(videoUrl);
-                    hls.attachMedia(video);
-                    
-                    hls.on(Hls.Events.MANIFEST_PARSED, () => {
-                        showStatus('Stream carregado com sucesso!', 'success');
-                        video.play().catch(e => {
-                            showStatus('Clique no botão play para iniciar o vídeo', 'info');
-                        });
-                    });
-                    
-                    hls.on(Hls.Events.ERROR, (event, data) => {
-                        console.error('HLS Error:', data);
-                        if (data.fatal) {
-                            // Se falhar com HLS, tenta como vídeo direto
-                            if (hls) {
+                });
+
+                hls.on(Hls.Events.ERROR, function(event, data) {
+                    console.log('Erro HLS:', data);
+                    if (data.fatal) {
+                        switch(data.type) {
+                            case Hls.ErrorTypes.NETWORK_ERROR:
+                                showMessage(`Erro de rede ao carregar ${channel.title}. Tentando recuperar...`);
+                                hls.startLoad();
+                                break;
+                            case Hls.ErrorTypes.MEDIA_ERROR:
+                                showMessage(`Erro de mídia em ${channel.title}. Tentando recuperar...`);
+                                hls.recoverMediaError();
+                                break;
+                            default:
+                                showMessage(`Erro fatal em ${channel.title}. Tentando método alternativo...`);
                                 hls.destroy();
                                 hls = null;
-                            }
-                            video.src = videoUrl;
-                            showStatus('Tentando reproduzir como vídeo direto...', 'info');
+                                loadDirectStream(video, channel);
+                                break;
                         }
+                    }
+                });
+            } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+                // Safari suporta HLS nativamente
+                video.src = channel.url;
+                video.addEventListener('loadedmetadata', function() {
+                    video.play().then(() => {
+                        showMessage(`Reproduzindo: ${channel.title}`, 'success');
+                    }).catch(error => {
+                        console.log('Erro reprodução nativa:', error);
+                        showMessage(`Erro ao reproduzir ${channel.title}. Clique no vídeo para tentar reproduzir.`);
                     });
-                } else {
-                    // Fallback para vídeo direto
-                    video.src = videoUrl;
+                });
+            } else {
+                showMessage(`HLS não suportado neste navegador para ${channel.title}. Use Chrome, Firefox ou Safari.`);
+            }
+        }
+
+        function loadDirectStream(video, channel) {
+            video.src = channel.url;
+            video.load();
+            
+            video.play().then(() => {
+                showMessage(`Reproduzindo: ${channel.title}`, 'success');
+            }).catch(error => {
+                console.log('Erro stream direto:', error);
+                showMessage(`${channel.title}: Clique no botão play do vídeo para reproduzir manualmente.`);
+            });
+        }
+
+        // Event listeners
+        document.getElementById('urlInput').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                loadPlaylist();
+            }
+        });
+
+        document.getElementById('video').addEventListener('error', function(e) {
+            const channel = channels[currentChannel];
+            if (channel) {
+                showMessage(`Erro no stream ${channel.title}. Pode ser um problema de CORS ou compatibilidade do navegador.`);
+            }
+        });
+
+        document.getElementById('video').addEventListener('loadstart', function() {
+            showMessage('Carregando stream...', 'success');
+        });
+
+        document.getElementById('video').addEventListener('canplay', function() {
+            const messageDiv = document.getElementById('message');
+            if (messageDiv.textContent.includes('Carregando stream') || messageDiv.textContent.includes('Tentando reproduzir')) {
+                messageDiv.textContent = '';
+                messageDiv.className = '';
+            }
+        });
+
+        // Adicionar suporte para tentar novamente
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'r' || e.key === 'R') {
+                if (channels.length > 0 && currentChannel >= 0) {
+                    const channel = channels[currentChannel];
+                    showMessage(`Tentando novamente: ${channel.title}`, 'success');
+                    playChannel(currentChannel);
                 }
             }
-            
-            videoContainer.style.display = 'block';
-            
-            // Event listeners
-            video.onloadstart = () => {
-                showStatus('Carregando vídeo...', 'info');
-            };
-            
-            video.oncanplay = () => {
-                showStatus('Vídeo pronto para reproduzir', 'success');
-            };
-            
-            video.onended = () => {
-                if (currentIndex < currentPlaylist.length - 1) {
-                    currentIndex++;
-                    reproduzirVideo(currentPlaylist[currentIndex].url);
-                    atualizarPlaylistAtiva();
-                }
-            };
-            
-            video.onerror = (e) => {
-                const error = video.error;
-                let errorMsg = 'Erro desconhecido';
-                
-                if (error) {
-                    switch (error.code) {
-                        case 1:
-                            errorMsg = 'Reprodução abortada pelo usuário';
-                            break;
-                        case 2:
-                            errorMsg = 'Erro de rede ao baixar o vídeo';
-                            break;
-                        case 3:
-                            errorMsg = 'Erro de decodificação do vídeo';
-                            break;
-                        case 4:
-                            errorMsg = 'Formato de vídeo não suportado';
-                            break;
-                    }
-                }
-                
-                showStatus(`Erro ao reproduzir: ${errorMsg}. URL: ${videoUrl}`, 'error');
-                console.error('Video error:', error, 'URL:', videoUrl);
-            };
-            
-            // Log para debug
-            console.log('Tentando reproduzir:', videoUrl);
-        }
-        
-        function reproduzirDiretamente(url) {
-            currentPlaylist = [{url: url, title: 'Stream Direto'}];
-            currentIndex = 0;
-            reproduzirVideo(url);
-            showStatus('Tentando reproduzir URL diretamente...', 'info');
-        }
-        
-        // Permite carregar ao pressionar Enter
-        document.getElementById('playlist-url').addEventListener('keypress', function(e) {
-            if (e.key === 'Enter') {
-                carregarPlaylist();
+        });
+
+        // Cleanup ao sair da página
+        window.addEventListener('beforeunload', function() {
+            if (hls) {
+                hls.destroy();
             }
         });
     </script>
