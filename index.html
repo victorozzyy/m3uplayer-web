@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Player M3U8</title>
+    <title>Player M3U8 Aprimorado - Sem CORS</title>
     <style>
         * {
             margin: 0;
@@ -327,6 +327,26 @@
             border-radius: 10px;
             background: #000;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+            /* Otimizações para Smart TV */
+            object-fit: contain;
+            -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+        }
+
+        /* Estilos específicos para Smart TV */
+        @media screen and (min-width: 1920px) {
+            .m3u8-video {
+                max-height: 70vh;
+            }
+            
+            .container {
+                max-width: 90vw;
+            }
+            
+            .btn, .channel-btn, .load-btn {
+                font-size: 18px;
+                padding: 15px 30px;
+            }
         }
 
         .playlist-container {
@@ -445,7 +465,7 @@
         <h1>🎬 Player M3U8</h1>
         
         <div class="button-container">
-            <button class="btn btn-show" id="showBtn" onclick="showChannelSelection()">📺 Canais</button>
+            <button class="btn btn-show" id="showBtn" onclick="showChannelSelection()">📺 Canais Fixos</button>
             <button class="btn btn-m3u8" id="m3u8Btn" onclick="showM3U8Player()">🎬 M3U8 Player</button>
             <button class="btn btn-hide" id="hideBtn" onclick="hidePlayer()" disabled>❌ Fechar</button>
         </div>
@@ -544,7 +564,7 @@
 			{ name: 'ESPN4', url: '//%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=espn4', icon: '⚽' },
 			{ name: 'ESPN5', url: '//%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=espn5', icon: '⚽' },
 			{ name: 'ESPN6', url: '//%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=espn6', icon: '⚽' },
-			{ name: 'SportTV1', url: '//%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=sportv1', icon: '⚽' },
+            { name: 'SportTV1', url: '//%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=sportv1', icon: '⚽' },
 			{ name: 'SportTV2', url: '//%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=sportv2', icon: '⚽' },
         	{ name: 'SportTV3', url: '//%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=sportv3', icon: '⚽' },
         	{ name: 'Premiere', url: '//%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=premiereclubes', icon: '⚽' },
@@ -863,11 +883,11 @@
             showMessage(`${m3u8Channels.length} canais encontrados!`, 'success');
             
             // Auto-play do primeiro canal
-           // if (m3u8Channels.length > 0) {
-            //     setTimeout(() => {
-             //        playM3U8Channel(0);
-             //    }, 1000);
-            // }
+            if (m3u8Channels.length > 0) {
+                setTimeout(() => {
+                    playM3U8Channel(0);
+                }, 1000);
+            }
         }
 
         function displayM3U8Playlist() {
@@ -915,63 +935,151 @@
             document.getElementById('m3u8CurrentChannel').innerHTML = `🎬 ${channel.title}`;
         }
 
+        // Detectar se está em Smart TV Tizen
+        function isTizenTV() {
+            return navigator.userAgent.includes('Tizen') || 
+                   navigator.userAgent.includes('SmartTV') ||
+                   window.tizen !== undefined;
+        }
+
+        // Detectar se está em webOS (LG)
+        function isWebOSTV() {
+            return navigator.userAgent.includes('webOS') || 
+                   window.webOS !== undefined;
+        }
+
+        // Detectar Smart TV em geral
+        function isSmartTV() {
+            return isTizenTV() || isWebOSTV() || 
+                   navigator.userAgent.includes('SMART-TV') ||
+                   navigator.userAgent.includes('SmartTV');
+        }
+
         function loadHLSStream(video, channel) {
+            // Para Smart TVs, priorizar suporte nativo
+            if (isSmartTV()) {
+                console.log('Smart TV detectada, usando suporte nativo');
+                loadNativeHLS(video, channel);
+                return;
+            }
+
+            // Para computadores, tentar HLS.js primeiro
             if (typeof Hls !== 'undefined' && Hls.isSupported()) {
+                console.log('Usando HLS.js');
                 hls = new Hls({
-                    enableWorker: true,
-                    lowLatencyMode: true,
-                    backBufferLength: 90
+                    enableWorker: false, // Desabilitar worker para melhor compatibilidade
+                    lowLatencyMode: false,
+                    backBufferLength: 30,
+                    maxBufferLength: 60,
+                    maxMaxBufferLength: 120,
+                    startLevel: -1,
+                    capLevelToPlayerSize: true
                 });
                 
                 hls.loadSource(channel.url);
                 hls.attachMedia(video);
                 
                 hls.on(Hls.Events.MANIFEST_PARSED, function() {
-                    video.play().catch(error => {
-                        console.log('Erro ao reproduzir:', error);
-                        showMessage(`Canal carregado. Clique em play para iniciar.`, 'success');
-                    });
+                    playVideo(video);
                 });
 
                 hls.on(Hls.Events.ERROR, function(event, data) {
-                    console.log('Erro HLS:', data);
+                    console.log('Erro HLS.js:', data);
                     if (data.fatal) {
-                        switch(data.type) {
-                            case Hls.ErrorTypes.NETWORK_ERROR:
-                                showMessage('Erro de rede. Tentando reconectar...', 'error');
-                                hls.startLoad();
-                                break;
-                            case Hls.ErrorTypes.MEDIA_ERROR:
-                                showMessage('Erro de mídia. Tentando recuperar...', 'error');
-                                hls.recoverMediaError();
-                                break;
-                            default:
-                                showMessage('Erro fatal. Tentando modo direto...', 'error');
-                                loadDirectStream(video, channel);
-                                break;
-                        }
+                        console.log('Erro fatal no HLS.js, tentando suporte nativo');
+                        hls.destroy();
+                        hls = null;
+                        loadNativeHLS(video, channel);
                     }
                 });
-            } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
-                video.src = channel.url;
-                video.addEventListener('loadedmetadata', function() {
-                    video.play().catch(error => {
-                        console.log('Erro reprodução:', error);
-                        showMessage('Canal carregado. Clique em play para iniciar.', 'success');
-                    });
-                });
             } else {
-                showMessage('Seu navegador não suporta HLS. Tentando modo direto...', 'error');
+                // Fallback para suporte nativo
+                loadNativeHLS(video, channel);
+            }
+        }
+
+        function loadNativeHLS(video, channel) {
+            console.log('Tentando suporte nativo HLS');
+            
+            // Configurar video para Smart TV
+            video.setAttribute('playsinline', 'true');
+            video.setAttribute('webkit-playsinline', 'true');
+            video.preload = 'metadata';
+            
+            if (video.canPlayType('application/vnd.apple.mpegurl') || 
+                video.canPlayType('application/x-mpegURL')) {
+                
+                console.log('Suporte nativo HLS disponível');
+                video.src = channel.url;
+                
+                const loadedHandler = function() {
+                    video.removeEventListener('loadedmetadata', loadedHandler);
+                    video.removeEventListener('canplay', loadedHandler);
+                    playVideo(video);
+                };
+                
+                video.addEventListener('loadedmetadata', loadedHandler);
+                video.addEventListener('canplay', loadedHandler);
+                
+                video.addEventListener('error', function(e) {
+                    console.log('Erro no vídeo nativo:', e);
+                    showMessage('Erro ao carregar stream. Tentando modo direto...', 'error');
+                    loadDirectStream(video, channel);
+                });
+                
+                video.load();
+            } else {
+                console.log('Suporte nativo HLS não disponível, tentando stream direto');
                 loadDirectStream(video, channel);
             }
         }
 
+        function playVideo(video) {
+            // Para Smart TVs, usar método mais compatível
+            if (isSmartTV()) {
+                setTimeout(() => {
+                    video.play().then(() => {
+                        showMessage('Reproduzindo...', 'success');
+                    }).catch(error => {
+                        console.log('Erro ao reproduzir:', error);
+                        showMessage('Stream carregado. Use o controle remoto para iniciar.', 'success');
+                    });
+                }, 500);
+            } else {
+                video.play().then(() => {
+                    showMessage('Reproduzindo...', 'success');
+                }).catch(error => {
+                    console.log('Erro ao reproduzir:', error);
+                    showMessage('Canal carregado. Clique em play para iniciar.', 'success');
+                });
+            }
+        }
+
         function loadDirectStream(video, channel) {
+            console.log('Carregando stream direto');
+            
+            // Configurações para Smart TV
+            if (isSmartTV()) {
+                video.setAttribute('playsinline', 'true');
+                video.setAttribute('webkit-playsinline', 'true');
+                video.preload = 'metadata';
+            }
+            
             video.src = channel.url;
             video.load();
-            video.play().catch(error => {
-                console.log('Erro ao reproduzir:', error);
-                showMessage('Canal carregado. Clique em play para iniciar.', 'success');
+            
+            const playHandler = function() {
+                video.removeEventListener('loadeddata', playHandler);
+                video.removeEventListener('canplay', playHandler);
+                playVideo(video);
+            };
+            
+            video.addEventListener('loadeddata', playHandler);
+            video.addEventListener('canplay', playHandler);
+            
+            video.addEventListener('error', function(e) {
+                console.log('Erro no stream direto:', e);
+                showMessage('Erro ao carregar vídeo. Verifique a URL.', 'error');
             });
         }
 
@@ -1021,6 +1129,12 @@
 
         // === EVENT LISTENERS ===
         document.addEventListener('DOMContentLoaded', function() {
+            // Mostrar informações sobre o dispositivo
+            if (isSmartTV()) {
+                console.log('Smart TV detectada:', navigator.userAgent);
+                showMessage('Smart TV detectada - Otimizações ativas', 'success');
+            }
+            
             // Event listeners para inputs
             document.getElementById('urlInput').addEventListener('keypress', function(e) {
                 if (e.key === 'Enter') loadPlaylist();
@@ -1030,18 +1144,69 @@
                 if (e.key === 'Enter') loadHiddenPlaylist();
             });
 
-            // Atalhos de teclado
+            // Atalhos de teclado (adaptados para Smart TV)
             document.addEventListener('keydown', function(event) {
-                if (event.key === 'Escape') {
-                    hidePlayer();
-                } else if (event.key === 'r' || event.key === 'R') {
-                    if (m3u8Channels.length > 0) reloadChannel();
-                } else if (event.key === 'ArrowLeft') {
-                    if (m3u8Channels.length > 0) previousChannel();
-                } else if (event.key === 'ArrowRight') {
-                    if (m3u8Channels.length > 0) nextChannel();
-                } else if (event.key === 'f' || event.key === 'F') {
-                    toggleFullscreen();
+                // Para Smart TVs, usar códigos de teclas específicos
+                const keyCode = event.keyCode || event.which;
+                
+                switch(keyCode) {
+                    case 27: // ESC
+                    case 461: // RETURN (Samsung)
+                        hidePlayer();
+                        break;
+                    case 37: // LEFT ARROW
+                    case 424: // LEFT (Samsung)
+                        if (m3u8Channels.length > 0) {
+                            event.preventDefault();
+                            previousChannel();
+                        }
+                        break;
+                    case 39: // RIGHT ARROW  
+                    case 425: // RIGHT (Samsung)
+                        if (m3u8Channels.length > 0) {
+                            event.preventDefault();
+                            nextChannel();
+                        }
+                        break;
+                    case 82: // R
+                    case 116: // F5
+                        if (m3u8Channels.length > 0) {
+                            event.preventDefault();
+                            reloadChannel();
+                        }
+                        break;
+                    case 70: // F
+                    case 122: // F11
+                        event.preventDefault();
+                        toggleFullscreen();
+                        break;
+                    case 13: // ENTER
+                    case 32: // SPACE
+                    case 415: // PLAY (Samsung)
+                        const video = document.getElementById('m3u8Video');
+                        if (video.paused) {
+                            video.play();
+                        } else {
+                            video.pause();
+                        }
+                        break;
+                }
+            });
+            
+            // Listener para detectar mudanças de foco (importante para Smart TV)
+            document.addEventListener('focusin', function(event) {
+                if (event.target.classList.contains('channel-btn') || 
+                    event.target.classList.contains('m3u8-channel')) {
+                    event.target.style.transform = 'scale(1.1)';
+                    event.target.style.zIndex = '10';
+                }
+            });
+            
+            document.addEventListener('focusout', function(event) {
+                if (event.target.classList.contains('channel-btn') || 
+                    event.target.classList.contains('m3u8-channel')) {
+                    event.target.style.transform = '';
+                    event.target.style.zIndex = '';
                 }
             });
         });
@@ -1060,5 +1225,7 @@
 				<button class="btn btn-m3u8" id="m3u8Btn" type="submit">nossoplayeronlinehd</button>
     </form>
 	</div>
+	
+	
 </body>
 </html>
