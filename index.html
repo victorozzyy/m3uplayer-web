@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Player M3U8</title>
+    <title>Player M3U8 - Tizen Smart TV Otimizado</title>
     <style>
         * {
             margin: 0;
@@ -61,23 +61,6 @@
             text-transform: uppercase;
             letter-spacing: 1px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .btn::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-            transition: left 0.5s;
-        }
-
-        .btn:hover::before {
-            left: 100%;
         }
 
         .btn-show {
@@ -85,19 +68,9 @@
             color: white;
         }
 
-        .btn-show:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(76, 175, 80, 0.4);
-        }
-
         .btn-hide {
             background: linear-gradient(45deg, #f44336, #da190b);
             color: white;
-        }
-
-        .btn-hide:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(244, 67, 54, 0.4);
         }
 
         .btn-m3u8 {
@@ -105,9 +78,8 @@
             color: white;
         }
 
-        .btn-m3u8:hover {
+        .btn:hover {
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(156, 39, 176, 0.4);
         }
 
         .btn:disabled {
@@ -168,6 +140,7 @@
             transform: scale(1.05);
         }
 
+        /* Player Container - CORRIGIDO para Tizen */
         .player-container {
             display: none;
             background: rgba(0, 0, 0, 0.8);
@@ -181,14 +154,35 @@
             display: block;
         }
 
-        .player-wrapper {
+        /* Video Player Responsivo - SEM dimensões fixas */
+        .video-wrapper {
             position: relative;
             width: 100%;
-            max-width: 800px;
-            margin: 0 auto;
+            margin: 0 auto 20px auto;
             border-radius: 10px;
             overflow: hidden;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            background: #000;
+        }
+
+        /* Vídeo responsivo para Tizen */
+        .tizen-video {
+            width: 100%;
+            height: auto;
+            max-height: 70vh;
+            min-height: 300px;
+            background: #000;
+            border: none;
+            outline: none;
+            object-fit: contain;
+        }
+
+        /* Iframe para canais fixos */
+        .channel-iframe {
+            width: 100%;
+            height: 450px;
+            border: none;
+            border-radius: 10px;
         }
 
         .current-channel {
@@ -197,13 +191,6 @@
             font-size: 1.2rem;
             font-weight: 600;
             text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-        }
-
-        iframe {
-            width: 100%;
-            height: 450px;
-            border: none;
-            border-radius: 10px;
         }
 
         .input-section {
@@ -322,104 +309,6 @@
             border: 1px solid rgba(244, 67, 54, 0.3);
         }
 
-        /* Player de vídeo otimizado para Smart TV */
-        .smart-tv-player {
-            width: 100%;
-            height: 450px;
-            background: #000;
-            border-radius: 10px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        /* Para Tizen TV - Player em tela cheia */
-        .smart-tv-player.tizen-mode {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
-            border-radius: 0;
-            z-index: 1000;
-        }
-
-        .smart-tv-player video {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-            background: #000;
-            border: none;
-            outline: none;
-        }
-
-        .smart-tv-player iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-            background: #000;
-        }
-
-        /* Controles para Tizen TV */
-        .tizen-controls {
-            position: fixed;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: rgba(0,0,0,0.8);
-            padding: 15px 25px;
-            border-radius: 25px;
-            color: white;
-            font-size: 16px;
-            z-index: 1001;
-            display: none;
-            animation: fadeIn 0.3s ease;
-        }
-
-        .tizen-controls.show {
-            display: block;
-        }
-
-        /* Botão de saída para Tizen */
-        .tizen-exit {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            background: rgba(244, 67, 54, 0.9);
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 20px;
-            font-size: 14px;
-            cursor: pointer;
-            z-index: 1001;
-            display: none;
-        }
-
-        .tizen-exit.show {
-            display: block;
-        }
-
-        /* Estilos específicos para Smart TV */
-        @media screen and (min-width: 1920px) {
-            .smart-tv-player:not(.tizen-mode) {
-                height: 60vh;
-            }
-            
-            .container {
-                max-width: 90vw;
-            }
-            
-            .btn, .channel-btn, .load-btn {
-                font-size: 18px;
-                padding: 15px 30px;
-            }
-            
-            .tizen-controls {
-                font-size: 20px;
-                padding: 20px 30px;
-            }
-        }
-
         .playlist-container {
             margin-top: 20px;
             max-height: 400px;
@@ -454,28 +343,35 @@
             border-bottom: none;
         }
 
+        /* Controles integrados - NÃO flutuantes */
         .controls {
             display: flex;
             gap: 10px;
             justify-content: center;
             margin: 15px 0;
             flex-wrap: wrap;
+            padding: 15px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 15px;
+            backdrop-filter: blur(5px);
         }
 
         .control-btn {
-            padding: 8px 16px;
+            padding: 12px 20px;
             border: none;
-            border-radius: 20px;
+            border-radius: 25px;
             background: rgba(255,255,255,0.2);
             color: white;
             cursor: pointer;
             transition: all 0.3s ease;
-            font-size: 12px;
+            font-size: 14px;
+            font-weight: 600;
         }
 
         .control-btn:hover, .control-btn:focus {
             background: rgba(255,255,255,0.3);
             outline: 2px solid #4CAF50;
+            transform: translateY(-2px);
         }
 
         .status {
@@ -523,6 +419,23 @@
             to { opacity: 1; transform: translateX(0); }
         }
 
+        /* Media Queries para Smart TV */
+        @media screen and (min-width: 1920px) {
+            .tizen-video {
+                max-height: 80vh;
+                min-height: 500px;
+            }
+            
+            .container {
+                max-width: 90vw;
+            }
+            
+            .btn, .channel-btn, .load-btn, .control-btn {
+                font-size: 18px;
+                padding: 15px 30px;
+            }
+        }
+
         @media (max-width: 768px) {
             .container { padding: 20px; margin: 10px; }
             h1 { font-size: 2rem; margin-bottom: 20px; }
@@ -535,7 +448,7 @@
 </head>
 <body>
     <div class="container">
-        <h1>🎬 Player M3U8</h1>
+        <h1>🎬 Player M3U8 - Tizen TV</h1>
         
         <div class="button-container">
             <button class="btn btn-show" id="showBtn" onclick="showChannelSelection()">📺 Canais Fixos</button>
@@ -549,11 +462,11 @@
             <div class="channel-grid" id="channelGrid"></div>
         </div>
 
-        <!-- Normal Player -->
+        <!-- Normal Player (Canais Fixos) -->
         <div class="player-container" id="playerContainer">
             <div class="current-channel" id="currentChannel">📡 Canal Selecionado</div>
-            <div class="player-wrapper">
-                <iframe id="playerFrame" src="" frameborder="0" scrolling="no" allow="encrypted-media" allowfullscreen></iframe>
+            <div class="video-wrapper">
+                <iframe id="playerFrame" class="channel-iframe" src="" frameborder="0" scrolling="no" allow="encrypted-media" allowfullscreen></iframe>
             </div>
         </div>
 
@@ -600,21 +513,19 @@
 
             <div id="m3u8Message" class="message"></div>
 
-            <!-- Player Otimizado para Smart TV -->
-            <div class="player-wrapper">
-                <div class="smart-tv-player" id="smartTvPlayer">
-                    <video id="m3u8Video" controls crossorigin="anonymous" playsinline webkit-playsinline>
-                        Seu navegador não suporta o elemento de vídeo.
-                    </video>
-                </div>
+            <!-- Player de Vídeo Otimizado para Tizen -->
+            <div class="video-wrapper">
+                <video id="tizenVideo" class="tizen-video" controls crossorigin="anonymous" playsinline webkit-playsinline>
+                    Seu navegador não suporta o elemento de vídeo.
+                </video>
             </div>
 
-            <!-- Controls -->
+            <!-- Controles Integrados (NÃO flutuantes) -->
             <div class="controls">
-                <button class="control-btn" onclick="previousChannel()">⏮️ Anterior</button>
-                <button class="control-btn" onclick="nextChannel()">⏭️ Próximo</button>
-                <button class="control-btn" onclick="reloadChannel()">🔄 Recarregar</button>
-                <button class="control-btn" onclick="toggleFullscreen()">🔳 Tela Cheia</button>
+                <button class="control-btn" onclick="previousChannel()" tabindex="0">⏮️ Anterior</button>
+                <button class="control-btn" onclick="nextChannel()" tabindex="0">⏭️ Próximo</button>
+                <button class="control-btn" onclick="reloadChannel()" tabindex="0">🔄 Recarregar</button>
+                <button class="control-btn" onclick="togglePlayPause()" tabindex="0">⏯️ Play/Pause</button>
             </div>
 
             <!-- Playlist -->
@@ -627,14 +538,14 @@
         <div class="status hidden" id="status">🔒 Selecione uma opção acima</div>
     </div>
 
-    <!-- Scripts para Smart TV - Mesmo do site de referência -->
+    <!-- Scripts para Smart TV -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/hls.js/1.4.12/hls.min.js"></script>
     
     <script>
         // Canais fixos
         const channels = [
             { name: 'Warner', url: decodeURIComponent('https://embedcanaistv.com/warner/'), icon: '📺' },
-            { name: 'ESPN1', url: decodeURIComponent('https://embedcanaistv.com/espn/'), icon: '⚽' },
+            { name: 'ESPN1', url: decodeURIComponent('https://nossoplayeronlinehd.blog/tv/espn'), icon: '⚽' },
             { name: 'ESPN2', url: decodeURIComponent('%2F%2F%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=espn2'), icon: '⚽' },
             { name: 'ESPN3', url: decodeURIComponent('%2F%2F%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=espn3'), icon: '⚽' },
             { name: 'ESPN4', url: decodeURIComponent('%2F%2F%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=espn4'), icon: '⚽' },
@@ -660,7 +571,7 @@
             { name: 'UFC', url: decodeURIComponent('%2F%2F%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=ufcfightpass'), icon: '📺' },
         ];
 
-        // Sistema de playlists ocultas - CORRIGIDO
+        // Sistema de playlists ocultas
         const getHiddenPlaylist = (code) => {
             const playlists = {
                 "tvmista": [
@@ -742,7 +653,7 @@
             document.getElementById('m3u8Container').classList.remove('show');
             document.getElementById('playerFrame').src = '';
             
-            const video = document.getElementById('m3u8Video');
+            const video = document.getElementById('tizenVideo');
             video.src = '';
             video.load();
         }
@@ -773,7 +684,7 @@
                 button.className = 'channel-btn';
                 button.innerHTML = `${channel.icon} ${channel.name}`;
                 button.onclick = () => selectChannel(channel, button);
-                button.tabIndex = 0; // Para Smart TV
+                button.tabIndex = 0;
                 channelGrid.appendChild(button);
             });
         }
@@ -810,7 +721,7 @@
 
             const playlistUrls = getHiddenPlaylist(code);
             if (!playlistUrls) {
-                showMessage('❌ Código inválido. Códigos disponíveis: tvmista, teste123, educativo', 'error');
+                showMessage('❌ Código inválido. Códigos disponíveis: tvmista, xxxxxxx, xxxxxxxx', 'error');
                 return;
             }
 
@@ -947,6 +858,7 @@
             reader.readAsText(file);
         }
 
+        // Parser M3U CORRIGIDO e mais robusto
         function parseM3U(data) {
             m3u8Channels = [];
             
@@ -955,27 +867,41 @@
                 return;
             }
             
-            const lines = data.split('\n');
-            let currentChannel = null;
-
+            console.log('📋 Parseando M3U data:', data.substring(0, 500) + '...');
+            
+            const lines = data.split('\n').map(line => line.trim()).filter(line => line.length > 0);
+            
             for (let i = 0; i < lines.length; i++) {
-                const line = lines[i].trim();
+                const line = lines[i];
                 
+                // Procurar por EXTINF
                 if (line.startsWith('#EXTINF:')) {
-                    const titleMatch = line.match(/,(.*)$/);
-                    currentChannel = {
-                        title: titleMatch ? titleMatch[1].trim() : `Canal ${m3u8Channels.length + 1}`,
-                        url: null
-                    };
-                } else if (line && !line.startsWith('#') && currentChannel) {
-                    currentChannel.url = line;
-                    m3u8Channels.push(currentChannel);
-                    currentChannel = null;
+                    // Extrair título do EXTINF
+                    const commaIndex = line.indexOf(',');
+                    const title = commaIndex > -1 ? line.substring(commaIndex + 1).trim() : `Canal ${m3u8Channels.length + 1}`;
+                    
+                    // Procurar URL na próxima linha não comentário
+                    for (let j = i + 1; j < lines.length; j++) {
+                        const nextLine = lines[j];
+                        if (nextLine && !nextLine.startsWith('#')) {
+                            // Validar se é uma URL válida
+                            if (nextLine.startsWith('http') || nextLine.startsWith('//') || nextLine.includes('.m3u8') || nextLine.includes('.ts')) {
+                                m3u8Channels.push({
+                                    title: title || `Canal ${m3u8Channels.length + 1}`,
+                                    url: nextLine
+                                });
+                                console.log(`📺 Canal adicionado: ${title} -> ${nextLine.substring(0, 50)}...`);
+                            }
+                            break;
+                        }
+                    }
                 }
             }
 
+            console.log(`✅ Total de canais encontrados: ${m3u8Channels.length}`);
+
             if (m3u8Channels.length === 0) {
-                showMessage('❌ Nenhum canal encontrado na playlist.', 'error');
+                showMessage('❌ Nenhum canal encontrado na playlist. Verifique o formato M3U8.', 'error');
                 return;
             }
 
@@ -993,18 +919,21 @@
                 channelDiv.className = 'm3u8-channel';
                 channelDiv.innerHTML = `<span>${index + 1}.</span><span>${channel.title}</span>`;
                 channelDiv.onclick = () => playM3U8Channel(index);
-                channelDiv.tabIndex = 0; // Para Smart TV
+                channelDiv.tabIndex = 0;
                 playlistDiv.appendChild(channelDiv);
             });
         }
 
-        // REPRODUTOR OTIMIZADO PARA SMART TV TIZEN
+        // REPRODUTOR OTIMIZADO ESPECÍFICO PARA TIZEN
         function playM3U8Channel(index) {
             if (index < 0 || index >= m3u8Channels.length) return;
 
             currentM3U8Channel = index;
-            const video = document.getElementById('m3u8Video');
+            const video = document.getElementById('tizenVideo');
             const channel = m3u8Channels[index];
+
+            console.log(`🎬 Reproduzindo canal ${index + 1}: ${channel.title}`);
+            console.log(`📡 URL: ${channel.url}`);
 
             // Atualizar classe ativa
             document.querySelectorAll('.m3u8-channel').forEach(ch => ch.classList.remove('active'));
@@ -1021,9 +950,9 @@
             showMessage(`🔄 Carregando: ${channel.title}`, 'success');
             document.getElementById('m3u8CurrentChannel').innerHTML = `🎬 ${channel.title}`;
 
-            // Para Smart TV Tizen, usar abordagem específica
+            // Reprodução específica para Tizen
             if (isTizenTV()) {
-                playOnTizenTV(video, channel);
+                playOnTizen(video, channel);
             } else if (isSmartTV()) {
                 playOnSmartTV(video, channel);
             } else {
@@ -1031,127 +960,61 @@
             }
         }
 
-        // Reprodução específica para Tizen (Samsung Smart TV)
-        function playOnTizenTV(video, channel) {
-            console.log('🖥️ Reproduzindo em Tizen TV - Modo Fullscreen');
-            
-            // Ativar modo fullscreen para Tizen
-            const playerContainer = document.getElementById('smartTvPlayer');
-            const tizenExit = document.querySelector('.tizen-exit') || createTizenExitButton();
-            const tizenControls = document.querySelector('.tizen-controls') || createTizenControls();
-            
-            playerContainer.classList.add('tizen-mode');
-            tizenExit.classList.add('show');
-            tizenControls.classList.add('show');
+        // Reprodução OTIMIZADA para Tizen
+        function playOnTizen(video, channel) {
+            console.log('🖥️ Modo Tizen - Reprodução otimizada');
             
             // Configurações específicas para Tizen
             video.setAttribute('crossorigin', 'anonymous');
             video.setAttribute('playsinline', 'true');
             video.setAttribute('webkit-playsinline', 'true');
-            video.setAttribute('autoplay', 'true');
             video.preload = 'auto';
-            video.muted = false; // Garantir que não está mudo
-            video.volume = 1.0;   // Volume máximo
+            video.muted = false;
+            video.volume = 1.0;
             
-            // Limpar o container e usar apenas video element (sem iframe)
-            playerContainer.innerHTML = '';
-            playerContainer.appendChild(video);
-            
-            if (channel.url.includes('.m3u8')) {
+            // Tentar reprodução nativa primeiro (Tizen tem bom suporte HLS)
+            if (channel.url.includes('.m3u8') || channel.url.includes('m3u8')) {
                 loadTizenHLS(video, channel);
             } else {
                 loadTizenDirect(video, channel);
             }
-            
-            // Ocultar interface principal
-            document.querySelector('.container').style.display = 'none';
-        }
-
-        function createTizenExitButton() {
-            const exitBtn = document.createElement('button');
-            exitBtn.className = 'tizen-exit';
-            exitBtn.innerHTML = '❌ Sair (Return)';
-            exitBtn.onclick = exitTizenMode;
-            document.body.appendChild(exitBtn);
-            return exitBtn;
-        }
-
-        function createTizenControls() {
-            const controls = document.createElement('div');
-            controls.className = 'tizen-controls';
-            controls.innerHTML = `
-                <div>🎬 ${m3u8Channels[currentM3U8Channel]?.title || 'Canal'}</div>
-                <div style="margin-top: 8px; font-size: 14px; opacity: 0.8;">
-                    ← → Trocar Canal | Enter Play/Pause | Return Sair
-                </div>
-            `;
-            document.body.appendChild(controls);
-            return controls;
-        }
-
-        function exitTizenMode() {
-            const playerContainer = document.getElementById('smartTvPlayer');
-            const tizenExit = document.querySelector('.tizen-exit');
-            const tizenControls = document.querySelector('.tizen-controls');
-            const video = document.getElementById('m3u8Video');
-            
-            // Remover modo fullscreen
-            playerContainer.classList.remove('tizen-mode');
-            if (tizenExit) tizenExit.classList.remove('show');
-            if (tizenControls) tizenControls.classList.remove('show');
-            
-            // Mostrar interface principal
-            document.querySelector('.container').style.display = 'block';
-            
-            // Parar vídeo
-            video.pause();
-            video.src = '';
-            video.load();
-            
-            if (hls) {
-                hls.destroy();
-                hls = null;
-            }
         }
 
         function loadTizenHLS(video, channel) {
-            console.log('🔄 Carregando HLS para Tizen:', channel.url);
+            console.log('🔄 Carregando HLS nativo para Tizen');
             
-            // Para Tizen, priorizar suporte nativo
+            // Tizen tem suporte nativo excelente para HLS
             video.src = channel.url;
             
-            const loadHandler = function() {
-                video.removeEventListener('loadeddata', loadHandler);
-                video.removeEventListener('canplay', loadHandler);
+            const successHandler = function() {
+                video.removeEventListener('loadeddata', successHandler);
+                video.removeEventListener('canplay', successHandler);
                 
-                console.log('✅ Vídeo carregado, iniciando reprodução');
-                
-                // Garantir que o áudio não está mudo
-                video.muted = false;
-                video.volume = 1.0;
+                console.log('✅ HLS carregado, iniciando reprodução');
                 
                 setTimeout(() => {
                     video.play().then(() => {
                         console.log('✅ Reprodução iniciada com sucesso');
-                        updateTizenControls(`🎬 ${channel.title} - Reproduzindo`);
+                        showMessage(`✅ Reproduzindo: ${channel.title}`, 'success');
                     }).catch(error => {
-                        console.log('⚠️ Autoplay falhou:', error);
-                        updateTizenControls(`🎬 ${channel.title} - Pressione Enter para reproduzir`);
+                        console.log('ℹ️ Autoplay restrito, aguardando interação do usuário');
+                        showMessage(`📺 ${channel.title} carregado. Use o controle remoto para reproduzir.`, 'success');
                     });
                 }, 1000);
             };
             
-            video.addEventListener('loadeddata', loadHandler);
-            video.addEventListener('canplay', loadHandler);
+            video.addEventListener('loadeddata', successHandler);
+            video.addEventListener('canplay', successHandler);
             
             video.addEventListener('error', function(e) {
-                console.log('❌ Erro no vídeo Tizen:', e);
-                updateTizenControls(`❌ Erro ao carregar ${channel.title}`);
+                console.log('❌ Erro no HLS nativo:', e);
+                showMessage('⚠️ Erro no suporte nativo, tentando HLS.js...', 'error');
                 
-                // Tentar fallback com HLS.js se disponível
+                // Fallback para HLS.js
                 if (typeof Hls !== 'undefined' && Hls.isSupported()) {
-                    console.log('🔄 Tentando fallback com HLS.js');
                     loadTizenHLSJS(video, channel);
+                } else {
+                    showMessage('❌ Erro ao carregar stream. Tente outro canal.', 'error');
                 }
             });
             
@@ -1159,10 +1022,7 @@
         }
 
         function loadTizenHLSJS(video, channel) {
-            if (hls) {
-                hls.destroy();
-                hls = null;
-            }
+            console.log('🔧 Usando HLS.js como fallback para Tizen');
             
             hls = new Hls({
                 enableWorker: false,
@@ -1178,65 +1038,53 @@
             
             hls.on(Hls.Events.MANIFEST_PARSED, function() {
                 console.log('✅ HLS.js manifest carregado');
-                video.muted = false;
-                video.volume = 1.0;
                 
                 setTimeout(() => {
                     video.play().then(() => {
-                        updateTizenControls(`🎬 ${channel.title} - Reproduzindo (HLS.js)`);
+                        showMessage(`✅ Reproduzindo: ${channel.title} (HLS.js)`, 'success');
                     }).catch(error => {
-                        updateTizenControls(`🎬 ${channel.title} - Pressione Enter para reproduzir`);
+                        showMessage(`📺 ${channel.title} carregado. Use o controle remoto.`, 'success');
                     });
                 }, 500);
             });
 
             hls.on(Hls.Events.ERROR, function(event, data) {
                 console.log('❌ Erro HLS.js:', data);
-                updateTizenControls(`❌ Erro ao carregar ${channel.title}`);
+                if (data.fatal) {
+                    hls.destroy();
+                    hls = null;
+                    showMessage('❌ Erro fatal no HLS.js. Tente outro canal.', 'error');
+                }
             });
         }
 
         function loadTizenDirect(video, channel) {
-            console.log('🔄 Carregando stream direto para Tizen:', channel.url);
+            console.log('📡 Carregando stream direto para Tizen');
             
             video.src = channel.url;
-            video.muted = false;
-            video.volume = 1.0;
             
-            const loadHandler = function() {
-                video.removeEventListener('loadeddata', loadHandler);
-                video.removeEventListener('canplay', loadHandler);
+            const successHandler = function() {
+                video.removeEventListener('loadeddata', successHandler);
+                video.removeEventListener('canplay', successHandler);
                 
                 setTimeout(() => {
                     video.play().then(() => {
-                        updateTizenControls(`🎬 ${channel.title} - Reproduzindo`);
+                        showMessage(`✅ Reproduzindo: ${channel.title}`, 'success');
                     }).catch(error => {
-                        updateTizenControls(`🎬 ${channel.title} - Pressione Enter para reproduzir`);
+                        showMessage(`📺 ${channel.title} carregado. Use o controle remoto.`, 'success');
                     });
                 }, 1000);
             };
             
-            video.addEventListener('loadeddata', loadHandler);
-            video.addEventListener('canplay', loadHandler);
+            video.addEventListener('loadeddata', successHandler);
+            video.addEventListener('canplay', successHandler);
             
             video.addEventListener('error', function(e) {
-                console.log('❌ Erro no stream direto Tizen:', e);
-                updateTizenControls(`❌ Erro ao carregar ${channel.title}`);
+                console.log('❌ Erro no stream direto:', e);
+                showMessage('❌ Erro ao carregar stream. Verifique a URL.', 'error');
             });
             
             video.load();
-        }
-
-        function updateTizenControls(message) {
-            const controls = document.querySelector('.tizen-controls');
-            if (controls) {
-                controls.innerHTML = `
-                    <div>${message}</div>
-                    <div style="margin-top: 8px; font-size: 14px; opacity: 0.8;">
-                        ← → Trocar Canal | Enter Play/Pause | Return Sair
-                    </div>
-                `;
-            }
         }
 
         // Reprodução para outras Smart TVs
@@ -1248,7 +1096,6 @@
             video.setAttribute('webkit-playsinline', 'true');
             
             if (channel.url.includes('.m3u8')) {
-                // Tentar suporte nativo primeiro
                 if (video.canPlayType('application/vnd.apple.mpegurl') || 
                     video.canPlayType('application/x-mpegURL')) {
                     loadNativeHLS(video, channel);
@@ -1273,35 +1120,6 @@
             } else {
                 loadDirectStream(video, channel);
             }
-        }
-
-        function loadDirectStreamTizen(video, channel) {
-            console.log('🔄 Carregando stream direto para Tizen');
-            
-            video.src = channel.url;
-            video.load();
-            
-            const playHandler = function() {
-                video.removeEventListener('loadeddata', playHandler);
-                video.removeEventListener('canplay', playHandler);
-                
-                setTimeout(() => {
-                    video.play().then(() => {
-                        showMessage('✅ Reproduzindo...', 'success');
-                    }).catch(error => {
-                        console.log('Aviso:', error);
-                        showMessage('📺 Stream carregado. Use o controle remoto.', 'success');
-                    });
-                }, 1000);
-            };
-            
-            video.addEventListener('loadeddata', playHandler);
-            video.addEventListener('canplay', playHandler);
-            
-            video.addEventListener('error', function(e) {
-                console.log('❌ Erro no vídeo Tizen:', e);
-                showMessage('❌ Erro ao carregar. Tente outro canal.', 'error');
-            });
         }
 
         function loadHLSStream(video, channel) {
@@ -1448,14 +1266,19 @@
             playM3U8Channel(currentM3U8Channel);
         }
 
-        function toggleFullscreen() {
-            const video = document.getElementById('m3u8Video');
-            if (document.fullscreenElement) {
-                document.exitFullscreen();
-            } else {
-                video.requestFullscreen().catch(err => {
-                    showMessage('❌ Erro ao entrar em tela cheia.', 'error');
-                });
+        function togglePlayPause() {
+            const video = document.getElementById('tizenVideo');
+            if (video && video.src) {
+                if (video.paused) {
+                    video.play().then(() => {
+                        showMessage('▶️ Reproduzindo...', 'success');
+                    }).catch(error => {
+                        showMessage('❌ Erro ao reproduzir.', 'error');
+                    });
+                } else {
+                    video.pause();
+                    showMessage('⏸️ Pausado.', 'success');
+                }
             }
         }
 
@@ -1464,7 +1287,7 @@
             // Mostrar informações sobre o dispositivo
             if (isTizenTV()) {
                 console.log('🖥️ Tizen TV detectada:', navigator.userAgent);
-                showMessage('🖥️ Samsung Smart TV detectada - Modo Tizen ativo', 'success');
+                showMessage('🖥️ Samsung Smart TV detectada - Modo Tizen otimizado', 'success');
             } else if (isSmartTV()) {
                 console.log('📺 Smart TV detectada:', navigator.userAgent);
                 showMessage('📺 Smart TV detectada - Otimizações ativas', 'success');
@@ -1487,13 +1310,7 @@
                     case 27: // ESC
                     case 461: // RETURN (Samsung)
                     case 10009: // RETURN (Tizen)
-                        // Se estiver em modo Tizen, sair do modo fullscreen
-                        if (document.querySelector('.smart-tv-player.tizen-mode')) {
-                            event.preventDefault();
-                            exitTizenMode();
-                        } else {
-                            hidePlayer();
-                        }
+                        hidePlayer();
                         break;
                     case 37: // LEFT ARROW
                     case 424: // LEFT (Samsung)
@@ -1519,35 +1336,14 @@
                             reloadChannel();
                         }
                         break;
-                    case 70: // F
-                    case 122: // F11
-                    case 404: // FULL_SCREEN (Samsung)
-                        event.preventDefault();
-                        if (!document.querySelector('.smart-tv-player.tizen-mode')) {
-                            toggleFullscreen();
-                        }
-                        break;
                     case 13: // ENTER
                     case 32: // SPACE
                     case 415: // PLAY (Samsung)
                     case 71:  // PLAY (Tizen)
-                        const video = document.getElementById('m3u8Video');
+                        const video = document.getElementById('tizenVideo');
                         if (video && video.src) {
                             event.preventDefault();
-                            if (video.paused) {
-                                video.play().then(() => {
-                                    if (document.querySelector('.tizen-controls')) {
-                                        updateTizenControls(`🎬 ${m3u8Channels[currentM3U8Channel]?.title} - Reproduzindo`);
-                                    }
-                                }).catch(error => {
-                                    console.log('Erro ao reproduzir:', error);
-                                });
-                            } else {
-                                video.pause();
-                                if (document.querySelector('.tizen-controls')) {
-                                    updateTizenControls(`⏸️ ${m3u8Channels[currentM3U8Channel]?.title} - Pausado`);
-                                }
-                            }
+                            togglePlayPause();
                         }
                         break;
                 }
