@@ -557,13 +557,13 @@
     <script>
         // Canais fixos
         const channels = [
-            { name: 'Warner', url: '//%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=warner', icon: '📺' },
-			{ name: 'ESPN1', url: '//%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=espn', icon: '⚽' },
-			{ name: 'ESPN2', url: '//%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=espn2', icon: '⚽' },
-			{ name: 'ESPN3', url: '//%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=espn3', icon: '⚽' },
-			{ name: 'ESPN4', url: '//%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=espn4', icon: '⚽' },
-			{ name: 'ESPN5', url: '//%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=espn5', icon: '⚽' },
-			{ name: 'ESPN6', url: '//%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=espn6', icon: '⚽' },
+            { name: 'Warner', url: 'https://redecanaistv.gd/player3/ch.php?canal=warner', icon: '📺' },
+			{ name: 'ESPN1', url: 'https://redecanaistv.gd/player3/ch.php?canal=espn', icon: '⚽' },
+			{ name: 'ESPN2', url: 'https://redecanaistv.gd/player3/ch.php?canal=espn2', icon: '⚽' },
+			{ name: 'ESPN3', url: 'https://redecanaistv.gd/player3/ch.php?canal=espn3', icon: '⚽' },
+			{ name: 'ESPN4', url: 'https://redecanaistv.gd/player3/ch.php?canal=espn4', icon: '⚽' },
+			{ name: 'ESPN5', url: 'https://redecanaistv.gd/player3/ch.php?canal=espn5', icon: '⚽' },
+			{ name: 'ESPN6', url: 'https://redecanaistv.gd/player3/ch.php?canal=espn6', icon: '⚽' },
             { name: 'SportTV1', url: '//%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=sportv1', icon: '⚽' },
 			{ name: 'SportTV2', url: '//%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=sportv2', icon: '⚽' },
         	{ name: 'SportTV3', url: '//%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=sportv3', icon: '⚽' },
@@ -587,19 +587,19 @@
         // Sistema de playlists ocultas - corrigido
         const getHiddenPlaylist = (code) => {
             const playlists = {
-                "tvmista": {
+                "tvmista171": {
                     urls: [
                         "https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/tvmisto.m3u8"
                     ]
                 },
-                "xxxxxxxx": {
+                "xxxxxxx": {
                     urls: [
                         "https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/teste.m3u8",
                         "https://api.allorigins.win/raw?url=https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/teste.m3u8",
                         "https://thingproxy.freeboard.io/fetch/https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/teste.m3u8"
                     ]
                 },
-                "xxxxxxx": {
+                "xxxxxxxx": {
                     urls: [
                         "https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/educativo.m3u8",
                         "https://api.allorigins.win/raw?url=https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/educativo.m3u8",
@@ -883,11 +883,11 @@
             showMessage(`${m3u8Channels.length} canais encontrados!`, 'success');
             
             // Auto-play do primeiro canal
-            if (m3u8Channels.length > 0) {
-                setTimeout(() => {
-                    playM3U8Channel(0);
-                }, 1000);
-            }
+            //if (m3u8Channels.length > 0) {
+             //   setTimeout(() => {
+             //       playM3U8Channel(0);
+            //    }, 1000);
+           // }
         }
 
         function displayM3U8Playlist() {
@@ -1221,11 +1221,10 @@
 				<form action="https://nossoplayeronlinehd.blog/" method="get" target="_blank">
 				<button class="btn btn-show" id="showBtn" type="submit">nossoplayeronlinehd</button>
     </form>
-	<form 		action="https://nossoplayeronlinehd.blog/" method="get" target="_blank">
+	<form 		action="https://embedcanaistv.com/" method="get" target="_blank">
 				<button class="btn btn-m3u8" id="m3u8Btn" type="submit">nossoplayeronlinehd</button>
     </form>
 	</div>
-	
 	
 </body>
 </html>
