@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Player M3U8 Smart</title>
+    <title>M3U8 Smart</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <h1>🎬 Player M3U8 - Tizen TV</h1>
+        <h1>🎬 Player M3U8</h1>
         
         <div class="button-container">
             <button class="btn btn-show" id="showBtn">📺 Canais Fixos</button>
@@ -74,8 +74,39 @@
         <button class="btn btn-external" onclick="window.open('https://embedcanaistv.com/', '_blank')">📺 Embed Canais TV</button>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
     <script>
+        // Variável global para verificar se HLS.js foi carregada
+        let hlsLibLoaded = false;
+        let hlsLoadPromise = null;
+
+        // Função para carregar HLS.js dinamicamente
+        function loadHlsJs() {
+            if (hlsLoadPromise) return hlsLoadPromise;
+            
+            hlsLoadPromise = new Promise((resolve, reject) => {
+                if (window.Hls) {
+                    hlsLibLoaded = true;
+                    resolve();
+                    return;
+                }
+
+                const script = document.createElement('script');
+                script.src = 'https://cdn.jsdelivr.net/npm/hls.js@latest';
+                script.onload = () => {
+                    hlsLibLoaded = true;
+                    console.log('✅ HLS.js carregada com sucesso');
+                    resolve();
+                };
+                script.onerror = () => {
+                    console.error('❌ Erro ao carregar HLS.js');
+                    reject(new Error('Falha ao carregar HLS.js'));
+                };
+                document.head.appendChild(script);
+            });
+
+            return hlsLoadPromise;
+        }
+
         // Canais fixos otimizados para Tizen
         const channels = [
             { name: 'Warner', url: 'https://embedcanaistv.com/warner/', icon: '🎬' },
@@ -105,14 +136,15 @@
             { name: 'UFC', url: '//%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=ufcfightpass', icon: '📺' },
         ];
 
-        // Sistema de playlists ocultas com múltiplas estratégias de carregamento
+        // Sistema de playlists ocultas
         const playlistDatabase = {
             tvmista: {
                 name: "TV Mista",
-                content: `#EXTINF:-1,BR: Friends
+                content: `#EXTM3U
+#EXTINF:-1,BR: Friends
 http://24hrs.homelinux.com:8080/24H-friends/video.m3u8
-#EXTINF:-1,4K: TINY4K
-http://lunar.pm:8080/ALVIN/9gJbtWskzsJS/122876
+#EXTINF:-1,VIP: Brand New Amateurs
+http://lunar.pm:8080/ALVIN/9gJbtWskzsJS/122910
 #EXTINF:-1,BR: Eu a Patroa e as Crianças 24h
 http://24hrs.homelinux.com:8080/24H-euapatroaeascriancas7/playlist.m3u8
 #EXTINF:-1,BR: 2 Homens e Meio 24h
@@ -122,8 +154,7 @@ http://24hrs.homelinux.com:8080/24H-todomundoodeiaocris/video.m3u8
 #EXTINF:-1,BR: Um Maluco no Pedaço 24h
 http://24hrs.homelinux.com:8080/24H-ummaluconopedaco/playlist.m3u8`,
                 fallbackUrls: [
-                    "https://api.allorigins.win/raw?url=https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/tvmisto.m3u8",
-                    "https://cors-anywhere.herokuapp.com/https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/tvmisto.m3u8"
+                    "https://api.allorigins.win/raw?url=https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/tvmisto.m3u8"
                 ]
             },
             teste: {
@@ -135,17 +166,14 @@ https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8
 https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
 #EXTINF:-1,Big Buck Bunny
 https://test-streams.mux.dev/dai-discontinuity-deltatre/manifest.m3u8
-#EXTINF:-1,Sample Stream 4K
-https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_1mb.mp4
 #EXTINF:-1,Arte Concerto
 https://arteconcert-lh.akamaihd.net/i/arte_concert@356450/master.m3u8`,
-                fallbackUrls: [
-                    "https://api.allorigins.win/raw?url=https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/teste.m3u8"
-                ]
+                fallbackUrls: []
             },
             educativo: {
                 name: "Canais Educativos",
-                content: `#EXTINF:-1,BR: Friends
+                content: `#EXTM3U
+#EXTINF:-1,BR: Friends
 http://24hrs.homelinux.com:8080/24H-friends/video.m3u8
 #EXTINF:-1,BR: Eu a Patroa e as Crianças 24h
 http://24hrs.homelinux.com:8080/24H-euapatroaeascriancas7/playlist.m3u8
@@ -155,9 +183,7 @@ http://24hrs.homelinux.com:8080/24H-2HomensEmeio/playlist.m3u8
 http://24hrs.homelinux.com:8080/24H-todomundoodeiaocris/video.m3u8
 #EXTINF:-1,BR: Um Maluco no Pedaço 24h
 http://24hrs.homelinux.com:8080/24H-ummaluconopedaco/playlist.m3u8`,
-                fallbackUrls: [
-                    "https://api.allorigins.win/raw?url=https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/educativo.m3u8"
-                ]
+                fallbackUrls: []
             }
         };
 
@@ -168,17 +194,24 @@ http://24hrs.homelinux.com:8080/24H-ummaluconopedaco/playlist.m3u8`,
         let video = null;
 
         // Inicialização
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', async function() {
             video = document.getElementById('tizenVideo');
+            
+            // Tentar carregar HLS.js
+            try {
+                await loadHlsJs();
+            } catch (error) {
+                console.warn('HLS.js não pôde ser carregada, usando reprodução nativa');
+            }
             
             // Configurar botões
             document.getElementById('showBtn').addEventListener('click', showChannelSelection);
             document.getElementById('m3u8Btn').addEventListener('click', showM3U8Player);
             document.getElementById('hideBtn').addEventListener('click', hidePlayer);
             
-            // Configurar eventos de teclado para Smart TV
-            setupTVControls();
+            // Configurar eventos
             setupEventListeners();
+            setupTVControls();
             
             // Verificar se é uma Tizen TV
             if (isTizenTV()) {
@@ -201,7 +234,7 @@ http://24hrs.homelinux.com:8080/24H-ummaluconopedaco/playlist.m3u8`,
                 }
             });
 
-            // Controles de teclado para Smart TV (específicos para M3U8)
+            // Controles de teclado para Smart TV
             document.addEventListener('keydown', function(e) {
                 if (document.getElementById('m3u8Container').classList.contains('show')) {
                     switch(e.keyCode) {
@@ -290,22 +323,17 @@ http://24hrs.homelinux.com:8080/24H-ummaluconopedaco/playlist.m3u8`,
         }
 
         function playFixedChannel(channel, index) {
-            // Limpar seleção anterior
             document.querySelectorAll('.channel-btn').forEach(btn => btn.classList.remove('active'));
-            
-            // Marcar como ativo
             document.querySelectorAll('.channel-btn')[index].classList.add('active');
             
-            // Configurar iframe
             const iframe = document.getElementById('playerFrame');
             iframe.src = channel.url.startsWith('//') ? 'https:' + channel.url : channel.url;
             
-            // Mostrar player
             document.getElementById('playerContainer').classList.add('show');
             showStatus(`▶️ Assistindo: ${channel.name}`, 'visible');
         }
 
-        // Sistema de Playlist Oculta Integrado
+        // Sistema de Playlist Oculta
         async function loadHiddenPlaylist() {
             const code = document.getElementById('codeInput').value.trim().toLowerCase();
             const btn = document.getElementById('loadHiddenBtn');
@@ -320,82 +348,28 @@ http://24hrs.homelinux.com:8080/24H-ummaluconopedaco/playlist.m3u8`,
                 return;
             }
 
-            // Atualizar botão
             btn.disabled = true;
-            btn.innerHTML = '<span class="loading"></span> Carregando...';
+            btn.innerHTML = '🔄 Carregando...';
 
             try {
                 const playlist = playlistDatabase[code];
                 showStatus(`🔄 Carregando ${playlist.name}...`, 'visible');
                 
-                // Primeiro tentar o conteúdo embutido
+                // Usar conteúdo embutido
                 if (playlist.content) {
-                    console.log('Usando playlist embutida');
                     parseM3UContent(playlist.content);
-                    showStatus(`✅ ${playlist.name} carregada com sucesso! ${m3u8Channels.length} canais encontrados`, 'visible');
+                    showStatus(`✅ ${playlist.name} carregada! ${m3u8Channels.length} canais encontrados`, 'visible');
                     if (m3u8Channels.length > 0) {
                         playM3U8Channel(0);
                     }
-                } else if (playlist.fallbackUrls && playlist.fallbackUrls.length > 0) {
-                    // Tentar URLs de fallback se disponíveis
-                    const success = await loadPlaylistFromUrls(playlist.fallbackUrls);
-                    
-                    if (success) {
-                        showStatus(`✅ ${playlist.name} carregada com sucesso! ${m3u8Channels.length} canais encontrados`, 'visible');
-                        if (m3u8Channels.length > 0) {
-                            playM3U8Channel(0);
-                        }
-                    } else {
-                        showStatus('❌ Não foi possível carregar a playlist. Usando conteúdo de backup.', 'error');
-                    }
-                } else {
-                    showStatus('❌ Playlist não disponível no momento.', 'error');
                 }
             } catch (error) {
                 console.error('Erro ao carregar playlist:', error);
-                showStatus('❌ Erro interno. Usando playlist de backup.', 'error');
-                
-                // Usar conteúdo embutido como fallback final
-                const playlist = playlistDatabase[code];
-                if (playlist.content) {
-                    parseM3UContent(playlist.content);
-                    if (m3u8Channels.length > 0) {
-                        playM3U8Channel(0);
-                        showStatus(`✅ Playlist de backup carregada - ${m3u8Channels.length} canais`, 'visible');
-                    }
-                }
+                showStatus('❌ Erro ao carregar playlist', 'error');
             } finally {
                 btn.disabled = false;
                 btn.textContent = '🚀 Carregar Playlist';
             }
-        }
-
-        // Carregamento de URLs alternativas
-        async function loadPlaylistFromUrls(urls) {
-            for (const url of urls) {
-                try {
-                    console.log(`Tentando carregar de: ${url}`);
-                    const response = await fetch(url, {
-                        method: 'GET',
-                        headers: {
-                            'Accept': 'text/plain, application/vnd.apple.mpegurl, application/x-mpegURL',
-                        },
-                        mode: 'cors'
-                    });
-                    
-                    if (response.ok) {
-                        const content = await response.text();
-                        if (content && content.includes('#EXTM3U')) {
-                            console.log('Playlist carregada com sucesso de:', url);
-                            parseM3UContent(content);
-                            return true;
-                        }
-                    }
-                } catch (error) {
-                    console.log(`Falha ao carregar de ${url}:`, error.message);
-                }
-            }
-            return false;
         }
 
         function loadPlaylist() {
@@ -412,10 +386,7 @@ http://24hrs.homelinux.com:8080/24H-ummaluconopedaco/playlist.m3u8`,
         function loadPlaylistFromUrl(url) {
             showStatus('🔄 Carregando playlist...', 'visible');
             
-            // Adiciona timestamp para evitar cache
-            const cacheBusterUrl = url + (url.includes('?') ? '&' : '?') + '_=' + Date.now();
-            
-            return fetch(cacheBusterUrl)
+            fetch(url)
                 .then(response => {
                     if (!response.ok) throw new Error('Erro na requisição: ' + response.status);
                     return response.text();
@@ -429,20 +400,13 @@ http://24hrs.homelinux.com:8080/24H-ummaluconopedaco/playlist.m3u8`,
                     if (m3u8Channels.length > 0) {
                         playM3U8Channel(0);
                     }
-                    return true;
                 })
                 .catch(error => {
-                    // Tentar com proxy CORS se falhar
-                    if (!url.includes('cors-anywhere') && !url.includes('allorigins')) {
-                        const proxyUrl = 'https://api.allorigins.win/raw?url=' + encodeURIComponent(url);
-                        return loadPlaylistFromUrl(proxyUrl);
-                    }
                     showStatus(`❌ Erro ao carregar: ${error.message}`, 'error');
-                    throw error;
                 });
         }
 
-        // Parser M3U otimizado
+        // Parser M3U
         function parseM3UContent(content) {
             m3u8Channels = [];
             const lines = content.split('\n').map(line => line.trim()).filter(line => line);
@@ -451,11 +415,9 @@ http://24hrs.homelinux.com:8080/24H-ummaluconopedaco/playlist.m3u8`,
                 const line = lines[i];
                 
                 if (line.startsWith('#EXTINF:')) {
-                    // Extrair nome do canal
                     const nameMatch = line.match(/,(.+)$/);
                     const name = nameMatch ? nameMatch[1].trim() : `Canal ${m3u8Channels.length + 1}`;
                     
-                    // Próxima linha deve ser a URL
                     const nextLine = lines[i + 1];
                     if (nextLine && !nextLine.startsWith('#') && (nextLine.startsWith('http') || nextLine.startsWith('//'))) {
                         const url = nextLine.startsWith('//') ? 'https:' + nextLine : nextLine;
@@ -486,8 +448,8 @@ http://24hrs.homelinux.com:8080/24H-ummaluconopedaco/playlist.m3u8`,
             document.getElementById('channelCount').textContent = m3u8Channels.length;
         }
 
-        // Reprodução otimizada com sistema avançado do index2
-        function playM3U8Channel(index) {
+        // Reprodução M3U8
+        async function playM3U8Channel(index) {
             if (index < 0 || index >= m3u8Channels.length) return;
             
             currentM3U8Channel = index;
@@ -510,35 +472,38 @@ http://24hrs.homelinux.com:8080/24H-ummaluconopedaco/playlist.m3u8`,
             video.load();
             
             // Reproduzir baseado no tipo de stream
-            if (channel.url.includes('.m3u8')) {
-                playHLSStream(channel);
+            if (isHLSStream(channel.url)) {
+                await playHLSStream(channel);
             } else {
                 playDirectStream(channel);
             }
         }
 
-        // Reprodução HLS com suporte completo
-        function playHLSStream(channel) {
-            const url = channel.url;
-            
+        function isHLSStream(url) {
+            return url.includes('.m3u8') || 
+                   /\/live\/.*\/.*\/\d+$/.test(url) ||
+                   /:\d+\/.*\/.*\/\d+$/.test(url) ||
+                   /\/get\.php\?/.test(url);
+        }
+
+        async function playHLSStream(channel) {
             // Verificar se o navegador suporta HLS nativamente
             if (video.canPlayType('application/vnd.apple.mpegurl')) {
                 console.log('🍎 Usando HLS nativo do navegador');
                 playNativeHLS(channel);
             } 
-            // Usar HLS.js para outros navegadores
-            else if (Hls.isSupported()) {
+            // Usar HLS.js se disponível
+            else if (hlsLibLoaded && window.Hls && window.Hls.isSupported()) {
                 console.log('📡 Usando HLS.js para reprodução');
                 playWithHlsJS(channel);
             }
-            // Fallback para tentativa direta
+            // Fallback para reprodução direta
             else {
                 console.log('🔄 Tentativa de reprodução direta');
                 playDirectStream(channel);
             }
         }
 
-        // HLS Nativo (Safari, iOS, algumas Smart TVs)
         function playNativeHLS(channel) {
             video.src = channel.url;
             
@@ -550,35 +515,25 @@ http://24hrs.homelinux.com:8080/24H-ummaluconopedaco/playlist.m3u8`,
                     })
                     .catch(error => {
                         console.error('Erro na reprodução nativa:', error);
-                        showStatus(`❌ Erro ao reproduzir: ${channel.title}. Tentando método alternativo...`, 'error');
-                        
-                        // Tentar com HLS.js como fallback
-                        if (Hls.isSupported()) {
-                            setTimeout(() => playWithHlsJS(channel), 1000);
-                        }
+                        showStatus(`❌ Erro ao reproduzir: ${channel.title}`, 'error');
                     });
             }
         }
 
-        // HLS.js (Chrome, Firefox, Edge)
         function playWithHlsJS(channel) {
-            hls = new Hls({
+            hls = new window.Hls({
                 enableWorker: false,
                 lowLatencyMode: false,
                 backBufferLength: 30,
                 maxBufferLength: 60,
-                maxMaxBufferLength: 120,
                 startLevel: -1,
-                debug: false,
-                xhrSetup: function(xhr, url) {
-                    xhr.withCredentials = false;
-                }
+                debug: false
             });
             
             hls.loadSource(channel.url);
             hls.attachMedia(video);
             
-            hls.on(Hls.Events.MANIFEST_PARSED, function() {
+            hls.on(window.Hls.Events.MANIFEST_PARSED, function() {
                 console.log('📋 Manifest HLS carregado');
                 
                 const playPromise = video.play();
@@ -594,39 +549,26 @@ http://24hrs.homelinux.com:8080/24H-ummaluconopedaco/playlist.m3u8`,
                 }
             });
             
-            hls.on(Hls.Events.ERROR, function(event, data) {
+            hls.on(window.Hls.Events.ERROR, function(event, data) {
                 console.error('❌ Erro HLS.js:', data);
                 
                 if (data.fatal) {
-                    switch(data.type) {
-                        case Hls.ErrorTypes.NETWORK_ERROR:
-                            showStatus(`❌ Erro de rede: ${channel.title}. Tentando recarregar...`, 'error');
-                            setTimeout(() => {
-                                hls.startLoad();
-                            }, 2000);
-                            break;
-                            
-                        case Hls.ErrorTypes.MEDIA_ERROR:
-                            showStatus(`❌ Erro de mídia: ${channel.title}. Tentando recuperar...`, 'error');
-                            hls.recoverMediaError();
-                            break;
-                            
-                        default:
-                            showStatus(`❌ Erro fatal no player: ${channel.title}`, 'error');
-                            hls.destroy();
-                            hls = null;
-                            break;
-                    }
+                    showStatus(`❌ Erro no player: ${channel.title}`, 'error');
+                    hls.destroy();
+                    hls = null;
+                    // Tentar reprodução direta como fallback
+                    setTimeout(() => {
+                        playDirectStream(channel);
+                    }, 1000);
                 }
             });
         }
 
-        // Reprodução direta (MP4, WebM, etc.)
         function playDirectStream(channel) {
             console.log('🎬 Reprodução direta do stream');
             
             video.src = channel.url;
-            video.crossOrigin = 'anonymous';
+            video.preload = 'auto';
             
             video.addEventListener('loadeddata', function() {
                 const playPromise = video.play();
@@ -702,7 +644,7 @@ http://24hrs.homelinux.com:8080/24H-ummaluconopedaco/playlist.m3u8`,
             document.addEventListener('keydown', function(e) {
                 const key = e.keyCode || e.which;
                 
-                // Teclas específicas para Smart TV (aplicadas globalmente)
+                // Teclas específicas para Smart TV
                 switch(key) {
                     case 27: // ESC
                     case 10009: // Tizen Return
