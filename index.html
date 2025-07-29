@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Player M3U8 Aprimorado </title>
+    <title>Player M3U8 Aprimorado - Sem CORS</title>
     <style>
         * {
             margin: 0;
@@ -294,6 +294,12 @@
             box-shadow: 0 6px 20px rgba(33, 150, 243, 0.4);
         }
 
+        .load-btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+
         .message {
             margin: 15px 0;
             padding: 12px;
@@ -399,6 +405,21 @@
             border: 1px solid rgba(76, 175, 80, 0.3);
         }
 
+        .loading {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid rgba(255,255,255,.3);
+            border-radius: 50%;
+            border-top-color: #fff;
+            animation: spin 1s ease-in-out infinite;
+            margin-right: 10px;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
@@ -421,10 +442,10 @@
 </head>
 <body>
     <div class="container">
-        <h1>🎬 Player</h1>
+        <h1>🎬 Player M3U8</h1>
         
         <div class="button-container">
-            <button class="btn btn-show" id="showBtn" onclick="showChannelSelection()">📺 Canais</button>
+            <button class="btn btn-show" id="showBtn" onclick="showChannelSelection()">📺 Canais Fixos</button>
             <button class="btn btn-m3u8" id="m3u8Btn" onclick="showM3U8Player()">🎬 M3U8 Player</button>
             <button class="btn btn-hide" id="hideBtn" onclick="hidePlayer()" disabled>❌ Fechar</button>
         </div>
@@ -449,11 +470,12 @@
             
             <!-- Playlist Oculta -->
             <div class="input-section">
-                <h3>🔐 Acessar Playlist Oculta</h3>
+                <h3>🔐 Acessar Playlist</h3>
                 <div class="input-group">
                     <input type="text" id="codeInput" placeholder="Digite o código de acesso aqui" style="font-family: monospace;">
                 </div>
-                <button onclick="loadHiddenPlaylist()" class="load-btn">Carregar Playlist Oculta</button>
+                <button onclick="loadHiddenPlaylist()" class="load-btn" id="hiddenPlaylistBtn">Carregar Playlist Oculta</button>
+               
             </div>
 
             <!-- Input Manual -->
@@ -515,41 +537,57 @@
     <script>
         // Canais fixos
         const channels = [
-        		{ name: 'Warner', url: '//%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=warner', icon: '📺' },
+            { name: 'Warner', url: '//%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=warner', icon: '📺' },
 			{ name: 'ESPN1', url: '//%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=espn', icon: '⚽' },
 			{ name: 'ESPN2', url: '//%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=espn2', icon: '⚽' },
 			{ name: 'ESPN3', url: '//%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=espn3', icon: '⚽' },
 			{ name: 'ESPN4', url: '//%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=espn4', icon: '⚽' },
 			{ name: 'ESPN5', url: '//%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=espn5', icon: '⚽' },
 			{ name: 'ESPN6', url: '//%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=espn6', icon: '⚽' },
-           		{ name: 'SportTV1', url: '//%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=sportv1', icon: '⚽' },
+			{ name: 'SportTV1', url: '//%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=sportv1', icon: '⚽' },
 			{ name: 'SportTV2', url: '//%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=sportv2', icon: '⚽' },
-        		{ name: 'SportTV3', url: '//%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=sportv3', icon: '⚽' },
-        		{ name: 'Premiere', url: '//%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=premiereclubes', icon: '⚽' },
-        		{ name: 'Premiere2', url: '//%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=premiere2', icon: '⚽' },
-        		{ name: 'Premiere3', url: '//%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=premiere3', icon: '⚽' },
-        		{ name: 'Premiere4', url: '//%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=premiere4', icon: '⚽' },
-        		{ name: 'Premiere5', url: '//%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=premiere5', icon: '⚽' },
-        		{ name: 'Premiere6', url: '//%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=premiere6', icon: '⚽' },
-        		{ name: 'TNT', url: '//%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=tnt', icon: '📺' },
+        	{ name: 'SportTV3', url: '//%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=sportv3', icon: '⚽' },
+        	{ name: 'Premiere', url: '//%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=premiereclubes', icon: '⚽' },
+        	{ name: 'Premiere2', url: '//%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=premiere2', icon: '⚽' },
+        	{ name: 'Premiere3', url: '//%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=premiere3', icon: '⚽' },
+        	{ name: 'Premiere4', url: '//%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=premiere4', icon: '⚽' },
+        	{ name: 'Premiere5', url: '//%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=premiere5', icon: '⚽' },
+        	{ name: 'Premiere6', url: '//%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=premiere6', icon: '⚽' },
+        	{ name: 'TNT', url: '//%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=tnt', icon: '📺' },
 			{ name: 'TNTseries', url: '//%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=tntseries', icon: '📺' },
 			{ name: 'HBO', url: '//%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=hbo', icon: '📺' },
-			{ name: 'HBO', url: '//%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=hbo2', icon: '📺' },
-        		{ name: 'Universal', url: '//%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=universal', icon: '📺' },
+			{ name: 'HBO2', url: '//%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=hbo2', icon: '📺' },
+        	{ name: 'Universal', url: '//%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=universal', icon: '📺' },
 			{ name: 'Space', url: '//%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=space', icon: '📺' },
-          		{ name: 'Telecine Action', url: '//%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=telecineaction', icon: '📺' },
-           		{ name: 'Megapix', url: '//%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=megapix', icon: '📺' },
+            { name: 'Telecine Action', url: '//%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=telecineaction', icon: '📺' },
+            { name: 'Megapix', url: '//%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=megapix', icon: '📺' },
 			{ name: 'UFC', url: '//%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=ufcfightpass', icon: '📺' },
         ];
 
-        // Dicionário de playlists ocultas - usando proxy CORS
-        const HIDDEN_PLAYLISTS = {
-            "tvmista": "https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/tvmisto.m3u8",
-            "xxxxxxx": "https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/teste.m3u8",
-            "xxxxxxxx": "https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/educativo.m3u8",
-            // Playlists de exemplo que funcionam diretamente
-            "demo1": "data:text/plain;charset=utf-8,%23EXTM3U%0A%23EXTINF%3A-1%2CGlobo%0Ahttps%3A//redecanais.tv/player3/ch.php%3Fcanal%3Dglobo%0A%23EXTINF%3A-1%2CSBT%0Ahttps%3A//redecanais.tv/player3/ch.php%3Fcanal%3Dsbt%0A%23EXTINF%3A-1%2CRecord%0Ahttps%3A//redecanais.tv/player3/ch.php%3Fcanal%3Drecord",
-            "demo2": "data:text/plain;charset=utf-8,%23EXTM3U%0A%23EXTINF%3A-1%2CESP%20Brasil%0Ahttps%3A//espnlive.me/br%0A%23EXTINF%3A-1%2CFox%20Sports%0Ahttps%3A//foxsportslive.me/br%0A%23EXTINF%3A-1%2CSporTV%0Ahttps%3A//sportv.me/br"
+        // Sistema de playlists ocultas - corrigido
+        const getHiddenPlaylist = (code) => {
+            const playlists = {
+                "tvmista171": {
+                    urls: [
+                        "https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/tvmisto.m3u8"
+                    ]
+                },
+                "teste": {
+                    urls: [
+                        "https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/teste.m3u8",
+                        "https://api.allorigins.win/raw?url=https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/teste.m3u8",
+                        "https://thingproxy.freeboard.io/fetch/https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/teste.m3u8"
+                    ]
+                },
+                "educativo": {
+                    urls: [
+                        "https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/educativo.m3u8",
+                        "https://api.allorigins.win/raw?url=https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/educativo.m3u8",
+                        "https://thingproxy.freeboard.io/fetch/https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/educativo.m3u8"
+                    ]
+                }
+            };
+            return playlists[code] || null;
         };
 
         // Variáveis globais
@@ -646,99 +684,60 @@
             showMessage(`Proxy selecionado: ${proxy || 'Nenhum'}`, 'success');
         }
 
-        function loadHiddenPlaylist() {
+        // Função corrigida para carregar playlists ocultas
+        async function loadHiddenPlaylist() {
             const code = document.getElementById('codeInput').value.trim();
+            const btn = document.getElementById('hiddenPlaylistBtn');
             
             if (!code) {
                 showMessage('Por favor, insira um código de acesso.', 'error');
                 return;
             }
 
-            if (HIDDEN_PLAYLISTS[code]) {
-                const playlistUrl = HIDDEN_PLAYLISTS[code];
-                
-                // Se for uma URL data:, decodificar diretamente
-                if (playlistUrl.startsWith('data:text/plain')) {
-                    try {
-                        const base64Data = playlistUrl.split(',')[1];
-                        const decodedData = decodeURIComponent(base64Data);
-                        parseM3U(decodedData);
-                        showMessage('Playlist oculta carregada com sucesso!', 'success');
-                        return;
-                    } catch (error) {
-                        showMessage('Erro ao decodificar playlist interna.', 'error');
-                        return;
-                    }
-                }
-                
-                // Para URLs normais, carregar via fetch
-                showMessage('Carregando playlist oculta...', 'success');
-                fetch(playlistUrl, {
-                    method: 'GET',
-                    headers: { 'Accept': 'text/plain,application/vnd.apple.mpegurl,*/*' }
-                })
-                .then(response => {
-                    if (!response.ok) throw new Error(`HTTP ${response.status}`);
-                    return response.text();
-                })
-                .then(data => {
-                    parseM3U(data);
-                    showMessage('Playlist oculta carregada com sucesso!', 'success');
-                })
-                .catch(error => {
-                    console.error('Erro:', error);
-                    showMessage(`Erro ao carregar playlist oculta: ${error.message}`, 'error');
-                });
-            } else {
-                showMessage('Código inválido. Verifique e tente novamente.', 'error');
-            }
-        }
-
-        function loadHiddenPlaylist() {
-            const code = document.getElementById('codeInput').value.trim();
-            
-            if (!code) {
-                showMessage('Por favor, insira um código de acesso.', 'error');
+            const playlist = getHiddenPlaylist(code);
+            if (!playlist) {
+                showMessage('Código inválido. Tente um código válido.', 'error');
                 return;
             }
 
-            if (HIDDEN_PLAYLISTS[code]) {
-                const playlistUrl = HIDDEN_PLAYLISTS[code];
+            // Desabilitar botão durante carregamento
+            btn.disabled = true;
+            btn.innerHTML = '<div class="loading"></div>Carregando...';
+            
+            try {
+                // Tentar carregar de uma das URLs da playlist
+                let loadedSuccessfully = false;
                 
-                // Se for uma URL data:, decodificar diretamente
-                if (playlistUrl.startsWith('data:text/plain')) {
+                for (const url of playlist.urls) {
                     try {
-                        const base64Data = playlistUrl.split(',')[1];
-                        const decodedData = decodeURIComponent(base64Data);
-                        parseM3U(decodedData);
-                        showMessage('Playlist oculta carregada com sucesso!', 'success');
-                        return;
+                        console.log('Tentando carregar:', url);
+                        const response = await fetch(url);
+                        
+                        if (response.ok) {
+                            const data = await response.text();
+                            if (data && data.trim()) {
+                                parseM3U(data);
+                                showMessage('✅ Playlist oculta carregada com sucesso!', 'success');
+                                loadedSuccessfully = true;
+                                break;
+                            }
+                        }
                     } catch (error) {
-                        showMessage('Erro ao decodificar playlist interna.', 'error');
-                        return;
+                        console.log('Erro ao carregar URL:', url, error);
+                        continue;
                     }
                 }
                 
-                // Para URLs normais, carregar via fetch
-                showMessage('Carregando playlist oculta...', 'success');
-                fetch(playlistUrl, {
-                    method: 'GET',
-                    headers: { 'Accept': 'text/plain,application/vnd.apple.mpegurl,*/*' }
-                })
-                .then(response => {
-                    if (!response.ok) throw new Error(`HTTP ${response.status}`);
-                    return response.text();
-                })
-                .then(data => {
-                    parseM3U(data);
-                    showMessage('Playlist oculta carregada com sucesso!', 'success');
-                })
-                .catch(error => {
-                    console.error('Erro:', error);
-                    showMessage(`Erro ao carregar playlist oculta: ${error.message}`, 'error');
-                });
-            } else {
-                showMessage('Código inválido. Verifique e tente novamente.', 'error');
+                if (!loadedSuccessfully) {
+                    throw new Error('Nenhuma URL da playlist pôde ser carregada');
+                }
+                
+            } catch (error) {
+                console.error('Erro ao carregar playlist oculta:', error);
+                showMessage('❌ Erro ao carregar playlist. Tente novamente.', 'error');
+            } finally {
+                btn.disabled = false;
+                btn.innerHTML = 'Carregar Playlist Oculta';
             }
         }
 
@@ -752,9 +751,16 @@
             showMessage('Testando URL...', 'success');
             
             const testUrl = selectedProxy + url;
+            const controller = new AbortController();
+            const timeoutId = setTimeout(() => controller.abort(), 10000);
             
-            fetch(testUrl, { method: 'HEAD', mode: 'cors' })
+            fetch(testUrl, { 
+                method: 'HEAD', 
+                mode: 'cors',
+                signal: controller.signal
+            })
             .then(response => {
+                clearTimeout(timeoutId);
                 if (response.ok) {
                     showMessage('✅ URL acessível! Você pode carregar a playlist.', 'success');
                 } else {
@@ -762,6 +768,7 @@
                 }
             })
             .catch(error => {
+                clearTimeout(timeoutId);
                 showMessage('❌ URL não acessível. Verifique a URL ou tente outro proxy.', 'error');
             });
         }
@@ -783,12 +790,16 @@
             showMessage('Carregando playlist...', 'success');
             
             const finalUrl = selectedProxy + url;
+            const controller = new AbortController();
+            const timeoutId = setTimeout(() => controller.abort(), 15000);
             
             fetch(finalUrl, {
                 method: 'GET',
-                headers: { 'Accept': 'text/plain,application/vnd.apple.mpegurl,*/*' }
+                headers: { 'Accept': 'text/plain,application/vnd.apple.mpegurl,*/*' },
+                signal: controller.signal
             })
             .then(response => {
+                clearTimeout(timeoutId);
                 if (!response.ok) throw new Error(`HTTP ${response.status}`);
                 return response.text();
             })
@@ -797,6 +808,7 @@
                 showMessage('Playlist carregada com sucesso!', 'success');
             })
             .catch(error => {
+                clearTimeout(timeoutId);
                 console.error('Erro:', error);
                 showMessage(`Erro ao carregar: ${error.message}. Tente outro proxy ou verifique a URL.`, 'error');
             });
@@ -816,6 +828,12 @@
 
         function parseM3U(data) {
             m3u8Channels = [];
+            
+            if (!data || typeof data !== 'string') {
+                showMessage('Dados da playlist inválidos.', 'error');
+                return;
+            }
+            
             const lines = data.split('\n');
             let currentChannel = null;
 
@@ -843,6 +861,13 @@
             displayM3U8Playlist();
             updateChannelCount();
             showMessage(`${m3u8Channels.length} canais encontrados!`, 'success');
+            
+            // Auto-play do primeiro canal
+            if (m3u8Channels.length > 0) {
+                setTimeout(() => {
+                    playM3U8Channel(0);
+                }, 1000);
+            }
         }
 
         function displayM3U8Playlist() {
@@ -1026,5 +1051,14 @@
             if (hls) hls.destroy();
         });
     </script>
+	
+	<div class="button-container">
+				<form action="https://nossoplayeronlinehd.blog/" method="get" target="_blank">
+				<button class="btn btn-show" id="showBtn" type="submit">nossoplayeronlinehd</button>
+    </form>
+	<form 		action="https://nossoplayeronlinehd.blog/" method="get" target="_blank">
+				<button class="btn btn-m3u8" id="m3u8Btn" type="submit">nossoplayeronlinehd</button>
+    </form>
+	</div>
 </body>
 </html>
