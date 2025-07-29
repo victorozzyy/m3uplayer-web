@@ -13,13 +13,14 @@
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
             min-height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             padding: 20px;
+            color: white;
         }
 
         .container {
@@ -51,163 +52,156 @@
         }
 
         .btn {
-            padding: 12px 24px;
+            padding: 15px 30px;
             border: none;
             border-radius: 50px;
-            font-size: 16px;
+            font-size: 18px;
             font-weight: 600;
             cursor: pointer;
             transition: all 0.3s ease;
             text-transform: uppercase;
             letter-spacing: 1px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            color: white;
         }
 
         .btn-show {
-            background: linear-gradient(45deg, #4CAF50, #45a049);
-            color: white;
+            background: linear-gradient(45deg, #4CAF50, #2E7D32);
         }
 
         .btn-hide {
-            background: linear-gradient(45deg, #f44336, #da190b);
-            color: white;
+            background: linear-gradient(45deg, #f44336, #c62828);
         }
 
         .btn-m3u8 {
-            background: linear-gradient(45deg, #9c27b0, #673ab7);
-            color: white;
+            background: linear-gradient(45deg, #9c27b0, #6a1b9a);
+        }
+
+        .btn-external {
+            background: linear-gradient(45deg, #2196F3, #1565C0);
         }
 
         .btn:hover {
-            transform: translateY(-2px);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .btn:active {
+            transform: translateY(1px);
         }
 
         .btn:disabled {
             opacity: 0.6;
             cursor: not-allowed;
             transform: none;
+            box-shadow: none;
         }
 
-        .channel-selection {
-            display: none;
-            margin-bottom: 30px;
-            animation: fadeIn 0.5s ease-in-out;
-        }
-
-        .channel-selection.show {
-            display: block;
-        }
-
-        .channel-title {
-            color: white;
-            font-size: 1.5rem;
-            margin-bottom: 20px;
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
-        }
-
-        .channel-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 15px;
-            margin-bottom: 20px;
-        }
-
-        .channel-btn {
-            padding: 15px 20px;
-            border: none;
-            border-radius: 15px;
-            font-size: 14px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            background: rgba(255, 255, 255, 0.1);
-            color: white;
-            border: 2px solid rgba(255, 255, 255, 0.2);
-            backdrop-filter: blur(5px);
-        }
-
-        .channel-btn:hover, .channel-btn:focus {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
-            background: rgba(255, 255, 255, 0.2);
-            border-color: rgba(255, 255, 255, 0.4);
-            outline: 2px solid #4CAF50;
-        }
-
-        .channel-btn.active {
-            background: linear-gradient(45deg, #4CAF50, #45a049);
-            border-color: #4CAF50;
-            transform: scale(1.05);
-        }
-
-        /* Player Container - CORRIGIDO para Tizen */
         .player-container {
             display: none;
-            background: rgba(0, 0, 0, 0.8);
-            border-radius: 15px;
-            padding: 20px;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
-            animation: fadeIn 0.5s ease-in-out;
+            width: 100%;
+            margin-top: 20px;
+            animation: fadeIn 0.5s ease;
         }
 
         .player-container.show {
             display: block;
         }
 
-        /* Video Player Responsivo - SEM dimensões fixas */
         .video-wrapper {
             position: relative;
             width: 100%;
-            margin: 0 auto 20px auto;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            background: #000;
             border-radius: 10px;
             overflow: hidden;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-            background: #000;
+            margin-bottom: 20px;
         }
 
-        /* Vídeo responsivo para Tizen */
         .tizen-video {
+            position: absolute;
+            top: 0;
+            left: 0;
             width: 100%;
-            height: auto;
-            max-height: 70vh;
-            min-height: 300px;
+            height: 100%;
             background: #000;
-            border: none;
-            outline: none;
-            object-fit: contain;
         }
 
-        /* Iframe para canais fixos */
-        .channel-iframe {
-            width: 100%;
-            height: 450px;
+        .controls {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+
+        .control-btn {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 25px;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            min-width: 120px;
+        }
+
+        .control-btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+
+        .channel-selection {
+            display: none;
+            margin: 20px 0;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .channel-selection.show {
+            display: block;
+        }
+
+        .channel-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .channel-btn {
+            padding: 15px;
             border: none;
             border-radius: 10px;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            min-height: 60px;
         }
 
-        .current-channel {
-            color: white;
-            margin-bottom: 15px;
-            font-size: 1.2rem;
-            font-weight: 600;
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        .channel-btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+        }
+
+        .channel-btn.active {
+            background: linear-gradient(45deg, #4CAF50, #2E7D32);
+            transform: scale(1.05);
         }
 
         .input-section {
-            margin-bottom: 20px;
-            padding: 20px;
-            border: 2px solid rgba(255,255,255,0.2);
+            background: rgba(255, 255, 255, 0.1);
             border-radius: 15px;
-            background: rgba(255,255,255,0.1);
-            backdrop-filter: blur(10px);
-        }
-
-        .input-section h3 {
-            color: white;
-            margin-bottom: 15px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
         }
 
         .input-group {
@@ -215,193 +209,84 @@
         }
 
         .input-group label {
-            color: white;
             display: block;
             margin-bottom: 8px;
-            font-weight: 500;
+            font-weight: 600;
+            color: white;
         }
 
-        .input-group input, .input-group select {
+        .input-group input {
             width: 100%;
-            padding: 12px;
-            border: 2px solid rgba(255,255,255,0.3);
+            padding: 12px 15px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
             border-radius: 8px;
-            background: rgba(255,255,255,0.1);
+            background: rgba(255, 255, 255, 0.1);
             color: white;
-            font-size: 14px;
+            font-size: 16px;
             transition: all 0.3s ease;
         }
 
-        .input-group input:focus, .input-group select:focus {
+        .input-group input:focus {
             outline: none;
             border-color: #4CAF50;
-            box-shadow: 0 0 10px rgba(76, 175, 80, 0.3);
-        }
-
-        .input-group input::placeholder {
-            color: rgba(255,255,255,0.6);
-        }
-
-        .proxy-selector {
-            display: flex;
-            gap: 10px;
-            margin-bottom: 15px;
-            flex-wrap: wrap;
-        }
-
-        .proxy-btn {
-            padding: 8px 16px;
-            border: 2px solid rgba(255,255,255,0.3);
-            border-radius: 20px;
-            background: rgba(255,255,255,0.1);
-            color: white;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            font-size: 12px;
-        }
-
-        .proxy-btn:hover, .proxy-btn.active {
-            background: rgba(76, 175, 80, 0.3);
-            border-color: #4CAF50;
-        }
-
-        .load-btn {
-            background: linear-gradient(45deg, #2196F3, #1976D2);
-            color: white;
-            padding: 12px 24px;
-            border: none;
-            border-radius: 25px;
-            cursor: pointer;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            margin: 5px;
-        }
-
-        .load-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(33, 150, 243, 0.4);
-        }
-
-        .load-btn:disabled {
-            opacity: 0.6;
-            cursor: not-allowed;
-            transform: none;
-        }
-
-        .message {
-            margin: 15px 0;
-            padding: 12px;
-            border-radius: 8px;
-            font-weight: 500;
-            display: none;
-            animation: slideIn 0.3s ease;
-        }
-
-        .message.success {
-            background: rgba(76, 175, 80, 0.2);
-            color: #4CAF50;
-            border: 1px solid rgba(76, 175, 80, 0.3);
-        }
-
-        .message.error {
-            background: rgba(244, 67, 54, 0.2);
-            color: #f44336;
-            border: 1px solid rgba(244, 67, 54, 0.3);
+            box-shadow: 0 0 10px rgba(76, 175, 80, 0.5);
         }
 
         .playlist-container {
-            margin-top: 20px;
-            max-height: 400px;
+            max-height: 300px;
             overflow-y: auto;
-            border: 2px solid rgba(255,255,255,0.2);
+            background: rgba(0, 0, 0, 0.3);
             border-radius: 10px;
-            background: rgba(0,0,0,0.3);
+            margin-top: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         .m3u8-channel {
-            padding: 12px 16px;
-            border-bottom: 1px solid rgba(255,255,255,0.1);
-            color: white;
+            padding: 12px 15px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
             cursor: pointer;
             transition: all 0.3s ease;
-            display: flex;
-            align-items: center;
-            gap: 10px;
         }
 
-        .m3u8-channel:hover, .m3u8-channel:focus {
-            background: rgba(255,255,255,0.1);
-            outline: 2px solid #4CAF50;
+        .m3u8-channel:hover {
+            background: rgba(255, 255, 255, 0.1);
         }
 
         .m3u8-channel.active {
-            background: linear-gradient(45deg, #4CAF50, #45a049);
+            background: linear-gradient(45deg, rgba(76, 175, 80, 0.3), rgba(46, 125, 50, 0.3));
             font-weight: 600;
-        }
-
-        .m3u8-channel:last-child {
-            border-bottom: none;
-        }
-
-        /* Controles integrados - NÃO flutuantes */
-        .controls {
-            display: flex;
-            gap: 10px;
-            justify-content: center;
-            margin: 15px 0;
-            flex-wrap: wrap;
-            padding: 15px;
-            background: rgba(255,255,255,0.1);
-            border-radius: 15px;
-            backdrop-filter: blur(5px);
-        }
-
-        .control-btn {
-            padding: 12px 20px;
-            border: none;
-            border-radius: 25px;
-            background: rgba(255,255,255,0.2);
-            color: white;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            font-size: 14px;
-            font-weight: 600;
-        }
-
-        .control-btn:hover, .control-btn:focus {
-            background: rgba(255,255,255,0.3);
-            outline: 2px solid #4CAF50;
-            transform: translateY(-2px);
         }
 
         .status {
-            margin-top: 20px;
-            padding: 10px;
+            padding: 15px;
             border-radius: 10px;
+            margin-top: 20px;
             font-weight: 600;
-            transition: all 0.3s ease;
-        }
-
-        .status.hidden {
-            background: rgba(244, 67, 54, 0.2);
-            color: #f44336;
-            border: 1px solid rgba(244, 67, 54, 0.3);
+            display: none;
         }
 
         .status.visible {
+            display: block;
             background: rgba(76, 175, 80, 0.2);
-            color: #4CAF50;
             border: 1px solid rgba(76, 175, 80, 0.3);
+            color: #4CAF50;
+        }
+
+        .status.error {
+            display: block;
+            background: rgba(244, 67, 54, 0.2);
+            border: 1px solid rgba(244, 67, 54, 0.3);
+            color: #f44336;
         }
 
         .loading {
             display: inline-block;
             width: 20px;
             height: 20px;
-            border: 3px solid rgba(255,255,255,.3);
+            border: 3px solid rgba(255, 255, 255, 0.3);
             border-radius: 50%;
-            border-top-color: #fff;
-            animation: spin 1s ease-in-out infinite;
+            border-top-color: white;
+            animation: spin 1s linear infinite;
             margin-right: 10px;
         }
 
@@ -414,35 +299,29 @@
             to { opacity: 1; transform: translateY(0); }
         }
 
-        @keyframes slideIn {
-            from { opacity: 0; transform: translateX(-20px); }
-            to { opacity: 1; transform: translateX(0); }
-        }
-
-        /* Media Queries para Smart TV */
+        /* Otimizações para Tizen TV */
         @media screen and (min-width: 1920px) {
-            .tizen-video {
-                max-height: 80vh;
-                min-height: 500px;
+            .btn {
+                padding: 20px 40px;
+                font-size: 22px;
             }
             
-            .container {
-                max-width: 90vw;
-            }
-            
-            .btn, .channel-btn, .load-btn, .control-btn {
-                font-size: 18px;
+            .control-btn {
                 padding: 15px 30px;
+                font-size: 20px;
+                min-width: 150px;
             }
-        }
-
-        @media (max-width: 768px) {
-            .container { padding: 20px; margin: 10px; }
-            h1 { font-size: 2rem; margin-bottom: 20px; }
-            .button-container { flex-direction: column; align-items: center; }
-            .btn { width: 200px; }
-            .channel-grid { grid-template-columns: 1fr; }
-            .proxy-selector { flex-direction: column; }
+            
+            .channel-btn {
+                padding: 20px;
+                font-size: 20px;
+                min-height: 80px;
+            }
+            
+            .input-group input {
+                padding: 15px 20px;
+                font-size: 20px;
+            }
         }
     </style>
 </head>
@@ -451,130 +330,112 @@
         <h1>🎬 Player M3U8 - Tizen TV</h1>
         
         <div class="button-container">
-            <button class="btn btn-show" id="showBtn" onclick="showChannelSelection()">📺 Canais Fixos</button>
-            <button class="btn btn-m3u8" id="m3u8Btn" onclick="showM3U8Player()">🎬 M3U8 Player</button>
-            <button class="btn btn-hide" id="hideBtn" onclick="hidePlayer()" disabled>❌ Fechar</button>
+            <button class="btn btn-show" id="showBtn">📺 Canais Fixos</button>
+            <button class="btn btn-m3u8" id="m3u8Btn">🎬 M3U8 Player</button>
+            <button class="btn btn-hide" id="hideBtn" disabled>❌ Fechar</button>
         </div>
 
-        <!-- Canal Selection -->
+        <!-- Seção de Canais Fixos -->
         <div class="channel-selection" id="channelSelection">
-            <h3 class="channel-title">📺 Escolha um Canal</h3>
+            <h2>📺 Escolha um Canal</h2>
             <div class="channel-grid" id="channelGrid"></div>
         </div>
 
-        <!-- Normal Player (Canais Fixos) -->
+        <!-- Player para Canais Fixos -->
         <div class="player-container" id="playerContainer">
-            <div class="current-channel" id="currentChannel">📡 Canal Selecionado</div>
             <div class="video-wrapper">
-                <iframe id="playerFrame" class="channel-iframe" src="" frameborder="0" scrolling="no" allow="encrypted-media" allowfullscreen></iframe>
+                <iframe id="playerFrame" class="tizen-video" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="controls">
+                <button class="control-btn" onclick="hidePlayer()">Voltar</button>
             </div>
         </div>
 
-        <!-- M3U8 Player -->
+        <!-- Player M3U8 -->
         <div class="player-container" id="m3u8Container">
-            <div class="current-channel" id="m3u8CurrentChannel">🎬 M3U8 Player Ativo</div>
-            
-            <!-- Playlist Oculta -->
+            <!-- Input para Playlist Oculta -->
             <div class="input-section">
-                <h3>🔐 Acessar Playlist</h3>
+                <h3>🔐 Playlist Oculta</h3>
                 <div class="input-group">
-                    <input type="text" id="codeInput" placeholder="Digite o código de acesso aqui" style="font-family: monospace;">
+                    <label for="codeInput">Código de Acesso:</label>
+                    <input type="text" id="codeInput" placeholder="Digite o código da playlist">
                 </div>
-                <button onclick="loadHiddenPlaylist()" class="load-btn" id="hiddenPlaylistBtn">Carregar Playlist Oculta</button>
+                <button class="btn btn-m3u8" id="loadHiddenBtn" onclick="loadHiddenPlaylist()">Carregar Playlist</button>
             </div>
 
             <!-- Input Manual -->
             <div class="input-section">
-                <h3>🌐 Carregar Playlist Manual</h3>
-                
+                <h3>🌐 Carregar Playlist Manualmente</h3>
                 <div class="input-group">
-                    <label>Selecionar Proxy CORS:</label>
-                    <div class="proxy-selector">
-                        <button class="proxy-btn" onclick="selectProxy('')">Sem Proxy</button>
-                        <button class="proxy-btn active" onclick="selectProxy('https://cors-anywhere.herokuapp.com/')">CORS Anywhere</button>
-                        <button class="proxy-btn" onclick="selectProxy('https://api.allorigins.win/raw?url=')">AllOrigins</button>
-                        <button class="proxy-btn" onclick="selectProxy('https://thingproxy.freeboard.io/fetch/')">ThingProxy</button>
-                    </div>
-                </div>
-
-                <div class="input-group">
-                    <label>📡 URL da Playlist M3U8:</label>
+                    <label for="urlInput">URL da Playlist:</label>
                     <input type="url" id="urlInput" placeholder="https://exemplo.com/playlist.m3u8">
                 </div>
-                
-                <div class="input-group">
-                    <label>📁 Ou selecione um arquivo:</label>
-                    <input type="file" id="fileInput" accept=".m3u,.m3u8">
-                </div>
-                
-                <button onclick="loadPlaylist()" class="load-btn">🚀 Carregar Playlist</button>
-                <button onclick="testUrl()" class="load-btn">🔍 Testar URL</button>
+                <button class="btn btn-m3u8" onclick="loadPlaylist()">Carregar URL</button>
             </div>
 
-            <div id="m3u8Message" class="message"></div>
-
-            <!-- Player de Vídeo Otimizado para Tizen -->
+            <!-- Player de Vídeo -->
             <div class="video-wrapper">
-                <video id="tizenVideo" class="tizen-video" controls crossorigin="anonymous" playsinline webkit-playsinline>
-                    Seu navegador não suporta o elemento de vídeo.
-                </video>
+                <video id="tizenVideo" class="tizen-video" controls playsinline webkit-playsinline></video>
             </div>
 
-            <!-- Controles Integrados (NÃO flutuantes) -->
+            <!-- Controles -->
             <div class="controls">
-                <button class="control-btn" onclick="previousChannel()" tabindex="0">⏮️ Anterior</button>
-                <button class="control-btn" onclick="nextChannel()" tabindex="0">⏭️ Próximo</button>
-                <button class="control-btn" onclick="reloadChannel()" tabindex="0">🔄 Recarregar</button>
-                <button class="control-btn" onclick="togglePlayPause()" tabindex="0">⏯️ Play/Pause</button>
+                <button class="control-btn" onclick="previousChannel()">⏮ Anterior</button>
+                <button class="control-btn" onclick="nextChannel()">⏭ Próximo</button>
+                <button class="control-btn" onclick="reloadChannel()">🔄 Recarregar</button>
+                <button class="control-btn" onclick="togglePlayPause()">⏯ Play/Pause</button>
             </div>
 
-            <!-- Playlist -->
-            <div style="margin-top: 20px;">
-                <h3 style="color: white; margin-bottom: 15px;">📋 Lista de Reprodução (<span id="channelCount">0</span> canais):</h3>
-                <div id="m3u8Playlist" class="playlist-container"></div>
+            <!-- Lista de Canais -->
+            <div>
+                <h3>📋 Lista de Canais (<span id="channelCount">0</span>)</h3>
+                <div class="playlist-container" id="m3u8Playlist"></div>
             </div>
         </div>
 
-        <div class="status hidden" id="status">🔒 Selecione uma opção acima</div>
+        <!-- Status -->
+        <div class="status" id="status"></div>
     </div>
 
-    <!-- Scripts para Smart TV -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/hls.js/1.4.12/hls.min.js"></script>
-    
+    <!-- Botões Externos -->
+    <div class="button-container" style="margin-top: 30px;">
+        <button class="btn btn-external" onclick="window.open('https://nossoplayeronlinehd.blog/', '_blank')">🌐 Nosso Player Online</button>
+        <button class="btn btn-external" onclick="window.open('https://embedcanaistv.com/', '_blank')">📺 Embed Canais TV</button>
+    </div>
+
     <script>
-        // Canais fixos
+        // Canais fixos otimizados para Tizen
         const channels = [
-            { name: 'Warner', url: decodeURIComponent('https://embedcanaistv.com/warner/'), icon: '📺' },
-            { name: 'ESPN1', url: decodeURIComponent('https://nossoplayeronlinehd.blog/tv/espn'), icon: '⚽' },
-            { name: 'ESPN2', url: decodeURIComponent('%2F%2F%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=espn2'), icon: '⚽' },
-            { name: 'ESPN3', url: decodeURIComponent('%2F%2F%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=espn3'), icon: '⚽' },
-            { name: 'ESPN4', url: decodeURIComponent('%2F%2F%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=espn4'), icon: '⚽' },
-            { name: 'ESPN5', url: decodeURIComponent('%2F%2F%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=espn5'), icon: '⚽' },
-            { name: 'ESPN6', url: decodeURIComponent('%2F%2F%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=espn6'), icon: '⚽' },
-            { name: 'SportTV1', url: decodeURIComponent('https://embedcanaistv.com/sportv/'), icon: '⚽' },
-            { name: 'SportTV2', url: decodeURIComponent('%2F%2F%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=sportv2'), icon: '⚽' },
-            { name: 'SportTV3', url: decodeURIComponent('%2F%2F%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=sportv3'), icon: '⚽' },
-            { name: 'Premiere', url: decodeURIComponent('%2F%2F%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=premiereclubes'), icon: '⚽' },
-            { name: 'Premiere2', url: decodeURIComponent('%2F%2F%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=premiere2'), icon: '⚽' },
-            { name: 'Premiere3', url: decodeURIComponent('%2F%2F%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=premiere3'), icon: '⚽' },
-            { name: 'Premiere4', url: decodeURIComponent('%2F%2F%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=premiere4'), icon: '⚽' },
-            { name: 'Premiere5', url: decodeURIComponent('%2F%2F%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=premiere5'), icon: '⚽' },
-            { name: 'Premiere6', url: decodeURIComponent('%2F%2F%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=premiere6'), icon: '⚽' },
-            { name: 'TNT', url: decodeURIComponent('%2F%2F%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=tnt'), icon: '📺' },
-            { name: 'TNTseries', url: decodeURIComponent('%2F%2F%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=tntseries'), icon: '📺' },
-            { name: 'HBO', url: decodeURIComponent('%2F%2F%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=hbo'), icon: '📺' },
-            { name: 'HBO2', url: decodeURIComponent('%2F%2F%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=hbo2'), icon: '📺' },
-            { name: 'Universal', url: decodeURIComponent('%2F%2F%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=universal'), icon: '📺' },
-            { name: 'Space', url: decodeURIComponent('%2F%2F%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=space'), icon: '📺' },
-            { name: 'Telecine Action', url: decodeURIComponent('%2F%2F%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=telecineaction'), icon: '📺' },
-            { name: 'Megapix', url: decodeURIComponent('%2F%2F%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=megapix'), icon: '📺' },
-            { name: 'UFC', url: decodeURIComponent('%2F%2F%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=ufcfightpass'), icon: '📺' },
+            { name: 'Warner', url: 'https://embedcanaistv.com/warner/', icon: '🎬' },
+            { name: 'ESPN', url: 'https://embedcanaistv.com/espn/', icon: '⚽' },
+			{ name: 'ESPN2', url: '//%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=espn2', icon: '⚽' },
+			{ name: 'ESPN3', url: '//%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=espn3', icon: '⚽' },
+			{ name: 'ESPN4', url: '//%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=espn4', icon: '⚽' },
+			{ name: 'ESPN5', url: '//%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=espn5', icon: '⚽' },
+			{ name: 'ESPN6', url: '//%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=espn6', icon: '⚽' },
+			{ name: 'SportTV1', url: '//%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=sportv1', icon: '⚽' },
+			{ name: 'SportTV2', url: '//%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=sportv2', icon: '⚽' },
+        	{ name: 'SportTV3', url: '//%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=sportv3', icon: '⚽' },
+        	{ name: 'Premiere', url: '//%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=premiereclubes', icon: '⚽' },
+        	{ name: 'Premiere2', url: '//%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=premiere2', icon: '⚽' },
+        	{ name: 'Premiere3', url: '//%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=premiere3', icon: '⚽' },
+        	{ name: 'Premiere4', url: '//%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=premiere4', icon: '⚽' },
+        	{ name: 'Premiere5', url: '//%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=premiere5', icon: '⚽' },
+        	{ name: 'Premiere6', url: '//%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=premiere6', icon: '⚽' },
+        	{ name: 'TNT', url: '//%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=tnt', icon: '📺' },
+			{ name: 'TNTseries', url: '//%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=tntseries', icon: '📺' },
+			{ name: 'HBO', url: '//%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=hbo', icon: '📺' },
+			{ name: 'HBO2', url: '//%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=hbo2', icon: '📺' },
+        	{ name: 'Universal', url: '//%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=universal', icon: '📺' },
+			{ name: 'Space', url: '//%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=space', icon: '📺' },
+            { name: 'Telecine Action', url: '//%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=telecineaction', icon: '📺' },
+            { name: 'Megapix', url: '//%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=megapix', icon: '📺' },
+			{ name: 'UFC', url: '//%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=ufcfightpass', icon: '📺' },
         ];
 
-        // Sistema de playlists ocultas
-        const getHiddenPlaylist = (code) => {
-            const playlists = {
-                "tvmista": [
+        // Playlists ocultas atualizadas
+        const hiddenPlaylists = {
+             "tvmista": [
                     "https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/tvmisto.m3u8",
                     "https://api.allorigins.win/raw?url=https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/tvmisto.m3u8",
                     "https://cors-anywhere.herokuapp.com/https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/tvmisto.m3u8"
@@ -590,43 +451,34 @@
                     "https://cors-anywhere.herokuapp.com/https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/educativo.m3u8"
                 ]
             };
-            return playlists[code] || null;
-        };
 
         // Variáveis globais
-        let currentSelectedChannel = null;
         let m3u8Channels = [];
-        let currentM3U8Channel = 0;
+        let currentM3U8Channel = -1;
         let hls = null;
-        let selectedProxy = 'https://cors-anywhere.herokuapp.com/';
 
-        // Detectar Smart TV Tizen
-        function isTizenTV() {
-            return navigator.userAgent.includes('Tizen') || 
-                   navigator.userAgent.includes('SMART-TV') ||
-                   navigator.userAgent.includes('SmartTV') ||
-                   window.tizen !== undefined;
-        }
+        // Inicialização
+        document.addEventListener('DOMContentLoaded', function() {
+            // Configurar botões
+            document.getElementById('showBtn').addEventListener('click', showChannelSelection);
+            document.getElementById('m3u8Btn').addEventListener('click', showM3U8Player);
+            document.getElementById('hideBtn').addEventListener('click', hidePlayer);
+            
+            // Configurar eventos de teclado para Smart TV
+            setupTVControls();
+            
+            // Verificar se é uma Tizen TV
+            if (isTizenTV()) {
+                showStatus('🖥️ Modo Tizen ativado - Player otimizado', 'visible');
+            }
+        });
 
-        // Detectar webOS (LG)
-        function isWebOSTV() {
-            return navigator.userAgent.includes('webOS') || 
-                   window.webOS !== undefined;
-        }
-
-        // Detectar Smart TV em geral
-        function isSmartTV() {
-            return isTizenTV() || isWebOSTV() || 
-                   navigator.userAgent.includes('SMART-TV') ||
-                   navigator.userAgent.includes('SmartTV');
-        }
-
-        // === FUNÇÕES PRINCIPAIS ===
+        // Funções principais
         function showChannelSelection() {
             hideAllPlayers();
             document.getElementById('channelSelection').classList.add('show');
             updateButtons('channel');
-            updateStatus('📋 Escolha um canal para assistir', 'visible');
+            showStatus('📺 Selecione um canal para assistir', 'visible');
             createChannelButtons();
         }
 
@@ -634,7 +486,7 @@
             hideAllPlayers();
             document.getElementById('m3u8Container').classList.add('show');
             updateButtons('m3u8');
-            updateStatus('🎬 M3U8 Player ativo - Carregue uma playlist', 'visible');
+            showStatus('🎬 Carregue uma playlist M3U8', 'visible');
         }
 
         function hidePlayer() {
@@ -644,748 +496,346 @@
                 hls = null;
             }
             updateButtons('none');
-            updateStatus('🔒 Selecione uma opção acima', 'hidden');
+            showStatus('🔴 Selecione uma opção para começar', 'visible');
         }
 
         function hideAllPlayers() {
             document.getElementById('channelSelection').classList.remove('show');
             document.getElementById('playerContainer').classList.remove('show');
             document.getElementById('m3u8Container').classList.remove('show');
-            document.getElementById('playerFrame').src = '';
             
+            // Limpar players
+            document.getElementById('playerFrame').src = '';
             const video = document.getElementById('tizenVideo');
             video.src = '';
             video.load();
         }
 
         function updateButtons(active) {
-            const showBtn = document.getElementById('showBtn');
-            const m3u8Btn = document.getElementById('m3u8Btn');
-            const hideBtn = document.getElementById('hideBtn');
-            
-            showBtn.disabled = active === 'channel';
-            m3u8Btn.disabled = active === 'm3u8';
-            hideBtn.disabled = active === 'none';
+            document.getElementById('showBtn').disabled = active === 'channel';
+            document.getElementById('m3u8Btn').disabled = active === 'm3u8';
+            document.getElementById('hideBtn').disabled = active === 'none';
         }
 
-        function updateStatus(message, type) {
+        function showStatus(message, type) {
             const status = document.getElementById('status');
+            status.textContent = message;
             status.className = `status ${type}`;
-            status.innerHTML = message;
         }
 
-        // === CANAIS FIXOS ===
+        // Canais Fixos
         function createChannelButtons() {
-            const channelGrid = document.getElementById('channelGrid');
-            channelGrid.innerHTML = '';
-
+            const grid = document.getElementById('channelGrid');
+            grid.innerHTML = '';
+            
             channels.forEach((channel, index) => {
-                const button = document.createElement('button');
-                button.className = 'channel-btn';
-                button.innerHTML = `${channel.icon} ${channel.name}`;
-                button.onclick = () => selectChannel(channel, button);
-                button.tabIndex = 0;
-                channelGrid.appendChild(button);
+                const btn = document.createElement('button');
+                btn.className = 'channel-btn';
+                btn.innerHTML = `${channel.icon} ${channel.name}`;
+                btn.onclick = () => playFixedChannel(channel, index);
+                grid.appendChild(btn);
             });
         }
 
-        function selectChannel(channel, buttonElement) {
+        function playFixedChannel(channel, index) {
+            // Limpar seleção anterior
             document.querySelectorAll('.channel-btn').forEach(btn => btn.classList.remove('active'));
-            buttonElement.classList.add('active');
             
-            document.getElementById('playerFrame').src = channel.url;
-            document.getElementById('currentChannel').innerHTML = `${channel.icon} ${channel.name}`;
+            // Marcar como ativo
+            document.querySelectorAll('.channel-btn')[index].classList.add('active');
+            
+            // Configurar iframe
+            const iframe = document.getElementById('playerFrame');
+            iframe.src = channel.url;
+            
+            // Mostrar player
             document.getElementById('playerContainer').classList.add('show');
-            
-            updateStatus(`▶️ Reproduzindo: ${channel.name}`, 'visible');
+            showStatus(`▶️ Assistindo: ${channel.name}`, 'visible');
         }
 
-        // === M3U8 PLAYER ===
-        function selectProxy(proxy) {
-            selectedProxy = proxy;
-            document.querySelectorAll('.proxy-btn').forEach(btn => btn.classList.remove('active'));
-            event.target.classList.add('active');
-            
-            showMessage(`Proxy selecionado: ${proxy || 'Nenhum'}`, 'success');
-        }
-
-        // Função CORRIGIDA para carregar playlists ocultas
-        async function loadHiddenPlaylist() {
+        // Player M3U8
+        function loadHiddenPlaylist() {
             const code = document.getElementById('codeInput').value.trim();
-            const btn = document.getElementById('hiddenPlaylistBtn');
+            const btn = document.getElementById('loadHiddenBtn');
             
             if (!code) {
-                showMessage('Por favor, insira um código de acesso.', 'error');
+                showStatus('❌ Digite um código de acesso', 'error');
                 return;
             }
-
-            const playlistUrls = getHiddenPlaylist(code);
-            if (!playlistUrls) {
-                showMessage('❌ Código inválido. Códigos disponíveis: tvmista, xxxxxxx, xxxxxxxx', 'error');
+            
+            if (!hiddenPlaylists[code]) {
+                showStatus('❌ Código inválido. Tente: tvmista ou teste', 'error');
                 return;
             }
-
+            
             btn.disabled = true;
-            btn.innerHTML = '<div class="loading"></div>Carregando...';
+            btn.innerHTML = '<span class="loading"></span> Carregando...';
             
-            let loadedSuccessfully = false;
+            // Tentar todas as URLs da playlist até uma funcionar
+            let loaded = false;
+            const promises = hiddenPlaylists[code].map(url => loadPlaylistFromUrl(url));
             
-            for (const url of playlistUrls) {
-                try {
-                    console.log('🔄 Tentando carregar:', url);
-                    
-                    const controller = new AbortController();
-                    const timeoutId = setTimeout(() => controller.abort(), 10000);
-                    
-                    const response = await fetch(url, {
-                        method: 'GET',
-                        headers: {
-                            'Accept': 'text/plain,application/vnd.apple.mpegurl,*/*',
-                            'User-Agent': 'Mozilla/5.0 (compatible; M3U8Player/1.0)'
-                        },
-                        mode: 'cors',
-                        signal: controller.signal
-                    });
-                    
-                    clearTimeout(timeoutId);
-                    
-                    if (response.ok) {
-                        const data = await response.text();
-                        if (data && data.trim() && (data.includes('#EXTINF') || data.includes('#EXT-X'))) {
-                            console.log('✅ Playlist carregada com sucesso!');
-                            parseM3U(data);
-                            showMessage(`✅ Playlist "${code}" carregada com sucesso! ${m3u8Channels.length} canais encontrados.`, 'success');
-                            loadedSuccessfully = true;
-                            break;
-                        }
-                    }
-                } catch (error) {
-                    console.log('❌ Erro ao carregar URL:', url, error.message);
-                    continue;
-                }
-            }
-            
-            if (!loadedSuccessfully) {
-                showMessage('❌ Não foi possível carregar a playlist. Verifique sua conexão ou tente mais tarde.', 'error');
-            }
-            
-            btn.disabled = false;
-            btn.innerHTML = 'Carregar Playlist Oculta';
-        }
-
-        function testUrl() {
-            const url = document.getElementById('urlInput').value.trim();
-            if (!url) {
-                showMessage('Digite uma URL primeiro.', 'error');
-                return;
-            }
-
-            showMessage('🔍 Testando URL...', 'success');
-            
-            const testUrl = selectedProxy + url;
-            const controller = new AbortController();
-            const timeoutId = setTimeout(() => controller.abort(), 10000);
-            
-            fetch(testUrl, { 
-                method: 'HEAD', 
-                mode: 'cors',
-                signal: controller.signal
-            })
-            .then(response => {
-                clearTimeout(timeoutId);
-                if (response.ok) {
-                    showMessage('✅ URL acessível! Você pode carregar a playlist.', 'success');
-                } else {
-                    showMessage(`⚠️ URL retornou status ${response.status}. Tente outro proxy.`, 'error');
-                }
-            })
-            .catch(error => {
-                clearTimeout(timeoutId);
-                showMessage('❌ URL não acessível. Verifique a URL ou tente outro proxy.', 'error');
-            });
+            Promise.any(promises)
+                .then(() => {
+                    btn.disabled = false;
+                    btn.textContent = 'Carregar Playlist';
+                })
+                .catch(() => {
+                    showStatus('❌ Não foi possível carregar a playlist', 'error');
+                    btn.disabled = false;
+                    btn.textContent = 'Carregar Playlist';
+                });
         }
 
         function loadPlaylist() {
-            const urlInput = document.getElementById('urlInput');
-            const fileInput = document.getElementById('fileInput');
+            const url = document.getElementById('urlInput').value.trim();
             
-            if (urlInput.value.trim()) {
-                loadFromUrl(urlInput.value.trim());
-            } else if (fileInput.files.length > 0) {
-                loadFromFile(fileInput.files[0]);
-            } else {
-                showMessage('Digite uma URL ou selecione um arquivo.', 'error');
-            }
-        }
-
-        function loadFromUrl(url) {
-            showMessage('🔄 Carregando playlist...', 'success');
-            
-            const finalUrl = selectedProxy + url;
-            const controller = new AbortController();
-            const timeoutId = setTimeout(() => controller.abort(), 15000);
-            
-            fetch(finalUrl, {
-                method: 'GET',
-                headers: { 'Accept': 'text/plain,application/vnd.apple.mpegurl,*/*' },
-                signal: controller.signal
-            })
-            .then(response => {
-                clearTimeout(timeoutId);
-                if (!response.ok) throw new Error(`HTTP ${response.status}`);
-                return response.text();
-            })
-            .then(data => {
-                parseM3U(data);
-                showMessage('✅ Playlist carregada com sucesso!', 'success');
-            })
-            .catch(error => {
-                clearTimeout(timeoutId);
-                console.error('Erro:', error);
-                showMessage(`❌ Erro ao carregar: ${error.message}. Tente outro proxy ou verifique a URL.`, 'error');
-            });
-        }
-
-        function loadFromFile(file) {
-            const reader = new FileReader();
-            reader.onload = function(e) {
-                parseM3U(e.target.result);
-                showMessage('✅ Arquivo carregado com sucesso!', 'success');
-            };
-            reader.onerror = function() {
-                showMessage('❌ Erro ao ler o arquivo.', 'error');
-            };
-            reader.readAsText(file);
-        }
-
-        // Parser M3U CORRIGIDO e mais robusto
-        function parseM3U(data) {
-            m3u8Channels = [];
-            
-            if (!data || typeof data !== 'string') {
-                showMessage('❌ Dados da playlist inválidos.', 'error');
+            if (!url) {
+                showStatus('❌ Digite uma URL válida', 'error');
                 return;
             }
             
-            console.log('📋 Parseando M3U data:', data.substring(0, 500) + '...');
+            loadPlaylistFromUrl(url);
+        }
+
+        function loadPlaylistFromUrl(url) {
+            showStatus('🔄 Carregando playlist...', 'visible');
             
-            const lines = data.split('\n').map(line => line.trim()).filter(line => line.length > 0);
+            return fetch(url)
+                .then(response => {
+                    if (!response.ok) throw new Error('Erro na requisição');
+                    return response.text();
+                })
+                .then(data => {
+                    parseM3U(data);
+                    showStatus(`✅ Playlist carregada - ${m3u8Channels.length} canais`, 'visible');
+                    return true;
+                })
+                .catch(error => {
+                    showStatus(`❌ Erro ao carregar: ${error.message}`, 'error');
+                    throw error;
+                });
+        }
+
+        function parseM3U(data) {
+            m3u8Channels = [];
+            const lines = data.split('\n');
             
             for (let i = 0; i < lines.length; i++) {
-                const line = lines[i];
+                const line = lines[i].trim();
                 
-                // Procurar por EXTINF
                 if (line.startsWith('#EXTINF:')) {
-                    // Extrair título do EXTINF
-                    const commaIndex = line.indexOf(',');
-                    const title = commaIndex > -1 ? line.substring(commaIndex + 1).trim() : `Canal ${m3u8Channels.length + 1}`;
+                    const title = line.split(',')[1] || `Canal ${m3u8Channels.length + 1}`;
+                    const nextLine = lines[i + 1] ? lines[i + 1].trim() : '';
                     
-                    // Procurar URL na próxima linha não comentário
-                    for (let j = i + 1; j < lines.length; j++) {
-                        const nextLine = lines[j];
-                        if (nextLine && !nextLine.startsWith('#')) {
-                            // Validar se é uma URL válida
-                            if (nextLine.startsWith('http') || nextLine.startsWith('//') || nextLine.includes('.m3u8') || nextLine.includes('.ts')) {
-                                m3u8Channels.push({
-                                    title: title || `Canal ${m3u8Channels.length + 1}`,
-                                    url: nextLine
-                                });
-                                console.log(`📺 Canal adicionado: ${title} -> ${nextLine.substring(0, 50)}...`);
-                            }
-                            break;
-                        }
+                    if (nextLine && !nextLine.startsWith('#') && (nextLine.startsWith('http') || nextLine.startsWith('//'))) {
+                        m3u8Channels.push({
+                            title: title,
+                            url: nextLine
+                        });
                     }
                 }
             }
-
-            console.log(`✅ Total de canais encontrados: ${m3u8Channels.length}`);
-
-            if (m3u8Channels.length === 0) {
-                showMessage('❌ Nenhum canal encontrado na playlist. Verifique o formato M3U8.', 'error');
-                return;
-            }
-
-            displayM3U8Playlist();
-            updateChannelCount();
-            showMessage(`✅ ${m3u8Channels.length} canais encontrados!`, 'success');
+            
+            updatePlaylistDisplay();
         }
 
-        function displayM3U8Playlist() {
-            const playlistDiv = document.getElementById('m3u8Playlist');
-            playlistDiv.innerHTML = '';
-
+        function updatePlaylistDisplay() {
+            const playlist = document.getElementById('m3u8Playlist');
+            playlist.innerHTML = '';
+            
             m3u8Channels.forEach((channel, index) => {
-                const channelDiv = document.createElement('div');
-                channelDiv.className = 'm3u8-channel';
-                channelDiv.innerHTML = `<span>${index + 1}.</span><span>${channel.title}</span>`;
-                channelDiv.onclick = () => playM3U8Channel(index);
-                channelDiv.tabIndex = 0;
-                playlistDiv.appendChild(channelDiv);
+                const item = document.createElement('div');
+                item.className = 'm3u8-channel';
+                item.textContent = `${index + 1}. ${channel.title}`;
+                item.onclick = () => playM3U8Channel(index);
+                playlist.appendChild(item);
             });
+            
+            document.getElementById('channelCount').textContent = m3u8Channels.length;
+            
+            // Reproduzir o primeiro canal se existir
+            if (m3u8Channels.length > 0) {
+                playM3U8Channel(0);
+            }
         }
 
-        // REPRODUTOR OTIMIZADO ESPECÍFICO PARA TIZEN
+        // Reprodução otimizada para Tizen
         function playM3U8Channel(index) {
             if (index < 0 || index >= m3u8Channels.length) return;
-
+            
             currentM3U8Channel = index;
-            const video = document.getElementById('tizenVideo');
             const channel = m3u8Channels[index];
-
-            console.log(`🎬 Reproduzindo canal ${index + 1}: ${channel.title}`);
-            console.log(`📡 URL: ${channel.url}`);
-
-            // Atualizar classe ativa
-            document.querySelectorAll('.m3u8-channel').forEach(ch => ch.classList.remove('active'));
+            const video = document.getElementById('tizenVideo');
+            
+            // Atualizar seleção
+            document.querySelectorAll('.m3u8-channel').forEach(item => item.classList.remove('active'));
             document.querySelectorAll('.m3u8-channel')[index].classList.add('active');
-
+            
+            showStatus(`🔄 Carregando: ${channel.title}`, 'visible');
+            
             // Limpar player anterior
             if (hls) {
                 hls.destroy();
                 hls = null;
             }
+            
             video.src = '';
             video.load();
-
-            showMessage(`🔄 Carregando: ${channel.title}`, 'success');
-            document.getElementById('m3u8CurrentChannel').innerHTML = `🎬 ${channel.title}`;
-
-            // Reprodução específica para Tizen
-            if (isTizenTV()) {
-                playOnTizen(video, channel);
-            } else if (isSmartTV()) {
-                playOnSmartTV(video, channel);
-            } else {
-                playOnDesktop(video, channel);
-            }
-        }
-
-        // Reprodução OTIMIZADA para Tizen
-        function playOnTizen(video, channel) {
-            console.log('🖥️ Modo Tizen - Reprodução otimizada');
             
             // Configurações específicas para Tizen
-            video.setAttribute('crossorigin', 'anonymous');
-            video.setAttribute('playsinline', 'true');
-            video.setAttribute('webkit-playsinline', 'true');
+            video.crossOrigin = 'anonymous';
             video.preload = 'auto';
-            video.muted = false;
-            video.volume = 1.0;
+            video.playsInline = true;
             
-            // Tentar reprodução nativa primeiro (Tizen tem bom suporte HLS)
-            if (channel.url.includes('.m3u8') || channel.url.includes('m3u8')) {
-                loadTizenHLS(video, channel);
+            // Verificar se é HLS
+            if (channel.url.includes('.m3u8')) {
+                if (isTizenTV()) {
+                    // Tizen tem suporte nativo excelente para HLS
+                    playNativeHLS(video, channel);
+                } else if (typeof Hls !== 'undefined' && Hls.isSupported()) {
+                    // Usar Hls.js para outros navegadores
+                    playWithHlsJS(video, channel);
+                } else {
+                    // Fallback para reprodução nativa
+                    playNativeHLS(video, channel);
+                }
             } else {
-                loadTizenDirect(video, channel);
+                // Reprodução direta para outros formatos
+                playDirectStream(video, channel);
             }
         }
 
-        function loadTizenHLS(video, channel) {
-            console.log('🔄 Carregando HLS nativo para Tizen');
+        function playNativeHLS(video, channel) {
+            console.log('🔧 Usando HLS nativo no Tizen');
             
-            // Tizen tem suporte nativo excelente para HLS
             video.src = channel.url;
             
-            const successHandler = function() {
-                video.removeEventListener('loadeddata', successHandler);
-                video.removeEventListener('canplay', successHandler);
-                
-                console.log('✅ HLS carregado, iniciando reprodução');
-                
-                setTimeout(() => {
-                    video.play().then(() => {
-                        console.log('✅ Reprodução iniciada com sucesso');
-                        showMessage(`✅ Reproduzindo: ${channel.title}`, 'success');
-                    }).catch(error => {
-                        console.log('ℹ️ Autoplay restrito, aguardando interação do usuário');
-                        showMessage(`📺 ${channel.title} carregado. Use o controle remoto para reproduzir.`, 'success');
+            video.addEventListener('loadedmetadata', function() {
+                video.play()
+                    .then(() => showStatus(`▶️ Assistindo: ${channel.title}`, 'visible'))
+                    .catch(error => {
+                        console.error('Erro ao reproduzir:', error);
+                        showStatus('▶️ Canal carregado. Pressione Play.', 'visible');
                     });
-                }, 1000);
-            };
-            
-            video.addEventListener('loadeddata', successHandler);
-            video.addEventListener('canplay', successHandler);
-            
-            video.addEventListener('error', function(e) {
-                console.log('❌ Erro no HLS nativo:', e);
-                showMessage('⚠️ Erro no suporte nativo, tentando HLS.js...', 'error');
-                
-                // Fallback para HLS.js
-                if (typeof Hls !== 'undefined' && Hls.isSupported()) {
-                    loadTizenHLSJS(video, channel);
-                } else {
-                    showMessage('❌ Erro ao carregar stream. Tente outro canal.', 'error');
-                }
             });
             
-            video.load();
+            video.addEventListener('error', function() {
+                showStatus('❌ Erro ao carregar o vídeo', 'error');
+            });
         }
 
-        function loadTizenHLSJS(video, channel) {
-            console.log('🔧 Usando HLS.js como fallback para Tizen');
+        function playWithHlsJS(video, channel) {
+            console.log('🔧 Usando Hls.js para reprodução');
             
             hls = new Hls({
                 enableWorker: false,
                 lowLatencyMode: false,
-                backBufferLength: 30,
-                maxBufferLength: 60,
-                startLevel: -1,
-                debug: false
+                backBufferLength: 30
             });
             
             hls.loadSource(channel.url);
             hls.attachMedia(video);
             
             hls.on(Hls.Events.MANIFEST_PARSED, function() {
-                console.log('✅ HLS.js manifest carregado');
-                
-                setTimeout(() => {
-                    video.play().then(() => {
-                        showMessage(`✅ Reproduzindo: ${channel.title} (HLS.js)`, 'success');
-                    }).catch(error => {
-                        showMessage(`📺 ${channel.title} carregado. Use o controle remoto.`, 'success');
+                video.play()
+                    .then(() => showStatus(`▶️ Assistindo: ${channel.title}`, 'visible'))
+                    .catch(error => {
+                        console.error('Erro ao reproduzir:', error);
+                        showStatus('▶️ Canal carregado. Pressione Play.', 'visible');
                     });
-                }, 500);
             });
-
+            
             hls.on(Hls.Events.ERROR, function(event, data) {
-                console.log('❌ Erro HLS.js:', data);
                 if (data.fatal) {
+                    showStatus('❌ Erro fatal no player. Tente outro canal.', 'error');
                     hls.destroy();
-                    hls = null;
-                    showMessage('❌ Erro fatal no HLS.js. Tente outro canal.', 'error');
                 }
             });
         }
 
-        function loadTizenDirect(video, channel) {
-            console.log('📡 Carregando stream direto para Tizen');
+        function playDirectStream(video, channel) {
+            console.log('🔧 Reprodução direta do stream');
             
             video.src = channel.url;
             
-            const successHandler = function() {
-                video.removeEventListener('loadeddata', successHandler);
-                video.removeEventListener('canplay', successHandler);
-                
-                setTimeout(() => {
-                    video.play().then(() => {
-                        showMessage(`✅ Reproduzindo: ${channel.title}`, 'success');
-                    }).catch(error => {
-                        showMessage(`📺 ${channel.title} carregado. Use o controle remoto.`, 'success');
+            video.addEventListener('loadeddata', function() {
+                video.play()
+                    .then(() => showStatus(`▶️ Assistindo: ${channel.title}`, 'visible'))
+                    .catch(error => {
+                        console.error('Erro ao reproduzir:', error);
+                        showStatus('▶️ Canal carregado. Pressione Play.', 'visible');
                     });
-                }, 1000);
-            };
-            
-            video.addEventListener('loadeddata', successHandler);
-            video.addEventListener('canplay', successHandler);
-            
-            video.addEventListener('error', function(e) {
-                console.log('❌ Erro no stream direto:', e);
-                showMessage('❌ Erro ao carregar stream. Verifique a URL.', 'error');
             });
             
-            video.load();
-        }
-
-        // Reprodução para outras Smart TVs
-        function playOnSmartTV(video, channel) {
-            console.log('📺 Reproduzindo em Smart TV');
-            
-            video.setAttribute('crossorigin', 'anonymous');
-            video.setAttribute('playsinline', 'true');
-            video.setAttribute('webkit-playsinline', 'true');
-            
-            if (channel.url.includes('.m3u8')) {
-                if (video.canPlayType('application/vnd.apple.mpegurl') || 
-                    video.canPlayType('application/x-mpegURL')) {
-                    loadNativeHLS(video, channel);
-                } else {
-                    loadDirectStream(video, channel);
-                }
-            } else {
-                loadDirectStream(video, channel);
-            }
-        }
-
-        // Reprodução para Desktop
-        function playOnDesktop(video, channel) {
-            console.log('💻 Reproduzindo em Desktop');
-            
-            if (channel.url.includes('.m3u8')) {
-                if (typeof Hls !== 'undefined' && Hls.isSupported()) {
-                    loadHLSStream(video, channel);
-                } else {
-                    loadNativeHLS(video, channel);
-                }
-            } else {
-                loadDirectStream(video, channel);
-            }
-        }
-
-        function loadHLSStream(video, channel) {
-            console.log('🔧 Usando HLS.js');
-            
-            hls = new Hls({
-                enableWorker: false,
-                lowLatencyMode: false,
-                backBufferLength: 30,
-                maxBufferLength: 60,
-                maxMaxBufferLength: 120,
-                startLevel: -1,
-                capLevelToPlayerSize: true,
-                debug: false
-            });
-            
-            hls.loadSource(channel.url);
-            hls.attachMedia(video);
-            
-            hls.on(Hls.Events.MANIFEST_PARSED, function() {
-                playVideo(video);
-            });
-
-            hls.on(Hls.Events.ERROR, function(event, data) {
-                console.log('❌ Erro HLS.js:', data);
-                if (data.fatal) {
-                    hls.destroy();
-                    hls = null;
-                    loadNativeHLS(video, channel);
-                }
+            video.addEventListener('error', function() {
+                showStatus('❌ Erro ao carregar o vídeo', 'error');
             });
         }
 
-        function loadNativeHLS(video, channel) {
-            console.log('🔄 Usando suporte nativo HLS');
-            
-            video.setAttribute('crossorigin', 'anonymous');
-            video.setAttribute('playsinline', 'true');
-            video.setAttribute('webkit-playsinline', 'true');
-            video.preload = 'metadata';
-            
-            if (video.canPlayType('application/vnd.apple.mpegurl') || 
-                video.canPlayType('application/x-mpegURL')) {
-                
-                video.src = channel.url;
-                
-                const loadedHandler = function() {
-                    video.removeEventListener('loadedmetadata', loadedHandler);
-                    video.removeEventListener('canplay', loadedHandler);
-                    playVideo(video);
-                };
-                
-                video.addEventListener('loadedmetadata', loadedHandler);
-                video.addEventListener('canplay', loadedHandler);
-                
-                video.addEventListener('error', function(e) {
-                    console.log('❌ Erro no vídeo nativo:', e);
-                    loadDirectStream(video, channel);
-                });
-                
-                video.load();
-            } else {
-                loadDirectStream(video, channel);
-            }
-        }
-
-        function loadDirectStream(video, channel) {
-            console.log('📡 Carregando stream direto');
-            
-            if (isSmartTV()) {
-                video.setAttribute('playsinline', 'true');
-                video.setAttribute('webkit-playsinline', 'true');
-                video.preload = 'metadata';
-            }
-            
-            video.src = channel.url;
-            video.load();
-            
-            const playHandler = function() {
-                video.removeEventListener('loadeddata', playHandler);
-                video.removeEventListener('canplay', playHandler);
-                playVideo(video);
-            };
-            
-            video.addEventListener('loadeddata', playHandler);
-            video.addEventListener('canplay', playHandler);
-            
-            video.addEventListener('error', function(e) {
-                console.log('❌ Erro no stream direto:', e);
-                showMessage('❌ Erro ao carregar vídeo. Verifique a URL.', 'error');
-            });
-        }
-
-        function playVideo(video) {
-            if (isSmartTV()) {
-                setTimeout(() => {
-                    video.play().then(() => {
-                        showMessage('✅ Reproduzindo...', 'success');
-                    }).catch(error => {
-                        console.log('Aviso:', error);
-                        showMessage('📺 Stream carregado. Use o controle remoto para iniciar.', 'success');
-                    });
-                }, 500);
-            } else {
-                video.play().then(() => {
-                    showMessage('✅ Reproduzindo...', 'success');
-                }).catch(error => {
-                    console.log('Aviso:', error);
-                    showMessage('📺 Canal carregado. Clique em play para iniciar.', 'success');
-                });
-            }
-        }
-
-        function showMessage(message, type) {
-            const messageDiv = document.getElementById('m3u8Message');
-            messageDiv.textContent = message;
-            messageDiv.className = `message ${type}`;
-            messageDiv.style.display = 'block';
-            
-            setTimeout(() => {
-                messageDiv.style.display = 'none';
-            }, 5000);
-        }
-
-        function updateChannelCount() {
-            document.getElementById('channelCount').textContent = m3u8Channels.length;
-        }
-
-        // === CONTROLES ===
+        // Controles
         function previousChannel() {
             if (m3u8Channels.length === 0) return;
-            const prevIndex = currentM3U8Channel > 0 ? currentM3U8Channel - 1 : m3u8Channels.length - 1;
+            const prevIndex = (currentM3U8Channel - 1 + m3u8Channels.length) % m3u8Channels.length;
             playM3U8Channel(prevIndex);
         }
 
         function nextChannel() {
             if (m3u8Channels.length === 0) return;
-            const nextIndex = currentM3U8Channel < m3u8Channels.length - 1 ? currentM3U8Channel + 1 : 0;
+            const nextIndex = (currentM3U8Channel + 1) % m3u8Channels.length;
             playM3U8Channel(nextIndex);
         }
 
         function reloadChannel() {
-            if (m3u8Channels.length === 0) return;
-            playM3U8Channel(currentM3U8Channel);
+            if (currentM3U8Channel >= 0) {
+                playM3U8Channel(currentM3U8Channel);
+            }
         }
 
         function togglePlayPause() {
             const video = document.getElementById('tizenVideo');
-            if (video && video.src) {
-                if (video.paused) {
-                    video.play().then(() => {
-                        showMessage('▶️ Reproduzindo...', 'success');
-                    }).catch(error => {
-                        showMessage('❌ Erro ao reproduzir.', 'error');
-                    });
-                } else {
-                    video.pause();
-                    showMessage('⏸️ Pausado.', 'success');
-                }
+            if (video.paused) {
+                video.play().catch(e => console.error(e));
+            } else {
+                video.pause();
             }
         }
 
-        // === EVENT LISTENERS ===
-        document.addEventListener('DOMContentLoaded', function() {
-            // Mostrar informações sobre o dispositivo
-            if (isTizenTV()) {
-                console.log('🖥️ Tizen TV detectada:', navigator.userAgent);
-                showMessage('🖥️ Samsung Smart TV detectada - Modo Tizen otimizado', 'success');
-            } else if (isSmartTV()) {
-                console.log('📺 Smart TV detectada:', navigator.userAgent);
-                showMessage('📺 Smart TV detectada - Otimizações ativas', 'success');
-            }
-            
-            // Event listeners para inputs
-            document.getElementById('urlInput').addEventListener('keypress', function(e) {
-                if (e.key === 'Enter') loadPlaylist();
-            });
+        // Utilitários
+        function isTizenTV() {
+            return navigator.userAgent.includes('Tizen') || 
+                   navigator.userAgent.includes('SMART-TV') ||
+                   typeof tizen !== 'undefined';
+        }
 
-            document.getElementById('codeInput').addEventListener('keypress', function(e) {
-                if (e.key === 'Enter') loadHiddenPlaylist();
-            });
-
-            // Atalhos de teclado otimizados para Smart TV
-            document.addEventListener('keydown', function(event) {
-                const keyCode = event.keyCode || event.which;
+        function setupTVControls() {
+            document.addEventListener('keydown', function(e) {
+                const key = e.keyCode || e.which;
                 
-                switch(keyCode) {
+                // Teclas específicas para Smart TV
+                switch(key) {
+                    case 37: // Left
+                    case 4:   // Tizen Left
+                        previousChannel();
+                        break;
+                    case 39: // Right
+                    case 5:   // Tizen Right
+                        nextChannel();
+                        break;
+                    case 13: // Enter
+                    case 32: // Space
+                        togglePlayPause();
+                        break;
                     case 27: // ESC
-                    case 461: // RETURN (Samsung)
-                    case 10009: // RETURN (Tizen)
+                    case 10009: // Tizen Return
                         hidePlayer();
                         break;
-                    case 37: // LEFT ARROW
-                    case 424: // LEFT (Samsung)
-                    case 4:   // LEFT (Tizen)
-                        if (m3u8Channels.length > 0) {
-                            event.preventDefault();
-                            previousChannel();
-                        }
-                        break;
-                    case 39: // RIGHT ARROW  
-                    case 425: // RIGHT (Samsung)
-                    case 5:   // RIGHT (Tizen)
-                        if (m3u8Channels.length > 0) {
-                            event.preventDefault();
-                            nextChannel();
-                        }
-                        break;
-                    case 82: // R
-                    case 116: // F5
-                    case 412: // REFRESH (Samsung)
-                        if (m3u8Channels.length > 0) {
-                            event.preventDefault();
-                            reloadChannel();
-                        }
-                        break;
-                    case 13: // ENTER
-                    case 32: // SPACE
-                    case 415: // PLAY (Samsung)
-                    case 71:  // PLAY (Tizen)
-                        const video = document.getElementById('tizenVideo');
-                        if (video && video.src) {
-                            event.preventDefault();
-                            togglePlayPause();
-                        }
-                        break;
                 }
             });
-            
-            // Listener para detectar mudanças de foco (importante para Smart TV)
-            document.addEventListener('focusin', function(event) {
-                if (event.target.classList.contains('channel-btn') || 
-                    event.target.classList.contains('m3u8-channel') ||
-                    event.target.classList.contains('control-btn')) {
-                    event.target.style.transform = 'scale(1.1)';
-                    event.target.style.zIndex = '10';
-                    event.target.style.outline = '3px solid #4CAF50';
-                }
-            });
-            
-            document.addEventListener('focusout', function(event) {
-                if (event.target.classList.contains('channel-btn') || 
-                    event.target.classList.contains('m3u8-channel') ||
-                    event.target.classList.contains('control-btn')) {
-                    event.target.style.transform = '';
-                    event.target.style.zIndex = '';
-                    event.target.style.outline = '';
-                }
-            });
-        });
-
-        // Cleanup ao sair
-        window.addEventListener('beforeunload', function() {
-            if (hls) hls.destroy();
-        });
+        }
     </script>
-    
-    <!-- Botões externos -->
-    <div class="button-container" style="margin-top: 30px;">
-        <form action="https://nossoplayeronlinehd.blog/" method="get" target="_blank">
-            <button class="btn btn-show" type="submit">🌐 nossoplayeronlinehd</button>
-        </form>
-        <form action="https://embedcanaistv.com/" method="get" target="_blank">
-            <button class="btn btn-m3u8" type="submit">📺 embedcanaistv</button>
-        </form>
-    </div>
-    
+
+    <!-- HLS.js para navegadores que não suportam HLS nativo -->
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
 </body>
 </html>
