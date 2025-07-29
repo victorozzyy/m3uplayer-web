@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Player M3U8 Aprimorado - Sem CORS</title>
+    <title>Player M3U8 Aprimorado - Smart TV Compatible</title>
     <style>
         * {
             margin: 0;
@@ -154,11 +154,12 @@
             backdrop-filter: blur(5px);
         }
 
-        .channel-btn:hover {
+        .channel-btn:hover, .channel-btn:focus {
             transform: translateY(-3px);
             box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
             background: rgba(255, 255, 255, 0.2);
             border-color: rgba(255, 255, 255, 0.4);
+            outline: 2px solid #4CAF50;
         }
 
         .channel-btn.active {
@@ -321,22 +322,34 @@
             border: 1px solid rgba(244, 67, 54, 0.3);
         }
 
-        .m3u8-video {
+        /* Player de vídeo otimizado para Smart TV */
+        .smart-tv-player {
             width: 100%;
-            max-height: 500px;
-            border-radius: 10px;
+            height: 450px;
             background: #000;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-            /* Otimizações para Smart TV */
+            border-radius: 10px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .smart-tv-player video {
+            width: 100%;
+            height: 100%;
             object-fit: contain;
-            -webkit-transform: translateZ(0);
-            transform: translateZ(0);
+            background: #000;
+        }
+
+        .smart-tv-player iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            background: #000;
         }
 
         /* Estilos específicos para Smart TV */
         @media screen and (min-width: 1920px) {
-            .m3u8-video {
-                max-height: 70vh;
+            .smart-tv-player {
+                height: 60vh;
             }
             
             .container {
@@ -369,8 +382,9 @@
             gap: 10px;
         }
 
-        .m3u8-channel:hover {
+        .m3u8-channel:hover, .m3u8-channel:focus {
             background: rgba(255,255,255,0.1);
+            outline: 2px solid #4CAF50;
         }
 
         .m3u8-channel.active {
@@ -401,8 +415,9 @@
             font-size: 12px;
         }
 
-        .control-btn:hover {
+        .control-btn:hover, .control-btn:focus {
             background: rgba(255,255,255,0.3);
+            outline: 2px solid #4CAF50;
         }
 
         .status {
@@ -495,7 +510,6 @@
                     <input type="text" id="codeInput" placeholder="Digite o código de acesso aqui" style="font-family: monospace;">
                 </div>
                 <button onclick="loadHiddenPlaylist()" class="load-btn" id="hiddenPlaylistBtn">Carregar Playlist Oculta</button>
-               
             </div>
 
             <!-- Input Manual -->
@@ -528,11 +542,13 @@
 
             <div id="m3u8Message" class="message"></div>
 
-            <!-- Video Player -->
+            <!-- Player Otimizado para Smart TV -->
             <div class="player-wrapper">
-                <video id="m3u8Video" class="m3u8-video" controls>
-                    Seu navegador não suporta o elemento de vídeo.
-                </video>
+                <div class="smart-tv-player" id="smartTvPlayer">
+                    <video id="m3u8Video" controls crossorigin="anonymous" playsinline webkit-playsinline>
+                        Seu navegador não suporta o elemento de vídeo.
+                    </video>
+                </div>
             </div>
 
             <!-- Controls -->
@@ -553,59 +569,57 @@
         <div class="status hidden" id="status">🔒 Selecione uma opção acima</div>
     </div>
 
+    <!-- Scripts para Smart TV - Mesmo do site de referência -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/hls.js/1.4.12/hls.min.js"></script>
+    
     <script>
         // Canais fixos
         const channels = [
-            { name: 'Warner', url: '//%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=warner', icon: '📺' },
-			{ name: 'ESPN1', url: '//%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=espn', icon: '⚽' },
-			{ name: 'ESPN2', url: '//%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=espn2', icon: '⚽' },
-			{ name: 'ESPN3', url: '//%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=espn3', icon: '⚽' },
-			{ name: 'ESPN4', url: '//%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=espn4', icon: '⚽' },
-			{ name: 'ESPN5', url: '//%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=espn5', icon: '⚽' },
-			{ name: 'ESPN6', url: '//%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=espn6', icon: '⚽' },
-            { name: 'SportTV1', url: '//%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=sportv1', icon: '⚽' },
-			{ name: 'SportTV2', url: '//%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=sportv2', icon: '⚽' },
-        	{ name: 'SportTV3', url: '//%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=sportv3', icon: '⚽' },
-        	{ name: 'Premiere', url: '//%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=premiereclubes', icon: '⚽' },
-        	{ name: 'Premiere2', url: '//%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=premiere2', icon: '⚽' },
-        	{ name: 'Premiere3', url: '//%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=premiere3', icon: '⚽' },
-        	{ name: 'Premiere4', url: '//%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=premiere4', icon: '⚽' },
-        	{ name: 'Premiere5', url: '//%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=premiere5', icon: '⚽' },
-        	{ name: 'Premiere6', url: '//%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=premiere6', icon: '⚽' },
-        	{ name: 'TNT', url: '//%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=tnt', icon: '📺' },
-			{ name: 'TNTseries', url: '//%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=tntseries', icon: '📺' },
-			{ name: 'HBO', url: '//%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=hbo', icon: '📺' },
-			{ name: 'HBO2', url: '//%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=hbo2', icon: '📺' },
-        	{ name: 'Universal', url: '//%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=universal', icon: '📺' },
-			{ name: 'Space', url: '//%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=space', icon: '📺' },
-            { name: 'Telecine Action', url: '//%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=telecineaction', icon: '📺' },
-            { name: 'Megapix', url: '//%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=megapix', icon: '📺' },
-			{ name: 'UFC', url: '//%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=ufcfightpass', icon: '📺' },
+            { name: 'Warner', url: decodeURIComponent('https://embedcanaistv.com/warner/'), icon: '📺' },
+            { name: 'ESPN1', url: decodeURIComponent('%2F%2F%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=espn'), icon: '⚽' },
+            { name: 'ESPN2', url: decodeURIComponent('%2F%2F%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=espn2'), icon: '⚽' },
+            { name: 'ESPN3', url: decodeURIComponent('%2F%2F%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=espn3'), icon: '⚽' },
+            { name: 'ESPN4', url: decodeURIComponent('%2F%2F%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=espn4'), icon: '⚽' },
+            { name: 'ESPN5', url: decodeURIComponent('%2F%2F%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=espn5'), icon: '⚽' },
+            { name: 'ESPN6', url: decodeURIComponent('%2F%2F%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=espn6'), icon: '⚽' },
+            { name: 'SportTV1', url: decodeURIComponent('%2F%2F%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=sportv1'), icon: '⚽' },
+            { name: 'SportTV2', url: decodeURIComponent('%2F%2F%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=sportv2'), icon: '⚽' },
+            { name: 'SportTV3', url: decodeURIComponent('%2F%2F%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=sportv3'), icon: '⚽' },
+            { name: 'Premiere', url: decodeURIComponent('%2F%2F%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=premiereclubes'), icon: '⚽' },
+            { name: 'Premiere2', url: decodeURIComponent('%2F%2F%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=premiere2'), icon: '⚽' },
+            { name: 'Premiere3', url: decodeURIComponent('%2F%2F%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=premiere3'), icon: '⚽' },
+            { name: 'Premiere4', url: decodeURIComponent('%2F%2F%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=premiere4'), icon: '⚽' },
+            { name: 'Premiere5', url: decodeURIComponent('%2F%2F%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=premiere5'), icon: '⚽' },
+            { name: 'Premiere6', url: decodeURIComponent('%2F%2F%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=premiere6'), icon: '⚽' },
+            { name: 'TNT', url: decodeURIComponent('%2F%2F%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=tnt'), icon: '📺' },
+            { name: 'TNTseries', url: decodeURIComponent('%2F%2F%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=tntseries'), icon: '📺' },
+            { name: 'HBO', url: decodeURIComponent('%2F%2F%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=hbo'), icon: '📺' },
+            { name: 'HBO2', url: decodeURIComponent('%2F%2F%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=hbo2'), icon: '📺' },
+            { name: 'Universal', url: decodeURIComponent('%2F%2F%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=universal'), icon: '📺' },
+            { name: 'Space', url: decodeURIComponent('%2F%2F%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=space'), icon: '📺' },
+            { name: 'Telecine Action', url: decodeURIComponent('%2F%2F%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=telecineaction'), icon: '📺' },
+            { name: 'Megapix', url: decodeURIComponent('%2F%2F%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=megapix'), icon: '📺' },
+            { name: 'UFC', url: decodeURIComponent('%2F%2F%72%65%64%65%63%61%6E%61%69%73%74%76%2E%67%64/player3/ch.php?canal=ufcfightpass'), icon: '📺' },
         ];
 
-        // Sistema de playlists ocultas - corrigido
+        // Sistema de playlists ocultas - CORRIGIDO
         const getHiddenPlaylist = (code) => {
             const playlists = {
-                "tvmista": {
-                    urls: [
-                        "https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/tvmisto.m3u8"
-                    ]
-                },
-                "xxxxxxx": {
-                    urls: [
-                        "https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/teste.m3u8",
-                        "https://api.allorigins.win/raw?url=https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/teste.m3u8",
-                        "https://thingproxy.freeboard.io/fetch/https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/teste.m3u8"
-                    ]
-                },
-                "xxxxxxxx": {
-                    urls: [
-                        "https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/educativo.m3u8",
-                        "https://api.allorigins.win/raw?url=https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/educativo.m3u8",
-                        "https://thingproxy.freeboard.io/fetch/https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/educativo.m3u8"
-                    ]
-                }
+                "tvmista": [
+                    "https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/tvmisto.m3u8",
+                    "https://api.allorigins.win/raw?url=https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/tvmisto.m3u8",
+                    "https://cors-anywhere.herokuapp.com/https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/tvmisto.m3u8"
+                ],
+                "xxxxxxx": [
+                    "https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/teste.m3u8",
+                    "https://api.allorigins.win/raw?url=https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/teste.m3u8",
+                    "https://cors-anywhere.herokuapp.com/https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/teste.m3u8"
+                ],
+                "xxxxxxxx": [
+                    "https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/educativo.m3u8",
+                    "https://api.allorigins.win/raw?url=https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/educativo.m3u8",
+                    "https://cors-anywhere.herokuapp.com/https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/educativo.m3u8"
+                ]
             };
             return playlists[code] || null;
         };
@@ -616,6 +630,27 @@
         let currentM3U8Channel = 0;
         let hls = null;
         let selectedProxy = 'https://cors-anywhere.herokuapp.com/';
+
+        // Detectar Smart TV Tizen
+        function isTizenTV() {
+            return navigator.userAgent.includes('Tizen') || 
+                   navigator.userAgent.includes('SMART-TV') ||
+                   navigator.userAgent.includes('SmartTV') ||
+                   window.tizen !== undefined;
+        }
+
+        // Detectar webOS (LG)
+        function isWebOSTV() {
+            return navigator.userAgent.includes('webOS') || 
+                   window.webOS !== undefined;
+        }
+
+        // Detectar Smart TV em geral
+        function isSmartTV() {
+            return isTizenTV() || isWebOSTV() || 
+                   navigator.userAgent.includes('SMART-TV') ||
+                   navigator.userAgent.includes('SmartTV');
+        }
 
         // === FUNÇÕES PRINCIPAIS ===
         function showChannelSelection() {
@@ -680,6 +715,7 @@
                 button.className = 'channel-btn';
                 button.innerHTML = `${channel.icon} ${channel.name}`;
                 button.onclick = () => selectChannel(channel, button);
+                button.tabIndex = 0; // Para Smart TV
                 channelGrid.appendChild(button);
             });
         }
@@ -704,7 +740,7 @@
             showMessage(`Proxy selecionado: ${proxy || 'Nenhum'}`, 'success');
         }
 
-        // Função corrigida para carregar playlists ocultas
+        // Função CORRIGIDA para carregar playlists ocultas
         async function loadHiddenPlaylist() {
             const code = document.getElementById('codeInput').value.trim();
             const btn = document.getElementById('hiddenPlaylistBtn');
@@ -714,51 +750,58 @@
                 return;
             }
 
-            const playlist = getHiddenPlaylist(code);
-            if (!playlist) {
-                showMessage('Código inválido. Tente um código válido.', 'error');
+            const playlistUrls = getHiddenPlaylist(code);
+            if (!playlistUrls) {
+                showMessage('❌ Código inválido. Códigos disponíveis: tvmista, teste123, educativo', 'error');
                 return;
             }
 
-            // Desabilitar botão durante carregamento
             btn.disabled = true;
             btn.innerHTML = '<div class="loading"></div>Carregando...';
             
-            try {
-                // Tentar carregar de uma das URLs da playlist
-                let loadedSuccessfully = false;
-                
-                for (const url of playlist.urls) {
-                    try {
-                        console.log('Tentando carregar:', url);
-                        const response = await fetch(url);
-                        
-                        if (response.ok) {
-                            const data = await response.text();
-                            if (data && data.trim()) {
-                                parseM3U(data);
-                                showMessage('✅ Playlist oculta carregada com sucesso!', 'success');
-                                loadedSuccessfully = true;
-                                break;
-                            }
+            let loadedSuccessfully = false;
+            
+            for (const url of playlistUrls) {
+                try {
+                    console.log('🔄 Tentando carregar:', url);
+                    
+                    const controller = new AbortController();
+                    const timeoutId = setTimeout(() => controller.abort(), 10000);
+                    
+                    const response = await fetch(url, {
+                        method: 'GET',
+                        headers: {
+                            'Accept': 'text/plain,application/vnd.apple.mpegurl,*/*',
+                            'User-Agent': 'Mozilla/5.0 (compatible; M3U8Player/1.0)'
+                        },
+                        mode: 'cors',
+                        signal: controller.signal
+                    });
+                    
+                    clearTimeout(timeoutId);
+                    
+                    if (response.ok) {
+                        const data = await response.text();
+                        if (data && data.trim() && (data.includes('#EXTINF') || data.includes('#EXT-X'))) {
+                            console.log('✅ Playlist carregada com sucesso!');
+                            parseM3U(data);
+                            showMessage(`✅ Playlist "${code}" carregada com sucesso! ${m3u8Channels.length} canais encontrados.`, 'success');
+                            loadedSuccessfully = true;
+                            break;
                         }
-                    } catch (error) {
-                        console.log('Erro ao carregar URL:', url, error);
-                        continue;
                     }
+                } catch (error) {
+                    console.log('❌ Erro ao carregar URL:', url, error.message);
+                    continue;
                 }
-                
-                if (!loadedSuccessfully) {
-                    throw new Error('Nenhuma URL da playlist pôde ser carregada');
-                }
-                
-            } catch (error) {
-                console.error('Erro ao carregar playlist oculta:', error);
-                showMessage('❌ Erro ao carregar playlist. Tente novamente.', 'error');
-            } finally {
-                btn.disabled = false;
-                btn.innerHTML = 'Carregar Playlist Oculta';
             }
+            
+            if (!loadedSuccessfully) {
+                showMessage('❌ Não foi possível carregar a playlist. Verifique sua conexão ou tente mais tarde.', 'error');
+            }
+            
+            btn.disabled = false;
+            btn.innerHTML = 'Carregar Playlist Oculta';
         }
 
         function testUrl() {
@@ -768,7 +811,7 @@
                 return;
             }
 
-            showMessage('Testando URL...', 'success');
+            showMessage('🔍 Testando URL...', 'success');
             
             const testUrl = selectedProxy + url;
             const controller = new AbortController();
@@ -807,7 +850,7 @@
         }
 
         function loadFromUrl(url) {
-            showMessage('Carregando playlist...', 'success');
+            showMessage('🔄 Carregando playlist...', 'success');
             
             const finalUrl = selectedProxy + url;
             const controller = new AbortController();
@@ -825,12 +868,12 @@
             })
             .then(data => {
                 parseM3U(data);
-                showMessage('Playlist carregada com sucesso!', 'success');
+                showMessage('✅ Playlist carregada com sucesso!', 'success');
             })
             .catch(error => {
                 clearTimeout(timeoutId);
                 console.error('Erro:', error);
-                showMessage(`Erro ao carregar: ${error.message}. Tente outro proxy ou verifique a URL.`, 'error');
+                showMessage(`❌ Erro ao carregar: ${error.message}. Tente outro proxy ou verifique a URL.`, 'error');
             });
         }
 
@@ -838,10 +881,10 @@
             const reader = new FileReader();
             reader.onload = function(e) {
                 parseM3U(e.target.result);
-                showMessage('Arquivo carregado com sucesso!', 'success');
+                showMessage('✅ Arquivo carregado com sucesso!', 'success');
             };
             reader.onerror = function() {
-                showMessage('Erro ao ler o arquivo.', 'error');
+                showMessage('❌ Erro ao ler o arquivo.', 'error');
             };
             reader.readAsText(file);
         }
@@ -850,7 +893,7 @@
             m3u8Channels = [];
             
             if (!data || typeof data !== 'string') {
-                showMessage('Dados da playlist inválidos.', 'error');
+                showMessage('❌ Dados da playlist inválidos.', 'error');
                 return;
             }
             
@@ -874,20 +917,13 @@
             }
 
             if (m3u8Channels.length === 0) {
-                showMessage('Nenhum canal encontrado na playlist.', 'error');
+                showMessage('❌ Nenhum canal encontrado na playlist.', 'error');
                 return;
             }
 
             displayM3U8Playlist();
             updateChannelCount();
-            showMessage(`${m3u8Channels.length} canais encontrados!`, 'success');
-            
-            // Auto-play do primeiro canal
-            //if (m3u8Channels.length > 0) {
-             //   setTimeout(() => {
-             //       playM3U8Channel(0);
-            //    }, 1000);
-           // }
+            showMessage(`✅ ${m3u8Channels.length} canais encontrados!`, 'success');
         }
 
         function displayM3U8Playlist() {
@@ -899,10 +935,12 @@
                 channelDiv.className = 'm3u8-channel';
                 channelDiv.innerHTML = `<span>${index + 1}.</span><span>${channel.title}</span>`;
                 channelDiv.onclick = () => playM3U8Channel(index);
+                channelDiv.tabIndex = 0; // Para Smart TV
                 playlistDiv.appendChild(channelDiv);
             });
         }
 
+        // REPRODUTOR OTIMIZADO PARA SMART TV TIZEN
         function playM3U8Channel(index) {
             if (index < 0 || index >= m3u8Channels.length) return;
 
@@ -922,86 +960,167 @@
             video.src = '';
             video.load();
 
-            showMessage(`Carregando: ${channel.title}`, 'success');
+            showMessage(`🔄 Carregando: ${channel.title}`, 'success');
+            document.getElementById('m3u8CurrentChannel').innerHTML = `🎬 ${channel.title}`;
 
-            // Verificar se é HLS
-            if (channel.url.includes('.m3u8') || channel.url.includes('m3u8')) {
-                loadHLSStream(video, channel);
+            // Para Smart TV Tizen, usar abordagem específica
+            if (isTizenTV()) {
+                playOnTizenTV(video, channel);
+            } else if (isSmartTV()) {
+                playOnSmartTV(video, channel);
+            } else {
+                playOnDesktop(video, channel);
+            }
+        }
+
+        // Reprodução específica para Tizen (Samsung Smart TV)
+        function playOnTizenTV(video, channel) {
+            console.log('🖥️ Reproduzindo em Tizen TV');
+            
+            // Configurações específicas para Tizen
+            video.setAttribute('crossorigin', 'anonymous');
+            video.setAttribute('playsinline', 'true');
+            video.setAttribute('webkit-playsinline', 'true');
+            video.preload = 'auto';
+            
+            // Para Tizen, iframe funciona melhor para alguns streams
+            if (channel.url.includes('.m3u8')) {
+                // Criar iframe para o stream M3U8
+                const iframe = document.createElement('iframe');
+                iframe.src = `data:text/html;charset=utf-8,
+                    <!DOCTYPE html>
+                    <html>
+                    <head>
+                        <meta charset="UTF-8">
+                        <style>
+                            body { margin: 0; padding: 0; background: #000; }
+                            video { width: 100%; height: 100vh; object-fit: contain; }
+                        </style>
+                    </head>
+                    <body>
+                        <video controls autoplay crossorigin="anonymous" playsinline webkit-playsinline>
+                            <source src="${channel.url}" type="application/vnd.apple.mpegurl">
+                            <source src="${channel.url}" type="application/x-mpegURL">
+                        </video>
+                    </body>
+                    </html>`;
+                iframe.width = '100%';
+                iframe.height = '450';
+                iframe.frameBorder = '0';
+                iframe.allow = 'encrypted-media';
+                iframe.allowFullscreen = true;
+                
+                const playerContainer = document.getElementById('smartTvPlayer');
+                playerContainer.innerHTML = '';
+                playerContainer.appendChild(iframe);
+                
+                showMessage('✅ Stream carregado para Tizen TV', 'success');
+            } else {
+                // Stream direto
+                loadDirectStreamTizen(video, channel);
+            }
+        }
+
+        // Reprodução para outras Smart TVs
+        function playOnSmartTV(video, channel) {
+            console.log('📺 Reproduzindo em Smart TV');
+            
+            video.setAttribute('crossorigin', 'anonymous');
+            video.setAttribute('playsinline', 'true');
+            video.setAttribute('webkit-playsinline', 'true');
+            
+            if (channel.url.includes('.m3u8')) {
+                // Tentar suporte nativo primeiro
+                if (video.canPlayType('application/vnd.apple.mpegurl') || 
+                    video.canPlayType('application/x-mpegURL')) {
+                    loadNativeHLS(video, channel);
+                } else {
+                    loadDirectStream(video, channel);
+                }
             } else {
                 loadDirectStream(video, channel);
             }
-
-            // Atualizar título atual
-            document.getElementById('m3u8CurrentChannel').innerHTML = `🎬 ${channel.title}`;
         }
 
-        // Detectar se está em Smart TV Tizen
-        function isTizenTV() {
-            return navigator.userAgent.includes('Tizen') || 
-                   navigator.userAgent.includes('SmartTV') ||
-                   window.tizen !== undefined;
+        // Reprodução para Desktop
+        function playOnDesktop(video, channel) {
+            console.log('💻 Reproduzindo em Desktop');
+            
+            if (channel.url.includes('.m3u8')) {
+                if (typeof Hls !== 'undefined' && Hls.isSupported()) {
+                    loadHLSStream(video, channel);
+                } else {
+                    loadNativeHLS(video, channel);
+                }
+            } else {
+                loadDirectStream(video, channel);
+            }
         }
 
-        // Detectar se está em webOS (LG)
-        function isWebOSTV() {
-            return navigator.userAgent.includes('webOS') || 
-                   window.webOS !== undefined;
-        }
-
-        // Detectar Smart TV em geral
-        function isSmartTV() {
-            return isTizenTV() || isWebOSTV() || 
-                   navigator.userAgent.includes('SMART-TV') ||
-                   navigator.userAgent.includes('SmartTV');
+        function loadDirectStreamTizen(video, channel) {
+            console.log('🔄 Carregando stream direto para Tizen');
+            
+            video.src = channel.url;
+            video.load();
+            
+            const playHandler = function() {
+                video.removeEventListener('loadeddata', playHandler);
+                video.removeEventListener('canplay', playHandler);
+                
+                setTimeout(() => {
+                    video.play().then(() => {
+                        showMessage('✅ Reproduzindo...', 'success');
+                    }).catch(error => {
+                        console.log('Aviso:', error);
+                        showMessage('📺 Stream carregado. Use o controle remoto.', 'success');
+                    });
+                }, 1000);
+            };
+            
+            video.addEventListener('loadeddata', playHandler);
+            video.addEventListener('canplay', playHandler);
+            
+            video.addEventListener('error', function(e) {
+                console.log('❌ Erro no vídeo Tizen:', e);
+                showMessage('❌ Erro ao carregar. Tente outro canal.', 'error');
+            });
         }
 
         function loadHLSStream(video, channel) {
-            // Para Smart TVs, priorizar suporte nativo
-            if (isSmartTV()) {
-                console.log('Smart TV detectada, usando suporte nativo');
-                loadNativeHLS(video, channel);
-                return;
-            }
+            console.log('🔧 Usando HLS.js');
+            
+            hls = new Hls({
+                enableWorker: false,
+                lowLatencyMode: false,
+                backBufferLength: 30,
+                maxBufferLength: 60,
+                maxMaxBufferLength: 120,
+                startLevel: -1,
+                capLevelToPlayerSize: true,
+                debug: false
+            });
+            
+            hls.loadSource(channel.url);
+            hls.attachMedia(video);
+            
+            hls.on(Hls.Events.MANIFEST_PARSED, function() {
+                playVideo(video);
+            });
 
-            // Para computadores, tentar HLS.js primeiro
-            if (typeof Hls !== 'undefined' && Hls.isSupported()) {
-                console.log('Usando HLS.js');
-                hls = new Hls({
-                    enableWorker: false, // Desabilitar worker para melhor compatibilidade
-                    lowLatencyMode: false,
-                    backBufferLength: 30,
-                    maxBufferLength: 60,
-                    maxMaxBufferLength: 120,
-                    startLevel: -1,
-                    capLevelToPlayerSize: true
-                });
-                
-                hls.loadSource(channel.url);
-                hls.attachMedia(video);
-                
-                hls.on(Hls.Events.MANIFEST_PARSED, function() {
-                    playVideo(video);
-                });
-
-                hls.on(Hls.Events.ERROR, function(event, data) {
-                    console.log('Erro HLS.js:', data);
-                    if (data.fatal) {
-                        console.log('Erro fatal no HLS.js, tentando suporte nativo');
-                        hls.destroy();
-                        hls = null;
-                        loadNativeHLS(video, channel);
-                    }
-                });
-            } else {
-                // Fallback para suporte nativo
-                loadNativeHLS(video, channel);
-            }
+            hls.on(Hls.Events.ERROR, function(event, data) {
+                console.log('❌ Erro HLS.js:', data);
+                if (data.fatal) {
+                    hls.destroy();
+                    hls = null;
+                    loadNativeHLS(video, channel);
+                }
+            });
         }
 
         function loadNativeHLS(video, channel) {
-            console.log('Tentando suporte nativo HLS');
+            console.log('🔄 Usando suporte nativo HLS');
             
-            // Configurar video para Smart TV
+            video.setAttribute('crossorigin', 'anonymous');
             video.setAttribute('playsinline', 'true');
             video.setAttribute('webkit-playsinline', 'true');
             video.preload = 'metadata';
@@ -1009,7 +1128,6 @@
             if (video.canPlayType('application/vnd.apple.mpegurl') || 
                 video.canPlayType('application/x-mpegURL')) {
                 
-                console.log('Suporte nativo HLS disponível');
                 video.src = channel.url;
                 
                 const loadedHandler = function() {
@@ -1022,43 +1140,19 @@
                 video.addEventListener('canplay', loadedHandler);
                 
                 video.addEventListener('error', function(e) {
-                    console.log('Erro no vídeo nativo:', e);
-                    showMessage('Erro ao carregar stream. Tentando modo direto...', 'error');
+                    console.log('❌ Erro no vídeo nativo:', e);
                     loadDirectStream(video, channel);
                 });
                 
                 video.load();
             } else {
-                console.log('Suporte nativo HLS não disponível, tentando stream direto');
                 loadDirectStream(video, channel);
             }
         }
 
-        function playVideo(video) {
-            // Para Smart TVs, usar método mais compatível
-            if (isSmartTV()) {
-                setTimeout(() => {
-                    video.play().then(() => {
-                        showMessage('Reproduzindo...', 'success');
-                    }).catch(error => {
-                        console.log('Erro ao reproduzir:', error);
-                        showMessage('Stream carregado. Use o controle remoto para iniciar.', 'success');
-                    });
-                }, 500);
-            } else {
-                video.play().then(() => {
-                    showMessage('Reproduzindo...', 'success');
-                }).catch(error => {
-                    console.log('Erro ao reproduzir:', error);
-                    showMessage('Canal carregado. Clique em play para iniciar.', 'success');
-                });
-            }
-        }
-
         function loadDirectStream(video, channel) {
-            console.log('Carregando stream direto');
+            console.log('📡 Carregando stream direto');
             
-            // Configurações para Smart TV
             if (isSmartTV()) {
                 video.setAttribute('playsinline', 'true');
                 video.setAttribute('webkit-playsinline', 'true');
@@ -1078,9 +1172,29 @@
             video.addEventListener('canplay', playHandler);
             
             video.addEventListener('error', function(e) {
-                console.log('Erro no stream direto:', e);
-                showMessage('Erro ao carregar vídeo. Verifique a URL.', 'error');
+                console.log('❌ Erro no stream direto:', e);
+                showMessage('❌ Erro ao carregar vídeo. Verifique a URL.', 'error');
             });
+        }
+
+        function playVideo(video) {
+            if (isSmartTV()) {
+                setTimeout(() => {
+                    video.play().then(() => {
+                        showMessage('✅ Reproduzindo...', 'success');
+                    }).catch(error => {
+                        console.log('Aviso:', error);
+                        showMessage('📺 Stream carregado. Use o controle remoto para iniciar.', 'success');
+                    });
+                }, 500);
+            } else {
+                video.play().then(() => {
+                    showMessage('✅ Reproduzindo...', 'success');
+                }).catch(error => {
+                    console.log('Aviso:', error);
+                    showMessage('📺 Canal carregado. Clique em play para iniciar.', 'success');
+                });
+            }
         }
 
         function showMessage(message, type) {
@@ -1122,7 +1236,7 @@
                 document.exitFullscreen();
             } else {
                 video.requestFullscreen().catch(err => {
-                    showMessage('Erro ao entrar em tela cheia.', 'error');
+                    showMessage('❌ Erro ao entrar em tela cheia.', 'error');
                 });
             }
         }
@@ -1130,9 +1244,12 @@
         // === EVENT LISTENERS ===
         document.addEventListener('DOMContentLoaded', function() {
             // Mostrar informações sobre o dispositivo
-            if (isSmartTV()) {
-                console.log('Smart TV detectada:', navigator.userAgent);
-                showMessage('Smart TV detectada - Otimizações ativas', 'success');
+            if (isTizenTV()) {
+                console.log('🖥️ Tizen TV detectada:', navigator.userAgent);
+                showMessage('🖥️ Samsung Smart TV detectada - Modo Tizen ativo', 'success');
+            } else if (isSmartTV()) {
+                console.log('📺 Smart TV detectada:', navigator.userAgent);
+                showMessage('📺 Smart TV detectada - Otimizações ativas', 'success');
             }
             
             // Event listeners para inputs
@@ -1144,18 +1261,19 @@
                 if (e.key === 'Enter') loadHiddenPlaylist();
             });
 
-            // Atalhos de teclado (adaptados para Smart TV)
+            // Atalhos de teclado otimizados para Smart TV
             document.addEventListener('keydown', function(event) {
-                // Para Smart TVs, usar códigos de teclas específicos
                 const keyCode = event.keyCode || event.which;
                 
                 switch(keyCode) {
                     case 27: // ESC
                     case 461: // RETURN (Samsung)
+                    case 10009: // RETURN (Tizen)
                         hidePlayer();
                         break;
                     case 37: // LEFT ARROW
                     case 424: // LEFT (Samsung)
+                    case 4:   // LEFT (Tizen)
                         if (m3u8Channels.length > 0) {
                             event.preventDefault();
                             previousChannel();
@@ -1163,6 +1281,7 @@
                         break;
                     case 39: // RIGHT ARROW  
                     case 425: // RIGHT (Samsung)
+                    case 5:   // RIGHT (Tizen)
                         if (m3u8Channels.length > 0) {
                             event.preventDefault();
                             nextChannel();
@@ -1170,6 +1289,7 @@
                         break;
                     case 82: // R
                     case 116: // F5
+                    case 412: // REFRESH (Samsung)
                         if (m3u8Channels.length > 0) {
                             event.preventDefault();
                             reloadChannel();
@@ -1177,17 +1297,22 @@
                         break;
                     case 70: // F
                     case 122: // F11
+                    case 404: // FULL_SCREEN (Samsung)
                         event.preventDefault();
                         toggleFullscreen();
                         break;
                     case 13: // ENTER
                     case 32: // SPACE
                     case 415: // PLAY (Samsung)
+                    case 71:  // PLAY (Tizen)
                         const video = document.getElementById('m3u8Video');
-                        if (video.paused) {
-                            video.play();
-                        } else {
-                            video.pause();
+                        if (video && !video.paused) {
+                            event.preventDefault();
+                            if (video.paused) {
+                                video.play();
+                            } else {
+                                video.pause();
+                            }
                         }
                         break;
                 }
@@ -1196,17 +1321,21 @@
             // Listener para detectar mudanças de foco (importante para Smart TV)
             document.addEventListener('focusin', function(event) {
                 if (event.target.classList.contains('channel-btn') || 
-                    event.target.classList.contains('m3u8-channel')) {
+                    event.target.classList.contains('m3u8-channel') ||
+                    event.target.classList.contains('control-btn')) {
                     event.target.style.transform = 'scale(1.1)';
                     event.target.style.zIndex = '10';
+                    event.target.style.outline = '3px solid #4CAF50';
                 }
             });
             
             document.addEventListener('focusout', function(event) {
                 if (event.target.classList.contains('channel-btn') || 
-                    event.target.classList.contains('m3u8-channel')) {
+                    event.target.classList.contains('m3u8-channel') ||
+                    event.target.classList.contains('control-btn')) {
                     event.target.style.transform = '';
                     event.target.style.zIndex = '';
+                    event.target.style.outline = '';
                 }
             });
         });
@@ -1216,15 +1345,16 @@
             if (hls) hls.destroy();
         });
     </script>
-	
-	<div class="button-container">
-				<form action="https://nossoplayeronlinehd.blog/" method="get" target="_blank">
-				<button class="btn btn-show" id="showBtn" type="submit">nossoplayeronlinehd</button>
-    </form>
-	<form 		action="https://embedcanaistv.com/" method="get" target="_blank">
-				<button class="btn btn-m3u8" id="m3u8Btn" type="submit">nossoplayeronlinehd</button>
-    </form>
-	</div>
-	
+    
+    <!-- Botões externos -->
+    <div class="button-container" style="margin-top: 30px;">
+        <form action="https://nossoplayeronlinehd.blog/" method="get" target="_blank">
+            <button class="btn btn-show" type="submit">🌐 nossoplayeronlinehd</button>
+        </form>
+        <form action="https://embedcanaistv.com/" method="get" target="_blank">
+            <button class="btn btn-m3u8" type="submit">📺 embedcanaistv</button>
+        </form>
+    </div>
+    
 </body>
 </html>
