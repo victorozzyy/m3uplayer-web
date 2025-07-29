@@ -567,19 +567,19 @@
         // Sistema de playlists ocultas - corrigido
         const getHiddenPlaylist = (code) => {
             const playlists = {
-                "tvmista171": {
+                "tvmista": {
                     urls: [
                         "https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/tvmisto.m3u8"
                     ]
                 },
-                "teste": {
+                "xxxxxxxx": {
                     urls: [
                         "https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/teste.m3u8",
                         "https://api.allorigins.win/raw?url=https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/teste.m3u8",
                         "https://thingproxy.freeboard.io/fetch/https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/teste.m3u8"
                     ]
                 },
-                "educativo": {
+                "xxxxxxx": {
                     urls: [
                         "https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/educativo.m3u8",
                         "https://api.allorigins.win/raw?url=https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/educativo.m3u8",
@@ -863,11 +863,11 @@
             showMessage(`${m3u8Channels.length} canais encontrados!`, 'success');
             
             // Auto-play do primeiro canal
-            if (m3u8Channels.length > 0) {
-                setTimeout(() => {
-                    playM3U8Channel(0);
-                }, 1000);
-            }
+           // if (m3u8Channels.length > 0) {
+            //     setTimeout(() => {
+             //        playM3U8Channel(0);
+             //    }, 1000);
+            // }
         }
 
         function displayM3U8Playlist() {
