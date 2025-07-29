@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
@@ -336,13 +335,11 @@
             <button class="btn btn-hide" id="hideBtn" disabled>❌ Fechar</button>
         </div>
 
-        <!-- Seção de Canais Fixos -->
         <div class="channel-selection" id="channelSelection">
             <h2>📺 Escolha um Canal</h2>
             <div class="channel-grid" id="channelGrid"></div>
         </div>
 
-        <!-- Player para Canais Fixos -->
         <div class="player-container" id="playerContainer">
             <div class="video-wrapper">
                 <iframe id="playerFrame" class="tizen-video" frameborder="0" allowfullscreen></iframe>
@@ -352,9 +349,7 @@
             </div>
         </div>
 
-        <!-- Player M3U8 -->
         <div class="player-container" id="m3u8Container">
-            <!-- Input para Playlist Oculta -->
             <div class="input-section">
                 <h3>🔐 Playlist Oculta</h3>
                 <div class="input-group">
@@ -364,7 +359,6 @@
                 <button class="btn btn-m3u8" id="loadHiddenBtn" onclick="loadHiddenPlaylist()">Carregar Playlist</button>
             </div>
 
-            <!-- Input Manual -->
             <div class="input-section">
                 <h3>🌐 Carregar Playlist Manualmente</h3>
                 <div class="input-group">
@@ -374,12 +368,10 @@
                 <button class="btn btn-m3u8" onclick="loadPlaylist()">Carregar URL</button>
             </div>
 
-            <!-- Player de Vídeo -->
             <div class="video-wrapper">
                 <video id="tizenVideo" class="tizen-video" controls playsinline webkit-playsinline></video>
             </div>
 
-            <!-- Controles -->
             <div class="controls">
                 <button class="control-btn" onclick="previousChannel()">⏮ Anterior</button>
                 <button class="control-btn" onclick="nextChannel()">⏭ Próximo</button>
@@ -387,18 +379,15 @@
                 <button class="control-btn" onclick="togglePlayPause()">⏯ Play/Pause</button>
             </div>
 
-            <!-- Lista de Canais -->
             <div>
                 <h3>📋 Lista de Canais (<span id="channelCount">0</span>)</h3>
                 <div class="playlist-container" id="m3u8Playlist"></div>
             </div>
         </div>
 
-        <!-- Status -->
         <div class="status" id="status"></div>
     </div>
 
-    <!-- Botões Externos -->
     <div class="button-container" style="margin-top: 30px;">
         <button class="btn btn-external" onclick="window.open('https://nossoplayeronlinehd.blog/', '_blank')">🌐 Nosso Player Online</button>
         <button class="btn btn-external" onclick="window.open('https://embedcanaistv.com/', '_blank')">📺 Embed Canais TV</button>
@@ -583,7 +572,10 @@
                     btn.textContent = 'Carregar Playlist';
                 })
                 .catch(() => {
-                    showStatus('❌ Não foi possível carregar a playlist', 'error');
+                    // This catch block means ALL provided URLs (including proxies) failed to load the M3U8 manifest.
+                    // The issue "não estão reproduzindo" could also mean the manifest loads, but segments fail.
+                    // However, within the 'playlists ocultas' section, this is the limit of handling.
+                    showStatus('❌ Não foi possível carregar a playlist. Verifique o código ou a disponibilidade da playlist.', 'error');
                     btn.disabled = false;
                     btn.textContent = 'Carregar Playlist';
                 });
@@ -614,7 +606,7 @@
                     return true;
                 })
                 .catch(error => {
-                    showStatus(`❌ Erro ao carregar: ${error.message}`, 'error');
+                    showStatus(`❌ Erro ao carregar: ${error.message}. Tente usar um proxy de CORS ou verificar a URL.`, 'error');
                     throw error;
                 });
         }
@@ -837,7 +829,6 @@
         }
     </script>
 
-    <!-- HLS.js para navegadores que não suportam HLS nativo -->
     <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
 </body>
 </html>
