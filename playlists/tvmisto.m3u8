@@ -1,5 +1,7 @@
 #EXTINF:-1,BR: Friends
 http://24hrs.homelinux.com:8080/24H-friends/video.m3u8
+#EXTINF:-1,4K: SLIM4K
+http://lunar.pm:8080/ALVIN/9gJbtWskzsJS/122877
 #EXTINF:-1,BR: Eu a Patroa e as Crianças 24h
 http://24hrs.homelinux.com:8080/24H-euapatroaeascriancas7/playlist.m3u8
 #EXTINF:-1,BR: 2 Homens e Meio 24h
