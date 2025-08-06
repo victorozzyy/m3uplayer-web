@@ -125,6 +125,7 @@
         .external-site-controls {
             display: flex;
             gap: 10px;
+            flex-wrap: wrap;
         }
 
         .control-btn {
@@ -136,11 +137,44 @@
             cursor: pointer;
             font-size: 14px;
             transition: all 0.3s ease;
+            position: relative;
         }
 
         .control-btn:hover, .control-btn:focus, .control-btn.focused {
             background: linear-gradient(45deg, #764ba2, #667eea);
             outline: 2px solid #ffff00;
+        }
+
+        .control-btn::before {
+            content: attr(data-index);
+            position: absolute;
+            top: -3px;
+            left: -3px;
+            background: rgba(255, 255, 0, 0.8);
+            color: #000;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 10px;
+            font-weight: bold;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .control-btn.focused::before {
+            opacity: 1;
+        }
+
+        /* Botões especiais para opções do canal */
+        .control-btn.option-2 {
+            background: linear-gradient(45deg, #ff6b6b, #ee5a52);
+        }
+
+        .control-btn.option-3 {
+            background: linear-gradient(45deg, #4ecdc4, #44a08d);
         }
 
         .external-site-frame {
