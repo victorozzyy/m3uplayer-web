@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>M3U8 Player - Controle Tizen</title>
+  <link rel="stylesheet" href="css/stylem3u8.css">
+  <script src="https://cdn.jsdelivr.net/npm/hls.js@latest" defer></script>
+  <script
+  src="js/m3u8.js" defer>
+  </script>
+</head>
+<body>
+  <h2>🎬 M3U8 Player TV - Tizen WGT</h2>
+
+  <div class="section" style="display:flex; flex-wrap: wrap; gap: 10px;">
+    <button class="navigable" id="btnHome" tabindex="0">🏠 Home</button>
+    <button class="navigable" id="btnLoadPlaylist" tabindex="0">📡 Playlists Remotas</button>
+    <button class="navigable" id="btnLocal" tabindex="0">📁 Playlists Locais</button>
+    <button class="navigable" id="btnUrl" tabindex="0">🌐 Playlist por URL</button>
+    <button class="navigable" id="btnSingle" tabindex="0">🔗 Canal Único</button>
+  </div>
+
+  <!-- Lista de playlists remotas disponíveis -->
+  <div class="section" id="remotePlaylistSelector" style="display:none; margin-top:10px;">
+    <h3>📡 Playlists Remotas Disponíveis:</h3>
+    <ul id="remotePlaylistList"></ul>
+    <button class="navigable" id="btnBackFromRemote" style="margin-top:10px;">⬅️ Voltar</button>
+  </div>
+
+  <!-- Lista de playlists locais disponíveis -->
+  <div class="section" id="playlistSelector" style="display:none; margin-top:10px;">
+    <h3>📂 Playlists Locais:</h3>
+    <ul id="playlistList"></ul>
+    <button class="navigable" id="btnBackFromLocal" style="margin-top:10px;">⬅️ Voltar</button>
+  </div>
+
+  <div class="section">
+    <label>📺 Canais:</label>
+    <ul id="channelList"></ul>
+  </div>
+
+  <div id="messageArea"></div>
+
+  <video controls id="player" tabindex="-1"
+         style="display:none; position:fixed; top:0; left:0;
+                width:100vw; height:100vh; z-index:9999;
+                background-color:black;"></video>
+
+  
+</body>
+</html>
