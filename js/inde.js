@@ -131,141 +131,222 @@ class SmartTVApp {
         this.currentChannelData = null; // Para armazenar dados do canal atual
         
         // Lista de canais fixos com múltiplas opções
+		//embedicu 1
+		//embedtv.net 2
+		//embetflix 3
+		//embedcanaistv embedtv nao
         this.FIXED_CHANNELS = [
             { 
                 name: "Warner", 
                 options: [
                     { url: "https://embedtv-2.icu/warnerchannel", label: "Opção 1" },
-                    { url: "https://embedcanaistv.com/warner", label: "Opção 2" },
+                    { url: "https://www.embedtv.net/embed/warner-channel", label: "Opção 2" },
                     { url: "https://embedflix.top/tv/player.php?id=warner-channel", label: "Opção 3" }
+                ]
+            },
+			{ 
+                name: "Canai 24H", 
+                options: [
+                    { url: "https://embedtv-2.icu/24h_odeiachris", label: "Cris" },
+                    { url: "https://embedtv-2.icu/24h_simpsons", label: "Simpsons" },
+                    { url: "https://embedtv-2.icu/24h_dragonball", label: "DBZ" }
                 ]
             },
             { 
                 name: "TNT", 
                 options: [
-                    { url: "https://embedflix.top/tv/player.php?id=tnt", label: "Opção 1" },
-                    { url: "https://embedcanaistv.com/tnt", label: "Opção 2" },
-                    { url: "https://reidoscanais.pro/embed/?id=tnt", label: "Opção 3" }
+                    { url: "https://embedtv-2.icu/tnt", label: "Opção 1" },
+                    { url: "https://www.embedtv.net/embed/tnt", label: "Opção 2" },
+                    { url: "https://nossoplayeronlinehd.blog/tv/tnt", label: "Opção 02" },
+                    { url: "https://embedflix.top/tv/player.php?id=tnt", label: "Opção 3" }
+                ]
+            },
+			{ 
+                name: "Megapix", 
+                options: [
+                    { url: "https://embedtv-2.icu/megapix", label: "Opção 1" },
+                    { url: "https://nossoplayeronlinehd.blog/tv/megapix", label: "Opção 2" },
+                    { url: "https://embedflix.top/tv/player.php?id=megapix", label: "Opção 3" }
                 ]
             },
             { 
                 name: "Fox", 
                 options: [
                     { url: "https://embedflix.top/tv/player.php?id=fox", label: "Opção 1" },
-                    { url: "https://embedcanaistv.com/fox", label: "Opção 2" },
-                    { url: "https://reidoscanais.pro/embed/?id=fox", label: "Opção 3" }
+                    { url: "https://embedtv-2.icu/fx", label: "FX" },
+                    { url: "https://embedtv-2.icu/cartoonnetwork", label: "Cartoon Network" },
+                    { url: "https://embedtv-2.icu/nickelodeon", label: "Nickelodeon" }
+                ]
+            },
+			{ 
+                name: "HBO", 
+                options: [
+                    { url: "https://embedtv-2.icu/hbo", label: "HBO" },
+                    { url: "https://nossoplayeronlinehd.blog/tv/hbo", label: "HBO²" },
+                    { url: "https://embedtv-2.icu/hbo2", label: "HBO2" },
+                    { url: "https://nossoplayeronlinehd.blog/tv/hbo2", label: "HBO2²" },
+                    { url: "https://embedtv-2.icu/hboplus", label: "Plus" },
+                    { url: "https://nossoplayeronlinehd.blog/tv/hboplus", label: "Plus²" },
+                    { url: "https://embedtv-2.icu/hboxtreme", label: "Extreme" },
+                    { url: "https://nossoplayeronlinehd.blog/tv/hboxtreme", label: "Extreme" }
                 ]
             },
             { 
                 name: "ESPN", 
                 options: [
-                    { url: "https://embedflix.top/tv/player.php?id=espn", label: "Opção 1" },
+                    { url: "https://embedtv-2.icu/espn", label: "Opção 1" },
                     { url: "https://www.embedtv.net/embed/espn", label: "Opção 2" },
-                    { url: "https://embedcanaistv.com/espn", label: "Opção 3" }
+                    { url: "https://nossoplayeronlinehd.blog/tv/espn", label: "Opção 3" },
+                    { url: "https://embedflix.top/tv/player.php?id=espn", label: "Opção 4" }
                 ]
             },
             { 
                 name: "ESPN2", 
                 options: [
-                    { url: "https://embedflix.top/tv/player.php?id=espn-2", label: "Opção 1" },
-                    { url: "https://embedcanaistv.com/espn2", label: "Opção 2" },
-                    { url: "https://reidoscanais.pro/embed/?id=espn2", label: "Opção 3" }
+                    { url: "https://embedtv-2.icu/espn2", label: "Opção 1" },
+                    { url: "https://www.embedtv.net/embed/espn-2", label: "Opção 2" },
+                    { url: "https://nossoplayeronlinehd.blog/tv/espn2", label: "Opção 3" },
+                    { url: "https://embedflix.top/tv/player.php?id=espn-2", label: "Opção 4" }
                 ]
             },
             { 
                 name: "ESPN3", 
                 options: [
-                    { url: "https://embedflix.top/tv/player.php?id=espn-3", label: "Opção 1" },
-                    { url: "https://embedcanaistv.com/espn3", label: "Opção 2" },
-                    { url: "https://reidoscanais.pro/embed/?id=espn3", label: "Opção 3" }
+                    { url: "https://embedtv-2.icu/espn3", label: "Opção 1" },
+                    { url: "https://nossoplayeronlinehd.blog/tv/espn3", label: "Opção 2" },
+                    { url: "https://embedflix.top/tv/player.php?id=espn-3", label: "Opção 3" }
                 ]
             },
             { 
                 name: "ESPN4", 
                 options: [
-                    { url: "https://embedflix.top/tv/player.php?id=espn-4", label: "Opção 1" },
+                    { url: "https://embedtv-2.icu/espn4", label: "Opção 1" },
                     { url: "https://sporturbo.com/player/multi/espn4sd", label: "Opção 2" },
-                    { url: "https://embedcanaistv.com/espn4", label: "Opção 3" }
+                    { url: "https://embedflix.top/tv/player.php?id=espn-4", label: "Opção 3" },
+                    { url: "https://www.embedtv.net/embed/espn-4", label: "Opção 4" },
+                    { url: "https://nossoplayeronlinehd.blog/tv/espn4", label: "Opção 5" }
+                ]
+            },
+			{ 
+                name: "ESPN5", 
+                options: [
+                    { url: "https://embedtv-2.icu/espn5", label: "Opção 1" },
+                    { url: "https://nossoplayeronlinehd.blog/tv/espn5", label: "Opção 2" },
+                    { url: "https://embedflix.top/tv/player.php?id=espn-5", label: "Opção 4" }
+                ]
+            },
+			{ 
+                name: "ESPN6", 
+                options: [
+                    { url: "https://embedtv-2.icu/espn6", label: "Opção 1" },
+                    { url: "https://nossoplayeronlinehd.blog/tv/espn6", label: "Opção 2" },
+                    { url: "https://embedflix.top/tv/player.php?id=espn-5", label: "Opção 4" }
                 ]
             },
             { 
                 name: "SporTV", 
                 options: [
-                    { url: "https://embedflix.top/tv/player.php?id=sportv", label: "Opção 1" },
-                    { url: "https://reidoscanais.pro/embed/?id=sportvalternativo", label: "Alternativo" },
-                    { url: "https://embedcanaistv.com/sportv", label: "Opção 3" }
+                    { url: "https://embedtv-2.icu/sportv", label: "Opção 1" },
+                    { url: "https://nossoplayeronlinehd.blog/tv/sportv", label: "Opção 2" },
+                    { url: "https://embedflix.top/tv/player.php?id=sportv", label: "Opção 3" }
                 ]
             },
             { 
                 name: "SporTV2", 
                 options: [
-                    { url: "https://embedflix.top/tv/player.php?id=sportv-2", label: "Opção 1" },
-                    { url: "https://embedcanaistv.com/sportv2", label: "Opção 2" },
-                    { url: "https://reidoscanais.pro/embed/?id=sportv2", label: "Opção 3" }
+                    { url: "https://embedtv-2.icu/sportv2", label: "Opção 1" },
+                    { url: "https://nossoplayeronlinehd.blog/tv/sportv2", label: "Opção 2" },
+                    { url: "https://embedflix.top/tv/player.php?id=sportv-2", label: "Opção 3" }
                 ]
             },
             { 
                 name: "SporTV3", 
                 options: [
-                    { url: "https://embedflix.top/tv/player.php?id=sportv-3", label: "Opção 1" },
-                    { url: "https://embedcanaistv.com/sportv3", label: "Opção 2" },
-                    { url: "https://reidoscanais.pro/embed/?id=sportv3", label: "Opção 3" }
+                    { url: "https://embedtv-2.icu/sportv3", label: "Opção 1" },
+                    { url: "https://nossoplayeronlinehd.blog/tv/sportv3", label: "Opção 2" },
+                    { url: "https://embedflix.top/tv/player.php?id=sportv-3", label: "Opção 3" }
+                ]
+            },
+			{ 
+                name: "Disney", 
+                options: [
+                    { url: "https://embedtv-2.icu/disneyplus1", label: "Canal 1" },
+                    { url: "https://nossoplayeronlinehd.blog/tv/disneyplus1", label: "Canal 1²" },
+                    { url: "https://embedtv-2.icu/disneyplus2", label: "Canal 2" },
+                    { url: "https://nossoplayeronlinehd.blog/tv/disneyplus2", label: "Canal 2²" },
+                    { url: "https://embedtv-2.icu/disneyplus3", label: "Canal 3" },
+                    { url: "https://nossoplayeronlinehd.blog/tv/disneyplus3", label: "Canal 3²" }
                 ]
             },
             { 
                 name: "Fox Sports", 
                 options: [
                     { url: "https://embedflix.top/tv/player.php?id=fox-sports", label: "Opção 1" },
-                    { url: "https://embedcanaistv.com/foxsports", label: "Opção 2" },
-                    { url: "https://reidoscanais.pro/embed/?id=foxsports", label: "Opção 3" }
+                    { url: "https://embedcanaistv.com/foxsports", label: "Opção 2" }
                 ]
             },
             { 
                 name: "Fox Sports 2", 
                 options: [
                     { url: "https://embedflix.top/tv/player.php?id=fox-sports-2", label: "Opção 1" },
-                    { url: "https://embedcanaistv.com/foxsports2", label: "Opção 2" },
-                    { url: "https://reidoscanais.pro/embed/?id=foxsports2", label: "Opção 3" }
+                    { url: "https://embedcanaistv.com/foxsports2", label: "Opção 2" }
                 ]
             },
             { 
                 name: "Premiere", 
                 options: [
-                    { url: "https://embedflix.top/tv/player.php?id=premiere", label: "Opção 1" },
+                    { url: "https://embedtv-2.icu/premiere", label: "Opção 1" },
                     { url: "https://embedcanaistv.com/premiere", label: "Opção 2" },
-                    { url: "https://reidoscanais.pro/embed/?id=premiere", label: "Opção 3" }
+                    { url: "https://embedflix.top/tv/player.php?id=premiere", label: "Opção 3" },
+                    { url: "https://nossoplayeronlinehd.blog/tv/premiere", label: "Opção 4" }
                 ]
             },
             { 
                 name: "Premiere2", 
                 options: [
-                    { url: "https://embedflix.top/tv/player.php?id=premiere-2", label: "Opção 1" },
+                    { url: "https://embedtv-2.icu/premiere2", label: "Opção 1" },
                     { url: "https://embedcanaistv.com/premiere2", label: "Opção 2" },
-                    { url: "https://reidoscanais.pro/embed/?id=premiere2", label: "Opção 3" }
+                    { url: "https://embedflix.top/tv/player.php?id=premiere-2", label: "Opção 3" }
                 ]
             },
             { 
                 name: "Premiere3", 
                 options: [
-                    { url: "https://embedflix.top/tv/player.php?id=premiere-3", label: "Opção 1" },
+                    { url: "https://embedtv-2.icu/premiere3", label: "Opção 1" },
                     { url: "https://embedcanaistv.com/premiere3", label: "Opção 2" },
-                    { url: "https://reidoscanais.pro/embed/?id=premiere3", label: "Opção 3" }
+                    { url: "https://embedflix.top/tv/player.php?id=premiere-3", label: "Opção 3" },
+                    { url: "https://nossoplayeronlinehd.blog/tv/premiere3", label: "Opção 4" }
                 ]
             },
             { 
                 name: "Premiere4", 
                 options: [
-                    { url: "https://embedflix.top/tv/player.php?id=premiere-4", label: "Opção 1" },
+                    { url: "https://embedtv-2.icu/premiere4", label: "Opção 1" },
                     { url: "https://embedcanaistv.com/premiere4", label: "Opção 2" },
-                    { url: "https://reidoscanais.pro/embed/?id=premiere4", label: "Opção 3" }
+                    { url: "https://embedflix.top/tv/player.php?id=premiere-4", label: "Opção 3" },
+                    { url: "https://nossoplayeronlinehd.blog/tv/premiere4", label: "Opção 4" }
+                ]
+            },
+			{ 
+                name: "Premiere5", 
+                options: [
+                    { url: "https://embedtv-2.icu/premiere5", label: "Opção 1" },
+                    { url: "https://embedcanaistv.com/premiere5", label: "Opção 2" },
+                    { url: "https://embedflix.top/tv/player.php?id=premiere-5", label: "Opção 3" },
+                    { url: "https://nossoplayeronlinehd.blog/tv/premiere5", label: "Opção 4" }
                 ]
             },
             { 
                 name: "Prime Video", 
                 options: [
-                    { url: "https://embedflix.top/tv/player.php?id=prime-video-1", label: "Canal 1" },
-                    { url: "https://embedflix.top/tv/player.php?id=prime-video-2", label: "Canal 2" },
-                    { url: "https://embedflix.top/tv/player.php?id=prime-video-3", label: "Canal 3" }
+                    { url: "https://embedtv-2.icu/primevideo", label: "Canal 1" },
+                    { url: "https://embedflix.top/tv/player.php?id=prime-video-1", label: "Canal 1²" },
+                    { url: "https://nossoplayeronlinehd.blog/tv/primevideo", label: "Canal 1³" },
+                    { url: "https://embedtv-2.icu/primevideo2", label: "Canal 2" },
+                    { url: "https://embedflix.top/tv/player.php?id=prime-video-2", label: "Canal 2²" },
+                    { url: "https://nossoplayeronlinehd.blog/tv/primevideo2", label: "Canal 2²" },
+                    { url: "https://embedflix.top/tv/player.php?id=prime-video-3", label: "Canal 3" },
+                    { url: "https://nossoplayeronlinehd.blog/tv/primevideo3", label: "Canal 3²" }
                 ]
             },
             { 
@@ -279,9 +360,31 @@ class SmartTVApp {
             { 
                 name: "Combat", 
                 options: [
-                    { url: "https://embedflix.top/tv/player.php?id=combate", label: "Opção 1" },
+                    { url: "https://embedtv-2.icu/ufcfightpass", label: "Ufc fightpass" },
+                    { url: "https://nossoplayeronlinehd.blog/tv/ufcfightpass", label: "Ufc fightpass²" },
+                    { url: "https://nossoplayeronlinehd.blog/tv/combate", label: "Opção 2" },
+                    { url: "https://embedflix.top/tv/player.php?id=combate", label: "Combat" }
+                ]
+            },
+			{ 
+                name: "Universal", 
+                options: [
+                    { url: "https://embedtv-2.icu/studiouniversal", label: "Opção 1" },
                     { url: "https://embedcanaistv.com/combate", label: "Opção 2" },
                     { url: "https://reidoscanais.pro/embed/?id=combate", label: "Opção 3" }
+                ]
+            },
+			{ 
+                name: "Telecine", 
+                options: [
+                    { url: "https://embedtv-2.icu/telecineaction", label: "Action" },
+                    { url: "https://nossoplayeronlinehd.blog/tv/telecineaction", label: "Action²" },
+                    { url: "https://embedtv-2.icu/telecinefun", label: "Fun" },
+                    { url: "https://nossoplayeronlinehd.blog/tv/telecinefun", label: "Fun²" },
+                    { url: "https://embedtv-2.icu/telecinepremium", label: "Premium" },
+                    { url: "https://nossoplayeronlinehd.blog/tv/telecinepremium", label: "Premium²" },
+                    { url: "https://embedtv-2.icu/telecinepipoca", label: "Pipoca" },
+                    { url: "https://nossoplayeronlinehd.blog/tv/telecinepipoca", label: "Pipoca²" }
                 ]
             },
             { 
@@ -289,7 +392,34 @@ class SmartTVApp {
                 options: [
                     { url: "https://embedflix.top/tv/player.php?id=space", label: "Opção 1" },
                     { url: "https://embedcanaistv.com/space", label: "Opção 2" },
-                    { url: "https://reidoscanais.pro/embed/?id=space", label: "Opção 3" }
+                    { url: "https://nossoplayeronlinehd.blog/tv/space", label: "Opção 3" }
+                ]
+            },
+			{ 
+                name: "Paramount", 
+                options: [
+                    { url: "https://embedtv-2.icu/paramountchannel", label: "Opção 1" },
+                    { url: "https://nossoplayeronlinehd.blog/tv/paramountplus", label: "Opção 1²" },
+                    { url: "https://embedtv-2.icu/paramountplus", label: "Plus" },
+                    { url: "https://embedtv-2.icu/paramountplus2", label: "Plus2" }
+                ]
+            },
+			{ 
+                name: "Discovery ", 
+                options: [
+                    { url: "https://embedtv-2.icu/discoveryturbo", label: "Turbo" },
+                    { url: "https://nossoplayeronlinehd.blog/tv/discoveryturbo", label: "Turbo²" },
+                    { url: "https://embedtv-2.icu/discoverychannel", label: "Channel" },
+                    { url: "https://nossoplayeronlinehd.blog/tv/discovery_channel_hd", label: "Channel²" },
+                    { url: "https://embedtv-2.icu/discoveryscience", label: "Science" },
+                    { url: "https://embedtv-2.icu/animalplanet", label: "Animal Planet" }
+                ]
+            },
+			{ 
+                name: "BOY", 
+                options: [
+                    { url: "https://embedtv-2.icu/playboy", label: "PlayBoy" },
+                    { url: "https://embedtv-2.icu/sexyhot", label: "Sexy" }
                 ]
             }
         ];
