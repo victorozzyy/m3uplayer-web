@@ -14,9 +14,9 @@
     <div class="container" id="mainContainer">
         <h1>🎬 Player M3U8 - Tizen TV</h1>
         
-        <div class="button-container">
+       <div class="button-container">
             <button class="btn btn-m3u8 focusable" data-index="1" onclick="showChannelSelection()">📺 Canais Fixos</button>
-            <button class="btn btn-m3u8 focusable" data-index="2" onclick="window.location.href = 'm3u8.html'">🎬 M3U8 Player</button>
+            
             <button class="btn btn-external focusable" data-index="3" onclick="loadExternalSite('https://nossoplayeronlinehd.blog/', '🌐 Nosso Player Online')">🌐 Nosso Player Online</button>
             <button class="btn btn-external focusable" data-index="4" onclick="loadExternalSite('https://embedcanaistv.com/', '📺 Embed Canais TV')">📺 Embed Canais TV</button>
         </div>
@@ -24,7 +24,7 @@
         <div class="button-container">
             <button class="btn btn-external focusable" data-index="5" onclick="loadExternalSite('https://redecanaistv.gd/', '📺 Rede Canais TV')">📺 Rede Canais TV</button>
             <button class="btn btn-external focusable" data-index="6" onclick="loadExternalSite('https://futebolplayhd.com/', '⚽ Futebol Play HD')">⚽ Futebol Play HD</button>
-            <button class="btn btn-hide focusable" data-index="7" onclick="closeTizenApp()">❌ Fechar App</button>
+            <button class="btn btn-external focusable" data-index="6" onclick="loadExternalSite('https://www.embedtv.net/', '⚽Embedtv/')">⚽ Futebol Play HD</button>
             <button class="btn btn-hide focusable" data-index="8" onclick="refreshApp()">🔄 Atualizar</button>
         </div>
     </div>
@@ -33,7 +33,7 @@
     <div class="external-site-container" id="externalSiteContainer">
         <div class="external-site-header">
             <div class="external-site-title" id="externalSiteTitle">Carregando...</div>
-            <div class="external-site-controls">
+            <div class="external-site-controls" id="externalSiteControls">
                 <button class="control-btn focusable" data-index="1" onclick="reloadExternalSite()">🔄 Recarregar</button>
                 <button class="control-btn focusable" data-index="2" onclick="goBackHome()">🏠 Voltar</button>
                 <button class="control-btn focusable" data-index="3" onclick="toggleFullscreenSite()">⛶ Tela Cheia</button>
@@ -57,7 +57,7 @@
     </div>
 
     <script>
-       
+        
     </script>
 </body>
 </html>
