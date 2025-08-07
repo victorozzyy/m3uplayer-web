@@ -1,23 +1,552 @@
 #EXTINF:-1,BR: Friends
 http://24hrs.homelinux.com:8080/24H-friends/video.m3u8
-#EXTINF:-1 group-title="Premium HD Channels",Brazzers TV Europe
-http://a0bn5xro.rostelekom.xyz/iptv/UPKY3Y8BF6KNX8/910/index.m3u8
-#EXTINF:-1,VIP: Brand New Amateurs
-http://lunar.pm:8080/ALVIN/9gJbtWskzsJS/122910
-#EXTINF:-1 tvg-id="ESPN" tvg-name="ESPN" tvg-logo="https://i.imgur.com/CkoAvYH.png" group-title="Canais | ESPN",ESPN HD
-https://cr7v.short.gy/manoiTVOP2/spnHD²/Index.m3u8
 #EXTINF:-1,BR: Eu a Patroa e as Crianças 24h
 http://24hrs.homelinux.com:8080/24H-euapatroaeascriancas7/playlist.m3u8
+#EXTINF:-1,BR: Eu a Patroa e as Crianças 2
+http://15.235.9.200:14908/
 #EXTINF:-1,BR: 2 Homens e Meio 24h
 http://24hrs.homelinux.com:8080/24H-2HomensEmeio/playlist.m3u8
+#EXTINF:-1,BR: 2 Homens e Meio 2
+http://15.235.9.200:14872/
 #EXTINF:-1,BR: Todo Mundo Odeia O Cris 24h
 http://24hrs.homelinux.com:8080/24H-todomundoodeiaocris/video.m3u8
 #EXTINF:-1,BR: Um Maluco no Pedaço 24h
-http://24hrs.homelinux.com:8080/24H-ummaluconopedaco/playlist.m3u8/master.m3u8?advertisingId=&appName=web&appVersion=unknown&appStoreUrl=&architecture=&buildVersion=&clientTime=0&deviceDNT=0&deviceId=9781c811-629b-11eb-86b1-3facc9da388a&deviceMake=Chrome&deviceModel=web&deviceType=web&deviceVersion=unknown&includeExtendedEvents=false&sid=30398c0d-72c1-4ff3-927f-d52a8f3d9300&userId=&serverSideAds=true
-#EXTINF:- 1 tvg-id="SporTV" tvg-logo="https://i.imgur.com/bwqLqyg.png" group-title="Canais | SporTV",SporTV HD
-https://cr7v.short.gy/manoiTVOP3/sptvxtra2/75991634025/index.m3u8
-#EXTINF:-1 tvg-id="Premiere Clubes" tvg-logo="https://i.imgur.com/T6VmjYB.png" group-title="Canais | PREMIERE",Premiere Clubes Live
-https://cr7v.short.gy/aoVIVO/PPVaoVIVO/index.m3u8
-#EXTINF:- 1 tvg-id="SporTV" tvg-logo="https://i.imgur.com/bwqLqyg.png" group-title="Canais | SporTV",SporTV FHD
-https://cr7v.short.gy/manoiTVOP1/sptv1/75991634025/index.m3u8#EXTINF:-1 tvg-id="Disney plus" tvg-name="Disney plus" tvg-logo="https://i.imgur.com/3jwgcNr.png" group-title="Canais | PPV ESPORTES",Disney+ 1 
-http://45.134.141.162:3366/stream/disneyplus/event1/master.m3u8
+http://24hrs.homelinux.com:8080/24H-ummaluconopedaco/playlist.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="BR: SPORTV" tvg-logo="" group-title="Brazil",BR: SPORTV
+http://lunar.pm:8080/2052023680/mvpQrGT27dkS/120832
+#EXTINF:-1 tvg-id="" tvg-name="BR: SPORTV 2" tvg-logo="" group-title="Brazil",BR: SPORTV 2
+http://lunar.pm:8080/2052023680/mvpQrGT27dkS/120833
+#EXTINF:-1,BR: SPORTV 1
+http://lunar.pm:8080/2052023680/mvpQrGT27dkS/120743
+#EXTINF:-1,BR: SPORTV 2 [Live During Events Only]
+http://lunar.pm:8080/2052023680/mvpQrGT27dkS/120744
+#EXTINF:-1,BR: SPORTV 3
+http://lunar.pm:8080/2052023680/mvpQrGT27dkS/120745
+#EXTINF:-1,BR: CONMEBOL 2
+http://lunar.pm:8080/2052023680/mvpQrGT27dkS/120601
+#EXTINF:-1,BR: DAZN
+http://lunar.pm:8080/2052023680/mvpQrGT27dkS/120604
+#EXTINF:-1,BR: DAZN 2
+http://lunar.pm:8080/2052023680/mvpQrGT27dkS/120605
+#EXTINF:-1,BR: DAZN 3
+http://lunar.pm:8080/2052023680/mvpQrGT27dkS/120606
+#EXTINF:-1,BR: ESPN
+http://lunar.pm:8080/2052023680/mvpQrGT27dkS/120621
+#EXTINF:-1,BR: ESPN 2
+http://lunar.pm:8080/2052023680/mvpQrGT27dkS/120622
+#EXTINF:-1,BR: ESPN 3
+http://lunar.pm:8080/2052023680/mvpQrGT27dkS/120623
+#EXTINF:-1,BR: ESPN 4
+http://lunar.pm:8080/2052023680/mvpQrGT27dkS/120624
+#EXTINF:-1,BR: ESPN Extra
+http://lunar.pm:8080/2052023680/mvpQrGT27dkS/120625
+#EXTINF:-1,BR: FOX PREMIUM 1
+http://lunar.pm:8080/2052023680/mvpQrGT27dkS/120629
+#EXTINF:-1,BR: FOX PREMIUM 2
+http://lunar.pm:8080/2052023680/mvpQrGT27dkS/120630
+#EXTINF:-1,BR: FOX SPORTS 2
+http://lunar.pm:8080/2052023680/mvpQrGT27dkS/120631
+#EXTINF:-1,BR: Fox Sports
+http://lunar.pm:8080/2052023680/mvpQrGT27dkS/120632
+#EXTINF:-1,BR: PREMIERE 1
+http://lunar.pm:8080/2052023680/mvpQrGT27dkS/120716
+#EXTINF:-1,BR: PREMIERE 2
+http://lunar.pm:8080/2052023680/mvpQrGT27dkS/120717
+#EXTINF:-1,BR: PREMIERE 3
+http://lunar.pm:8080/2052023680/mvpQrGT27dkS/120718
+#EXTINF:-1,BR: PREMIERE 4
+http://lunar.pm:8080/2052023680/mvpQrGT27dkS/120719
+#EXTINF:-1,BR: PREMIERE 5
+http://lunar.pm:8080/2052023680/mvpQrGT27dkS/120720
+#EXTINF:-1,BR: PREMIERE 7
+http://lunar.pm:8080/2052023680/mvpQrGT27dkS/120721
+#EXTINF:-1,BR: PREMIERE 8
+http://lunar.pm:8080/2052023680/mvpQrGT27dkS/120722
+#EXTINF:-1,BR: PREMIERE CLUBES
+http://lunar.pm:8080/2052023680/mvpQrGT27dkS/120723
+#EXTINF:-1,BR: TNT
+http://lunar.pm:8080/2052023680/mvpQrGT27dkS/120758
+#EXTINF:-1,BR: TNT SERIES
+http://lunar.pm:8080/2052023680/mvpQrGT27dkS/120759
+#EXTINF:-1,BR: TNT Sports
+http://lunar.pm:8080/2052023680/mvpQrGT27dkS/120760
+#EXTINF:-1,BR: TNT SPORTS 2
+http://lunar.pm:8080/2052023680/mvpQrGT27dkS/120761
+#EXTINF:-1,BR: TNT SPORTS 3
+http://lunar.pm:8080/2052023680/mvpQrGT27dkS/120762
+#EXTINF:-1,BR: Friends
+http://24hrs.homelinux.com:8080/24H-friends/video.m3u8
+#EXTINF:-1,BR: Eu a Patroa e as Crianças 24h
+http://24hrs.homelinux.com:8080/24H-euapatroaeascriancas7/playlist.m3u8
+#EXTINF:-1,BR: Eu a Patroa e as Crianças 2
+http://15.235.9.200:14908/
+#EXTINF:-1,BR: 2 Homens e Meio 24h
+http://24hrs.homelinux.com:8080/24H-2HomensEmeio/playlist.m3u8
+#EXTINF:-1,BR: 2 Homens e Meio 2
+http://15.235.9.200:14872/
+#EXTINF:-1,BR: Todo Mundo Odeia O Cris 24h
+http://24hrs.homelinux.com:8080/24H-todomundoodeiaocris/video.m3u8
+#EXTINF:-1,BR: Um Maluco no Pedaço 24h
+http://24hrs.homelinux.com:8080/24H-ummaluconopedaco/playlist.m3u8
+#EXTINF:-1,BR: 13 MAX
+http://lunar.pm:8080/2052023680/mvpQrGT27dkS/120579
+#EXTINF:-1,BR: A&E
+http://lunar.pm:8080/2052023680/mvpQrGT27dkS/120580
+#EXTINF:-1,BR: ALL SPORTS
+http://lunar.pm:8080/2052023680/mvpQrGT27dkS/120581
+#EXTINF:-1,BR: AMC
+http://lunar.pm:8080/2052023680/mvpQrGT27dkS/120582
+#EXTINF:-1,BR: ANIMAL PLANET
+http://lunar.pm:8080/2052023680/mvpQrGT27dkS/120583
+#EXTINF:-1,BR: ARTE 1
+http://lunar.pm:8080/2052023680/mvpQrGT27dkS/120584
+#EXTINF:-1,BR: AXN
+http://lunar.pm:8080/2052023680/mvpQrGT27dkS/120585
+#EXTINF:-1,BR: BABY
+http://lunar.pm:8080/2052023680/mvpQrGT27dkS/120586
+#EXTINF:-1,BR: BAND NEWS
+http://lunar.pm:8080/2052023680/mvpQrGT27dkS/120587
+#EXTINF:-1,BR: Band Sports
+http://lunar.pm:8080/2052023680/mvpQrGT27dkS/120588
+#EXTINF:-1,BR: BIS
+http://lunar.pm:8080/2052023680/mvpQrGT27dkS/120589
+#EXTINF:-1,BR: BOOMERANG
+http://lunar.pm:8080/2052023680/mvpQrGT27dkS/120590
+#EXTINF:-1,BR: CARTOON NETWORK
+http://lunar.pm:8080/2052023680/mvpQrGT27dkS/120594
+#EXTINF:-1,BR: Cartoonito
+http://lunar.pm:8080/2052023680/mvpQrGT27dkS/120595
+#EXTINF:-1,BR: CINEMAX
+http://lunar.pm:8080/2052023680/mvpQrGT27dkS/120597
+#EXTINF:-1,BR: CNN BRASIL
+http://lunar.pm:8080/2052023680/mvpQrGT27dkS/120598
+#EXTINF:-1,BR: COMBATE
+http://lunar.pm:8080/2052023680/mvpQrGT27dkS/120599
+#EXTINF:-1,BR: COMEDY CENTRAL
+http://lunar.pm:8080/2052023680/mvpQrGT27dkS/120600
+#EXTINF:-1,BR: DISCOVERY CHANNEL
+http://lunar.pm:8080/2052023680/mvpQrGT27dkS/120607
+#EXTINF:-1,BR: DISCOVERY HOME & HEALTH
+http://lunar.pm:8080/2052023680/mvpQrGT27dkS/120608
+#EXTINF:-1,BR: DISCOVERY ID
+http://lunar.pm:8080/2052023680/mvpQrGT27dkS/120609
+#EXTINF:-1,BR: DISCOVERY KIDS
+http://lunar.pm:8080/2052023680/mvpQrGT27dkS/120610
+#EXTINF:-1,BR: DISCOVERY SCIENCE
+http://lunar.pm:8080/2052023680/mvpQrGT27dkS/120611
+#EXTINF:-1,BR: DISCOVERY THEATER
+http://lunar.pm:8080/2052023680/mvpQrGT27dkS/120612
+#EXTINF:-1,BR: DISCOVERY TLC
+http://lunar.pm:8080/2052023680/mvpQrGT27dkS/120613
+#EXTINF:-1,BR: DISCOVERY TURBO
+http://lunar.pm:8080/2052023680/mvpQrGT27dkS/120614
+#EXTINF:-1,BR: DISCOVERY WORLD
+http://lunar.pm:8080/2052023680/mvpQrGT27dkS/120615
+#EXTINF:-1,BR: DISNEY CHANNEL
+http://lunar.pm:8080/2052023680/mvpQrGT27dkS/120616
+#EXTINF:-1,BR: DISNEY JR
+http://lunar.pm:8080/2052023680/mvpQrGT27dkS/120617
+#EXTINF:-1,BR: DISNEY XD
+http://lunar.pm:8080/2052023680/mvpQrGT27dkS/120618
+#EXTINF:-1,BR: E!
+http://lunar.pm:8080/2052023680/mvpQrGT27dkS/120619
+#EXTINF:-1,BR: Ei Maxx Brasil
+http://lunar.pm:8080/2052023680/mvpQrGT27dkS/120620
+#EXTINF:-1,BR: Fish TV
+http://lunar.pm:8080/2052023680/mvpQrGT27dkS/120626
+#EXTINF:-1,BR: FOOD NETWORK
+http://lunar.pm:8080/2052023680/mvpQrGT27dkS/120627
+#EXTINF:-1,BR: STAR LIFE (FOX LIFE)
+http://lunar.pm:8080/2052023680/mvpQrGT27dkS/120628
+
+#EXTINF:-1,BR: Futura
+http://lunar.pm:8080/2052023680/mvpQrGT27dkS/120633
+#EXTINF:-1,BR: FX
+http://lunar.pm:8080/2052023680/mvpQrGT27dkS/120634
+#EXTINF:-1,BR: H2
+http://lunar.pm:8080/2052023680/mvpQrGT27dkS/120690
+#EXTINF:-1,BR: HBO
+http://lunar.pm:8080/2052023680/mvpQrGT27dkS/120691
+#EXTINF:-1,BR: HBO 2
+http://lunar.pm:8080/2052023680/mvpQrGT27dkS/120692
+#EXTINF:-1,BR: HBO Extreme
+http://lunar.pm:8080/2052023680/mvpQrGT27dkS/120693
+#EXTINF:-1,BR: HBO FAMILY
+http://lunar.pm:8080/2052023680/mvpQrGT27dkS/120694
+#EXTINF:-1,BR: HBO Mundi
+http://lunar.pm:8080/2052023680/mvpQrGT27dkS/120695
+#EXTINF:-1,BR: HBO PLUS
+http://lunar.pm:8080/2052023680/mvpQrGT27dkS/120696
+#EXTINF:-1,BR: HBO Pop
+http://lunar.pm:8080/2052023680/mvpQrGT27dkS/120697
+#EXTINF:-1,BR: HBO SIGNATURE
+http://lunar.pm:8080/2052023680/mvpQrGT27dkS/120698
+#EXTINF:-1,BR: HBO XTREME
+http://lunar.pm:8080/2052023680/mvpQrGT27dkS/120699
+#EXTINF:-1,BR: HGTV
+http://lunar.pm:8080/2052023680/mvpQrGT27dkS/120700
+#EXTINF:-1,BR: HISTORY CHANNEL
+http://lunar.pm:8080/2052023680/mvpQrGT27dkS/120701
+#EXTINF:-1,BR: JOVEM PAN NEWS
+http://lunar.pm:8080/2052023680/mvpQrGT27dkS/120702
+#EXTINF:-1,BR: LIFETIME
+http://lunar.pm:8080/2052023680/mvpQrGT27dkS/120703
+#EXTINF:-1,BR: MTV
+http://lunar.pm:8080/2052023680/mvpQrGT27dkS/120705
+#EXTINF:-1,BR: MULTI SHOW
+http://lunar.pm:8080/2052023680/mvpQrGT27dkS/120706
+#EXTINF:-1,BR: Music Box Brazil
+http://lunar.pm:8080/2052023680/mvpQrGT27dkS/120707
+#EXTINF:-1,BR: NAT GEO KIDS
+http://lunar.pm:8080/2052023680/mvpQrGT27dkS/120708
+#EXTINF:-1,BR: NAT GEO WILD
+http://lunar.pm:8080/2052023680/mvpQrGT27dkS/120709
+#EXTINF:-1,BR: NAT GEO
+http://lunar.pm:8080/2052023680/mvpQrGT27dkS/120710
+#EXTINF:-1,BR: NICKELODEON
+http://lunar.pm:8080/2052023680/mvpQrGT27dkS/120711
+#EXTINF:-1,BR: OFF
+http://lunar.pm:8080/2052023680/mvpQrGT27dkS/120714
+#EXTINF:-1,BR: PARAMOUNT CHANNEL
+http://lunar.pm:8080/2052023680/mvpQrGT27dkS/120715
+#EXTINF:-1,BR: RedBull TV
+http://lunar.pm:8080/2052023680/mvpQrGT27dkS/120730
+http://lunar.pm:8080/2052023680/mvpQrGT27dkS/120740
+#EXTINF:-1,BR: SONY
+http://lunar.pm:8080/2052023680/mvpQrGT27dkS/120741
+#EXTINF:-1,BR: SPACE
+http://lunar.pm:8080/2052023680/mvpQrGT27dkS/120742
+#EXTINF:-1,BR: STAR CHANNEL
+http://lunar.pm:8080/2052023680/mvpQrGT27dkS/120746
+#EXTINF:-1,BR: STUDIO UNIVERSAL
+http://lunar.pm:8080/2052023680/mvpQrGT27dkS/120747
+#EXTINF:-1,BR: SYFY
+http://lunar.pm:8080/2052023680/mvpQrGT27dkS/120748
+#EXTINF:-1,BR: TBS
+http://lunar.pm:8080/2052023680/mvpQrGT27dkS/120749
+#EXTINF:-1,BR: TCM
+http://lunar.pm:8080/2052023680/mvpQrGT27dkS/120750
+#EXTINF:-1,BR: TELECINE ACTION
+http://lunar.pm:8080/2052023680/mvpQrGT27dkS/120751
+#EXTINF:-1,BR: TELE CINE CULT
+http://lunar.pm:8080/2052023680/mvpQrGT27dkS/120752
+#EXTINF:-1,BR: TELECINE FUN
+http://lunar.pm:8080/2052023680/mvpQrGT27dkS/120753
+#EXTINF:-1,BR: TELECINE PIPOCA
+http://lunar.pm:8080/2052023680/mvpQrGT27dkS/120754
+#EXTINF:-1,BR: TELECINE PREMIUM
+http://lunar.pm:8080/2052023680/mvpQrGT27dkS/120755
+#EXTINF:-1,BR: TELECINE TOUCH
+http://lunar.pm:8080/2052023680/mvpQrGT27dkS/120756
+#EXTINF:-1,BR: TerraViva
+http://lunar.pm:8080/2052023680/mvpQrGT27dkS/120757
+#EXTINF:-1 tvg-id="" tvg-name="BR: UNIVERSAL CHANNEL" tvg-logo="" group-title="Brazil",BR: UNIVERSAL CHANNEL
+http://lunar.pm:8080/2052023680/mvpQrGT27dkS/120782
+#EXTINF:-1 tvg-id="" tvg-name="BR: WARNER CHANNEL" tvg-logo="http://landiptv.vip:2095/images/HM3xx55KZnCUdlPuNC1k2CQmSialG6ZFMmnpVE7A3yrIRUzMt92eOT9XEeS0KfwXTohEhIg0Cbv52OXZo8HFNw.png" group-title="Brazil",BR: WARNER CHANNEL
+http://lunar.pm:8080/2052023680/mvpQrGT27dkS/120786
+#EXTINF:-1 tvg-id="" tvg-name="BR: DISCOVERY CIVILIZATION" tvg-logo="" group-title="Brazil",BR: DISCOVERY CIVILIZATION
+http://lunar.pm:8080/2052023680/mvpQrGT27dkS/120806
+#EXTINF:-1 tvg-id="" tvg-name="BR: DISCOVERY H&H" tvg-logo="" group-title="Brazil",BR: DISCOVERY H&H
+http://lunar.pm:8080/2052023680/mvpQrGT27dkS/120807
+#EXTINF:-1 tvg-id="" tvg-name="BR: DISNEY JUNIOR" tvg-logo="" group-title="Brazil",BR: DISNEY JUNIOR
+http://lunar.pm:8080/2052023680/mvpQrGT27dkS/120808
+#EXTINF:-1 tvg-id="" tvg-name="BR: Discovery H&H" tvg-logo="" group-title="Brazil",BR: Discovery H&H
+http://lunar.pm:8080/2052023680/mvpQrGT27dkS/120809
+#EXTINF:-1 tvg-id="" tvg-name="BR: FOX" tvg-logo="" group-title="Brazil",BR: FOX
+http://lunar.pm:8080/2052023680/mvpQrGT27dkS/120810
+#EXTINF:-1 tvg-id="" tvg-name="BR: FOX LIFE" tvg-logo="" group-title="Brazil",BR: FOX LIFE
+http://lunar.pm:8080/2052023680/mvpQrGT27dkS/120811
+#EXTINF:-1 tvg-id="" tvg-name="BR: ID InvestigaÃ§Ã£o Discovery" tvg-logo="" group-title="Brazil",BR: ID InvestigaÃ§Ã£o Discovery
+http://lunar.pm:8080/2052023680/mvpQrGT27dkS/120818
+#EXTINF:-1 tvg-id="" tvg-name="BR: MAX" tvg-logo="" group-title="Brazil",BR: MAX
+http://lunar.pm:8080/2052023680/mvpQrGT27dkS/120820
+#EXTINF:-1 tvg-id="" tvg-name="BR: MAX PRIME" tvg-logo="" group-title="Brazil",BR: MAX PRIME
+http://lunar.pm:8080/2052023680/mvpQrGT27dkS/120821
+#EXTINF:-1 tvg-id="" tvg-name="BR: MEGAPIX" tvg-logo="" group-title="Brazil",BR: MEGAPIX
+http://lunar.pm:8080/2052023680/mvpQrGT27dkS/120823
+#EXTINF:-1 tvg-id="" tvg-name="BR: MEGAPIX" tvg-logo="" group-title="Brazil",BR: MEGAPIX
+http://lunar.pm:8080/2052023680/mvpQrGT27dkS/120822
+#EXTINF:-1,BR: MEGA PIX
+http://lunar.pm:8080/2052023680/mvpQrGT27dkS/120704
+#EXTINF:-1 tvg-id="" tvg-name="BR: Megapix" tvg-logo="" group-title="Brazil",BR: Megapix
+http://lunar.pm:8080/2052023680/mvpQrGT27dkS/120826
+#EXTINF:-1 tvg-id="" tvg-name="BR: MULTISHOW" tvg-logo="" group-title="Brazil",BR: MULTISHOW
+http://lunar.pm:8080/2052023680/mvpQrGT27dkS/120824
+#EXTINF:-1 tvg-id="" tvg-name="BR: Mais Globosat" tvg-logo="" group-title="Brazil",BR: Mais Globosat
+http://lunar.pm:8080/2052023680/mvpQrGT27dkS/120825
+#EXTINF:-1 tvg-id="" tvg-name="BR: Modo Viagem" tvg-logo="" group-title="Brazil",BR: Modo Viagem
+http://lunar.pm:8080/2052023680/mvpQrGT27dkS/120827
+#EXTINF:-1 tvg-id="" tvg-name="BR: PRIME BOX BRASIL" tvg-logo="" group-title="Brazil",BR: PRIME BOX BRASIL
+http://lunar.pm:8080/2052023680/mvpQrGT27dkS/120828
+#EXTINF:-1 tvg-id="" tvg-name="BR: Premiere Clubes Extra" tvg-logo="" group-title="Brazil",BR: Premiere Clubes Extra
+http://lunar.pm:8080/2052023680/mvpQrGT27dkS/120829
+#EXTINF:-1 tvg-id="" tvg-name="BR: Record Nordeste" tvg-logo="" group-title="Brazil",BR: Record Nordeste
+http://lunar.pm:8080/2052023680/mvpQrGT27dkS/120830
+#EXTINF:-1 tvg-id="" tvg-name="BR: SBT SP" tvg-logo="" group-title="Brazil",BR: SBT SP
+http://lunar.pm:8080/2052023680/mvpQrGT27dkS/120831
+#EXTINF:-1 tvg-id="" tvg-name="BR: Star Life" tvg-logo="" group-title="Brazil",BR: Star Life
+http://lunar.pm:8080/2052023680/mvpQrGT27dkS/120834
+#EXTINF:-1 tvg-id="" tvg-name="BR: TELECINE CULT" tvg-logo="" group-title="Brazil",BR: TELECINE CULT
+http://lunar.pm:8080/2052023680/mvpQrGT27dkS/120835
+#EXTINF:-1 tvg-id="" tvg-name="BR: TVCINE ACTION" tvg-logo="" group-title="Brazil",BR: TVCINE ACTION
+http://lunar.pm:8080/2052023680/mvpQrGT27dkS/120840
+#EXTINF:-1 tvg-id="" tvg-name="BR: Telecine Cult" tvg-logo="" group-title="Brazil",BR: Telecine Cult
+http://lunar.pm:8080/2052023680/mvpQrGT27dkS/120841
+#EXTINF:-1 tvg-id="" tvg-name="BR: UNIVERSAL TV" tvg-logo="" group-title="Brazil",BR: UNIVERSAL TV
+http://lunar.pm:8080/2052023680/mvpQrGT27dkS/120842
+#EXTINF:-1 tvg-id="" tvg-name="BR: WARNER" tvg-logo="" group-title="Brazil",BR: WARNER
+http://lunar.pm:8080/2052023680/mvpQrGT27dkS/120844
+#EXTINF:-1,4K: EXOTIC
+http://lunar.pm:8080/ALVIN/9gJbtWskzsJS/122875
+#EXTINF:-1,4K: TINY4K
+http://lunar.pm:8080/ALVIN/9gJbtWskzsJS/122876
+#EXTINF:-1,4K: SLIM4K
+http://lunar.pm:8080/ALVIN/9gJbtWskzsJS/122877
+#EXTINF:-1,4K: CUCK HUNTER
+http://lunar.pm:8080/ALVIN/9gJbtWskzsJS/122878
+#EXTINF:-1,4K: TINY4K 2
+http://lunar.pm:8080/ALVIN/9gJbtWskzsJS/122879
+#EXTINF:-1,4K: FIRST CLASS
+http://lunar.pm:8080/ALVIN/9gJbtWskzsJS/122880
+#EXTINF:-1,4K: FOXY4KME
+http://lunar.pm:8080/ALVIN/9gJbtWskzsJS/122881
+#EXTINF:-1,4K: CUM 4K
+http://lunar.pm:8080/ALVIN/9gJbtWskzsJS/122882
+#EXTINF:-1,4K: BENEFIT MONKEY
+http://lunar.pm:8080/ALVIN/9gJbtWskzsJS/122883
+#EXTINF:-1,4K: FAPADOO THREESOMES
+http://lunar.pm:8080/ALVIN/9gJbtWskzsJS/122884
+#EXTINF:-1,4K: LETS DO IT [HIGH]
+http://lunar.pm:8080/ALVIN/9gJbtWskzsJS/122885
+#EXTINF:-1,4K: ABELLA DANGER
+http://lunar.pm:8080/ALVIN/9gJbtWskzsJS/122886
+#EXTINF:-1,4K: ADRIANA CHECHIK
+http://lunar.pm:8080/ALVIN/9gJbtWskzsJS/122887
+#EXTINF:-1,4K: ALINA LOPEZ
+http://lunar.pm:8080/ALVIN/9gJbtWskzsJS/122888
+#EXTINF:-1,4K: ANGELA WHITE
+http://lunar.pm:8080/ALVIN/9gJbtWskzsJS/122889
+#EXTINF:-1,4K: ARIANA MARIE
+http://lunar.pm:8080/ALVIN/9gJbtWskzsJS/122890
+#EXTINF:-1,4K: AUGUST AMES
+http://lunar.pm:8080/ALVIN/9gJbtWskzsJS/122891
+#EXTINF:-1,4K: BRANDI LOVE
+http://lunar.pm:8080/ALVIN/9gJbtWskzsJS/122892
+#EXTINF:-1,4K: DANI DANIELS
+http://lunar.pm:8080/ALVIN/9gJbtWskzsJS/122893
+#EXTINF:-1,4K: DANI JENSEN
+http://lunar.pm:8080/ALVIN/9gJbtWskzsJS/122894
+#EXTINF:-1,4K: ELSA JEAN
+http://lunar.pm:8080/ALVIN/9gJbtWskzsJS/122895
+#EXTINF:-1,4K: EMILY WILLIS
+http://lunar.pm:8080/ALVIN/9gJbtWskzsJS/122896
+#EXTINF:-1,4K: EVA LOVIA
+http://lunar.pm:8080/ALVIN/9gJbtWskzsJS/122897
+#EXTINF:-1,4K: GINA VALENTINA
+http://lunar.pm:8080/ALVIN/9gJbtWskzsJS/122898
+#EXTINF:-1,4K: JANICE GRIFFITH
+http://lunar.pm:8080/ALVIN/9gJbtWskzsJS/122899
+#EXTINF:-1,4K: AUTUMN FALLS
+http://lunar.pm:8080/ALVIN/9gJbtWskzsJS/122900
+#EXTINF:-1,VIP: TINY4K
+http://lunar.pm:8080/ALVIN/9gJbtWskzsJS/122901
+#EXTINF:-1,VIP: TUSHY
+http://lunar.pm:8080/ALVIN/9gJbtWskzsJS/122902
+#EXTINF:-1,VIP: VIXEN
+http://lunar.pm:8080/ALVIN/9gJbtWskzsJS/122903
+#EXTINF:-1,VIP: ASIAN BONDAGE
+http://lunar.pm:8080/ALVIN/9gJbtWskzsJS/122904
+#EXTINF:-1,VIP: ASIAN SEX DIARY
+http://lunar.pm:8080/ALVIN/9gJbtWskzsJS/122905
+#EXTINF:-1,VIP: BLACK GFS
+http://lunar.pm:8080/ALVIN/9gJbtWskzsJS/122906
+#EXTINF:-1,VIP: BLACK NEED
+http://lunar.pm:8080/ALVIN/9gJbtWskzsJS/122907
+#EXTINF:-1,VIP: BLACKED
+http://lunar.pm:8080/ALVIN/9gJbtWskzsJS/122908
+#EXTINF:-1,VIP: Blacked HD
+http://lunar.pm:8080/ALVIN/9gJbtWskzsJS/122909
+#EXTINF:-1,VIP: Brand New Amateurs
+http://lunar.pm:8080/ALVIN/9gJbtWskzsJS/122910
+#EXTINF:-1,VIP: Bratty Sis
+http://lunar.pm:8080/ALVIN/9gJbtWskzsJS/122911
+#EXTINF:-1,VIP: BRATTY SIS
+http://lunar.pm:8080/ALVIN/9gJbtWskzsJS/122912
+#EXTINF:-1,VIP: Brazzers HD
+http://lunar.pm:8080/ALVIN/9gJbtWskzsJS/122913
+#EXTINF:-1,VIP: Brazzers TV Europe
+http://lunar.pm:8080/ALVIN/9gJbtWskzsJS/122914
+#EXTINF:-1,VIP: CHINA XXX
+http://lunar.pm:8080/ALVIN/9gJbtWskzsJS/122915
+#EXTINF:-1,VIP: CUM4K
+http://lunar.pm:8080/ALVIN/9gJbtWskzsJS/122916
+#EXTINF:-1,VIP: DOGFART NETWORK
+http://lunar.pm:8080/ALVIN/9gJbtWskzsJS/122917
+#EXTINF:-1,VIP: FAKE TAXI
+http://lunar.pm:8080/ALVIN/9gJbtWskzsJS/122918
+#EXTINF:-1,VIP: FAMILY STROKES
+http://lunar.pm:8080/ALVIN/9gJbtWskzsJS/122919
+#EXTINF:-1,VIP: FILTHY KINGS
+http://lunar.pm:8080/ALVIN/9gJbtWskzsJS/122920
+#EXTINF:-1,VIP: FIt 18
+http://lunar.pm:8080/ALVIN/9gJbtWskzsJS/122921
+#EXTINF:-1,VIP: GOLDEN ASIA CHERRY
+http://lunar.pm:8080/ALVIN/9gJbtWskzsJS/122922
+#EXTINF:-1,VIP: HER LIMIT
+http://lunar.pm:8080/ALVIN/9gJbtWskzsJS/122923
+#EXTINF:-1,VIP: IBIZA
+http://lunar.pm:8080/ALVIN/9gJbtWskzsJS/122924
+#EXTINF:-1,VIP: JAYS POV
+http://lunar.pm:8080/ALVIN/9gJbtWskzsJS/122925
+#EXTINF:-1,VIP: LETS DOEIT
+http://lunar.pm:8080/ALVIN/9gJbtWskzsJS/122926
+#EXTINF:-1,VIP: LITTLE ASIANS
+http://lunar.pm:8080/ALVIN/9gJbtWskzsJS/122927
+#EXTINF:-1,VIP: MODEL MEDIA ASIAN
+http://lunar.pm:8080/ALVIN/9gJbtWskzsJS/122928
+#EXTINF:-1,VIP: MOMS TEACH
+http://lunar.pm:8080/ALVIN/9gJbtWskzsJS/122929
+#EXTINF:-1,VIP: MOFOS
+http://lunar.pm:8080/ALVIN/9gJbtWskzsJS/122930
+#EXTINF:-1,VIP: MY FAMILY PIES
+http://lunar.pm:8080/ALVIN/9gJbtWskzsJS/122931
+#EXTINF:-1,VIP: MY PERVY FAMILY
+http://lunar.pm:8080/ALVIN/9gJbtWskzsJS/122932
+#EXTINF:-1,VIP: NET VIDEO GIRLS
+http://lunar.pm:8080/ALVIN/9gJbtWskzsJS/122933
+#EXTINF:-1,VIP: NEW SENSATIONS
+http://lunar.pm:8080/ALVIN/9gJbtWskzsJS/122934
+#EXTINF:-1,VIP: NUBILE FILMS
+http://lunar.pm:8080/ALVIN/9gJbtWskzsJS/122935
+#EXTINF:-1,VIP: PRIVATE BLACK
+http://lunar.pm:8080/ALVIN/9gJbtWskzsJS/122936
+#EXTINF:-1,VIP: PROPERTY SEX
+http://lunar.pm:8080/ALVIN/9gJbtWskzsJS/122937
+#EXTINF:-1,VIP: PUPLIC AGENT
+http://lunar.pm:8080/ALVIN/9gJbtWskzsJS/122938
+#EXTINF:-1,VIP: REALITY KINGS
+http://lunar.pm:8080/ALVIN/9gJbtWskzsJS/122939
+#EXTINF:-1,VIP: SPANK MONSTER
+http://lunar.pm:8080/ALVIN/9gJbtWskzsJS/122940
+#EXTINF:-1 Now Premier League 1 [Events Only]
+http://lunar.pm:8080/ALVIN/9gJbtWskzsJS/117457
+#EXTINF:-1 Now Premier League 2 [Events Only]
+http://lunar.pm:8080/ALVIN/9gJbtWskzsJS/117458
+#EXTINF:-1 Now Premier League 3 [Events Only]
+http://lunar.pm:8080/ALVIN/9gJbtWskzsJS/117459
+#EXTINF:-1 Now Premier League 4 [Events Only]
+http://lunar.pm:8080/ALVIN/9gJbtWskzsJS/117460
+#EXTINF:-1 Now Premier League 5 [Events Only]
+http://lunar.pm:8080/ALVIN/9gJbtWskzsJS/117461
+#EXTINF:-1 Now Premier League 6 [Events Only]
+http://lunar.pm:8080/ALVIN/9gJbtWskzsJS/117462
+#EXTINF:-1 Now Premier League 7 [Events Only]
+http://lunar.pm:8080/ALVIN/9gJbtWskzsJS/117463
+#EXTINF:-1 Now Premier League 8 [Events Only]
+http://lunar.pm:8080/ALVIN/9gJbtWskzsJS/117464
+#EXTINF:-1 Altitude Sports 
+http://lunar.pm:8080/ALVIN/9gJbtWskzsJS/109824
+#EXTINF:-1 Altitude Sports 2
+http://lunar.pm:8080/ALVIN/9gJbtWskzsJS/110306
+#EXTINF:-1 AFN Sports
+http://lunar.pm:8080/ALVIN/9gJbtWskzsJS/118468
+#EXTINF:-1 AFN Sports 2
+http://lunar.pm:8080/ALVIN/9gJbtWskzsJS/118469
+#EXTINF:-1 MLB CHANNELS GUIDE
+http://lunar.pm:8080/ALVIN/9gJbtWskzsJS/108481
+#EXTINF:-1 PPV: Fight Network 1
+http://lunar.pm:8080/ALVIN/9gJbtWskzsJS/48526
+#EXTINF:-1 PPV: Fight Network 2
+http://lunar.pm:8080/ALVIN/9gJbtWskzsJS/35337
+#EXTINF:-1 PPV: WWE 
+http://lunar.pm:8080/ALVIN/9gJbtWskzsJS/29662
+#EXTINF:-1 PPV: UFC FIGHT PASS
+http://lunar.pm:8080/ALVIN/9gJbtWskzsJS/94756
+#EXTINF:-1 tvg-id="" tvg-name="ABC (Cincinnati)" tvg-logo="" group-title="USA Locals( DO NOT USE FOR NFL ETC USE THE PROPER GROUP)",ABC (Cincinnati)
+http://lunar.pm:8080/ALVIN/9gJbtWskzsJS/123141
+#EXTINF:-1 tvg-id="ABC Atlanta" tvg-name="ABC 02(Atlanta)" tvg-logo="" group-title="USA Locals( DO NOT USE FOR NFL ETC USE THE PROPER GROUP)",ABC 02(Atlanta)
+http://lunar.pm:8080/ALVIN/9gJbtWskzsJS/64465
+#EXTINF:-1 tvg-id="ABC Baltimore" tvg-name="ABC 02(Baltimore)" tvg-logo="" group-title="USA Locals( DO NOT USE FOR NFL ETC USE THE PROPER GROUP)",ABC 02(Baltimore)
+http://lunar.pm:8080/ALVIN/9gJbtWskzsJS/64464
+#EXTINF:-1 tvg-id="ABC Milwaukee" tvg-name="ABC 02(Milwaukee)" tvg-logo="" group-title="USA Locals( DO NOT USE FOR NFL ETC USE THE PROPER GROUP)",ABC 02(Milwaukee)
+http://lunar.pm:8080/ALVIN/9gJbtWskzsJS/64467
+#EXTINF:-1 tvg-id="ABC Nashville" tvg-name="ABC 02(Nashville)" tvg-logo="" group-title="USA Locals( DO NOT USE FOR NFL ETC USE THE PROPER GROUP)",ABC 02(Nashville)
+http://lunar.pm:8080/ALVIN/9gJbtWskzsJS/64466
+#EXTINF:-1 tvg-id="ABC Portland" tvg-name="ABC 02(Portland)" tvg-logo="" group-title="USA Locals( DO NOT USE FOR NFL ETC USE THE PROPER GROUP)",ABC 02(Portland)
+http://lunar.pm:8080/ALVIN/9gJbtWskzsJS/64463
+#EXTINF:-1 tvg-id="ABC PITTSBURGH" tvg-name="ABC 04(Pittsburgh)" tvg-logo="" group-title="USA Locals( DO NOT USE FOR NFL ETC USE THE PROPER GROUP)",ABC 04(Pittsburgh)
+http://lunar.pm:8080/ALVIN/9gJbtWskzsJS/64461
+#EXTINF:-1 tvg-id="ABC SALT LAKE CITY" tvg-name="ABC 04(Salt Lake City)" tvg-logo="" group-title="USA Locals( DO NOT USE FOR NFL ETC USE THE PROPER GROUP)",ABC 04(Salt Lake City)
+http://lunar.pm:8080/ALVIN/9gJbtWskzsJS/64462
+#EXTINF:-1 tvg-id="ABC SEATTLE" tvg-name="ABC 04(Seattle)" tvg-logo="" group-title="USA Locals( DO NOT USE FOR NFL ETC USE THE PROPER GROUP)",ABC 04(Seattle)
+http://lunar.pm:8080/ALVIN/9gJbtWskzsJS/64460
+#EXTINF:-1 tvg-id="ABC BOSTON" tvg-name="ABC 05(Boston)" tvg-logo="" group-title="USA Locals( DO NOT USE FOR NFL ETC USE THE PROPER GROUP)",ABC 05(Boston)
+http://lunar.pm:8080/ALVIN/9gJbtWskzsJS/64459
+#EXTINF:-1 tvg-id="ABC MINNEAPOLIS" tvg-name="ABC 05(Saint Paul)" tvg-logo="" group-title="USA Locals( DO NOT USE FOR NFL ETC USE THE PROPER GROUP)",ABC 05(Saint Paul)
+http://lunar.pm:8080/ALVIN/9gJbtWskzsJS/64458
+#EXTINF:-1 tvg-id="ABC Indianapolis" tvg-name="ABC 06(Indianapolis)" tvg-logo="" group-title="USA Locals( DO NOT USE FOR NFL ETC USE THE PROPER GROUP)",ABC 06(Indianapolis)
+http://lunar.pm:8080/ALVIN/9gJbtWskzsJS/64456
+#EXTINF:-1 tvg-id="" tvg-name="ABC 06(Augusta)" tvg-logo="" group-title="USA Locals( DO NOT USE FOR NFL ETC USE THE PROPER GROUP)",ABC 06(Augusta)
+http://lunar.pm:8080/ALVIN/9gJbtWskzsJS/118529
+#EXTINF:-1 tvg-id="ABC PHILADELPHIA" tvg-name="ABC 06(Philly)" tvg-logo="" group-title="USA Locals( DO NOT USE FOR NFL ETC USE THE PROPER GROUP)",ABC 06(Philly)
+http://lunar.pm:8080/ALVIN/9gJbtWskzsJS/64457
+#EXTINF:-1 tvg-id="ABC CHICAGO" tvg-name="ABC 07(Chicago)" tvg-logo="" group-title="USA Locals( DO NOT USE FOR NFL ETC USE THE PROPER GROUP)",ABC 07(Chicago)
+http://lunar.pm:8080/ALVIN/9gJbtWskzsJS/64452
+#EXTINF:-1 tvg-id="ABC DENVER" tvg-name="ABC 07(Denver)" tvg-logo="" group-title="USA Locals( DO NOT USE FOR NFL ETC USE THE PROPER GROUP)",ABC 07(Denver)
+http://lunar.pm:8080/ALVIN/9gJbtWskzsJS/64453
+#EXTINF:-1 tvg-id="ABC DETROIT" tvg-name="ABC 07(Detroit)" tvg-logo="" group-title="USA Locals( DO NOT USE FOR NFL ETC USE THE PROPER GROUP)",ABC 07(Detroit)
+http://lunar.pm:8080/ALVIN/9gJbtWskzsJS/64450
+#EXTINF:-1 tvg-id="" tvg-name="ABC 07 (Fort Myers)" tvg-logo="" group-title="USA Locals( DO NOT USE FOR NFL ETC USE THE PROPER GROUP)",ABC 07 (Fort Myers)
+http://lunar.pm:8080/ALVIN/9gJbtWskzsJS/123012
+#EXTINF:-1 tvg-id="ABC LOS ANGELES" tvg-name="ABC 07(Los Angeles)" tvg-logo="" group-title="USA Locals( DO NOT USE FOR NFL ETC USE THE PROPER GROUP)",ABC 07(Los Angeles)
+http://lunar.pm:8080/ALVIN/9gJbtWskzsJS/64455
+#EXTINF:-1 tvg-id="ABC NEW YORK" tvg-name="ABC 07(New York)" tvg-logo="" group-title="USA Locals( DO NOT USE FOR NFL ETC USE THE PROPER GROUP)",ABC 07(New York)
+http://lunar.pm:8080/ALVIN/9gJbtWskzsJS/64449
+#EXTINF:-1 tvg-id="ABC San Francisco" tvg-name="ABC 07(San Franscisco-Bay Area)" tvg-logo="" group-title="USA Locals( DO NOT USE FOR NFL ETC USE THE PROPER GROUP)",ABC 07(San Franscisco-Bay Area)
+http://lunar.pm:8080/ALVIN/9gJbtWskzsJS/64454
+#EXTINF:-1 tvg-id="ABC Washington DC" tvg-name="ABC 07(Washington Dc)" tvg-logo="" group-title="USA Locals( DO NOT USE FOR NFL ETC USE THE PROPER GROUP)",ABC 07(Washington Dc)
+http://lunar.pm:8080/ALVIN/9gJbtWskzsJS/64451
+#EXTINF:-1 tvg-id="ABC DALLAS" tvg-name="ABC 08(Dallas)" tvg-logo="" group-title="USA Locals( DO NOT USE FOR NFL ETC USE THE PROPER GROUP)",ABC 08(Dallas)
+http://lunar.pm:8080/ALVIN/9gJbtWskzsJS/64448
+#EXTINF:-1 tvg-id="ABC Hartford" tvg-name="ABC 08(Hartford)" tvg-logo="" group-title="USA Locals( DO NOT USE FOR NFL ETC USE THE PROPER GROUP)",ABC 08(Hartford)
+http://lunar.pm:8080/ALVIN/9gJbtWskzsJS/64447
+#EXTINF:-1 tvg-id="ABC Charlotte" tvg-name="ABC 09(Charlotte)" tvg-logo="" group-title="USA Locals( DO NOT USE FOR NFL ETC USE THE PROPER GROUP)",ABC 09(Charlotte)
+http://lunar.pm:8080/ALVIN/9gJbtWskzsJS/64446
+#EXTINF:-1 tvg-id="ABC Albany GA" tvg-name="ABC 10 (Albany)" tvg-logo="" group-title="USA Locals( DO NOT USE FOR NFL ETC USE THE PROPER GROUP)",ABC 10 (Albany)
+http://lunar.pm:8080/ALVIN/9gJbtWskzsJS/120056
+#EXTINF:-1 tvg-id="ABC MIAMI" tvg-name="ABC 10(Miami)" tvg-logo="" group-title="USA Locals( DO NOT USE FOR NFL ETC USE THE PROPER GROUP)",ABC 10(Miami)
+http://lunar.pm:8080/ALVIN/9gJbtWskzsJS/64444
+#EXTINF:-1 tvg-id="ABC ORLANDO" tvg-name="ABC 09(Orlando)" tvg-logo="" group-title="USA Locals( DO NOT USE FOR NFL ETC USE THE PROPER GROUP)",ABC 09(Orlando)
+http://lunar.pm:8080/ALVIN/9gJbtWskzsJS/64445
+#EXTINF:-1 tvg-id="ABC SACRAMENTO" tvg-name="ABC 10(Sacremento)" tvg-logo="" group-title="USA Locals( DO NOT USE FOR NFL ETC USE THE PROPER GROUP)",ABC 10(Sacremento)
+http://lunar.pm:8080/ALVIN/9gJbtWskzsJS/64442
+#EXTINF:-1 tvg-id="ABC SAN DIEGO" tvg-name="ABC 10(San Diego)" tvg-logo="" group-title="USA Locals( DO NOT USE FOR NFL ETC USE THE PROPER GROUP)",ABC 10(San Diego)
+http://lunar.pm:8080/ALVIN/9gJbtWskzsJS/64443
+#EXTINF:-1 tvg-id="ABC Raleigh" tvg-name="ABC 11(Raleigh)" tvg-logo="" group-title="USA Locals( DO NOT USE FOR NFL ETC USE THE PROPER GROUP)",ABC 11(Raleigh)
+http://lunar.pm:8080/ALVIN/9gJbtWskzsJS/64441
+#EXTINF:-1 tvg-id="ABC Houston" tvg-name="ABC 13(Houston)" tvg-logo="" group-title="USA Locals( DO NOT USE FOR NFL ETC USE THE PROPER GROUP)",ABC 13(Houston)
+http://lunar.pm:8080/ALVIN/9gJbtWskzsJS/64440
+#EXTINF:-1 tvg-id="ABC PHOENIX" tvg-name="ABC 15(Pheonix)" tvg-logo="" group-title="USA Locals( DO NOT USE FOR NFL ETC USE THE PROPER GROUP)",ABC 15(Pheonix)
+http://lunar.pm:8080/ALVIN/9gJbtWskzsJS/64439
+#EXTINF:-1 tvg-id="ABC.(KXXV).Waco,.TX.us" tvg-name="ABC 25(Waco)" tvg-logo="" group-title="USA Locals( DO NOT USE FOR NFL ETC USE THE PROPER GROUP)",ABC 25(Waco)
+http://lunar.pm:8080/ALVIN/9gJbtWskzsJS/118472
+#EXTINF:-1 tvg-id="ABC TAMPA" tvg-name="ABC 28(Tampa Bay)" tvg-logo="" group-title="USA Locals( DO NOT USE FOR NFL ETC USE THE PROPER GROUP)",ABC 28(Tampa Bay)
+http://lunar.pm:8080/ALVIN/9gJbtWskzsJS/64438
+#EXTINF:-1 tvg-id="ABC Fresno" tvg-name="ABC 30(Fresno)" tvg-logo="" group-title="USA Locals( DO NOT USE FOR NFL ETC USE THE PROPER GROUP)",ABC 30(Fresno)
+http://lunar.pm:8080/ALVIN/9gJbtWskzsJS/64437
+#EXTINF:-1 tvg-id="ABC ST Louis" tvg-name="ABC 30(ST Louis)" tvg-logo="" group-title="USA Locals( DO NOT USE FOR NFL ETC USE THE PROPER GROUP)",ABC 30(ST Louis)
+http://lunar.pm:8080/ALVIN/9gJbtWskzsJS/64436
+#EXTINF:-1 tvg-id="" tvg-name="Bay News 9 (Tampa Bay)" tvg-logo="" group-title="USA Locals( DO NOT USE FOR NFL ETC USE THE PROPER GROUP)",Bay News 9 (Tampa Bay)
+http://lunar.pm:8080/ALVIN/9gJbtWskzsJS/120024
+#EXTINF:-1 Nascar Season Schedule
+http://lunar.pm:8080/ALVIN/9gJbtWskzsJS/118830
+#EXTINF:-1 FOX NASCAR
+http://lunar.pm:8080/ALVIN/9gJbtWskzsJS/118831
+#EXTINF:-1 FS1 Nascar
+http://lunar.pm:8080/ALVIN/9gJbtWskzsJS/118832
+#EXTINF:-1 NASCAR 2025 SEASON",NBC Nascar
+http://lunar.pm:8080/ALVIN/9gJbtWskzsJS/118833
+#EXTINF:-1K: USA Nascar
+http://lunar.pm:8080/ALVIN/9gJbtWskzsJS/118834
+#EXTINF:-1K: FR: CANAL+ MOTOGP
+http://lunar.pm:8080/ALVIN/9gJbtWskzsJS/121531
