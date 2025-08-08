@@ -12,26 +12,6 @@ http://15.235.9.200:14872/
 http://24hrs.homelinux.com:8080/24H-todomundoodeiaocris/video.m3u8
 #EXTINF:-1,BR: Um Maluco no Pedaço 24h
 http://24hrs.homelinux.com:8080/24H-ummaluconopedaco/playlist.m3u8
-#EXTINF:-1  tvg-logo="https://imgur.com/L89LBAz.png" group-title="FILMES",American Pie 9- Apresenta Meninas ao Ataque
-http://fhd4.oneplayer.site/343rt342wtg34wetg34retg4rgh5kh4/FHD4/tt11771594.mp4
-#EXTINF:-1  tvg-logo="https://imgur.com/L89LBAz.png" group-title="FILMES",Amor na Medida Certa
-http://fhd1.oneplayer.site/ertg43r5g34ty34yt543t43wer234t34t345/FHD10/tt0083099.mp4
-#EXTINF:-1  tvg-logo="https://imgur.com/L89LBAz.png" group-title="FILMES",American Pie 8– O Reencontro
-http://fhd1.oneplayer.site/ertg43r5g34ty34yt543t43wer234t34y3s7/FHD3/tt1605630.mp4
-#EXTINF:-1  tvg-logo="https://imgur.com/L89LBAz.png" group-title="FILMES",American Pie 7- O Livro do Amor
-http://fhd1.oneplayer.site/ertg43r5g34ty34yt543t43wer234t34y3s7/FHD3/tt1407050.mp4
-#EXTINF:-1  tvg-logo="https://imgur.com/L89LBAz.png" group-title="FILMES",American Pie 6 – Caindo em Tentação
-http://fhd1.oneplayer.site/ertg43r5g34ty34yt543t43wer234t34y3s7/FHD3/tt0974959.mp4
-#EXTINF:-1  tvg-logo="https://imgur.com/L89LBAz.png" group-title="FILMES",American Pie 5 – O Último Stifler Virgem
-http://fhd1.oneplayer.site/ertg43r5g34ty34yt543t43wer234t34y3s7/FHD3/tt0808146.mp4
-#EXTINF:-1  tvg-logo="https://imgur.com/L89LBAz.png" group-title="FILMES",American Pie 4 – Tocando a Maior Zona
-http://fhd1.oneplayer.site/ertg43r5g34ty34yt543t43wer234t34y3s7/FHD3/tt0436058.mp4
-#EXTINF:-1  tvg-logo="https://imgur.com/L89LBAz.png" group-title="FILMES",American Pie 3 - O Casamento
-http://fhd1.oneplayer.site/ertg43r5g34ty34yt543t43wer234t34y3s7/FHD3/tt0328828.mp4
-#EXTINF:-1  tvg-logo="https://imgur.com/L89LBAz.png" group-title="FILMES",American Pie 2 - A Segunda Vez é Ainda Melhor
-http://fhd1.oneplayer.site/ertg43r5g34ty34yt543t43wer234t34y3s7/FHD3/tt0252866.mp4
-#EXTINF:-1  tvg-logo="https://imgur.com/L89LBAz.png" group-title="FILMES",American Pie- A Primeira Vez é Inesquecível
-http://fhd1.oneplayer.site/ertg43r5g34ty34yt543t43wer234t34y3s7/FHD3/tt0163651.mp4
 
 #EXTINF:-1 tvg-logo="https://imgur.com/BatygW5.png " group-title="Canais | ANIMES & GEEK",🔴Dragon Ball 24
 http://24hrs.homelinux.com:80/24H-dragon.ball/video.m3u8?
@@ -165,3 +145,134 @@ http://24hrs.homelinux.com:8080/24H-avataralendadeaang/video.m3u8
 http://24hrs.homelinux.com:8080/24H-avataralendadekorra/video.m3u8
 
 
+#EXTINF:-1  tvg-logo="https://imgur.com/L89LBAz.png" group-title="FILMES",2022 Através da minha Janela
+http://fhd4.oneplayer.site/343rt342wtg34wetg34retg4rgh5kh4/FHD4/tt14463484.mp4
+#EXTINF:-1  tvg-logo="https://imgur.com/L89LBAz.png" group-title="FILMES",2023  Através da minha Janela 2: Além do Mar
+http://fhd4.oneplayer.site/343rt342wtg34wetg34retg4rgh5kh4/FHD4/tt21245882.mp4
+#EXTINF:-1  tvg-logo="https://imgur.com/L89LBAz.png" group-title="FILMES",2024Através da minha Janela 3: Olho nos olhos
+http://fhd4.oneplayer.site/343rt342wtg34wetg34retg4rgh5kh4/FHD4/tt28105944.mp4
+#EXTINF:-1  tvg-logo="https://imgur.com/L89LBAz.png" group-title="FILMES",40 dias e 40 noites
+http://fhd5.oneplayer.site/343rt342wtg34wetg34retghksi68ssk/FHD5/tt0243736.mp4
+#EXTINF:-1  tvg-logo="https://imgur.com/L89LBAz.png" group-title="FILMES",A Arte d Amar
+http://fhd4.oneplayer.site/343rt342wtg34wetg34retg4rgh5kh4/FHD4/tt28355490.mp4
+#EXTINF:-1  tvg-logo="https://imgur.com/L89LBAz.png" group-title="FILMES",A Cor da Vingança
+http://fhd4.oneplayer.site/343rt342wtg34wetg34retg4rgh5kh4/FHD4/tt2793072.mp4
+#EXTINF:-1  tvg-logo="https://imgur.com/L89LBAz.png" group-title="FILMES",A Guerra do Hambúrguer
+http://fhd5.oneplayer.site/343rt342wtg34wetg34retghksi68ssk/FHD5/tt0119215.mp4
+#EXTINF:-1  tvg-logo="https://imgur.com/L89LBAz.png" group-title="FILMES",A Guerra do Hambúrguer 2
+http://fhd4.oneplayer.site/343rt342wtg34wetg34retg4rgh5kh4/FHD4/tt25289836.mp4
+#EXTINF:-1  tvg-logo="https://i.imgur.com/L89LBAz.png" group-title="FILMES",A Guerra dos Mundos – O Ataque 2023
+http://fhd4.oneplayer.site/343rt342wtg34wetg34retg4rgh5kh4/FHD4/tt12519802.mp4
+#EXTINF:-1  tvg-logo="https://imgur.com/L89LBAz.png" group-title="FILMES",A Lenda do Cavaleiro Sem Cabeça
+http://fhd5.oneplayer.site/343rt342wtg34wetg34retghksi68ssk/FHD5/tt0051850.mp4
+#EXTINF:-1  tvg-logo="https://imgur.com/L89LBAz.png" group-title="FILMES",A Liga
+http://fhd4.oneplayer.site/343rt342wtg34wetg34retg4rgh5kh4/FHD4/tt12610390.mp4
+#EXTINF:-1  tvg-logo="https://i.imgur.com/L89LBAz.png" group-title="FILMES",A Missy Errada
+http://fhd4.oneplayer.site/343rt342wtg34wetg34retg4rgh5kh4/FHD4/tt9619798.mp4
+#EXTINF:-1  tvg-logo="https://i.imgur.com/L89LBAz.png" group-title="FILMES",A Nova Geração da Máfia
+http://fhd4.oneplayer.site/343rt342wtg34wetg34retg4rgh5kh4/FHD4/tt9010322.mp4
+#EXTINF:-1  tvg-logo="https://imgur.com/L89LBAz.png" group-title="FILMES",A Ordem
+http://fhd4.oneplayer.site/343rt342wtg34wetg34retg4rgh5kh4/FHD4/tt26625693.mp4
+#EXTINF:-1  tvg-logo="https://imgur.com/L89LBAz.png" group-title="FILMES",A Semente do Mal
+http://fhd4.oneplayer.site/343rt342wtg34wetg34retg4rgh5kh4/FHD4/tt26594993.mp4
+#EXTINF:-1  tvg-logo="https://i.imgur.com/L89LBAz.png" group-title="FILMES",A Substância
+http://fhd4.oneplayer.site/343rt342wtg34wetg34retg4rgh5kh4/FHD4/tt17526714.mp4
+#EXTINF:-1  tvg-logo="https://imgur.com/L89LBAz.png" group-title="FILMES",A Tentação
+http://fhd4.oneplayer.site/343rt342wtg34wetg34retg4rgh5kh4/FHD4/tt18274350.mp4
+#EXTINF:-1  tvg-logo="https://i.imgur.com/L89LBAz.png" group-title="FILMES",A Última Invocação
+http://fhd4.oneplayer.site/343rt342wtg34wetg34retg4rgh5kh4/FHD4/tt26758292.mp4
+#EXTINF:-1  tvg-logo="https://imgur.com/L89LBAz.png" group-title="FILMES",A Última Esperança Soviética
+http://fhd4.oneplayer.site/343rt342wtg34wetg34retg4rgh5kh4/FHD4/tt17074644.mp4
+#EXTINF:-1  tvg-logo="https://imgur.com/L89LBAz.png" group-title="FILMES",A Vespa
+http://fhd4.oneplayer.site/343rt342wtg34wetg34retg4rgh5kh4/FHD4/tt21958136.mp4
+#EXTINF:-1  tvg-logo="https://imgur.com/L89LBAz.png" group-title="FILMES",Acampamento do pecado
+http://fhd5.oneplayer.site/343rt342wtg34wetg34retghksi68ssk/FHD5/tt8949056.mp4
+#EXTINF:-1  tvg-logo="https://i.imgur.com/L89LBAz.png" group-title="FILMES",Acordo com o Diabo
+http://fhd4.oneplayer.site/343rt342wtg34wetg34retg4rgh5kh4/FHD4/tt13836760.mp4
+#EXTINF:-1  tvg-logo="https://imgur.com/L89LBAz.png" group-title="FILMES",Ad Vitam
+http://fhd4.oneplayer.site/343rt342wtg34wetg34retg4rgh5kh4/FHD4/tt32138452.mp4
+#EXTINF:-1  tvg-logo="https://i.imgur.com/L89LBAz.png" group-title="FILMES",Agente Oculto
+http://fhd4.oneplayer.site/343rt342wtg34wetg34retg4rgh5kh4/FHD4/tt1649418.mp4
+#EXTINF:-1  tvg-logo="https://imgur.com/L89LBAz.png" group-title="FILMES",Álibi.com
+http://fhd4.oneplayer.site/343rt342wtg34wetg34retg4rgh5kh4/FHD4/tt5657028.mp4
+#EXTINF:-1  tvg-logo="https://i.imgur.com/L89LBAz.png" group-title="FILMES",Amor Bandido
+http://fhd4.oneplayer.site/343rt342wtg34wetg34retg4rgh5kh4/FHD4/tt30788842.mp4
+#EXTINF:-1  tvg-logo="https://imgur.com/L89LBAz.png" group-title="FILMES",Amor na Medida Certa
+http://fhd1.oneplayer.site/ertg43r5g34ty34yt543t43wer234t34t345/FHD10/tt0083099.mp4
+#EXTINF:-1  tvg-logo="https://i.imgur.com/L89LBAz.png" group-title="FILMES",Amor na Medida Certa
+http://fhd1.oneplayer.site/ertg43r5g34ty34yt543t43wer234t34y3s7/FHD10/tt0083099.mp4
+#EXTINF:-1  tvg-logo="https://imgur.com/L89LBAz.png" group-title="FILMES",American Pie- A Primeira Vez é Inesquecível
+http://fhd1.oneplayer.site/ertg43r5g34ty34yt543t43wer234t34y3s7/FHD3/tt0163651.mp4
+#EXTINF:-1  tvg-logo="https://imgur.com/L89LBAz.png" group-title="FILMES",American Pie 2 - A Segunda Vez é Ainda Melhor
+http://fhd1.oneplayer.site/ertg43r5g34ty34yt543t43wer234t34y3s7/FHD3/tt0252866.mp4
+#EXTINF:-1  tvg-logo="https://imgur.com/L89LBAz.png" group-title="FILMES",American Pie 3 - O Casamento
+http://fhd1.oneplayer.site/ertg43r5g34ty34yt543t43wer234t34y3s7/FHD3/tt0328828.mp4
+#EXTINF:-1  tvg-logo="https://imgur.com/L89LBAz.png" group-title="FILMES",American Pie 4 – Tocando a Maior Zona
+http://fhd1.oneplayer.site/ertg43r5g34ty34yt543t43wer234t34y3s7/FHD3/tt0436058.mp4
+#EXTINF:-1  tvg-logo="https://imgur.com/L89LBAz.png" group-title="FILMES",American Pie 5 – O Último Stifler Virgem
+http://fhd1.oneplayer.site/ertg43r5g34ty34yt543t43wer234t34y3s7/FHD3/tt0808146.mp4
+#EXTINF:-1  tvg-logo="https://imgur.com/L89LBAz.png" group-title="FILMES",American Pie 6 – Caindo em Tentação
+http://fhd1.oneplayer.site/ertg43r5g34ty34yt543t43wer234t34y3s7/FHD3/tt0974959.mp4
+#EXTINF:-1  tvg-logo="https://imgur.com/L89LBAz.png" group-title="FILMES",American Pie 7- O Livro do Amor
+http://fhd1.oneplayer.site/ertg43r5g34ty34yt543t43wer234t34y3s7/FHD3/tt1407050.mp4
+#EXTINF:-1  tvg-logo="https://imgur.com/L89LBAz.png" group-title="FILMES",American Pie 8– O Reencontro
+http://fhd1.oneplayer.site/ertg43r5g34ty34yt543t43wer234t34y3s7/FHD3/tt1605630.mp4
+#EXTINF:-1  tvg-logo="https://imgur.com/L89LBAz.png" group-title="FILMES",American Pie 9- Apresenta Meninas ao Ataque
+http://fhd4.oneplayer.site/343rt342wtg34wetg34retg4rgh5kh4/FHD4/tt11771594.mp4
+#EXTINF:-1  tvg-logo="https://imgur.com/L89LBAz.png" group-title="FILMES",Amigos Sem Compromisso
+http://fhd4.oneplayer.site/343rt342wtg34wetg34retg4rgh5kh4/FHD4/tt28669770.mp4
+#EXTINF:-1  tvg-logo="https://i.imgur.com/L89LBAz.png" group-title="FILMES",As Aventuras de Max Keeble
+http://fhd1.oneplayer.site/ertg43r5g34ty34yt543t43wer234t34y3s7/FHD10/tt0273799.mp4
+#EXTINF:-1  tvg-logo="https://i.imgur.com/L89LBAz.png" group-title="FILMES",As Aventuras Sexuais de um Casal em Crise
+http://fhd4.oneplayer.site/343rt342wtg34wetg34retg4rgh5kh4/FHD4/tt18081000.mp4
+#EXTINF:-1  tvg-logo="https://imgur.com/L89LBAz.png" group-title="FILMES",As Vantagens de Ser Invisível
+http://fhd1.oneplayer.site/ertg43r5g34ty34yt543t43wer234t34y3s7/FHD3/tt1659337.mp4
+#EXTINF:-1  tvg-logo="https://imgur.com/L89LBAz.png" group-title="FILMES",Assassinato de Elite
+http://fhd4.oneplayer.site/343rt342wtg34wetg34retg4rgh5kh4/FHD4/tt27028399.mp4
+#EXTINF:-1  tvg-logo="https://imgur.com/L89LBAz.png" group-title="FILMES",Assassino por Acaso
+http://fhd4.oneplayer.site/343rt342wtg34wetg34retg4rgh5kh4/FHD4/tt20215968.mp4
+#EXTINF:-1  tvg-logo="https://imgur.com/L89LBAz.png" group-title="FILMES",Até a Morte: Sobreviver é a Melhor Vingança
+http://fhd4.oneplayer.site/343rt342wtg34wetg34retg4rgh5kh4/FHD4/tt11804152.mp4
+#EXTINF:-1  tvg-logo="https://i.imgur.com/L89LBAz.png" group-title="FILMES",Baby Blue – Assassino em Série
+http://fhd4.oneplayer.site/343rt342wtg34wetg34retg4rgh5kh4/FHD4/tt18376800.mp4
+#EXTINF:-1  tvg-logo="https://i.imgur.com/L89LBAz.png" group-title="FILMES",Bad Candy
+http://fhd4.oneplayer.site/343rt342wtg34wetg34retg4rgh5kh4/FHD4/tt6561576.mp4
+#EXTINF:-1  tvg-logo="https://imgur.com/L89LBAz.png" group-title="FILMES",Bad Boys: Até o Fim
+http://fhd4.oneplayer.site/343rt342wtg34wetg34retg4rgh5kh4/FHD4/tt4919268.mp4
+#EXTINF:-1  tvg-logo="https://imgur.com/L89LBAz.png" group-title="FILMES",Bagagem de Risco
+http://fhd4.oneplayer.site/343rt342wtg34wetg34retg4rgh5kh4/FHD4/tt21382296.mp4
+#EXTINF:-1  tvg-logo="https://i.imgur.com/L89LBAz.png" group-title="FILMES",Baila,Vini
+http://fhd4.oneplayer.site/343rt342wtg34wetg34retg4rgh5kh4/FHD4/tt34682248.mp4
+#EXTINF:-1  tvg-logo="https://imgur.com/L89LBAz.png" group-title="FILMES",Beekeeper Rede d Vingança
+http://fhd4.oneplayer.site/343rt342wtg34wetg34retg4rgh5kh4/FHD4/tt15314262.mp4
+#EXTINF:-1  tvg-logo="https://imgur.com/L89LBAz.png" group-title="FILMES",Belo desastre
+http://fhd4.oneplayer.site/343rt342wtg34wetg34retg4rgh5kh4/FHD4/tt2316548.mp4
+#EXTINF:-1  tvg-logo="https://i.imgur.com/L89LBAz.png" group-title="FILMES",Better Man – A História de Robbie Williams
+http://fhd4.oneplayer.site/343rt342wtg34wetg34retg4rgh5kh4/FHD4/tt14260836.mp4
+#EXTINF:-1  tvg-logo="https://imgur.com/L89LBAz.png" group-title="FILMES",Bob Marley: One Love
+http://fhd4.oneplayer.site/343rt342wtg34wetg34retg4rgh5kh4/FHD4/tt8521778.mp4
+#EXTINF:-1  tvg-logo="https://i.imgur.com/L89LBAz.png" group-title="FILMES",Bogotá: A Cidade dos Sonhos Perdidos
+http://fhd4.oneplayer.site/343rt342wtg34wetg34retg4rgh5kh4/FHD4/tt22507374.mp4
+#EXTINF:-1  tvg-logo="https://i.imgur.com/L89LBAz.png" group-title="FILMES",Branca de Neve
+http://fhd4.oneplayer.site/343rt342wtg34wetg34retg4rgh5kh4/FHD4/tt6208148.mp4
+#EXTINF:-1  tvg-logo="https://i.imgur.com/L89LBAz.png" group-title="FILMES",Cão de Briga
+http://fhd4.oneplayer.site/343rt342wtg34wetg34retg4rgh5kh4/FHD4/tt22489042.mp4
+#EXTINF:-1  tvg-logo="https://i.imgur.com/L89LBAz.png" group-title="FILMES",Caos e Destruição
+http://fhd4.oneplayer.site/343rt342wtg34wetg34retg4rgh5kh4/FHD4/tt14123284.mp4
+#EXTINF:-1  tvg-logo="https://i.imgur.com/L89LBAz.png" group-title="FILMES",Capitão América: Admirável Mundo Novo
+http://fhd4.oneplayer.site/343rt342wtg34wetg34retg4rgh5kh4/FHD4/tt14513804.mp4
+#EXTINF:-1  tvg-logo="https://i.imgur.com/L89LBAz.png" group-title="FILMES",Celebração Macabra
+http://fhd4.oneplayer.site/343rt342wtg34wetg34retg4rgh5kh4/FHD4/tt23785128.mp4
+#EXTINF:-1  tvg-logo="https://imgur.com/L89LBAz.png" group-title="FILMES",Cerco ao Terror: Ataque ao Templo
+http://fhd4.oneplayer.site/343rt342wtg34wetg34retg4rgh5kh4/FHD4/tt14418234.mp4
+#EXTINF:-1  tvg-logo="https://imgur.com/L89LBAz.png" group-title="FILMES",Cherry 2000
+http://fhd5.oneplayer.site/343rt342wtg34wetg34retghksi68ssk/FHD/FHD5/tt0092746.mp4
+#EXTINF:-1  tvg-logo="https://imgur.com/L89LBAz.png" group-title="FILMES",Conexão Jamaica
+http://hd5.oneplayer.site/343rt342wtg34wetg34retghksi68ssk/FHD5/tt0281190.mp4
+#EXTINF:-1  tvg-logo="https://imgur.com/L89LBAz.png" group-title="FILMES",Confia: Sonho de Cria
+http://fhd4.oneplayer.site/343rt342wtg34wetg34retg4rgh5kh4/FHD4/tt34581855.mp4
+#EXTINF:-1  tvg-logo="https://i.imgur.com/L89LBAz.png" group-title="FILMES",Corações Roubados
+http://fhd4.oneplayer.site/343rt342wtg34wetg34retg4rgh5kh4/FHD4/tt31240036.mp4
+#EXTINF:-1  tvg-logo="https://imgur.com/L89LBAz.png" group-title="FILMES",Deadpool & Wolverine
+http://fhd4.oneplayer.site/343rt342wtg34wetg34retg4rgh5kh4/FHD4/tt6263850.mp4
+#EXTINF:-1  tvg-logo=
