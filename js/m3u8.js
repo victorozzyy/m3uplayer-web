@@ -20,15 +20,39 @@ document.addEventListener("DOMContentLoaded", () => {
     // Lista de playlists remotas - VOCÊ PODE ADICIONAR MAIS AQUI
     const remotePlaylistsConfig = [
       {
-        name: "🎬 TV Misto Premium",
+        name: "🎬 Canais 24 Hs",
+        description: "Canais variados de alta qualidade",
+        url: "https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/canais24h.m3u8",
+        category: "Filmes e Series"
+      },
+	  {
+        name: "🎬 TV Misto",
         description: "Canais variados de alta qualidade",
         url: "https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/tvmisto.m3u8",
         category: "Filmes e Series"
-      },{
+      },
+      {
+        name: "🎬 TV Misto 2",
+        description: "Canais variados de alta qualidade",
+        url: "https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/otra.m3u8",
+        category: "Filmes e Series"
+      },
+      {
         name: "🎬 Filmes e Series",
         description: "Canais variados de alta qualidade",
         url: "https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/filmes-series.m3u8",
         category: "Filmes e Series"
+      },
+      {
+        name: "🎬 Filmes mp4",
+        description: "Canais variados de alta qualidade",
+        url: "https://gist.githubusercontent.com/BrasilChannel/77d80bf7b68011726d2a34ca9c6ad219/raw/c973a6df2aec707f6f37a1403464e7560d1343d2/Canais%2520Full",
+        category: "Filmes e Series"
+      },{
+        name: "🎬 Filmes2 mp4",
+        description: "Canais variados de alta qualidade",
+        url: "https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/canais2.m3u8",
+        category: "Filmes"
       },
       {
         name: "🏆 Esportes HD",
@@ -36,40 +60,66 @@ document.addEventListener("DOMContentLoaded", () => {
         url: "https://raw.githubusercontent.com/exemplo/repo/main/esportes.m3u8",
         category: "Esportes"
       },
-      
       {
-        name: "🎭 Entretenimento",
+        name: "🎭 Educativo",
         description: "Canais de séries, filmes e shows",
         url: "https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/educativo.m3u8",
         category: "Entretenimento"
       },
-	  {
-        name: "🎭 Entretenimento",
+      {
+        name: "🎭 Educativo2",
+        description: "Canais de séries, filmes e shows",
+        url: "https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/aqules.m3u8",
+        category: "Entretenimento"
+      },
+      {
+        name: "🎭 Educativo3",
+        description: "Canais de séries, filmes e shows",
+        url: "https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/new.m3u8",
+        category: "Entretenimento"
+      },
+      {
+        name: "🎭 teste",
         description: "Canais de séries, filmes e shows",
         url: "https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/teste.m3u8",
         category: "Entretenimento"
       },
       {
+        name: "🎭 teste2",
+        description: "Canais de séries, filmes e shows",
+        url: "https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/teste2.m3u8",
+        category: "Entretenimento"
+      },
+      {
+        name: "🎭 Ptria2",
+        description: "Canais de séries, filmes e shows",
+        url: "https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/putria2.m3u8",
+        category: "Entretenimento"
+      },
+      {
+        name: "🎭 Ptria3",
+        description: "Canais de séries, filmes e shows",
+        url: "https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/putria3.m3u8",
+        category: "Entretenimento"
+      },
+      {
+        name: "🎭 PtriaMp4",
+        description: "Canais de séries, filmes e shows",
+        url: "https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/putria4.m3u8",
+        category: "Entretenimento"
+      },
+      {
+        name: "🎭 Ptria",
+        description: "Canais de séries, filmes e shows",
+        url: "https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/putria.m3u8",
+        category: "Entretenimento"
+      },
+      {
         name: "👶 Infantil",
         description: "Conteúdo seguro para crianças",
-        url: "https://raw.githubusercontent.com/exemplo/repo/main/infantil.m3u8",
+        url: "",
         category: "Infantil"
-      },
-      
-      
-      
-      // ADICIONE MAIS PLAYLISTS AQUI SEGUINDO O MESMO FORMATO
-    ];
-
-    // Lista de playlists que devem estar na pasta 'playlists' do WGT
-    const availablePlaylists = [
-      { name: "TV Misto", filename: "tvmisto.m3u8" },
-      { name: "Filmes e Series", filename: "filmes_series.m3u8" },
-      { name: "Esportes", filename: "esportes.m3u8" },
-      { name: "Variedades", filename: "variedades.m3u8" },
-      { name: "Educativo", filename: "teste.m3u8" },
-      { name: "Top", filename: "new.m3u8" },
-      { name: "Top", filename: "aqules.m3u8" }
+      }
     ];
 
     // Função para mostrar mensagens
