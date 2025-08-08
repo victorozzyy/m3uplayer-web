@@ -12,6 +12,26 @@ http://15.235.9.200:14872/
 http://24hrs.homelinux.com:8080/24H-todomundoodeiaocris/video.m3u8
 #EXTINF:-1,BR: Um Maluco no Pedaço 24h
 http://24hrs.homelinux.com:8080/24H-ummaluconopedaco/playlist.m3u8
+#EXTINF:-1  tvg-logo="https://imgur.com/L89LBAz.png" group-title="FILMES",American Pie 9- Apresenta Meninas ao Ataque
+http://fhd4.oneplayer.site/343rt342wtg34wetg34retg4rgh5kh4/FHD4/tt11771594.mp4
+#EXTINF:-1  tvg-logo="https://imgur.com/L89LBAz.png" group-title="FILMES",Amor na Medida Certa
+http://fhd1.oneplayer.site/ertg43r5g34ty34yt543t43wer234t34t345/FHD10/tt0083099.mp4
+#EXTINF:-1  tvg-logo="https://imgur.com/L89LBAz.png" group-title="FILMES",American Pie 8– O Reencontro
+http://fhd1.oneplayer.site/ertg43r5g34ty34yt543t43wer234t34y3s7/FHD3/tt1605630.mp4
+#EXTINF:-1  tvg-logo="https://imgur.com/L89LBAz.png" group-title="FILMES",American Pie 7- O Livro do Amor
+http://fhd1.oneplayer.site/ertg43r5g34ty34yt543t43wer234t34y3s7/FHD3/tt1407050.mp4
+#EXTINF:-1  tvg-logo="https://imgur.com/L89LBAz.png" group-title="FILMES",American Pie 6 – Caindo em Tentação
+http://fhd1.oneplayer.site/ertg43r5g34ty34yt543t43wer234t34y3s7/FHD3/tt0974959.mp4
+#EXTINF:-1  tvg-logo="https://imgur.com/L89LBAz.png" group-title="FILMES",American Pie 5 – O Último Stifler Virgem
+http://fhd1.oneplayer.site/ertg43r5g34ty34yt543t43wer234t34y3s7/FHD3/tt0808146.mp4
+#EXTINF:-1  tvg-logo="https://imgur.com/L89LBAz.png" group-title="FILMES",American Pie 4 – Tocando a Maior Zona
+http://fhd1.oneplayer.site/ertg43r5g34ty34yt543t43wer234t34y3s7/FHD3/tt0436058.mp4
+#EXTINF:-1  tvg-logo="https://imgur.com/L89LBAz.png" group-title="FILMES",American Pie 3 - O Casamento
+http://fhd1.oneplayer.site/ertg43r5g34ty34yt543t43wer234t34y3s7/FHD3/tt0328828.mp4
+#EXTINF:-1  tvg-logo="https://imgur.com/L89LBAz.png" group-title="FILMES",American Pie 2 - A Segunda Vez é Ainda Melhor
+http://fhd1.oneplayer.site/ertg43r5g34ty34yt543t43wer234t34y3s7/FHD3/tt0252866.mp4
+#EXTINF:-1  tvg-logo="https://imgur.com/L89LBAz.png" group-title="FILMES",American Pie- A Primeira Vez é Inesquecível
+http://fhd1.oneplayer.site/ertg43r5g34ty34yt543t43wer234t34y3s7/FHD3/tt0163651.mp4
 
 #EXTINF:-1 tvg-logo="https://imgur.com/BatygW5.png " group-title="Canais | ANIMES & GEEK",🔴Dragon Ball 24
 http://24hrs.homelinux.com:80/24H-dragon.ball/video.m3u8?
