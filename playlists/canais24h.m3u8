@@ -1,4 +1,19 @@
 #EXTM3U
+#EXTINF:-1,BR: Friends
+http://24hrs.homelinux.com:8080/24H-friends/video.m3u8
+#EXTINF:-1,BR: Eu a Patroa e as Crianças 24h
+http://24hrs.homelinux.com:8080/24H-euapatroaeascriancas7/playlist.m3u8
+#EXTINF:-1,BR: Eu a Patroa e as Crianças 2
+http://15.235.9.200:14908/
+#EXTINF:-1,BR: 2 Homens e Meio 24h
+http://24hrs.homelinux.com:8080/24H-2HomensEmeio/playlist.m3u8
+#EXTINF:-1,BR: 2 Homens e Meio 2
+http://15.235.9.200:14872/
+#EXTINF:-1,BR: Todo Mundo Odeia O Cris 24h
+http://24hrs.homelinux.com:8080/24H-todomundoodeiaocris/video.m3u8
+#EXTINF:-1,BR: Um Maluco no Pedaço 24h
+http://24hrs.homelinux.com:8080/24H-ummaluconopedaco/playlist.m3u8
+
 #EXTINF:-1 tvg-logo="https://imgur.com/BatygW5.png" group-title="Canais | INFANTIL",🔴Futurama
 http://24hrs.homelinux.com:8080/24H-futurama/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://imgur.com/BatygW5.png" group-title="Canais | INFANTIL",🔴South Park
