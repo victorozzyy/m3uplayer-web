@@ -123,7 +123,7 @@ document.addEventListener("DOMContentLoaded", () => {
       {
         name: "👶 Infantil",
         description: "Conteúdo seguro para crianças",
-        url: "",
+        url: "https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists2/novopono.m3u8",
         category: "Infantil"
       }
     ];
