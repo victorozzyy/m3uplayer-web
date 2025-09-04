@@ -37,6 +37,12 @@ document.addEventListener("DOMContentLoaded", () => {
         url: "https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/otra.m3u8",
         category: "Filmes e Series"
       },
+		{
+        name: "🎬 TV Misto32",
+        description: "Canais variados de alta qualidade",
+        url: "https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/canais1.m3u8",
+        category: "Filmes e Series"
+      },
       {
         name: "🎬 Filmes e Series",
         description: "Canais variados de alta qualidade",
