@@ -1,4 +1,7 @@
 #EXTM3U
+#EXT-X-SESSION-DATA:DATA-ID="com.xui.1_5_13"
+#EXTINF:-1 tvg-name="Harry Potter E O Prisioneiro De Azkaban 4K" tvg-logo="https://image.tmdb.org/t/p/w600_and_h900_bestv2/gxxWeSnGIOlpnV41geSDp2Rokit.jpg" group-title="2 - Filmes - 4K",Harry Potter E O Prisioneiro De Azkaban 4K
+http://enegf3.dynamic-router-backend-net.site:80/movie/854191413/383942274/4258500.mp4
 #EXTINF:-1 group-title="Canais", Friends
 http://24hrs.homelinux.com:8080/24H-friends/video.m3u8
 #EXTINF:-1 group-title="Canais", Eu a Patroa e as Crianças 24h
