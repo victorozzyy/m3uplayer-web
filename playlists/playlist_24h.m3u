@@ -1,28 +1,7 @@
 #EXTM3U
-#EXTINF:-1 tvg-id="24HAnimes" tvg-name="BAND SP - BAND CAMPINAS HD" tvg-logo="https://img.hotice.site/icones_channels/BAND_HDTV.png" group-title="⭐ BAND",BAND SP - BAND CAMPINAS HD
-http://enegf3.dynamic-router-backend-net.site:80/Anonymous100/Hacker100/4230987
-#EXTINF:-1 tvg-id="24HAnimes" tvg-name="CANAL TV SENADO FHD" tvg-logo="https://img.hotice.site/icones_channels/TV_Senado.png" group-title="⭐ ABERTOS",CANAL TV SENADO FHD
-http://enegf3.dynamic-router-backend-net.site:80/Anonymous100/Hacker100/4231033
-#EXTINF:-1 tvg-id="24HAnimes" tvg-name="GLOBO MA - TV MIRANTE COCAIS FHD" tvg-logo="https://img.hotice.site/icones_channels/GLOBO_RS_HD.png" group-title="⭐ GLOBOS",GLOBO MA - TV MIRANTE COCAIS FHD
-http://enegf3.dynamic-router-backend-net.site:80/Anonymous100/Hacker100/4231269
-#EXTINF:-1 tvg-id="24HAnimes" tvg-name="GLOBO PR - RPC CASCAVEL HD" tvg-logo="https://img.hotice.site/icones_channels/GLOBO_RS_HD.png" group-title="⭐ GLOBOS",GLOBO PR - RPC CASCAVEL HD
-http://enegf3.dynamic-router-backend-net.site:80/Anonymous100/Hacker100/4231384
-#EXTINF:-1 tvg-id="24HAnimes" tvg-name="GLOBO PR - RPC CASCAVEL SD" tvg-logo="https://img.hotice.site/icones_channels/GLOBO_RS_HD.png" group-title="⭐ GLOBOS",GLOBO PR - RPC CASCAVEL SD
-http://enegf3.dynamic-router-backend-net.site:80/Anonymous100/Hacker100/4231385
-#EXTINF:-1 tvg-id="24HAnimes" tvg-name="GLOBO PR - RPC LONDRINA FHD" tvg-logo="https://img.hotice.site/icones_channels/GLOBO_RS_HD.png" group-title="⭐ GLOBOS",GLOBO PR - RPC LONDRINA FHD
-http://enegf3.dynamic-router-backend-net.site:80/Anonymous100/Hacker100/4231392
-#EXTINF:-1 tvg-id="24HAnimes" tvg-name="GLOBO PR - RPC LONDRINA HD" tvg-logo="https://img.hotice.site/icones_channels/GLOBO_RS_HD.png" group-title="⭐ GLOBOS",GLOBO PR - RPC LONDRINA HD
-http://enegf3.dynamic-router-backend-net.site:80/Anonymous100/Hacker100/4231393
-#EXTINF:-1 tvg-id="24HAnimes" tvg-name="GLOBO PR - RPC LONDRINA SD" tvg-logo="https://img.hotice.site/icones_channels/GLOBO_RS_HD.png" group-title="⭐ GLOBOS",GLOBO PR - RPC LONDRINA SD
-http://enegf3.dynamic-router-backend-net.site:80/Anonymous100/Hacker100/4231394
-#EXTINF:-1 tvg-id="24HAnimes" tvg-name="GLOBO SP - TV VANGUARDA TAUBATÉ FHD" tvg-logo="https://img.hotice.site/icones_channels/GLOBO_RS_HD.png" group-title="⭐ GLOBOS",GLOBO SP - TV VANGUARDA TAUBATÉ FHD
-http://enegf3.dynamic-router-backend-net.site:80/Anonymous100/Hacker100/4231535
-#EXTINF:-1 tvg-id="24HAnimes" tvg-name="GLOBO SP - TV VANGUARDA TAUBATÉ SD" tvg-logo="https://img.hotice.site/icones_channels/GLOBO_RS_HD.png" group-title="⭐ GLOBOS",GLOBO SP - TV VANGUARDA TAUBATÉ SD
-http://enegf3.dynamic-router-backend-net.site:80/Anonymous100/Hacker100/4231537
-#EXTINF:-1 tvg-id="24HAnimes" tvg-name="REDE SECULO 21 FHD" tvg-logo="https://img.inboxbr.pro/icones_channels/rede-21.png" group-title="⭐ RELIGIOSOS",REDE SECULO 21 FHD
-http://enegf3.dynamic-router-backend-net.site:80/Anonymous100/Hacker100/4231794
-#EXTINF:-1 tvg-id="24HAnimes" tvg-name="REDE SECULO 21 HD" tvg-logo="https://img.inboxbr.pro/icones_channels/rede-21.png" group-title="⭐ RELIGIOSOS",REDE SECULO 21 HD
-http://enegf3.dynamic-router-backend-net.site:80/Anonymous100/Hacker100/4231795
+#EXT-X-SESSION-DATA:DATA-ID="com.xui.1_5_13"
+#EXTINF:-1 tvg-id="" tvg-name="THE BIG BANG THEORY 24HRS" tvg-logo="" group-title="⭐ 24HORAS",THE BIG BANG THEORY 24HRS
+http://enegf3.dynamic-router-backend-net.site:80/854191413/383942274/4238329
 #EXTINF:-1 tvg-id="24HAnimes" tvg-name="SPACE 4K" tvg-logo="https://img.hotice.site/icones_channels/SPACE_HD.png" group-title="⭐ 4K",SPACE 4K
 http://enegf3.dynamic-router-backend-net.site:80/Anonymous100/Hacker100/4231849
 #EXTINF:-1 tvg-id="" tvg-name="Aladdin 24hrs" tvg-logo="" group-title="⭐ 24HORAS",Aladdin 24hrs
