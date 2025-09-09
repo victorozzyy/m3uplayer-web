@@ -98,6 +98,22 @@
         location.href = "m3u8.html?return=true";
       }
     });
+	// 🔥 Salvar posição no localStorage
+video.addEventListener("timeupdate", () => {
+  const allStates = JSON.parse(localStorage.getItem("playbackPositions") || "{}");
+  allStates[index || url] = video.currentTime; // usa índice se existir, senão a URL
+  localStorage.setItem("playbackPositions", JSON.stringify(allStates));
+});
+
+// 🔥 Restaurar posição ao carregar
+window.addEventListener("load", () => {
+  const allStates = JSON.parse(localStorage.getItem("playbackPositions") || "{}");
+  if (allStates[index || url]) {
+    video.currentTime = allStates[index || url];
+    console.log(`⏪ Retomando do segundo ${allStates[index || url]} para`, name);
+  }
+});
+
   </script>
 </body>
 </html>
