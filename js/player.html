@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Player Web</title>
+  <style>
+    html, body { height: 100%; margin: 0; background: #000; }
+    #video { width: 100%; height: 100%; background: #000; display: block; }
+    #channelOverlay {
+      position: absolute; top: 10px; left: 0; right: 0;
+      text-align: center; color: #fff; font-size: 22px;
+      background: rgba(0,0,0,0.5); padding: 10px;
+      transition: opacity 0.5s ease;
+      opacity: 1;
+    }
+    #nextBtn {
+      margin-left: 20px; padding: 5px 10px;
+      background: #6bff6b; border: none; border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <video id="video" controls autoplay playsinline></video>
+
+  <div id="channelOverlay">
+    <span id="channelTitle"></span>
+    <button id="nextBtn">⏭ Próximo Canal</button>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+  <script>
+    const video = document.getElementById('video');
+    const overlay = document.getElementById('channelOverlay');
+    const titleEl = document.getElementById('channelTitle');
+    const nextBtn = document.getElementById('nextBtn');
+
+    const params = new URLSearchParams(window.location.search);
+    let index = parseInt(params.get("index") || "0");
+
+    function showOverlay(ms = 3000) {
+      overlay.style.opacity = "1";
+      if (showOverlay._t) clearTimeout(showOverlay._t);
+      if (ms > 0) {
+        showOverlay._t = setTimeout(() => overlay.style.opacity = "0", ms);
+      }
+    }
+
+    function loadChannel(i) {
+      const state = JSON.parse(localStorage.getItem('savedPlaylistState') || '{}');
+      if (!state.urls || !Array.isArray(state.urls) || !state.urls[i]) return;
+
+      const ch = state.urls[i];
+      index = i;
+      titleEl.textContent = ch.name;
+      showOverlay(3000);
+
+      if (ch.url.toLowerCase().endsWith(".m3u8")) {
+        if (window.Hls && Hls.isSupported()) {
+          if (window.hls) window.hls.destroy();
+          window.hls = new Hls();
+          window.hls.loadSource(ch.url);
+          window.hls.attachMedia(video);
+        } else if (video.canPlayType("application/vnd.apple.mpegurl")) {
+          video.src = ch.url;
+        }
+      } else {
+        video.src = ch.url;
+      }
+
+      video.play().catch(err => console.warn("⚠️ Autoplay bloqueado:", err));
+    }
+
+    // Inicial
+    loadChannel(index);
+
+    // Botão próximo
+    nextBtn.onclick = () => loadChannel(index + 1);
+
+    // Auto próximo ao fim (mp4)
+    video.addEventListener("ended", () => {
+      const state = JSON.parse(localStorage.getItem('savedPlaylistState') || '{}');
+      if (state.urls && state.urls[index] && state.urls[index].url.toLowerCase().endsWith(".mp4")) {
+        loadChannel(index + 1);
+      }
+    });
+
+    // Mostrar inicial e reaparecer em eventos
+    showOverlay(5000);
+    document.addEventListener("mousemove", () => showOverlay(3000));
+    video.addEventListener("pause", () => showOverlay(0));
+
+    // Tecla voltar
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Backspace" || e.key === "Escape" || e.keyCode === 10009) {
+        e.preventDefault();
+        location.href = "m3u8.html?return=true";
+      }
+    });
+  </script>
+</body>
+</html>
