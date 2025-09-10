@@ -115,14 +115,14 @@ let restoringState = false; // evita que updateChannelList roube o foco durante 
         url: "https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/playlist_mp4_part2.m3u",
         category: "Mp4"
       },
-	  /* Atualizar essas playlists
+	  
 	  {
         name: "🎬 Mp4 3",
         description: "Canais variados de alta qualidade",
         url: "https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/playlist_mp4_part3.m3u",
         category: "Filmes"
       },
-	  {
+	  /*{
         name: "🎬 Mp4 4",
         description: "Canais variados de alta qualidade",
         url: "https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/playlist_mp4_part4.m3u",
