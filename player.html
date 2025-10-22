@@ -23,6 +23,77 @@
 </head>
 <body>
   <video id="video" controls autoplay playsinline></video>
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Player</title>
+<style>
+  html,body{height:100%;margin:0;background:#000;color:#fff}
+  #video{width:100%;height:100%;background:#000;display:block}
+  #channelOverlay{position:absolute;left:0;right:0;top:8px;text-align:center;color:#fff}
+  #channelTitle{font-size:20px}
+  #nextBtn{position:absolute;right:16px;top:8px}
+</style>
+</head>
+<body>
+  <video id="video" controls autoplay playsinline></video>
+  <div id="channelOverlay"><span id="channelTitle"></span><button id="nextBtn">⏭</button></div>
+  <span id="clock" style="position:absolute;right:12px;bottom:12px;font-family:monospace"></span>
+
+  <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+  <script>
+    (function(){
+      const params = new URLSearchParams(window.location.search);
+      const url = params.get("url") || "";
+      const name = params.get("name") || "";
+      const video = document.getElementById("video");
+      const titleEl = document.getElementById("channelTitle");
+      const nextBtn = document.getElementById("nextBtn");
+
+      function showOverlay(ms){ const o = document.getElementById("channelOverlay"); if(!o) return; o.style.opacity="1"; if(showOverlay._t) clearTimeout(showOverlay._t); if(ms>0) showOverlay._t = setTimeout(()=> o.style.opacity="0", ms); }
+
+      function loadChannelDirect(u, n){
+        titleEl.textContent = n || u;
+        showOverlay(3000);
+        if (!u) return;
+        if (u.toLowerCase().endsWith(".m3u8")) {
+          if (window.Hls && Hls.isSupported()) {
+            if (window.hls) window.hls.destroy();
+            window.hls = new Hls();
+            window.hls.loadSource(u);
+            window.hls.attachMedia(video);
+          } else if (video.canPlayType("application/vnd.apple.mpegurl")) {
+            video.src = u;
+          }
+        } else {
+          video.src = u;
+        }
+        video.play().catch(err => console.warn("Autoplay:", err));
+      }
+
+      // init
+      loadChannelDirect(url, name);
+
+      // next button: just hides (no playlist)
+      nextBtn.addEventListener("click", () => { /* no-op: playlist-less player */ });
+
+      // close tab on Backspace / Escape / remote back key
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Backspace" || e.key === "Escape" || e.keyCode === 10009) {
+          e.preventDefault();
+          try { window.close(); } catch(err) { /* some browsers block close() for non-window.open tabs */ }
+        }
+      });
+
+      // simple clock
+      function updateClock(){ const now = new Date(); const h = String(now.getHours()).padStart(2,"0"); const m = String(now.getMinutes()).padStart(2,"0"); const s = String(now.getSeconds()).padStart(2,"0"); document.getElementById("clock").textContent = h+":"+m+":"+s; }
+      setInterval(updateClock,1000); updateClock();
+    })();
+  </script>
+</body>
+</html>
 
   <div id="channelOverlay">
     <span id="channelTitle"></span>
@@ -50,30 +121,73 @@
       }
     }
 
+    
     function loadChannel(i) {
-      const state = JSON.parse(localStorage.getItem('savedPlaylistState') || '{}');
-      if (!state.urls || !Array.isArray(state.urls) || !state.urls[i]) return;
-
-      const ch = state.urls[i];
-      index = i;
-      titleEl.textContent = ch.name;
-      showOverlay(3000);
-
-      if (ch.url.toLowerCase().endsWith(".m3u8")) {
-        if (window.Hls && Hls.isSupported()) {
-          if (window.hls) window.hls.destroy();
-          window.hls = new Hls();
-          window.hls.loadSource(ch.url);
-          window.hls.attachMedia(video);
-        } else if (video.canPlayType("application/vnd.apple.mpegurl")) {
-          video.src = ch.url;
+      // Lê params da URL e tenta obter playlist compactada via `data` (base64 JSON)
+      const params_local = new URLSearchParams(window.location.search);
+      const dataParam = params_local.get("data");
+      let playlist = [];
+      try {
+        if (dataParam) {
+          // decodeURIComponent + atob podem lançar se estiverem corrompidos
+          playlist = JSON.parse(atob(decodeURIComponent(dataParam)));
+          if (!Array.isArray(playlist)) playlist = [];
         }
-      } else {
-        video.src = ch.url;
+      } catch (err) {
+        console.warn("⚠️ Falha ao decodificar playlist passada por URL:", err);
+        playlist = [];
       }
 
-      video.play().catch(err => console.warn("⚠️ Autoplay bloqueado:", err));
+      // Determina canal a partir do índice (i) ou fallback para url/name individuais
+      let ch = null;
+      if (Array.isArray(playlist) && Number.isInteger(i) && i >= 0 && playlist[i] && playlist[i].url) {
+        ch = playlist[i];
+      } else {
+        const urlParam = params_local.get("url");
+        const nameParam = params_local.get("name");
+        if (urlParam) {
+          ch = { url: urlParam, name: nameParam || urlParam };
+        }
+      }
+
+      if (!ch || !ch.url) {
+        console.warn("Nenhum canal válido para carregar.");
+        return;
+      }
+
+      index = (Number.isInteger(i) && i >= 0) ? i : 0;
+      titleEl.textContent = ch.name || ch.url || ("Canal " + index);
+      showOverlay(3000);
+
+      try {
+        if (ch.url.toLowerCase().endsWith(".m3u8")) {
+          if (window.Hls && Hls.isSupported()) {
+            if (window.hls) window.hls.destroy();
+            window.hls = new Hls();
+            window.hls.loadSource(ch.url);
+            window.hls.attachMedia(video);
+          } else if (video.canPlayType("application/vnd.apple.mpegurl")) {
+            video.src = ch.url;
+          }
+        } else {
+          video.src = ch.url;
+        }
+      } catch (err) {
+        console.warn("Erro ao configurar fonte do vídeo:", err);
+      }
+
+      // Autoplay: se foi aberto a partir da página de playlists (window.opener existe) ou referrer contém "m3u8"
+      try {
+        if (window.opener || (document.referrer && document.referrer.includes("m3u8"))) {
+          setTimeout(function(){ video.play().catch(function(err){ console.warn("⚠️ Autoplay bloqueado:", err); }); }, 300);
+        } else {
+          video.play().catch(function(err){ console.warn("⚠️ Autoplay bloqueado:", err); });
+        }
+      } catch (err) {
+        console.warn("Erro ao tentar reproduzir:", err);
+      }
     }
+
 
     // Inicial
     loadChannel(index);
@@ -82,12 +196,27 @@
     nextBtn.onclick = () => loadChannel(index + 1);
 
     // Auto próximo ao fim (mp4)
-    video.addEventListener("ended", () => {
-      const state = JSON.parse(localStorage.getItem('savedPlaylistState') || '{}');
-      if (state.urls && state.urls[index] && state.urls[index].url.toLowerCase().endsWith(".mp4")) {
-        loadChannel(index + 1);
+    
+    video.addEventListener("ended", function() {
+      try {
+        const params_ended = new URLSearchParams(window.location.search);
+        const dataParam_ended = params_ended.get("data");
+        let playlistEnded = [];
+        if (dataParam_ended) {
+          try { playlistEnded = JSON.parse(atob(decodeURIComponent(dataParam_ended))); } catch(e){ playlistEnded = []; }
+        } else {
+          // fallback legacy (não confiável sem localStorage)
+          try { playlistEnded = JSON.parse(localStorage.getItem('savedPlaylistState') || '{}').urls || []; } catch(e){ playlistEnded = []; }
+        }
+
+        if (playlistEnded && playlistEnded[index] && playlistEnded[index].url && playlistEnded[index].url.toLowerCase().endsWith(".mp4")) {
+          loadChannel(index + 1);
+        }
+      } catch (err) {
+        console.warn('Erro no evento ended:', err);
       }
     });
+
 
     // Mostrar inicial e reaparecer em eventos
     showOverlay(5000);
