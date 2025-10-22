@@ -128,8 +128,7 @@ let restoringState = false; // evita que updateChannelList roube o foco durante 
         url: "https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/playlist_mp4_part4.m3u",
         category: "Filmes"
       },
-	  
-      
+	 
       {
         name: "🎭 Educativo",
         description: "Canais de séries, filmes e shows",
@@ -571,72 +570,45 @@ closeBtn.tabIndex = 0;
     }
 
     // Função para salvar estado da playlist (melhorada)
-    function savePlaylistState(playlistData, playlistName, playlistType) {
-        try {
-            const playlistState = {
-                urls: playlistData,
-                name: playlistName,
-                type: playlistType,
-                timestamp: Date.now(),
-                version: "1.1" // Para futuras migrações
-            };
-            localStorage.setItem('savedPlaylistState', JSON.stringify(playlistState));
-        } catch (error) {
-            handleError(error, 'Salvamento de playlist');
-        }
+    
+function savePlaylistState(playlistData, playlistName, playlistType) {
+    // função preservada, mas sem persistência localStorage
+    try {
+        // Apenas cria um objeto de estado em memória (não persistido)
+        const playlistState = {
+            urls: playlistData,
+            name: playlistName,
+            type: playlistType,
+            timestamp: Date.now(),
+            version: "1.1" // Para futuras migrações
+        };
+        // Nota: persistência removida por solicitação do usuário.
+        // Se desejar: enviar para servidor ou usar outra forma de armazenamento.
+        // console.log('savePlaylistState (desativado):', playlistState);
+    } catch (error) {
+        handleError(error, 'Salvamento de playlist');
     }
+}
+
 
     // MELHORIA 7: Função principal otimizada para abrir no player
-    function openChannelInPlayer(url, name, channelIndex = -1) {
     
-	// Salva o grupo atual para retorno
-    if (typeof currentGroup !== "undefined" && currentGroup) {
-        localStorage.setItem("lastOverlayGroup", currentGroup);
-    } else {
-        localStorage.setItem("lastOverlayGroup", "Todos os Canais");
-    }
-
-        try {
-            if (!isValidUrl(url)) {
-                throw new Error('URL do canal inválida');
-            }
-
-            console.log(`🎯 Abrindo canal: ${name}`, { url, channelIndex });
-            
-            // Salvar o índice do canal atual
-            if (channelIndex >= 0) {
-                lastPlayedChannelIndex = channelIndex;
-            } else {
-                lastPlayedChannelIndex = channelItems.findIndex(item => item.dataset.url === url);
-            }
-            
-            // Preparar dados do canal
-            const channelData = {
-                url,
-                name,
-                channelIndex: lastPlayedChannelIndex,
-                playlist: playlistUrls,
-                timestamp: Date.now(),
-                version: "1.1"
-            };
-            
-            localStorage.setItem('currentChannel', JSON.stringify(channelData));
-            
-            // Salvar estado da playlist
-            if (playlistUrls.length > 0) {
-                savePlaylistState(playlistUrls, "Playlist Atual", "current");
-            }
-            
-            showMessage(`🔄 Abrindo ${name} no player...`, 'loading');
-            
-            // Redirecionar para o player
-            const playerUrl = `player.html?url=${encodeURIComponent(url)}&name=${encodeURIComponent(name)}&index=${lastPlayedChannelIndex}`;
-            window.location.href = playerUrl;
-            
-        } catch (error) {
-            handleError(error, 'Abertura do canal');
+function openChannelInPlayer(url, name, channelIndex = -1) {
+    try {
+        if (!isValidUrl(url)) {
+            throw new Error('URL do canal inválida');
         }
+
+        console.log(`🎯 Abrindo canal: ${name}`, { url, channelIndex });
+
+        // Abrir player em nova aba sem salvar nada em local/session storage
+        const playerUrl = `player.html?url=${encodeURIComponent(url)}&name=${encodeURIComponent(name)}&index=${channelIndex}`;
+        window.open(playerUrl, '_blank');
+    } catch (error) {
+        handleError(error, 'Abertura do canal');
     }
+}
+
 
     // MELHORIA 8: Sistema de mensagens melhorado
     function showMessage(text, type = 'info') {
@@ -689,7 +661,7 @@ function focusLastPlayedChannelInOverlay() {
     try {
         const urlParams = new URLSearchParams(window.location.search);
         const returnFromPlayer = urlParams.get('return');
-        const raw = localStorage.getItem('currentChannel');
+        const raw = null;
 
         if (returnFromPlayer === 'true' && raw) {
             const currentChannelData = JSON.parse(raw);
@@ -709,7 +681,7 @@ function focusLastPlayedChannelInOverlay() {
     // Função para restaurar estado da playlist (melhorada)
     function restorePlaylistState(currentChannelData) {
     try {
-        const saved = localStorage.getItem('savedPlaylistState');
+        const saved = null;
         if (!saved) return false;
 
         const playlistState = JSON.parse(saved);
@@ -764,7 +736,7 @@ function focusLastPlayedChannelInOverlay() {
 
     } catch (error) {
         handleError(error, 'Restauração de playlist');
-        localStorage.removeItem('savedPlaylistState');
+
         return false;
     } finally {
         restoringState = false;
@@ -1271,7 +1243,7 @@ function focusLastPlayedChannelInOverlay() {
 			
             const fragment = document.createDocumentFragment();
 			// Mostrar nome da playlist atual no topo
-const savedState = JSON.parse(localStorage.getItem('savedPlaylistState') || "{}");
+const savedState = JSON.parse(null || "{}");
 if (savedState.name) {
     const playlistHeader = document.createElement("li");
     playlistHeader.textContent = `📂 Playlist: ${savedState.name}`;
@@ -1626,7 +1598,30 @@ if (savedState.name) {
         // Botões de voltar
         document.getElementById("btnBackFromRemote").addEventListener("click", backToButtons);
         document.getElementById("btnBackFromLocal").addEventListener("click", backToButtons);
+    document.getElementById("btnUpload").addEventListener("click", () => {
+  document.getElementById("fileInput").click();
+});
+
+document.getElementById("fileInput").addEventListener("change", (e) => {
+  const file = e.target.files[0];
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = (event) => {
+    const content = event.target.result;
+    const parsedPlaylist = parsePlaylist(content);
+    if (parsedPlaylist.length > 0) {
+      playlistUrls = parsedPlaylist;
+      updateChannelList();
+      focusChannel();
+      showMessage(`✅ ${file.name} carregada (${parsedPlaylist.length} canais)`, 'success');
+    } else {
+      showMessage(`⚠️ Nenhum canal válido encontrado em ${file.name}`, 'error');
     }
+  };
+  reader.readAsText(file);
+});
+
+	}
 
     // MELHORIA 19: Inicialização otimizada e mais robusta
     
