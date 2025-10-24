@@ -266,6 +266,17 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
+
+    // Validação de URL
+    function isValidUrl(string) {
+        try {
+            const url = new URL(string);
+            return url.protocol === 'http:' || url.protocol === 'https:';
+        } catch {
+            return false;
+        }
+    }
+    
     // Debug do foco
     function debugFocus(context) {
         if (console.debug) {
