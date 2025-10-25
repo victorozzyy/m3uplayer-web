@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
     
-    // Helper: trata tecla OK/Enter de controles remotos (Tizen, WebOS, etc.)
+    // Helper: trata tecla OK/Enter de controles remotos
     function isOKKey(e) {
         return e && (
             e.key === "Enter" ||
@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
             e.keyCode === 65376
         );
     }
-    
+
     const video = document.getElementById("player");
     const channelList = document.getElementById("channelList");
     const playlistSelector = document.getElementById("playlistSelector");
@@ -21,7 +21,15 @@ document.addEventListener("DOMContentLoaded", () => {
     const remotePlaylistList = document.getElementById("remotePlaylistList");
     const messageArea = document.getElementById("messageArea");
     
-    let lastPlayedChannelIndex = -1;
+    // VARIÁVEIS GLOBAIS (substituindo localStorage)
+    let currentPlaylist = {
+        urls: [],
+        name: "",
+        type: "",
+        currentIndex: -1,
+        lastPosition: 0
+    };
+    
     let playlistUrls = [];
     let channelItems = [];
     let playlistItems = [];
@@ -34,213 +42,67 @@ document.addEventListener("DOMContentLoaded", () => {
     let overlayChannels = [];
     let overlayFocusIndex = 0;
     let restoringState = false;
-    let hls = null;
-    let currentChannelIndex = -1;
+
+    // PLAYER OVERLAY VARIABLES
+    let playerOverlay = null;
+    let avplay = null;
+    let isPlaying = false;
+    let hideTimer = null;
+    let duration = 0;
+    let advanceTimer = null;
+    let advanceStart = 0;
 
     // Lista de playlists remotas
     const remotePlaylistsConfig = [
-      {
-        name: "🏆 Esportes 1",
-        description: "Canais esportivos em alta definição",
-        url: "https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/esportes.m3u8",
-        category: "Esportes"
-      },{
-        name: "🏆 Esportes 2",
-        description: "Canais esportivos em alta definição",
-        url: "https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/playlist_esportes.m3u",
-        category: "Esportes"
-      },{
-        name: "🎬 Canais 24 Hs",
-        description: "Canais variados de alta qualidade",
-        url: "https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/playlist_24h.m3u",
-        category: "Filmes e Series"
-      },
-      {
-        name: "🎬 Canais",
-        description: "Canais variados de alta qualidade",
-        url: "https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/canais24h.m3u8",
-        category: "Filmes"
-      },
-      {
-        name: "🎬 Filmes1 ",
-        description: "Canais variados de alta qualidade",
-        url: "https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/playlist_mp4_part1.m3u",
-        category: "Mp4"
-      },
-      {
-        name: "🎬 Series1 ",
-        description: "Canais variados de alta qualidade",
-        url: "https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/seriesmp4.m3u8",
-        category: "Mp4"
-      },
-      {
-        name: "🎬 Filmes e Series",
-        description: "Canais variados de alta qualidade",
-        url: "https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/filmes-series.m3u8",
-        category: "Mp4"
-      },{
-        name: "🎬 Filmes e Series2",
-        description: "Canais variados de alta qualidade",
-        url: "https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/playlist_filmes_series.m3u",
-        category: "Filmes e Series"
-      },
-      {
-        name: "🎬 Series2 mp4",
-        description: "Big sequencia, series boas.",
-        url: "https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists2/series2-mp4.m3u8",
-        category: "Mp4"
-      },{
-        name: "🎬 Series3 mp4",
-        description: "Rancho, Dexter, Suits, Justfield",
-        url: "https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists2/series3-mp4.m3u8",
-        category: "Mp4"
-      },{
-        name: "🎬 Filmes2 mp4",
-        description: "Canais variados de alta qualidade",
-        url: "https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists2/filmes2-mp4.m3u8",
-        category: "Mp4"
-      },{
-        name: "🎬 Canais2 mp4",
-        description: "Canais variados de alta qualidade",
-        url: "https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/canais2.m3u8",
-        category: "Mp4"
-      },
-      {
-        name: "🎬 Mp4 1",
-        description: "Canais variados de alta qualidade",
-        url: "https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/playlist_mp4_part1.m3u",
-        category: "Mp4"
-      },{
-        name: "🎬 Mp4 2",
-        description: "Canais variados de alta qualidade",
-        url: "https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/playlist_mp4_part2.m3u",
-        category: "Mp4"
-      },
-      {
-        name: "🎬 Mp4 3",
-        description: "Canais variados de alta qualidade",
-        url: "https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/playlist_mp4_part3.m3u",
-        category: "Filmes"
-      },
-      {
-        name: "🎬 Mp4 4",
-        description: "Canais variados de alta qualidade",
-        url: "https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/playlist_mp4_part4.m3u",
-        category: "Filmes"
-      },
-      {
-        name: "🎭 Educativo",
-        description: "Canais de séries, filmes e shows",
-        url: "https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/educativo.m3u8",
-        category: "Pt"
-      },
-      {
-        name: "🎭 Aqueles",
-        description: "Canais de séries, filmes e shows",
-        url: "https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/aqules.m3u8",
-        category: "Pt"
-      },
-      {
-        name: "🎭 Educativo3",
-        description: "Canais de séries, filmes e shows",
-        url: "https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/new.m3u8",
-        category: "Pt"
-      },
-      {
-        name: "🎭 teste",
-        description: "Canais de séries, filmes e shows",
-        url: "https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/teste.m3u8",
-        category: "Pt"
-      },
-      {
-        name: "🎭 Funcional00",
-        description: "Canais de séries, filmes e shows",
-        url: "https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/teste2.m3u8",
-        category: "Pt"
-      },
-      {
-        name: "🎭 Funcional Mp4",
-        description: "Canais de séries, filmes e shows",
-        url: "https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/putria2.m3u8",
-        category: "Pt"
-      },
-      {
-        name: "🎭 Funcional4 Mp4",
-        description: "Canais de séries, filmes e shows",
-        url: "https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/putria3.m3u8",
-        category: "Pt"
-      },
-      {
-        name: "🎭 Funcional Pov Mp4",
-        description: "Canais de séries, filmes e shows",
-        url: "https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/putria4.m3u8",
-        category: "Pt"
-      },
-      {
-        name: "🎭 Funcional3 Mp4",
-        description: "Canais de séries, filmes e shows",
-        url: "https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/putria.m3u8",
-        category: "Pt"
-      },
-      {
-        name: "🎭 NovoPono Instavel",
-        description: "Conteúdo seguro para crianças",
-        url: "https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists2/novopono.m3u8",
-        category: "Pt"
-      },
-      {
-        name: "👶 Desenhos",
-        description: "Conteúdo seguro para crianças",
-        url: "https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/playlist_desenhos.m3u",
-        category: "Infantil"
-      }
+      {name: "🏆 Esportes 1", description: "Canais esportivos em alta definição", url: "https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/esportes.m3u8", category: "Esportes"},
+      {name: "🏆 Esportes 2", description: "Canais esportivos em alta definição", url: "https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/playlist_esportes.m3u", category: "Esportes"},
+      {name: "🎬 Canais 24 Hs", description: "Canais variados de alta qualidade", url: "https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/playlist_24h.m3u", category: "Filmes e Series"},
+      {name: "🎬 Canais", description: "Canais variados de alta qualidade", url: "https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/canais24h.m3u8", category: "Filmes"},
+      {name: "🎬 Filmes1 ", description: "Canais variados de alta qualidade", url: "https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/playlist_mp4_part1.m3u", category: "Mp4"},
+      {name: "🎬 Series1 ", description: "Canais variados de alta qualidade", url: "https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/seriesmp4.m3u8", category: "Mp4"},
+      {name: "🎬 Filmes e Series", description: "Canais variados de alta qualidade", url: "https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/filmes-series.m3u8", category: "Mp4"},
+      {name: "🎬 Filmes e Series2", description: "Canais variados de alta qualidade", url: "https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/playlist_filmes_series.m3u", category: "Filmes e Series"},
+      {name: "🎬 Series2 mp4", description: "Big sequencia, series boas.", url: "https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists2/series2-mp4.m3u8", category: "Mp4"},
+      {name: "🎬 Series3 mp4", description: "Rancho, Dexter, Suits, Justfield", url: "https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists2/series3-mp4.m3u8", category: "Mp4"},
+      {name: "🎬 Filmes2 mp4", description: "Canais variados de alta qualidade", url: "https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists2/filmes2-mp4.m3u8", category: "Mp4"},
+      {name: "🎬 Canais2 mp4", description: "Canais variados de alta qualidade", url: "https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/canais2.m3u8", category: "Mp4"},
+      {name: "🎬 Mp4 1", description: "Canais variados de alta qualidade", url: "https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/playlist_mp4_part1.m3u", category: "Mp4"},
+      {name: "🎬 Mp4 2", description: "Canais variados de alta qualidade", url: "https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/playlist_mp4_part2.m3u", category: "Mp4"},
+      {name: "🎬 Mp4 3", description: "Canais variados de alta qualidade", url: "https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/playlist_mp4_part3.m3u", category: "Filmes"},
+      {name: "🎬 Mp4 4", description: "Canais variados de alta qualidade", url: "https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/playlist_mp4_part4.m3u", category: "Filmes"},
+      {name: "🎭 Educativo", description: "Canais de séries, filmes e shows", url: "https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/educativo.m3u8", category: "Pt"},
+      {name: "🎭 Aqueles", description: "Canais de séries, filmes e shows", url: "https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/aqules.m3u8", category: "Pt"},
+      {name: "🎭 Educativo3", description: "Canais de séries, filmes e shows", url: "https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/new.m3u8", category: "Pt"},
+      {name: "🎭 teste", description: "Canais de séries, filmes e shows", url: "https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/teste.m3u8", category: "Pt"},
+      {name: "🎭 Funcional00", description: "Canais de séries, filmes e shows", url: "https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/teste2.m3u8", category: "Pt"},
+      {name: "🎭 Funcional Mp4", description: "Canais de séries, filmes e shows", url: "https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/putria2.m3u8", category: "Pt"},
+      {name: "🎭 Funcional4 Mp4", description: "Canais de séries, filmes e shows", url: "https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/putria3.m3u8", category: "Pt"},
+      {name: "🎭 Funcional Pov Mp4", description: "Canais de séries, filmes e shows", url: "https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/putria4.m3u8", category: "Pt"},
+      {name: "🎭 Funcional3 Mp4", description: "Canais de séries, filmes e shows", url: "https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/putria.m3u8", category: "Pt"},
+      {name: "🎭 NovoPono Instavel", description: "Conteúdo seguro para crianças", url: "https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists2/novopono.m3u8", category: "Pt"},
+      {name: "👶 Desenhos", description: "Conteúdo seguro para crianças", url: "https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/playlist_desenhos.m3u", category: "Infantil"}
     ];
 
-    // Lista de playlists locais
     const availablePlaylists = [
-      { name: "24 Hs", filename: "playlist_24h.m3u" },
-      { name: "TV Misto", filename: "tvmisto.m3u8" },
-      { name: "Filmes e Series", filename: "filmes-series.m3u8" },
-      { name: "Filmes mp4 ", filename: "filmes.m3u8" },
-      { name: "Esportes", filename: "esportes.m3u8" },
-      { name: "Variedades", filename: "variedades.m3u8" },
-      { name: "Educativo", filename: "teste.m3u8" },
-      { name: "EducativoT", filename: "teste2.m3u8" },
-      { name: "Top", filename: "new.m3u8" },
-      { name: "Novo", filename: "novopono.m3u8" }
+      {name: "24 Hs", filename: "playlist_24h.m3u"},
+      {name: "TV Misto", filename: "tvmisto.m3u8"},
+      {name: "Filmes e Series", filename: "filmes-series.m3u8"},
+      {name: "Filmes mp4 ", filename: "filmes.m3u8"},
+      {name: "Esportes", filename: "esportes.m3u8"},
+      {name: "Variedades", filename: "variedades.m3u8"},
+      {name: "Educativo", filename: "teste.m3u8"},
+      {name: "EducativoT", filename: "teste2.m3u8"},
+      {name: "Top", filename: "new.m3u8"},
+      {name: "Novo", filename: "novopono.m3u8"}
     ];
 
-    // Minhas Listas Config
-    const minhasListasConfig = [
-      {
-        name: "🔥 Minha Lista Principal",
-        description: "Lista 01",
-        url: "https://felas87dz.icu/get.php?username=Anonymous100&password=Hacker100&type=m3u_plus"
-      },
-      {
-        name: "🔥 Minha 02",
-        description: "Lista 02",
-        url: "https://felas87dz.icu/get.php?username=ednamaria&password=366242934&type=m3u_plus"
-      },
-      {
-        name: "🔥 Minha 03",
-        description: "Lista 03",
-        url: "https://felas87dz.icu/get.php?username=Diego01&password=9518484&type=m3u_plus"
-      },
-      {
-        name: "🔥 Minha Lista 04",
-        description: "Lista 04",
-        url: "https://felas87dz.icu/get.php?username=854191413&password=383942274&type=m3u_plus"
-      }
-    ];
-
-    // Cache para melhor performance
     const cache = {
         playlists: new Map(),
         lastAccessed: new Map()
     };
 
-    // Debounce
+    // ========== FUNÇÕES AUXILIARES ==========
+
     function debounce(func, delay) {
         let timeoutId;
         return function (...args) {
@@ -249,39 +111,24 @@ document.addEventListener("DOMContentLoaded", () => {
         };
     }
 
-    // Tratamento de erros
     function handleError(error, context = 'Operação') {
         console.error(`[${context}] Erro:`, error);
         const userMessage = error.message || 'Erro desconhecido';
         showMessage(`❌ ${context}: ${userMessage}`, 'error');
     }
 
-    // Validação de URL
     function isValidUrl(string) {
         try {
             const url = new URL(string);
             return url.protocol === 'http:' || url.protocol === 'https:';
-        } catch {
+        } catch (e) {
             return false;
         }
     }
 
-
-    // Validação de URL
-    function isValidUrl(string) {
-        try {
-            const url = new URL(string);
-            return url.protocol === 'http:' || url.protocol === 'https:';
-        } catch {
-            return false;
-        }
-    }
-    
-    // Debug do foco
     function debugFocus(context) {
         if (console.debug) {
             console.debug(`[${context}]`, {
-                lastPlayedChannelIndex,
                 currentFocusIndex,
                 channelItemsLength: channelItems.length,
                 currentView,
@@ -290,376 +137,8 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    // ===== SISTEMA DE PLAYER OVERLAY =====
-    function createPlayerOverlay() {
-        let overlay = document.getElementById("nativePlayerOverlay");
-        if (overlay) return overlay;
-
-        overlay = document.createElement("div");
-        overlay.id = "nativePlayerOverlay";
-        overlay.style.cssText = `
-            display: none;
-            position: fixed;
-            inset: 0;
-            background: #000;
-            z-index: 10000;
-            flex-direction: column;
-            outline: none;
-        `;
-        overlay.tabIndex = 0;
-
-        // Barra superior
-        const topBar = document.createElement("div");
-        topBar.id = "playerTopBar";
-        topBar.style.cssText = `
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            background: linear-gradient(to bottom, rgba(0,0,0,0.9), transparent);
-            padding: 20px;
-            z-index: 10001;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        `;
-
-        const channelInfo = document.createElement("div");
-        channelInfo.id = "playerChannelInfo";
-        channelInfo.style.cssText = `
-            color: #fff;
-            font-size: 1.5em;
-            font-weight: bold;
-        `;
-
-        const closeBtn = document.createElement("button");
-        closeBtn.id = "playerCloseBtn";
-        closeBtn.textContent = "✕ Fechar";
-        closeBtn.className = "navigable-player";
-        closeBtn.tabIndex = 0;
-        closeBtn.style.cssText = `
-            background: #ff4444;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-            font-weight: bold;
-        `;
-        closeBtn.onclick = closePlayerOverlay;
-        topBar.appendChild(channelInfo);
-        topBar.appendChild(closeBtn);
-
-        // Player de vídeo
-        const videoPlayer = document.createElement("video");
-        videoPlayer.id = "nativeVideoPlayer";
-        videoPlayer.controls = false;
-        videoPlayer.autoplay = true;
-        videoPlayer.tabIndex = 0;
-        videoPlayer.style.cssText = `
-            width: 100%;
-            height: 100%;
-            background: #000;
-        `;
-
-        // Barra inferior com botões
-        const bottomBar = document.createElement("div");
-        bottomBar.id = "playerBottomBar";
-        bottomBar.style.cssText = `
-            position: absolute;
-            bottom: 120px;
-            left: 0;
-            right: 0;
-            display: flex;
-            justify-content: center;
-            gap: 40px;
-            padding: 20px;
-            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
-            z-index: 10001;
-            transition: opacity 0.5s ease;
-        `;
-
-        function makeButton(label, action) {
-            const btn = document.createElement("button");
-            btn.textContent = label;
-            btn.className = "player-btn navigable-player";
-            btn.tabIndex = 0;
-            btn.onclick = action;
-            btn.style.cssText = `
-                background: #333;
-                color: white;
-                border: 2px solid #666;
-                padding: 15px 30px;
-                border-radius: 8px;
-                cursor: pointer;
-                font-size: 18px;
-                font-weight: bold;
-                transition: all 0.2s ease;
-            `;
-            btn.onfocus = () => (btn.style.borderColor = "#6bff6b");
-            btn.onblur = () => (btn.style.borderColor = "#666");
-            return btn;
-        }
-
-        const prevBtn = makeButton("⏮ Anterior", () => playPreviousChannel());
-        const playPauseBtn = makeButton("⏯ Pausar", () => {
-            if (videoPlayer.paused) {
-                videoPlayer.play();
-                playPauseBtn.textContent = "⏸ Pausar";
-            } else {
-                videoPlayer.pause();
-                playPauseBtn.textContent = "▶️ Reproduzir";
-            }
-        });
-        const nextBtn = makeButton("⏭ Próximo", () => playNextChannel());
-        const closeBottomBtn = makeButton("✕ Fechar", closePlayerOverlay);
-
-        bottomBar.append(prevBtn, playPauseBtn, nextBtn, closeBottomBtn);
-
-        // Barra de progresso
-        const progressBarContainer = document.createElement("div");
-        progressBarContainer.id = "playerProgressContainer";
-        progressBarContainer.style.cssText = `
-            position: absolute;
-            bottom: 40px;
-            left: 5%;
-            right: 5%;
-            height: 10px;
-            background: rgba(255,255,255,0.2);
-            border-radius: 5px;
-            cursor: pointer;
-            z-index: 10002;
-            outline: none;
-        `;
-        progressBarContainer.tabIndex = 0;
-
-        const progressBarFill = document.createElement("div");
-        progressBarFill.id = "playerProgressFill";
-        progressBarFill.style.cssText = `
-            height: 100%;
-            width: 0%;
-            background: #6bff6b;
-            border-radius: 5px;
-            transition: width 0.2s linear;
-        `;
-        progressBarContainer.appendChild(progressBarFill);
-
-        overlay.append(topBar, videoPlayer, bottomBar, progressBarContainer);
-        document.body.appendChild(overlay);
-
-        // Atualiza progresso
-        videoPlayer.addEventListener("timeupdate", () => {
-            if (videoPlayer.duration) {
-                const percent = (videoPlayer.currentTime / videoPlayer.duration) * 100;
-                progressBarFill.style.width = `${percent}%`;
-            }
-        });
-
-        // Controle da barra de progresso
-        progressBarContainer.addEventListener("keydown", (e) => {
-            if (["ArrowRight", "ArrowLeft"].includes(e.key)) {
-                e.preventDefault();
-                const step = videoPlayer.duration * 0.05;
-                videoPlayer.currentTime += e.key === "ArrowRight" ? step : -step;
-            } else if (isOKKey(e)) {
-                e.preventDefault();
-                if (videoPlayer.paused) {
-                    videoPlayer.play();
-                    playPauseBtn.textContent = "⏸ Pausar";
-                } else {
-                    videoPlayer.pause();
-                    playPauseBtn.textContent = "▶️ Reproduzir";
-                }
-            } else if (e.key === "ArrowUp") {
-                e.preventDefault();
-                currentRow = "buttons";
-                playerButtons[focusIndex].focus();
-            } else if (e.key === "Backspace" || e.keyCode === 10009) {
-                e.preventDefault();
-                closePlayerOverlay();
-            }
-        });
-
-        // Sistema de foco TV-like
-        const playerButtons = [prevBtn, playPauseBtn, nextBtn, closeBottomBtn];
-        let focusIndex = 1;
-        let currentRow = "buttons";
-
-        function moveHorizontal(delta) {
-            if (currentRow === "buttons") {
-                focusIndex = (focusIndex + delta + playerButtons.length) % playerButtons.length;
-                playerButtons[focusIndex].focus();
-            }
-        }
-
-        overlay.addEventListener("keydown", (e) => {
-            if (currentRow === "buttons") {
-                if (e.key === "ArrowRight") {
-                    e.preventDefault();
-                    moveHorizontal(1);
-                } else if (e.key === "ArrowLeft") {
-                    e.preventDefault();
-                    moveHorizontal(-1);
-                } else if (e.key === "ArrowDown") {
-                    e.preventDefault();
-                    currentRow = "progress";
-                    progressBarContainer.focus();
-                } else if (isOKKey(e)) {
-                    e.preventDefault();
-                    playerButtons[focusIndex].click();
-                } else if (e.key === "Backspace" || e.key === "Escape" || e.keyCode === 10009) {
-                    e.preventDefault();
-                    closePlayerOverlay();
-                }
-            }
-        });
-
-        // Ocultação automática
-        let hideTimeout;
-        const hideControls = () => {
-            bottomBar.style.opacity = "0";
-            topBar.style.opacity = "0";
-            progressBarContainer.style.opacity = "0";
-        };
-        const showControls = () => {
-            bottomBar.style.opacity = "1";
-            topBar.style.opacity = "1";
-            progressBarContainer.style.opacity = "1";
-            resetHideTimer();
-        };
-        const resetHideTimer = () => {
-            clearTimeout(hideTimeout);
-            hideTimeout = setTimeout(hideControls, 5000);
-        };
-        overlay.addEventListener("mousemove", showControls);
-        overlay.addEventListener("keydown", showControls);
-        resetHideTimer();
-
-        setTimeout(() => playPauseBtn.focus(), 200);
-
-        // Auto-avançar
-        videoPlayer.addEventListener("ended", () => playNextChannel());
-
-        return overlay;
-    }
-
-    function openChannelInPlayer(url, name, index) {
-        try {
-            currentChannelIndex = index;
-            lastPlayedChannelIndex = index;
-
-            const overlay = createPlayerOverlay();
-            const videoPlayer = overlay.querySelector("#nativeVideoPlayer");
-            const channelInfo = overlay.querySelector("#playerChannelInfo");
-
-            overlay.style.display = "flex";
-            channelInfo.textContent = name;
-            currentView = 'player';
-
-            if (url.endsWith(".m3u8")) {
-                if (window.Hls && Hls.isSupported()) {
-                    if (hls) {
-                        hls.destroy();
-                    }
-                    hls = new Hls({
-                        enableWorker: true,
-                        lowLatencyMode: true,
-                        backBufferLength: 90
-                    });
-                    hls.loadSource(url);
-                    hls.attachMedia(videoPlayer);
-                    hls.on(Hls.Events.MANIFEST_PARSED, () => videoPlayer.play());
-                } else {
-                    videoPlayer.src = url;
-                    videoPlayer.play();
-                }
-            } else {
-                videoPlayer.src = url;
-                videoPlayer.play();
-            }
-
-            showMessage(`▶️ Reproduzindo: ${name}`, "info");
-        } catch (err) {
-            console.error("Erro ao abrir player:", err);
-            handleError(err, "Abertura do player");
-        }
-    }
-
-    function closePlayerOverlay() {
-        const overlay = document.getElementById("nativePlayerOverlay");
-        const videoEl = document.getElementById("nativeVideoPlayer");
-        
-        if (videoEl) {
-            videoEl.pause();
-            videoEl.src = "";
-        }
-        
-        if (hls) {
-            hls.destroy();
-            hls = null;
-        }
-        
-        if (overlay) {
-            overlay.style.display = "none";
-        }
-        
-        currentView = 'channels';
-        
-        setTimeout(() => {
-            if (lastPlayedChannelIndex >= 0) {
-                focusLastPlayedChannel();
-            } else {
-                focusChannel();
-            }
-        }, 100);
-        
-        console.log("ℹ️ Player fechado");
-    }
-
-    function playNextChannel() {
-        if (currentChannelIndex >= 0 && currentChannelIndex < playlistUrls.length - 1) {
-            const nextIndex = currentChannelIndex + 1;
-            const nextChannel = playlistUrls[nextIndex];
-            openChannelInPlayer(nextChannel.url, nextChannel.name, nextIndex);
-        } else {
-            showMessage("🚫 Último canal da lista", 'info');
-        }
-    }
-
-    function playPreviousChannel() {
-        if (currentChannelIndex > 0) {
-            const prevIndex = currentChannelIndex - 1;
-            const prevChannel = playlistUrls[prevIndex];
-            openChannelInPlayer(prevChannel.url, prevChannel.name, prevIndex);
-        } else {
-            showMessage("🚫 Primeiro canal da lista", 'info');
-        }
-    }
-
-    function focusLastPlayedChannel() {
-        if (lastPlayedChannelIndex >= 0 && playlistUrls[lastPlayedChannelIndex]) {
-            const lastChannel = playlistUrls[lastPlayedChannelIndex];
-            const group = lastChannel.group;
-            const channelsInGroup = playlistUrls.filter(c => c.group === group);
-            showCategoryOverlay(group, channelsInGroup);
-            
-            requestAnimationFrame(() => {
-                const targetChannelElement = overlayChannels.find(
-                    el => el.dataset.url === lastChannel.url
-                );
-                if (targetChannelElement) {
-                    setOverlayFocus(overlayChannels.indexOf(targetChannelElement));
-                }
-            });
-        }
-    }
-    // ===== FIM PLAYER OVERLAY =====
-
-    // Navegação com categorias
     function getVisibleNavigableItems() {
         const headers = Array.from(document.querySelectorAll(".category-header"));
-        
         const visibleChannels = Array.from(document.querySelectorAll("ul.category-sublist"))
             .filter(ul => ul.style.display === "block" || ul.style.display === "")
             .flatMap(ul => Array.from(ul.querySelectorAll(".channel-item")));
@@ -680,7 +159,426 @@ document.addEventListener("DOMContentLoaded", () => {
         currentFocusIndex = channelItems.indexOf(el);
     }
 
-    // Overlay de categorias
+    // ========== MESSAGES ==========
+
+    function showMessage(text, type = 'info') {
+        const messageDiv = document.createElement('div');
+        messageDiv.className = `message ${type === 'error' ? 'error-message' : 
+                                type === 'loading' ? 'loading' : 'success-message'}`;
+        messageDiv.textContent = text;
+        messageDiv.setAttribute('role', 'status');
+        messageDiv.setAttribute('aria-live', 'polite');
+        
+        messageArea.innerHTML = '';
+        messageArea.appendChild(messageDiv);
+        
+        if (type !== 'loading') {
+            setTimeout(() => {
+                if (messageArea.contains(messageDiv)) {
+                    messageArea.removeChild(messageDiv);
+                }
+            }, 5000);
+        }
+    }
+
+    // ========== PLAYER OVERLAY FUNCTIONS ==========
+
+    function formatTime(ms) {
+        const sec = Math.floor(ms / 1000);
+        const m = Math.floor(sec / 60).toString().padStart(2, "0");
+        const s = (sec % 60).toString().padStart(2, "0");
+        return `${m}:${s}`;
+    }
+
+    function createPlayerOverlay() {
+        if (playerOverlay) return playerOverlay;
+
+        playerOverlay = document.createElement("div");
+        playerOverlay.id = "playerOverlay";
+        playerOverlay.style.cssText = `
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: black;
+            z-index: 10000;
+        `;
+
+        playerOverlay.innerHTML = `
+            <div id="playerControls" style="
+                position: fixed; bottom: 60px; left: 50%; transform: translateX(-50%);
+                display: flex; gap: 15px;
+                background: rgba(0,0,0,0.6); padding: 12px 24px; border-radius: 12px;
+                transition: opacity 0.5s ease;">
+                <button id="playerPrev" style="font-size: 18px; padding: 10px 20px; background: #222; color: white; border: none; border-radius: 6px; cursor: pointer;">⏮ Anterior</button>
+                <button id="playerRew" style="font-size: 18px; padding: 10px 20px; background: #222; color: white; border: none; border-radius: 6px; cursor: pointer;">⏪ -10s</button>
+                <button id="playerPlayPause" autofocus style="font-size: 18px; padding: 10px 20px; background: #222; color: white; border: none; border-radius: 6px; cursor: pointer;">▶️ Play</button>
+                <button id="playerFwd" style="font-size: 18px; padding: 10px 20px; background: #222; color: white; border: none; border-radius: 6px; cursor: pointer;">⏩ +10s</button>
+                <button id="playerAdvanceHold" style="font-size: 18px; padding: 10px 20px; background: #222; color: white; border: none; border-radius: 6px; cursor: pointer;">⏩⏳ Avançar</button>
+                <button id="playerNext" style="font-size: 18px; padding: 10px 20px; background: #222; color: white; border: none; border-radius: 6px; cursor: pointer;">⏭ Próximo</button>
+                <button id="playerReload" style="font-size: 18px; padding: 10px 20px; background: #222; color: white; border: none; border-radius: 6px; cursor: pointer;">🔄 Recarregar</button>
+                <button id="playerFullscreen" style="font-size: 18px; padding: 10px 20px; background: #222; color: white; border: none; border-radius: 6px; cursor: pointer;">🖵 Tela Cheia</button>
+                <button id="playerClose" style="font-size: 18px; padding: 10px 20px; background: #ff4444; color: white; border: none; border-radius: 6px; cursor: pointer;">❌ Fechar</button>
+            </div>
+            <div id="playerProgressContainer" style="
+                position: fixed; bottom: 15px; left: 50%; transform: translateX(-50%);
+                display: flex; align-items: center; gap: 10px; width: 80%;
+                opacity: 1; transition: opacity 0.5s ease;">
+                <span id="playerTime" style="font-size: 14px; color: white; font-variant-numeric: tabular-nums;">00:00 / 00:00</span>
+                <input type="range" id="playerProgress" value="0" min="0" max="100" style="flex: 1; height: 8px;">
+            </div>
+            <div id="playerChannelTitle" style="
+                position: fixed; top: 20px; left: 50%; transform: translateX(-50%);
+                background: rgba(0,0,0,0.6); color: #fff; padding: 10px 20px;
+                border-radius: 8px; font-size: 20px; transition: opacity 0.5s ease;">
+            </div>
+            <div id="playerClock" style="
+                position: fixed; top: 20px; right: 20px;
+                background: rgba(0,0,0,0.6); color: #fff;
+                padding: 8px 16px; border-radius: 8px;
+                font-size: 18px; font-family: monospace;
+                transition: opacity 0.5s ease;">
+            </div>
+        `;
+
+        document.body.appendChild(playerOverlay);
+        setupPlayerEvents();
+        return playerOverlay;
+    }
+
+    function setupPlayerEvents() {
+        document.getElementById("playerPlayPause").addEventListener("click", togglePlayPause);
+        document.getElementById("playerRew").addEventListener("click", () => seek(-10000));
+        document.getElementById("playerFwd").addEventListener("click", () => seek(10000));
+        document.getElementById("playerReload").addEventListener("click", reloadPlayer);
+        document.getElementById("playerFullscreen").addEventListener("click", toggleFullscreen);
+        document.getElementById("playerPrev").addEventListener("click", () => switchChannel(-1));
+        document.getElementById("playerNext").addEventListener("click", () => switchChannel(1));
+        document.getElementById("playerClose").addEventListener("click", closePlayer);
+
+        const advanceBtn = document.getElementById("playerAdvanceHold");
+        const start = (e) => { e.preventDefault(); startAdvanceHold(); };
+        const stop = (e) => { e.preventDefault(); stopAdvanceHold(); };
+        advanceBtn.addEventListener("mousedown", start);
+        advanceBtn.addEventListener("touchstart", start, { passive: true });
+        ["mouseup","mouseleave","touchend","touchcancel","blur"].forEach(ev => 
+            advanceBtn.addEventListener(ev, stop));
+        advanceBtn.addEventListener("keydown", (e) => { 
+            if (e.key === "Enter" || e.key === " ") { e.preventDefault(); startAdvanceHold(); } 
+        });
+        advanceBtn.addEventListener("keyup", (e) => { 
+            if (e.key === "Enter" || e.key === " ") { e.preventDefault(); stopAdvanceHold(); } 
+        });
+
+        const progress = document.getElementById("playerProgress");
+        progress.addEventListener("input", () => {
+            if (duration > 0 && avplay) {
+                const pos = (progress.value / 100) * duration;
+                avplay.seekTo(pos);
+            }
+        });
+
+        document.addEventListener("keydown", handlePlayerKeyboard);
+    }
+
+    function handlePlayerKeyboard(e) {
+        if (currentView !== 'player') return;
+
+        showPlayerControls();
+
+        if (e.key === "Backspace" || e.keyCode === 10009) {
+            e.preventDefault();
+            closePlayer();
+            return;
+        }
+
+        if (e.keyCode === 427 || e.key === "ChannelUp") {
+            e.preventDefault();
+            switchChannel(1);
+        }
+        if (e.keyCode === 428 || e.key === "ChannelDown") {
+            e.preventDefault();
+            switchChannel(-1);
+        }
+
+        const controls = document.getElementById("playerControls");
+        const allButtons = Array.from(controls.querySelectorAll("button"));
+        const progress = document.getElementById("playerProgress");
+        const allFocusables = [...allButtons, progress];
+        const focused = document.activeElement;
+        const idx = allFocusables.indexOf(focused);
+
+        if (e.key === "ArrowRight" && idx >= 0) {
+            (allFocusables[idx + 1] || allFocusables[0]).focus();
+            e.preventDefault();
+        }
+        if (e.key === "ArrowLeft" && idx >= 0) {
+            (allFocusables[idx - 1] || allFocusables[allFocusables.length - 1]).focus();
+            e.preventDefault();
+        }
+        if (e.key === "Enter" && idx >= 0 && focused.tagName === "BUTTON") {
+            focused.click();
+            e.preventDefault();
+        }
+    }
+
+    function showPlayerControls() {
+        const controls = document.getElementById("playerControls");
+        const progressContainer = document.getElementById("playerProgressContainer");
+        const channelTitle = document.getElementById("playerChannelTitle");
+        const clock = document.getElementById("playerClock");
+
+        if (controls) controls.style.opacity = "1";
+        if (progressContainer) progressContainer.style.opacity = "1";
+        if (channelTitle) channelTitle.style.opacity = "1";
+        if (clock) clock.style.opacity = "1";
+
+        clearTimeout(hideTimer);
+        hideTimer = setTimeout(() => {
+            if (controls) controls.style.opacity = "0";
+            if (progressContainer) progressContainer.style.opacity = "0";
+            if (channelTitle) channelTitle.style.opacity = "0";
+            if (clock) clock.style.opacity = "0";
+        }, 4000);
+    }
+
+    function updateClock() {
+        const clock = document.getElementById("playerClock");
+        if (!clock) return;
+        const now = new Date();
+        const h = now.getHours().toString().padStart(2, "0");
+        const m = now.getMinutes().toString().padStart(2, "0");
+        const s = now.getSeconds().toString().padStart(2, "0");
+        clock.textContent = `${h}:${m}:${s}`;
+    }
+
+    function initPlayer(streamUrl, channelName, channelIndex) {
+        if (!streamUrl) {
+            alert("Nenhuma URL");
+            return;
+        }
+
+        currentPlaylist.currentIndex = channelIndex;
+        currentPlaylist.lastPosition = 0;
+
+        const channelTitle = document.getElementById("playerChannelTitle");
+        if (channelTitle) {
+            channelTitle.textContent = `📺 ${channelName}`;
+        }
+
+        setInterval(updateClock, 1000);
+        updateClock();
+
+        if (!window.webapis || !webapis.avplay) {
+            console.warn("Simulação: AVPlay não existe aqui.");
+            showMessage("⚠️ AVPlay não disponível (apenas em TVs Samsung)", "error");
+            return;
+        }
+
+        avplay = webapis.avplay;
+        avplay.open(streamUrl);
+        avplay.setDisplayRect(0, 0, 1920, 1080);
+
+        avplay.setListener({
+            onstreamcompleted: () => {
+                console.log("🔄 Canal terminou.");
+                const currentChannel = playlistUrls[currentPlaylist.currentIndex];
+                if (currentChannel && /\.(mp4|mkv|avi|mov|wmv|flv)$/i.test(currentChannel.url)) {
+                    console.log("▶️ Arquivo de vídeo, indo para próximo canal...");
+                    switchChannel(1);
+                }
+            },
+            onerror: (err) => console.error("Erro AVPlay:", err)
+        });
+
+        avplay.prepareAsync(() => {
+            duration = avplay.getDuration();
+            play();
+            updateProgress();
+        }, err => console.error("Erro ao preparar:", err));
+    }
+
+    function play() {
+        if (!avplay) return;
+        avplay.play();
+        isPlaying = true;
+        const btn = document.getElementById("playerPlayPause");
+        if (btn) btn.innerText = "⏸ Pause";
+    }
+
+    function pause() {
+        if (!avplay) return;
+        avplay.pause();
+        isPlaying = false;
+        currentPlaylist.lastPosition = avplay.getCurrentTime();
+        const btn = document.getElementById("playerPlayPause");
+        if (btn) btn.innerText = "▶️ Play";
+    }
+
+    function togglePlayPause() {
+        isPlaying ? pause() : play();
+    }
+
+    function seek(offset) {
+        if (!avplay) return;
+        try {
+            const pos = avplay.getCurrentTime();
+            avplay.seekTo(Math.max(0, pos + offset));
+        } catch(e) {
+            console.error("Erro ao buscar:", e);
+        }
+    }
+
+    function reloadPlayer() {
+        if (!avplay) return;
+        currentPlaylist.lastPosition = avplay.getCurrentTime();
+        avplay.stop();
+        avplay.close();
+        const currentChannel = playlistUrls[currentPlaylist.currentIndex];
+        if (currentChannel) {
+            initPlayer(currentChannel.url, currentChannel.name, currentPlaylist.currentIndex);
+        }
+    }
+
+    function toggleFullscreen() {
+        const elem = document.documentElement;
+        if (!document.fullscreenElement) {
+            if (elem.requestFullscreen) elem.requestFullscreen();
+            else if (elem.webkitRequestFullscreen) elem.webkitRequestFullscreen();
+        } else {
+            if (document.exitFullscreen) document.exitFullscreen();
+            else if (document.webkitExitFullscreen) document.webkitExitFullscreen();
+        }
+    }
+
+    function updateProgress() {
+        if (currentView !== 'player') return;
+        
+        try {
+            if (avplay) {
+                const pos = avplay.getCurrentTime();
+                if (duration > 0) {
+                    const progress = document.getElementById("playerProgress");
+                    const timeLabel = document.getElementById("playerTime");
+                    if (progress) progress.value = (pos / duration) * 100;
+                    if (timeLabel) timeLabel.textContent = `${formatTime(pos)} / ${formatTime(duration)}`;
+                }
+            }
+        } catch(e) {
+            console.error("Erro ao atualizar progresso:", e);
+        }
+        requestAnimationFrame(updateProgress);
+    }
+
+    function switchChannel(offset) {
+        if (playlistUrls.length === 0) return;
+
+        let idx = currentPlaylist.currentIndex;
+        if (idx < 0) idx = 0;
+
+        const total = playlistUrls.length;
+        idx = (idx + offset + total) % total;
+
+        const nextCh = playlistUrls[idx];
+        if (!nextCh || !nextCh.url) {
+            console.warn("Item inválido:", nextCh);
+            return;
+        }
+
+        currentPlaylist.currentIndex = idx;
+        currentPlaylist.lastPosition = 0;
+
+        if (avplay) {
+            try {
+                avplay.stop();
+                avplay.close();
+            } catch(e) {
+                console.error("Erro ao fechar player:", e);
+            }
+        }
+
+        initPlayer(nextCh.url, nextCh.name, idx);
+    }
+
+    function startAdvanceHold() {
+        stopAdvanceHold();
+        advanceStart = Date.now();
+        advanceTimer = setInterval(() => {
+            const held = Date.now() - advanceStart;
+            let step;
+            if (held < 1000) step = 5000;
+            else if (held < 3000) step = 10000;
+            else if (held < 6000) step = 20000;
+            else if (held < 10000) step = 30000;
+            else step = 60000;
+            seek(step);
+        }, 400);
+    }
+
+    function stopAdvanceHold() {
+        if (advanceTimer) {
+            clearInterval(advanceTimer);
+            advanceTimer = null;
+        }
+    }
+
+    function closePlayer() {
+        if (avplay) {
+            try {
+                avplay.stop();
+                avplay.close();
+            } catch(e) {
+                console.error("Erro ao fechar player:", e);
+            }
+        }
+
+        if (playerOverlay) {
+            playerOverlay.style.display = "none";
+        }
+
+        currentView = 'channels';
+        isPlaying = false;
+        avplay = null;
+
+        setTimeout(() => {
+            const firstHeader = document.querySelector('.category-header');
+            if (firstHeader) {
+                setFocusElement(firstHeader);
+            }
+        }, 100);
+    }
+
+    function openChannelInPlayer(url, name, channelIndex = -1) {
+        try {
+            if (!isValidUrl(url)) {
+                throw new Error('URL do canal inválida');
+            }
+
+            console.log(`🎯 Abrindo canal: ${name}`, { url, channelIndex });
+            
+            if (channelIndex >= 0) {
+                currentPlaylist.url = url;
+            currentPlaylist.name = name;
+
+            showMessage(`🔄 Abrindo ${name} no player...`, 'loading');
+            
+            createPlayerOverlay();
+            playerOverlay.style.display = "block";
+            currentView = 'player';
+
+            hideCategoryOverlay();
+
+            initPlayer(url, name, currentPlaylist.currentIndex);
+            
+        } catch (error) {
+            handleError(error, 'Abertura do canal');
+        }
+    }
+
+    // ========== CATEGORY OVERLAY ==========
+
     function createOverlayElement() {
         let overlay = document.getElementById("channelOverlay");
         if (!overlay) {
@@ -887,6 +785,8 @@ document.addEventListener("DOMContentLoaded", () => {
         setOverlayFocus(newIndex);
     }
 
+    // ========== CACHE SYSTEM ==========
+
     function cachePlaylist(key, data) {
         cache.playlists.set(key, data);
         cache.lastAccessed.set(key, Date.now());
@@ -907,25 +807,7 @@ document.addEventListener("DOMContentLoaded", () => {
         return null;
     }
 
-    function showMessage(text, type = 'info') {
-        const messageDiv = document.createElement('div');
-        messageDiv.className = `message ${type === 'error' ? 'error-message' : 
-                                type === 'loading' ? 'loading' : 'success-message'}`;
-        messageDiv.textContent = text;
-        messageDiv.setAttribute('role', 'status');
-        messageDiv.setAttribute('aria-live', 'polite');
-        
-        messageArea.innerHTML = '';
-        messageArea.appendChild(messageDiv);
-        
-        if (type !== 'loading') {
-            setTimeout(() => {
-                if (messageArea.contains(messageDiv)) {
-                    messageArea.removeChild(messageDiv);
-                }
-            }, 5000);
-        }
-    }
+    // ========== REMOTE PLAYLISTS ==========
 
     function showRemotePlaylistSelector() {
         hideAllSelectors();
@@ -940,6 +822,19 @@ document.addEventListener("DOMContentLoaded", () => {
         try {
             const fragment = document.createDocumentFragment();
             
+            const allHeader = document.createElement("li");
+            allHeader.className = "category-header";
+            allHeader.setAttribute("tabindex", "0");
+            allHeader.setAttribute("role", "button");
+            allHeader.setAttribute("aria-expanded", "false");
+            allHeader.dataset.group = "Todos os Canais";
+            allHeader.innerHTML = `<strong class="cat-label">📺 Todos os Canais (${playlistUrls.length})</strong>`;
+            allHeader.style.cssText = "color: #ffeb3b; padding: 15px 10px; border-bottom: 2px solid #333; cursor: pointer; background: linear-gradient(45deg, #333, #555); border-radius: 5px; margin-bottom: 5px;";
+            allHeader.onclick = () => showCategoryOverlay("Todos os Canais", playlistUrls);
+            if (playlistUrls.length > 0) {
+                fragment.appendChild(allHeader);
+            }
+        
             const categories = [...new Set(remotePlaylistsConfig.map(p => p.category))];
             
             categories.forEach(category => {
@@ -982,52 +877,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    // Minhas Listas
-    function showMinhasListasSelector() {
-        hideAllSelectors();
-        remotePlaylistSelector.style.display = "block";
-        updateMinhasListasList();
-        currentView = 'minhasListas';
-        
-        setTimeout(() => {
-            remotePlaylistItems = Array.from(document.querySelectorAll(".remote-playlist-item"));
-            if (remotePlaylistItems.length > 0) {
-                remoteFocusIndex = 0;
-                remotePlaylistItems[0].focus();
-                remotePlaylistItems[0].classList.add("focused");
-            }
-        }, 100);
-    }
-
-    function updateMinhasListasList() {
-        try {
-            const fragment = document.createDocumentFragment();
-            const header = document.createElement("li");
-            header.innerHTML = "<strong>🔥 Suas Listas Fixas:</strong>";
-            header.className = "section-header";
-            header.style.cssText = "color: #6bff6b; padding: 10px 0;";
-            fragment.appendChild(header);
-
-            minhasListasConfig.forEach(playlist => {
-                const li = document.createElement("li");
-                li.className = "remote-playlist-item";
-                li.setAttribute("tabindex", "0");
-                li.dataset.url = playlist.url;
-                li.dataset.name = playlist.name;
-                li.innerHTML = `<div><strong>${playlist.name}</strong></div>
-                                <div style='font-size:0.9em;color:#ccc;margin-left:10px;'>${playlist.description}</div>`;
-                li.onclick = () => loadRemotePlaylist(playlist.url, playlist.name);
-                fragment.appendChild(li);
-            });
-
-            remotePlaylistList.innerHTML = "";
-            remotePlaylistList.appendChild(fragment);
-            showMessage(`🔥 ${minhasListasConfig.length} listas fixas disponíveis`, 'success');
-        } catch (error) {
-            handleError(error, 'Atualização de Minhas Listas');
-        }
-    }
-
     async function loadRemotePlaylist(url, name) {
         try {
             if (!isValidUrl(url)) {
@@ -1038,6 +887,10 @@ document.addEventListener("DOMContentLoaded", () => {
             if (cached) {
                 console.log('📦 Usando playlist em cache:', name);
                 playlistUrls = cached;
+                playlistUrls.forEach((c, i) => c.tempId = i);
+                currentPlaylist.urls = playlistUrls;
+                currentPlaylist.name = name;
+                currentPlaylist.type = 'remote';
                 updateChannelList();
                 hideAllSelectors();
                 focusChannel();
@@ -1045,7 +898,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 return;
             }
 
-            showMessage(`📄 Carregando ${name}...`, 'loading');
+            showMessage(`🔄 Carregando ${name}...`, 'loading');
             
             const controller = new AbortController();
             const timeoutId = setTimeout(() => controller.abort(), 10000);
@@ -1071,6 +924,10 @@ document.addEventListener("DOMContentLoaded", () => {
             cachePlaylist(url, parsedPlaylist);
             
             playlistUrls = parsedPlaylist;
+            playlistUrls.forEach((c, i) => c.tempId = i);
+            currentPlaylist.urls = playlistUrls;
+            currentPlaylist.name = name;
+            currentPlaylist.type = 'remote';
             updateChannelList();
             hideAllSelectors();
             focusChannel();
@@ -1084,6 +941,8 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         }
     }
+
+    // ========== LOCAL PLAYLISTS ==========
 
     async function detectAvailablePlaylists() {
         showMessage("🔍 Verificando playlists disponíveis...", 'loading');
@@ -1123,7 +982,7 @@ document.addEventListener("DOMContentLoaded", () => {
         hideAllSelectors();
         playlistSelector.style.display = "block";
         
-        playlistList.innerHTML = "<li class='loading'>📄 Detectando playlists disponíveis...</li>";
+        playlistList.innerHTML = "<li class='loading'>🔄 Detectando playlists disponíveis...</li>";
         
         try {
             const detectedPlaylists = await detectAvailablePlaylists();
@@ -1156,6 +1015,19 @@ document.addEventListener("DOMContentLoaded", () => {
     function updatePlaylistList(playlists) {
         try {
             const fragment = document.createDocumentFragment();
+            
+            if (playlistUrls.length > 0) {
+                const allHeader = document.createElement("li");
+                allHeader.className = "category-header";
+                allHeader.setAttribute("tabindex", "0");
+                allHeader.setAttribute("role", "button");
+                allHeader.setAttribute("aria-expanded", "false");
+                allHeader.dataset.group = "Todos os Canais";
+                allHeader.innerHTML = `<strong class="cat-label">📺 Todos os Canais (${playlistUrls.length})</strong>`;
+                allHeader.style.cssText = "color: #ffeb3b; padding: 15px 10px; border-bottom: 2px solid #333; cursor: pointer; background: linear-gradient(45deg, #333, #555); border-radius: 5px; margin-bottom: 5px;";
+                allHeader.onclick = () => showCategoryOverlay("Todos os Canais", playlistUrls);
+                fragment.appendChild(allHeader);
+            }
             
             const manualLi = document.createElement("li");
             manualLi.textContent = "✏️ Digite nome do arquivo manualmente";
@@ -1238,6 +1110,10 @@ document.addEventListener("DOMContentLoaded", () => {
             if (cached) {
                 console.log('📦 Usando playlist local em cache:', filename);
                 playlistUrls = cached;
+                playlistUrls.forEach((c, i) => c.tempId = i);
+                currentPlaylist.urls = playlistUrls;
+                currentPlaylist.name = filename;
+                currentPlaylist.type = 'local';
                 updateChannelList();
                 hideAllSelectors();
                 focusChannel();
@@ -1245,7 +1121,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 return;
             }
 
-            showMessage(`📄 Carregando ${filename}...`, 'loading');
+            showMessage(`🔄 Carregando ${filename}...`, 'loading');
             
             const response = await fetch(`playlists/${filename}`, {
                 cache: 'no-cache',
@@ -1266,6 +1142,10 @@ document.addEventListener("DOMContentLoaded", () => {
             cachePlaylist(cacheKey, parsedPlaylist);
             
             playlistUrls = parsedPlaylist;
+            playlistUrls.forEach((c, i) => c.tempId = i);
+            currentPlaylist.urls = playlistUrls;
+            currentPlaylist.name = filename;
+            currentPlaylist.type = 'local';
             updateChannelList();
             hideAllSelectors();
             focusChannel();
@@ -1290,6 +1170,10 @@ document.addEventListener("DOMContentLoaded", () => {
             if (cached) {
                 console.log('📦 Usando playlist de URL em cache');
                 playlistUrls = cached;
+                playlistUrls.forEach((c, i) => c.tempId = i);
+                currentPlaylist.urls = playlistUrls;
+                currentPlaylist.name = `URL: ${trimmedUrl}`;
+                currentPlaylist.type = 'url';
                 updateChannelList();
                 hideAllSelectors();
                 focusChannel();
@@ -1297,7 +1181,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 return;
             }
 
-            showMessage("📄 Carregando playlist de URL...", 'loading');
+            showMessage("🔄 Carregando playlist de URL...", 'loading');
             
             const response = await fetch(trimmedUrl, {
                 signal: AbortSignal.timeout(10000)
@@ -1317,6 +1201,10 @@ document.addEventListener("DOMContentLoaded", () => {
             cachePlaylist(trimmedUrl, parsedPlaylist);
             
             playlistUrls = parsedPlaylist;
+            playlistUrls.forEach((c, i) => c.tempId = i);
+            currentPlaylist.urls = playlistUrls;
+            currentPlaylist.name = `URL: ${trimmedUrl}`;
+            currentPlaylist.type = 'url';
             updateChannelList();
             hideAllSelectors();
             focusChannel();
@@ -1338,6 +1226,9 @@ document.addEventListener("DOMContentLoaded", () => {
             }
             
             playlistUrls = [{ url: trimmedUrl, name: "Canal Único", group: "Único" }];
+            currentPlaylist.urls = playlistUrls;
+            currentPlaylist.name = "Canal Único";
+            currentPlaylist.type = 'single';
             updateChannelList();
             hideAllSelectors();
             focusChannel();
@@ -1348,32 +1239,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    // Upload de arquivo
-    function handleFileUpload() {
-        const input = document.createElement('input');
-        input.type = 'file';
-        input.accept = '.m3u,.m3u8';
-        input.onchange = (e) => {
-            const file = e.target.files[0];
-            if (!file) return;
-            const reader = new FileReader();
-            reader.onload = (event) => {
-                const content = event.target.result;
-                const parsedPlaylist = parsePlaylist(content);
-                if (parsedPlaylist.length > 0) {
-                    playlistUrls = parsedPlaylist;
-                    updateChannelList();
-                    hideAllSelectors();
-                    focusChannel();
-                    showMessage(`✅ ${file.name} carregada (${parsedPlaylist.length} canais)`, 'success');
-                } else {
-                    showMessage(`⚠️ Nenhum canal válido encontrado em ${file.name}`, 'error');
-                }
-            };
-            reader.readAsText(file);
-        };
-        input.click();
-    }
+    // ========== PLAYLIST PARSER ==========
 
     function parsePlaylist(content) {
         try {
@@ -1421,6 +1287,7 @@ document.addEventListener("DOMContentLoaded", () => {
             }
 
             console.log(`📋 Playlist parseada: ${parsed.length} canais encontrados`);
+            parsed.forEach((c, i) => c.tempId = i);
             return parsed;
             
         } catch (error) {
@@ -1429,10 +1296,19 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
+    // ========== CHANNEL LIST UPDATE ==========
+
     function updateChannelList() {
         try {
             const fragment = document.createDocumentFragment();
             
+            if (currentPlaylist.name) {
+                const playlistHeader = document.createElement("li");
+                playlistHeader.textContent = `📂 Playlist: ${currentPlaylist.name}`;
+                playlistHeader.style.cssText = "color: #00e676; padding: 15px 10px; font-weight: bold; font-size: 1.1em;";
+                fragment.appendChild(playlistHeader);
+            }
+
             const allHeader = document.createElement("li");
             allHeader.className = "category-header";
             allHeader.setAttribute("tabindex", "0");
@@ -1499,6 +1375,8 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
+    // ========== FOCUS FUNCTIONS ==========
+
     const debouncedFocusChannel = debounce((index = 0) => {
         if (!channelItems.length) {
             channelItems = Array.from(document.querySelectorAll(".category-header"));
@@ -1507,20 +1385,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (!channelItems.length) return;
         
         try {
-            let targetIndex = index;
-            
-            if (lastPlayedChannelIndex >= 0 && playlistUrls[lastPlayedChannelIndex]) {
-                const lastChannel = playlistUrls[lastPlayedChannelIndex];
-                const categoryHeader = Array.from(channelItems).find(header => 
-                    header.dataset.group === lastChannel.group
-                );
-                
-                if (categoryHeader) {
-                    targetIndex = channelItems.indexOf(categoryHeader);
-                }
-            }
-            
-            targetIndex = Math.max(0, Math.min(targetIndex, channelItems.length - 1));
+            let targetIndex = Math.max(0, Math.min(index, channelItems.length - 1));
             
             currentFocusIndex = targetIndex;
             currentView = 'channels';
@@ -1565,6 +1430,8 @@ document.addEventListener("DOMContentLoaded", () => {
         currentFocusIndex = -1;
     }
 
+    // ========== NAVIGATION ==========
+
     const debouncedMoveFocus = debounce((delta) => {
         if (currentView === 'overlay') {
             moveOverlayFocus(delta);
@@ -1600,7 +1467,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 item.classList.add("focused");
                 item.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
             }
-        } else if ((currentView === 'remote' || currentView === 'minhasListas') && remotePlaylistItems.length) {
+        } else if (currentView === 'remote' && remotePlaylistItems.length) {
             if (remoteFocusIndex >= 0) {
                 remotePlaylistItems[remoteFocusIndex]?.classList.remove("focused");
             }
@@ -1618,16 +1485,16 @@ document.addEventListener("DOMContentLoaded", () => {
         debouncedMoveFocus(delta);
     }
 
+    // ========== KEYBOARD CONTROLS ==========
+
     function setupKeyboardControls() {
         document.addEventListener("keydown", (e) => {
             console.log(`Tecla pressionada: ${e.key}, View atual: ${currentView}`);
             
-            // Controles específicos para player overlay
             if (currentView === 'player') {
-                return; // Já tratado no overlay do player
+                return;
             }
-            
-            // Controles específicos para overlay de categorias
+
             if (currentView === 'overlay') {
                 if (e.key === "ArrowDown") {
                     e.preventDefault();
@@ -1664,8 +1531,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
             }
             
-            // Navegação vertical nas listas
-            if (['channels', 'playlists', 'remote', 'minhasListas'].includes(currentView)) {
+            if (['channels', 'playlists', 'remote'].includes(currentView)) {
                 if (e.key === "ArrowDown") {
                     e.preventDefault();
                     moveFocus(1);
@@ -1678,7 +1544,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
             }
 
-            // Enter para ativar elementos
             if (isOKKey(e)) {
                 e.preventDefault();
                 const active = document.activeElement;
@@ -1694,10 +1559,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 return;
             }
 
-            // Backspace para voltar
             if (e.key === "Backspace" || e.keyCode === 10009) {
                 e.preventDefault();
-                if (['playlists', 'remote', 'minhasListas'].includes(currentView)) {
+                if (['playlists', 'remote'].includes(currentView)) {
                     backToButtons();
                 } else if (currentView === 'channels') {
                     hideChannelFocus();
@@ -1712,7 +1576,6 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
 
-        // Navegação horizontal nos botões
         document.addEventListener("keydown", (e) => {
             if (currentView === 'buttons' && ["ArrowRight", "ArrowLeft"].includes(e.key)) {
                 e.preventDefault();
@@ -1727,42 +1590,29 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
+    // ========== EVENT LISTENERS ==========
+
     function setupEventListeners() {
-        const btnHome = document.getElementById("btnHome");
-        if (btnHome) btnHome.addEventListener("click", () => {
+        document.getElementById("btnHome").addEventListener("click", () => {
             if (confirm("Voltar para a página inicial?")) {
                 location.href = "index.html";
             }
         });
         
-        const btnLoadPlaylist = document.getElementById("btnLoadPlaylist");
-        if (btnLoadPlaylist) btnLoadPlaylist.addEventListener("click", showRemotePlaylistSelector);
+        document.getElementById("btnLoadPlaylist").addEventListener("click", showRemotePlaylistSelector);
+        document.getElementById("btnLocal").addEventListener("click", showPlaylistSelector);
+        document.getElementById("btnUrl").addEventListener("click", loadFromUrl);
+        document.getElementById("btnSingle").addEventListener("click", loadSingleChannel);
         
-        const btnMinhasListas = document.getElementById("btnMinhasListas");
-        if (btnMinhasListas) btnMinhasListas.addEventListener("click", showMinhasListasSelector);
-        
-        const btnLocal = document.getElementById("btnLocal");
-        if (btnLocal) btnLocal.addEventListener("click", showPlaylistSelector);
-        
-        const btnUrl = document.getElementById("btnUrl");
-        if (btnUrl) btnUrl.addEventListener("click", loadFromUrl);
-        
-        const btnSingle = document.getElementById("btnSingle");
-        if (btnSingle) btnSingle.addEventListener("click", loadSingleChannel);
-        
-        const btnUpload = document.getElementById("btnUpload");
-        if (btnUpload) btnUpload.addEventListener("click", handleFileUpload);
-        
-        const btnBackFromRemote = document.getElementById("btnBackFromRemote");
-        if (btnBackFromRemote) btnBackFromRemote.addEventListener("click", backToButtons);
-        
-        const btnBackFromLocal = document.getElementById("btnBackFromLocal");
-        if (btnBackFromLocal) btnBackFromLocal.addEventListener("click", backToButtons);
+        document.getElementById("btnBackFromRemote").addEventListener("click", backToButtons);
+        document.getElementById("btnBackFromLocal").addEventListener("click", backToButtons);
     }
+
+    // ========== INITIALIZATION ==========
 
     function initialize() {
         try {
-            console.log("🚀 M3U8 Player inicializado com player overlay integrado");
+            console.log("🚀 M3U8 Player inicializado (sem localStorage + Player Overlay integrado)");
             
             setupKeyboardControls();
             setupEventListeners();
@@ -1773,11 +1623,11 @@ document.addEventListener("DOMContentLoaded", () => {
             }
             
             playlistUrls = [];
-            lastPlayedChannelIndex = -1;
+            currentPlaylist.currentIndex = -1;
             channelItems = [];
             updateChannelList();
             showMessage("💡 Selecione uma opção acima para começar", 'success');
-            console.log("📄 Inicialização limpa - nenhuma playlist pré-carregada");
+            console.log("🔄 Inicialização limpa - nenhuma playlist pré-carregada");
             
             debugFocus('Inicialização');
             
@@ -1786,8 +1636,10 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    // Executar inicialização
     initialize();
-    
-    console.log("✅ M3U8 Player com overlay nativo carregado com sucesso");
-});
+});currentIndex = channelIndex;
+            } else {
+                currentPlaylist.currentIndex = playlistUrls.findIndex(ch => ch.url === url);
+            }
+            
+            currentPlaylist.
