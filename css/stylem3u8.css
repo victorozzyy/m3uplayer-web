@@ -1,77 +1,310 @@
-    body {
-      font-family: Arial, sans-serif;
-      margin: 20px;
-      background-color: #1a1a1a;
-      color: #fff;
+/* stylem3u8.css - Estilos para M3U8 Player */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  color: #fff;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #6bff6b;
+  text-shadow: 0 0 10px rgba(107, 255, 107, 0.5);
+}
+
+h3 {
+  color: #6bff6b;
+  margin-bottom: 15px;
+}
+
+.section {
+  background: rgba(42, 42, 42, 0.8);
+  border: 2px solid #444;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+/* Botões */
+button.navigable {
+  background: linear-gradient(135deg, #333 0%, #555 100%);
+  color: white;
+  border: 2px solid #666;
+  padding: 15px 30px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+button.navigable:hover,
+button.navigable:focus {
+  border-color: #6bff6b;
+  background: linear-gradient(135deg, #444 0%, #666 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(107, 255, 107, 0.3);
+}
+
+/* Listas */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  padding: 10px;
+  margin: 5px 0;
+  background: #2a2a2a;
+  border: 2px solid #444;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+li:hover,
+li:focus,
+li.focused {
+  border-color: #6bff6b;
+  background: #333;
+}
+
+.category-header {
+  font-weight: bold;
+  background: linear-gradient(45deg, #1a1a1a, #2a2a2a);
+  border-bottom: 2px solid #333;
+  padding: 15px 10px;
+  margin-bottom: 5px;
+}
+
+.section-header {
+  color: #6bff6b;
+  padding: 10px 0;
+  border-bottom: 1px solid #333;
+  margin: 10px 0;
+}
+
+.remote-playlist-item {
+  padding: 15px;
+  margin: 10px 0;
+}
+
+/* Mensagens */
+#messageArea {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  max-width: 400px;
+  z-index: 10000;
+}
+
+.message {
+  background: rgba(42, 42, 42, 0.95);
+  border: 2px solid #6bff6b;
+  border-radius: 8px;
+  padding: 15px;
+  margin-top: 10px;
+  animation: slideIn 0.3s ease;
+}
+
+.error-message {
+  border-color: #ff4444;
+  color: #ff4444;
+}
+
+.success-message {
+  border-color: #6bff6b;
+  color: #6bff6b;
+}
+
+.loading {
+  border-color: #ffeb3b;
+  color: #ffeb3b;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(400px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Overlay de canais */
+#channelOverlay .overlay-channel-item {
+  background: #2a2a2a;
+  border: 2px solid #444;
+  border-radius: 8px;
+  padding: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: white;
+}
+
+#channelOverlay .overlay-channel-item:hover,
+#channelOverlay .overlay-channel-item.focused {
+  border-color: #6bff6b;
+  background: #333;
+}
+/* Adicione estas regras ao seu arquivo css/stylem3u8.css */
+
+/* Estilos específicos para os novos botões */
+#btnMinhasListas {
+    background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+    border-color: #ff6b35;
+    animation: pulse-fire 2s ease-in-out infinite;
+}
+
+#btnMinhasListas:hover,
+#btnMinhasListas:focus {
+    border-color: #ffeb3b;
+    box-shadow: 0 5px 20px rgba(255, 107, 53, 0.5);
+}
+
+#btnUpload {
+    background: linear-gradient(135deg, #4a90e2 0%, #357abd 100%);
+    border-color: #4a90e2;
+}
+
+#btnUpload:hover,
+#btnUpload:focus {
+    border-color: #6bff6b;
+    box-shadow: 0 5px 20px rgba(74, 144, 226, 0.5);
+}
+
+/* Animação de pulso para o botão Minhas Listas */
+@keyframes pulse-fire {
+    0%, 100% {
+        box-shadow: 0 0 10px rgba(255, 107, 53, 0.3);
     }
+    50% {
+        box-shadow: 0 0 20px rgba(255, 107, 53, 0.6);
+    }
+}
+
+/* Estilo para itens de Minhas Listas */
+.remote-playlist-item {
+    transition: all 0.3s ease;
+}
+
+.remote-playlist-item:hover {
+    transform: translateX(5px);
+}
+
+/* Indicador visual de upload */
+input[type="file"] {
+    display: none;
+}
+
+/* Mensagem de sucesso para upload */
+.message.upload-success {
+    border-color: #4a90e2;
+    color: #4a90e2;
+    animation: slideInBounce 0.5s ease;
+}
+
+@keyframes slideInBounce {
+    0% {
+        transform: translateX(400px);
+        opacity: 0;
+    }
+    60% {
+        transform: translateX(-10px);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/* Header de seção para Minhas Listas */
+.section-header {
+    font-weight: bold;
+    color: #6bff6b;
+    padding: 10px 0;
+    border-bottom: 1px solid #333;
+    margin: 10px 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Hover effect melhorado para todos os botões navegáveis */
+.navigable {
+    position: relative;
+    overflow: hidden;
+}
+
+.navigable::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(107, 255, 107, 0.3);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.navigable:active::before {
+    width: 300px;
+    height: 300px;
+}
+
+/* Indicador de foco melhorado */
+.focused {
+    outline: 3px solid #6bff6b;
+    outline-offset: 2px;
+    animation: focusPulse 1.5s ease-in-out infinite;
+}
+
+@keyframes focusPulse {
+    0%, 100% {
+        outline-color: #6bff6b;
+    }
+    50% {
+        outline-color: #4caf50;
+    }
+}
+
+/* Responsividade para botões */
+@media (max-width: 768px) {
     .section {
-      margin: 15px 0;
-      padding: 15px;
-      background-color: #2a2a2a;
-      border-radius: 8px;
+        flex-direction: column;
     }
-    button {
-      padding: 10px 15px;
-      margin: 5px;
-      background-color: #4a4a4a;
-      color: #fff;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
+    
+    button.navigable {
+        width: 100%;
+        margin-bottom: 10px;
     }
-    button:hover, button:focus {
-      background-color: #6a6a6a;
-      outline: 2px solid #0f0;
-    }
-    .focused { 
-      outline: 2px solid #0f0 !important; 
-      background-color: #333 !important; 
-    }
-    .playlist-item, .channel-item {
-      cursor: pointer;
-      padding: 8px;
-      margin: 3px 0;
-      border-radius: 5px;
-      background-color: #3a3a3a;
-      list-style: none;
-    }
-    .playlist-item:hover, .channel-item:hover {
-      background-color: #4a4a4a;
-    }
-    .manual-input {
-      border-left: 4px solid #ff6b35;
-      font-style: italic;
-    }
-    .available-playlist {
-      border-left: 4px solid #35ff6b;
-    }
-    .unavailable-playlist {
-      border-left: 4px solid #ff3535;
-      opacity: 0.6;
-    }
-    ul {
-      padding: 0;
-      margin: 0;
-    }
-    .error-message {
-      color: #ff6b6b;
-      background-color: #4a2a2a;
-      padding: 10px;
-      border-radius: 5px;
-      margin: 10px 0;
-    }
-    .success-message {
-      color: #6bff6b;
-      background-color: #2a4a2a;
-      padding: 10px;
-      border-radius: 5px;
-      margin: 10px 0;
-    }
-    .loading {
-      color: #ffeb3b;
-      background-color: #4a4a2a;
-      padding: 10px;
-      border-radius: 5px;
-      margin: 10px 0;
-    }
-  
+}
+
+/* Loading indicator para upload */
+.loading-upload {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(74, 144, 226, 0.3);
+    border-radius: 50%;
+    border-top-color: #4a90e2;
+    animation: spin 1s linear infinite;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
