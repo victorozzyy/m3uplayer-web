@@ -1,4 +1,25 @@
-// app.js - Inicialização e configuração principal
+// app.js - Versão com verificação segura
+
+// 🛡️ Helper para adicionar event listeners com segurança
+function safeAddEventListener(elementId, event, callback) {
+    const element = document.getElementById(elementId);
+    if (element) {
+        element.addEventListener(event, callback);
+        return true;
+    }
+    console.warn(`⚠️ Elemento "${elementId}" não encontrado`);
+    return false;
+}
+
+// 🛡️ Helper para querySelector com segurança
+function safeQuerySelector(selector, callback) {
+    const element = document.querySelector(selector);
+    if (element && callback) {
+        callback(element);
+        return element;
+    }
+    return element;
+}
 
 document.addEventListener('DOMContentLoaded', () => {
     console.log('🚀 M3U8 Player inicializado - Versão modular sem localStorage');
@@ -25,51 +46,43 @@ document.addEventListener('DOMContentLoaded', () => {
     ChannelModule.showMessage('💡 Selecione uma opção acima para começar', 'success');
 });
 
-// Configura botões principais
+// Configura botões principais COM VERIFICAÇÃO
 function setupMainButtons() {
-    // Botão Home
-    document.getElementById('btnHome').addEventListener('click', () => {
+    safeAddEventListener('btnHome', 'click', () => {
         if (confirm('Voltar para a página inicial?')) {
             location.href = 'index.html';
         }
     });
     
-    // Botão Minhas Listas (NOVO)
-    document.getElementById('btnMinhasListas').addEventListener('click', () => {
+    safeAddEventListener('btnMinhasListas', 'click', () => {
         PlaylistModule.showMinhasListasSelector();
     });
     
-    // Botão Playlists Remotas
-    document.getElementById('btnLoadPlaylist').addEventListener('click', () => {
+    safeAddEventListener('btnLoadPlaylist', 'click', () => {
         PlaylistModule.showRemotePlaylistSelector();
     });
     
-    // Botão Playlists Locais
-    document.getElementById('btnLocal').addEventListener('click', () => {
+    safeAddEventListener('btnLocal', 'click', () => {
         PlaylistModule.showPlaylistSelector();
     });
     
-    // Botão URL
-    document.getElementById('btnUrl').addEventListener('click', () => {
+    safeAddEventListener('btnUrl', 'click', () => {
         PlaylistModule.loadFromUrl();
     });
     
-    // Botão Canal Único
-    document.getElementById('btnSingle').addEventListener('click', () => {
+    safeAddEventListener('btnSingle', 'click', () => {
         PlaylistModule.loadSingleChannel();
     });
     
-    // Botão Upload (NOVO)
-    document.getElementById('btnUpload').addEventListener('click', () => {
+    safeAddEventListener('btnUpload', 'click', () => {
         PlaylistModule.handleFileUpload();
     });
     
-    // Botões de voltar
-    document.getElementById('btnBackFromRemote').addEventListener('click', () => {
+    safeAddEventListener('btnBackFromRemote', 'click', () => {
         NavigationModule.backToButtons();
     });
     
-    document.getElementById('btnBackFromLocal').addEventListener('click', () => {
+    safeAddEventListener('btnBackFromLocal', 'click', () => {
         NavigationModule.backToButtons();
     });
 }
