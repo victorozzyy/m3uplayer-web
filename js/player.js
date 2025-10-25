@@ -10,6 +10,8 @@ const PlayerModule = {
     advanceStart: 0,
     overlay: null,
     useNativePlayer: false,
+    controlButtons: [],
+    currentButtonIndex: 0,
     
     // Cria overlay do player
     createOverlay() {
@@ -43,13 +45,13 @@ const PlayerModule = {
                 border-radius: 12px;
                 transition: opacity 0.5s ease;
             ">
-                <button id="prevBtn" style="font-size: 18px; padding: 10px 20px; background: #222; color: white; border: none; border-radius: 6px;">⮜ Anterior</button>
-                <button id="rewBtn" style="font-size: 18px; padding: 10px 20px; background: #222; color: white; border: none; border-radius: 6px;">⏪ -10s</button>
-                <button id="playPauseBtn" autofocus style="font-size: 18px; padding: 10px 20px; background: #222; color: white; border: none; border-radius: 6px;">▶️ Play</button>
-                <button id="fwdBtn" style="font-size: 18px; padding: 10px 20px; background: #222; color: white; border: none; border-radius: 6px;">⏩ +10s</button>
-                <button id="nextBtn" style="font-size: 18px; padding: 10px 20px; background: #222; color: white; border: none; border-radius: 6px;">⮞ Próximo</button>
-                <button id="reloadBtn" style="font-size: 18px; padding: 10px 20px; background: #222; color: white; border: none; border-radius: 6px;">🔄 Recarregar</button>
-                <button id="closeBtn" style="font-size: 18px; padding: 10px 20px; background: #c00; color: white; border: none; border-radius: 6px;">✖ Fechar</button>
+                <button id="prevBtn" class="player-control" tabindex="-1" style="font-size: 18px; padding: 10px 20px; background: #222; color: white; border: 2px solid transparent; border-radius: 6px; cursor: pointer; transition: all 0.2s;">⮜ Anterior</button>
+                <button id="rewBtn" class="player-control" tabindex="-1" style="font-size: 18px; padding: 10px 20px; background: #222; color: white; border: 2px solid transparent; border-radius: 6px; cursor: pointer; transition: all 0.2s;">⪪ -10s</button>
+                <button id="playPauseBtn" class="player-control" tabindex="-1" style="font-size: 18px; padding: 10px 20px; background: #222; color: white; border: 2px solid transparent; border-radius: 6px; cursor: pointer; transition: all 0.2s;">▶️ Play</button>
+                <button id="fwdBtn" class="player-control" tabindex="-1" style="font-size: 18px; padding: 10px 20px; background: #222; color: white; border: 2px solid transparent; border-radius: 6px; cursor: pointer; transition: all 0.2s;">⩩ +10s</button>
+                <button id="nextBtn" class="player-control" tabindex="-1" style="font-size: 18px; padding: 10px 20px; background: #222; color: white; border: 2px solid transparent; border-radius: 6px; cursor: pointer; transition: all 0.2s;">⮞ Próximo</button>
+                <button id="reloadBtn" class="player-control" tabindex="-1" style="font-size: 18px; padding: 10px 20px; background: #222; color: white; border: 2px solid transparent; border-radius: 6px; cursor: pointer; transition: all 0.2s;">🔄 Recarregar</button>
+                <button id="closeBtn" class="player-control" tabindex="-1" style="font-size: 18px; padding: 10px 20px; background: #c00; color: white; border: 2px solid transparent; border-radius: 6px; cursor: pointer; transition: all 0.2s;">✖ Fechar</button>
             </div>
             
             <div id="progress-container" style="
@@ -100,10 +102,40 @@ const PlayerModule = {
         return this.overlay;
     },
     
+    // Define foco no botão especificado
+    setButtonFocus(index) {
+        // Remove foco de todos os botões
+        this.controlButtons.forEach(btn => {
+            btn.style.border = '2px solid transparent';
+            btn.style.background = btn.id === 'closeBtn' ? '#c00' : '#222';
+            btn.style.transform = 'scale(1)';
+        });
+        
+        // Aplica foco no botão atual
+        if (this.controlButtons[index]) {
+            const btn = this.controlButtons[index];
+            btn.style.border = '2px solid #00ff00';
+            btn.style.background = btn.id === 'closeBtn' ? '#e00' : '#333';
+            btn.style.transform = 'scale(1.05)';
+            this.currentButtonIndex = index;
+        }
+    },
+    
+    // Navega entre os botões
+    navigateButtons(direction) {
+        const newIndex = this.currentButtonIndex + direction;
+        if (newIndex >= 0 && newIndex < this.controlButtons.length) {
+            this.setButtonFocus(newIndex);
+        }
+    },
+    
     // Configura controles do player
     setupPlayerControls() {
         const controls = this.overlay.querySelector('#controls');
         const progressBar = this.overlay.querySelector('#progressBar');
+        
+        // Armazena referência dos botões
+        this.controlButtons = Array.from(controls.querySelectorAll('.player-control'));
         
         // Botões
         this.overlay.querySelector('#playPauseBtn').onclick = () => this.togglePlayPause();
@@ -162,13 +194,28 @@ const PlayerModule = {
                 this.close();
             } else if (e.key === ' ' || e.key === 'Enter') {
                 e.preventDefault();
-                this.togglePlayPause();
+                // Executa ação do botão focado
+                if (this.controlButtons[this.currentButtonIndex]) {
+                    this.controlButtons[this.currentButtonIndex].click();
+                } else {
+                    this.togglePlayPause();
+                }
             } else if (e.key === 'ArrowLeft') {
                 e.preventDefault();
-                this.seek(-10000);
+                this.navigateButtons(-1);
+                this.showControls();
             } else if (e.key === 'ArrowRight') {
                 e.preventDefault();
+                this.navigateButtons(1);
+                this.showControls();
+            } else if (e.key === 'ArrowUp') {
+                e.preventDefault();
+                this.seek(-10000);
+                this.showControls();
+            } else if (e.key === 'ArrowDown') {
+                e.preventDefault();
                 this.seek(10000);
+                this.showControls();
             } else if (e.keyCode === 427 || e.key === 'ChannelUp') {
                 e.preventDefault();
                 this.switchChannel(1);
@@ -176,8 +223,6 @@ const PlayerModule = {
                 e.preventDefault();
                 this.switchChannel(-1);
             }
-            
-            this.showControls();
         });
         
         // Relógio
@@ -194,6 +239,12 @@ const PlayerModule = {
         
         this.overlay.style.display = 'block';
         this.overlay.querySelector('#channelTitle').textContent = `📺 ${name}`;
+        
+        // Define foco inicial no botão Play/Pause (índice 2)
+        setTimeout(() => {
+            this.currentButtonIndex = 2; // Play/Pause é o 3º botão (índice 2)
+            this.setButtonFocus(this.currentButtonIndex);
+        }, 300);
         
         // Detectar tipo de player
         if (window.webapis && webapis.avplay) {
