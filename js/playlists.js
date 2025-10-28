@@ -52,24 +52,71 @@ const PlaylistModule = {
     // Minhas Listas (personalizadas)
     minhasListasConfig: [
         {
-            name: "🔥 Minha Lista Principal",
-            description: "Lista 01",
-            url: "https://felas87dz.icu/get.php?username=Anonymous100&password=Hacker100&type=m3u_plus"
+            name: "🔥 Lista 01",
+            description: "Lista 04 ",
+            url: "https://felas87dz.icu/get.php?username=854191413&password=383942274&type=m3u_plus",
+            needsCors: true
         },
-        {
+		{
             name: "🔥 Minha 02",
-            description: "Lista 02",
-            url: "https://felas87dz.icu/get.php?username=ednamaria&password=366242934&type=m3u_plus"
+            description: "Lista 01 ",
+            url: "https://kinder5.live/get.php?username=164485614&password=530298439&type=m3u_plus",
+            needsCors: true
         },
-        {
+		{
             name: "🔥 Minha 03",
-            description: "Lista 03",
-            url: "https://felas87dz.icu/get.php?username=Diego01&password=9518484&type=m3u_plus"
+            description: "Lista 01 ",
+            url: "http://kinder5.live:80/get.php?username=707434249&password=697551514&type=m3u_plus",
+            needsCors: true
+        },
+		{
+            name: "🔥 Lista 04",
+            description: "Lista 04 ",
+            url: "http://kinder5.live:80/get.php?username=688306193&password=033189514&type=m3u_plus",
+            needsCors: true
+        },
+		{
+            name: "🔥 Minha 05",
+            description: "Lista 01 ",
+            url: "http://kinder5.live:80/get.php?username=460757764&password=835992209&type=m3u_plus",
+            needsCors: true
+        },
+		{
+            name: "🔥 Minha 06",
+            description: "Lista 01 ",
+            url: "http://kinder5.live:80/get.php?username=34211473179&password=88284437124&type=m3u_plus",
+            needsCors: true
+        },
+		
+		{
+            name: "🔥 Minha 07",
+            description: "Lista 01 ",
+            url: "http://kinder5.live:80/get.php?username=534910100&password=232065201&type=m3u_plus",
+            needsCors: true
+        },
+		{
+            name: "🔥 Lista 08",
+            description: "Lista 04 ",
+            url: "http://kinder5.live:80/get.php?username=82647069012&password=34033899350&type=m3u_plus",
+            needsCors: true
+        },
+		{
+            name: "🔥 Minha 09",
+            description: "Lista 01 ",
+            url: "http://kinder5.live:80/get.php?username=661282206&password=318344838&type=m3u_plus",
+            needsCors: true
+        },
+		{
+            name: "🔥 Minha 10",
+            description: "Lista 01 ",
+            url: "http://kinder5.live:80/get.php?username=094279188&password=062038990&type=m3u_plus",
+            needsCors: true
         },
         {
-            name: "🔥 Minha Lista 04",
-            description: "Lista 04",
-            url: "https://felas87dz.icu/get.php?username=854191413&password=383942274&type=m3u_plus"
+            name: "🔥 Minha 11",
+            description: "Lista 02",
+            url: "http://kinder5.live:80/get.php?username=23156616732&password=42382360350&type=m3u_plus",
+            needsCors: true
         }
     ],
     
@@ -651,3 +698,4 @@ if (typeof module !== 'undefined' && module.exports) {
     module.exports = PlaylistModule;
 
 }
+
