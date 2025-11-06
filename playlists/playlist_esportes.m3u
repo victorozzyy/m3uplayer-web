@@ -1,201 +1,1055 @@
 #EXTM3U
-#EXTINF:-1 tvg-id="BandSports.br" tvg-name="BAND SPORTS FHD" tvg-logo="https://img.hotice.site/icones_channels/BAND_Sports_HD.png" group-title="⚽ ESPORTES",BAND SPORTS FHD
+#EXTINF:-1 tvg-id="BandSports.br" tvg-name="BAND SPORTS FHD" tvg-logo="https://img.hotice.site/icones_channels/BAND_Sports_HD.png" group-title="02⚽ ESPORTES",BAND SPORTS FHD
 http://enegf3.dynamic-router-backend-net.site:80/Anonymous100/Hacker100/4230991
-#EXTINF:-1 tvg-id="BandSports.br" tvg-name="BAND SPORTS HD" tvg-logo="https://img.hotice.site/icones_channels/BAND_Sports_HD.png" group-title="⚽ ESPORTES",BAND SPORTS HD
+#EXTINF:-1 tvg-id="BandSports.br" tvg-name="BAND SPORTS HD" tvg-logo="https://img.hotice.site/icones_channels/BAND_Sports_HD.png" group-title="02⚽ ESPORTES",BAND SPORTS HD
 http://enegf3.dynamic-router-backend-net.site:80/Anonymous100/Hacker100/4230992
-#EXTINF:-1 tvg-id="BandSports.br" tvg-name="BAND SPORTS SD" tvg-logo="https://img.hotice.site/icones_channels/BAND_Sports_HD.png" group-title="⚽ ESPORTES",BAND SPORTS SD
+#EXTINF:-1 tvg-id="BandSports.br" tvg-name="BAND SPORTS SD" tvg-logo="https://img.hotice.site/icones_channels/BAND_Sports_HD.png" group-title="02⚽ ESPORTES",BAND SPORTS SD
 http://enegf3.dynamic-router-backend-net.site:80/Anonymous100/Hacker100/4230993
-#EXTINF:-1 tvg-id="" tvg-name="CANAL GOAT 01 HD" tvg-logo="https://img.hotice.site/icones_channels/Canal_GOAT.png" group-title="⚽ ESPORTES",CANAL GOAT 01 HD
+#EXTINF:-1 tvg-id="" tvg-name="CANAL GOAT 01 HD" tvg-logo="https://img.hotice.site/icones_channels/Canal_GOAT.png" group-title="02⚽ ESPORTES",CANAL GOAT 01 HD
 http://enegf3.dynamic-router-backend-net.site:80/Anonymous100/Hacker100/4231011
-#EXTINF:-1 tvg-id="" tvg-name="CANAL GOAT 02 HD" tvg-logo="https://img.hotice.site/icones_channels/Canal_GOAT_2.png" group-title="⚽ ESPORTES",CANAL GOAT 02 HD
+#EXTINF:-1 tvg-id="" tvg-name="CANAL GOAT 02 HD" tvg-logo="https://img.hotice.site/icones_channels/Canal_GOAT_2.png" group-title="02⚽ ESPORTES",CANAL GOAT 02 HD
 http://enegf3.dynamic-router-backend-net.site:80/Anonymous100/Hacker100/4231012
-#EXTINF:-1 tvg-id="" tvg-name="CAZÉ TV 01 HD" tvg-logo="https://img.hotice.site/icones_channels/CazeTV.png" group-title="⚽ ESPORTES",CAZÉ TV 01 HD
+#EXTINF:-1 tvg-id="" tvg-name="CAZÉ TV 01 HD" tvg-logo="https://img.hotice.site/icones_channels/CazeTV.png" group-title="02⚽ ESPORTES",CAZÉ TV 01 HD
 http://enegf3.dynamic-router-backend-net.site:80/Anonymous100/Hacker100/4231046
-#EXTINF:-1 tvg-id="" tvg-name="CAZÉ TV 02 HD" tvg-logo="https://img.hotice.site/icones_channels/CazeTV.png" group-title="⚽ ESPORTES",CAZÉ TV 02 HD
+#EXTINF:-1 tvg-id="" tvg-name="CAZÉ TV 02 HD" tvg-logo="https://img.hotice.site/icones_channels/CazeTV.png" group-title="02⚽ ESPORTES",CAZÉ TV 02 HD
 http://enegf3.dynamic-router-backend-net.site:80/Anonymous100/Hacker100/4231048
-#EXTINF:-1 tvg-id="" tvg-name="CAZÉ TV 03 HD" tvg-logo="https://img.hotice.site/icones_channels/CazeTV.png" group-title="⚽ ESPORTES",CAZÉ TV 03 HD
+#EXTINF:-1 tvg-id="" tvg-name="CAZÉ TV 03 HD" tvg-logo="https://img.hotice.site/icones_channels/CazeTV.png" group-title="02⚽ ESPORTES",CAZÉ TV 03 HD
 http://enegf3.dynamic-router-backend-net.site:80/Anonymous100/Hacker100/4231049
-#EXTINF:-1 tvg-id="Combate.br" tvg-name="COMBATE 4K" tvg-logo="https://img.hotice.site/icones_channels/COMBATE_HD.png" group-title="⭐ 4K",COMBATE 4K
+#EXTINF:-1 tvg-id="Combate.br" tvg-name="COMBATE 4K" tvg-logo="https://img.hotice.site/icones_channels/COMBATE_HD.png" group-title="02⭐ 4K",COMBATE 4K
 http://enegf3.dynamic-router-backend-net.site:80/Anonymous100/Hacker100/4231074
-#EXTINF:-1 tvg-id="Combate.br" tvg-name="COMBATE FHD" tvg-logo="https://img.hotice.site/icones_channels/COMBATE_HD.png" group-title="✊ COMBATE UFC",COMBATE FHD
+#EXTINF:-1 tvg-id="Combate.br" tvg-name="COMBATE FHD" tvg-logo="https://img.hotice.site/icones_channels/COMBATE_HD.png" group-title="02✊ COMBATE UFC",COMBATE FHD
 http://enegf3.dynamic-router-backend-net.site:80/Anonymous100/Hacker100/4231075
-#EXTINF:-1 tvg-id="Combate.br" tvg-name="COMBATE HD" tvg-logo="https://img.hotice.site/icones_channels/COMBATE_HD.png" group-title="✊ COMBATE UFC",COMBATE HD
+#EXTINF:-1 tvg-id="Combate.br" tvg-name="COMBATE HD" tvg-logo="https://img.hotice.site/icones_channels/COMBATE_HD.png" group-title="02✊ COMBATE UFC",COMBATE HD
 http://enegf3.dynamic-router-backend-net.site:80/Anonymous100/Hacker100/4231076
-#EXTINF:-1 tvg-id="Combate.br" tvg-name="COMBATE SD" tvg-logo="https://img.hotice.site/icones_channels/COMBATE_HD.png" group-title="✊ COMBATE UFC",COMBATE SD
+#EXTINF:-1 tvg-id="Combate.br" tvg-name="COMBATE SD" tvg-logo="https://img.hotice.site/icones_channels/COMBATE_HD.png" group-title="02✊ COMBATE UFC",COMBATE SD
 http://enegf3.dynamic-router-backend-net.site:80/Anonymous100/Hacker100/4231077
-#EXTINF:-1 tvg-id="" tvg-name="DAZN 01 BR HD" tvg-logo="https://img.hotice.site/icones_channels/DAZN.png" group-title="⚽ ELEVEN-DAZN",DAZN 01 BR HD
+#EXTINF:-1 tvg-id="" tvg-name="DAZN 01 BR HD" tvg-logo="https://img.hotice.site/icones_channels/DAZN.png" group-title="02⚽ ELEVEN-DAZN",DAZN 01 BR HD
 http://enegf3.dynamic-router-backend-net.site:80/Anonymous100/Hacker100/4231084
-#EXTINF:-1 tvg-id="" tvg-name="DAZN 02 BR HD" tvg-logo="https://img.hotice.site/icones_channels/DAZN_2.png" group-title="⚽ ELEVEN-DAZN",DAZN 02 BR HD
+#EXTINF:-1 tvg-id="" tvg-name="DAZN 02 BR HD" tvg-logo="https://img.hotice.site/icones_channels/DAZN_2.png" group-title="02⚽ ELEVEN-DAZN",DAZN 02 BR HD
 http://enegf3.dynamic-router-backend-net.site:80/Anonymous100/Hacker100/4231086
-#EXTINF:-1 tvg-id="" tvg-name="ELEVEN SPORTS 01" tvg-logo="https://img.hotice.site/icones_channels/ELEVEN_SPORTS_1_PT.png" group-title="⚽ ELEVEN-DAZN",ELEVEN SPORTS 01
+#EXTINF:-1 tvg-id="" tvg-name="ELEVEN SPORTS 01" tvg-logo="https://img.hotice.site/icones_channels/ELEVEN_SPORTS_1_PT.png" group-title="02⚽ ELEVEN-DAZN",ELEVEN SPORTS 01
 http://enegf3.dynamic-router-backend-net.site:80/Anonymous100/Hacker100/4231135
-#EXTINF:-1 tvg-id="" tvg-name="ELEVEN SPORTS 02" tvg-logo="https://img.hotice.site/icones_channels/ELEVEN_SPORTS_2_PT.png" group-title="⚽ ELEVEN-DAZN",ELEVEN SPORTS 02
+#EXTINF:-1 tvg-id="" tvg-name="ELEVEN SPORTS 02" tvg-logo="https://img.hotice.site/icones_channels/ELEVEN_SPORTS_2_PT.png" group-title="02⚽ ELEVEN-DAZN",ELEVEN SPORTS 02
 http://enegf3.dynamic-router-backend-net.site:80/Anonymous100/Hacker100/4231136
-#EXTINF:-1 tvg-id="br#espn-hd" tvg-name="ESPN 01 4K" tvg-logo="https://img.hotice.site/icones_channels/ESPN_HD.png" group-title="⭐ 4K",ESPN 01 4K
+#EXTINF:-1 tvg-id="br#espn-hd" tvg-name="ESPN 01 4K" tvg-logo="https://img.hotice.site/icones_channels/ESPN_HD.png" group-title="02⭐ 4K",ESPN 01 4K
 http://enegf3.dynamic-router-backend-net.site:80/Anonymous100/Hacker100/4231140
-#EXTINF:-1 tvg-id="br#espn-hd" tvg-name="ESPN 01 FHD" tvg-logo="https://img.hotice.site/icones_channels/ESPN_HD.png" group-title="⚽ ESPN",ESPN 01 FHD
+#EXTINF:-1 tvg-id="br#espn-hd" tvg-name="ESPN 01 FHD" tvg-logo="https://img.hotice.site/icones_channels/ESPN_HD.png" group-title="02⚽ ESPN",ESPN 01 FHD
 http://enegf3.dynamic-router-backend-net.site:80/Anonymous100/Hacker100/4231141
-#EXTINF:-1 tvg-id="br#espn-hd" tvg-name="ESPN 01 HD" tvg-logo="https://img.hotice.site/icones_channels/ESPN_HD.png" group-title="⚽ ESPN",ESPN 01 HD
+#EXTINF:-1 tvg-id="br#espn-hd" tvg-name="ESPN 01 HD" tvg-logo="https://img.hotice.site/icones_channels/ESPN_HD.png" group-title="02⚽ ESPN",ESPN 01 HD
 http://enegf3.dynamic-router-backend-net.site:80/Anonymous100/Hacker100/4231142
-#EXTINF:-1 tvg-id="br#espn-hd" tvg-name="ESPN 01 SD" tvg-logo="https://img.hotice.site/icones_channels/ESPN_HD.png" group-title="⚽ ESPN",ESPN 01 SD
+#EXTINF:-1 tvg-id="br#espn-hd" tvg-name="ESPN 01 SD" tvg-logo="https://img.hotice.site/icones_channels/ESPN_HD.png" group-title="02⚽ ESPN",ESPN 01 SD
 http://enegf3.dynamic-router-backend-net.site:80/Anonymous100/Hacker100/4231143
-#EXTINF:-1 tvg-id="ESPN2.br" tvg-name="ESPN 02 4K" tvg-logo="https://img.hotice.site/icones_channels/ESPN_2_HD.png" group-title="⭐ 4K",ESPN 02 4K
+#EXTINF:-1 tvg-id="ESPN2.br" tvg-name="ESPN 02 4K" tvg-logo="https://img.hotice.site/icones_channels/ESPN_2_HD.png" group-title="02⭐ 4K",ESPN 02 4K
 http://enegf3.dynamic-router-backend-net.site:80/Anonymous100/Hacker100/4231144
-#EXTINF:-1 tvg-id="ESPN2.br" tvg-name="ESPN 02 FHD" tvg-logo="https://img.hotice.site/icones_channels/ESPN_2_HD.png" group-title="⚽ ESPN",ESPN 02 FHD
+#EXTINF:-1 tvg-id="ESPN2.br" tvg-name="ESPN 02 FHD" tvg-logo="https://img.hotice.site/icones_channels/ESPN_2_HD.png" group-title="02⚽ ESPN",ESPN 02 FHD
 http://enegf3.dynamic-router-backend-net.site:80/Anonymous100/Hacker100/4231145
-#EXTINF:-1 tvg-id="ESPN2.br" tvg-name="ESPN 02 HD" tvg-logo="https://img.hotice.site/icones_channels/ESPN_2_HD.png" group-title="⚽ ESPN",ESPN 02 HD
+#EXTINF:-1 tvg-id="ESPN2.br" tvg-name="ESPN 02 HD" tvg-logo="https://img.hotice.site/icones_channels/ESPN_2_HD.png" group-title="02⚽ ESPN",ESPN 02 HD
 http://enegf3.dynamic-router-backend-net.site:80/Anonymous100/Hacker100/4231146
-#EXTINF:-1 tvg-id="ESPN2.br" tvg-name="ESPN 02 SD" tvg-logo="https://img.hotice.site/icones_channels/ESPN_2_HD.png" group-title="⚽ ESPN",ESPN 02 SD
+#EXTINF:-1 tvg-id="ESPN2.br" tvg-name="ESPN 02 SD" tvg-logo="https://img.hotice.site/icones_channels/ESPN_2_HD.png" group-title="02⚽ ESPN",ESPN 02 SD
 http://enegf3.dynamic-router-backend-net.site:80/Anonymous100/Hacker100/4231147
-#EXTINF:-1 tvg-id="ESPN3.br" tvg-name="ESPN 03 4K" tvg-logo="https://img.hotice.site/icones_channels/ESPN_3_HD.png" group-title="⭐ 4K",ESPN 03 4K
+#EXTINF:-1 tvg-id="ESPN3.br" tvg-name="ESPN 03 4K" tvg-logo="https://img.hotice.site/icones_channels/ESPN_3_HD.png" group-title="02⭐ 4K",ESPN 03 4K
 http://enegf3.dynamic-router-backend-net.site:80/Anonymous100/Hacker100/4231148
-#EXTINF:-1 tvg-id="ESPN3.br" tvg-name="ESPN 03 FHD" tvg-logo="https://img.hotice.site/icones_channels/ESPN_3_HD.png" group-title="⚽ ESPN",ESPN 03 FHD
+#EXTINF:-1 tvg-id="ESPN3.br" tvg-name="ESPN 03 FHD" tvg-logo="https://img.hotice.site/icones_channels/ESPN_3_HD.png" group-title="02⚽ ESPN",ESPN 03 FHD
 http://enegf3.dynamic-router-backend-net.site:80/Anonymous100/Hacker100/4231149
-#EXTINF:-1 tvg-id="ESPN3.br" tvg-name="ESPN 03 HD" tvg-logo="https://img.hotice.site/icones_channels/ESPN_3_HD.png" group-title="⚽ ESPN",ESPN 03 HD
+#EXTINF:-1 tvg-id="ESPN3.br" tvg-name="ESPN 03 HD" tvg-logo="https://img.hotice.site/icones_channels/ESPN_3_HD.png" group-title="02⚽ ESPN",ESPN 03 HD
 http://enegf3.dynamic-router-backend-net.site:80/Anonymous100/Hacker100/4231151
-#EXTINF:-1 tvg-id="ESPN3.br" tvg-name="ESPN 03 SD" tvg-logo="https://img.hotice.site/icones_channels/ESPN_3_HD.png" group-title="⚽ ESPN",ESPN 03 SD
+#EXTINF:-1 tvg-id="ESPN3.br" tvg-name="ESPN 03 SD" tvg-logo="https://img.hotice.site/icones_channels/ESPN_3_HD.png" group-title="02⚽ ESPN",ESPN 03 SD
 http://enegf3.dynamic-router-backend-net.site:80/Anonymous100/Hacker100/4231152
-#EXTINF:-1 tvg-id="ESPN4.br" tvg-name="ESPN 04 4K" tvg-logo="https://img.hotice.site/icones_channels/ESPN_4_HD.png" group-title="⭐ 4K",ESPN 04 4K
+#EXTINF:-1 tvg-id="ESPN4.br" tvg-name="ESPN 04 4K" tvg-logo="https://img.hotice.site/icones_channels/ESPN_4_HD.png" group-title="02⭐ 4K",ESPN 04 4K
 http://enegf3.dynamic-router-backend-net.site:80/Anonymous100/Hacker100/4231153
-#EXTINF:-1 tvg-id="ESPN4.br" tvg-name="ESPN 04 FHD" tvg-logo="https://img.hotice.site/icones_channels/ESPN_4_HD.png" group-title="⚽ ESPN",ESPN 04 FHD
+#EXTINF:-1 tvg-id="ESPN4.br" tvg-name="ESPN 04 FHD" tvg-logo="https://img.hotice.site/icones_channels/ESPN_4_HD.png" group-title="02⚽ ESPN",ESPN 04 FHD
 http://enegf3.dynamic-router-backend-net.site:80/Anonymous100/Hacker100/4231154
-#EXTINF:-1 tvg-id="ESPN4.br" tvg-name="ESPN 04 HD" tvg-logo="https://img.hotice.site/icones_channels/ESPN_4_HD.png" group-title="⚽ ESPN",ESPN 04 HD
+#EXTINF:-1 tvg-id="ESPN4.br" tvg-name="ESPN 04 HD" tvg-logo="https://img.hotice.site/icones_channels/ESPN_4_HD.png" group-title="02⚽ ESPN",ESPN 04 HD
 http://enegf3.dynamic-router-backend-net.site:80/Anonymous100/Hacker100/4231155
-#EXTINF:-1 tvg-id="ESPN4.br" tvg-name="ESPN 04 SD" tvg-logo="https://img.hotice.site/icones_channels/ESPN_4_HD.png" group-title="⚽ ESPN",ESPN 04 SD
+#EXTINF:-1 tvg-id="ESPN4.br" tvg-name="ESPN 04 SD" tvg-logo="https://img.hotice.site/icones_channels/ESPN_4_HD.png" group-title="02⚽ ESPN",ESPN 04 SD
 http://enegf3.dynamic-router-backend-net.site:80/Anonymous100/Hacker100/4231156
-#EXTINF:-1 tvg-id="ESPN5.br" tvg-name="ESPN 05 4K" tvg-logo="https://img.hotice.site/icones_channels/ESPN_5_HD.png" group-title="⭐ 4K",ESPN 05 4K
+#EXTINF:-1 tvg-id="ESPN5.br" tvg-name="ESPN 05 4K" tvg-logo="https://img.hotice.site/icones_channels/ESPN_5_HD.png" group-title="02⭐ 4K",ESPN 05 4K
 http://enegf3.dynamic-router-backend-net.site:80/Anonymous100/Hacker100/4231157
-#EXTINF:-1 tvg-id="ESPN5.br" tvg-name="ESPN 05 FHD" tvg-logo="https://img.hotice.site/icones_channels/ESPN_5_HD.png" group-title="⚽ ESPN",ESPN 05 FHD
+#EXTINF:-1 tvg-id="ESPN5.br" tvg-name="ESPN 05 FHD" tvg-logo="https://img.hotice.site/icones_channels/ESPN_5_HD.png" group-title="02⚽ ESPN",ESPN 05 FHD
 http://enegf3.dynamic-router-backend-net.site:80/Anonymous100/Hacker100/4231158
-#EXTINF:-1 tvg-id="ESPN5.br" tvg-name="ESPN 05 HD" tvg-logo="https://img.hotice.site/icones_channels/ESPN_5_HD.png" group-title="⚽ ESPN",ESPN 05 HD
+#EXTINF:-1 tvg-id="ESPN5.br" tvg-name="ESPN 05 HD" tvg-logo="https://img.hotice.site/icones_channels/ESPN_5_HD.png" group-title="02⚽ ESPN",ESPN 05 HD
 http://enegf3.dynamic-router-backend-net.site:80/Anonymous100/Hacker100/4231159
-#EXTINF:-1 tvg-id="ESPN5.br" tvg-name="ESPN 05 SD" tvg-logo="https://img.hotice.site/icones_channels/ESPN_5_HD.png" group-title="⚽ ESPN",ESPN 05 SD
+#EXTINF:-1 tvg-id="ESPN5.br" tvg-name="ESPN 05 SD" tvg-logo="https://img.hotice.site/icones_channels/ESPN_5_HD.png" group-title="02⚽ ESPN",ESPN 05 SD
 http://enegf3.dynamic-router-backend-net.site:80/Anonymous100/Hacker100/4231160
-#EXTINF:-1 tvg-id="ESPN6.br" tvg-name="ESPN 06 4K" tvg-logo="https://img.hotice.site/icones_channels/ESPN_6_HD.png" group-title="⭐ 4K",ESPN 06 4K
+#EXTINF:-1 tvg-id="ESPN6.br" tvg-name="ESPN 06 4K" tvg-logo="https://img.hotice.site/icones_channels/ESPN_6_HD.png" group-title="02⭐ 4K",ESPN 06 4K
 http://enegf3.dynamic-router-backend-net.site:80/Anonymous100/Hacker100/4231161
-#EXTINF:-1 tvg-id="ESPN6.br" tvg-name="ESPN 06 FHD" tvg-logo="https://img.hotice.site/icones_channels/ESPN_6_HD.png" group-title="⚽ ESPN",ESPN 06 FHD
+#EXTINF:-1 tvg-id="ESPN6.br" tvg-name="ESPN 06 FHD" tvg-logo="https://img.hotice.site/icones_channels/ESPN_6_HD.png" group-title="02⚽ ESPN",ESPN 06 FHD
 http://enegf3.dynamic-router-backend-net.site:80/Anonymous100/Hacker100/4231162
-#EXTINF:-1 tvg-id="ESPN6.br" tvg-name="ESPN 06 HD" tvg-logo="https://img.hotice.site/icones_channels/ESPN_6_HD.png" group-title="⚽ ESPN",ESPN 06 HD
+#EXTINF:-1 tvg-id="ESPN6.br" tvg-name="ESPN 06 HD" tvg-logo="https://img.hotice.site/icones_channels/ESPN_6_HD.png" group-title="02⚽ ESPN",ESPN 06 HD
 http://enegf3.dynamic-router-backend-net.site:80/Anonymous100/Hacker100/4231163
-#EXTINF:-1 tvg-id="ESPN6.br" tvg-name="ESPN 06 SD" tvg-logo="https://img.hotice.site/icones_channels/ESPN_6_HD.png" group-title="⚽ ESPN",ESPN 06 SD
+#EXTINF:-1 tvg-id="ESPN6.br" tvg-name="ESPN 06 SD" tvg-logo="https://img.hotice.site/icones_channels/ESPN_6_HD.png" group-title="02⚽ ESPN",ESPN 06 SD
 http://enegf3.dynamic-router-backend-net.site:80/Anonymous100/Hacker100/4231164
-#EXTINF:-1 tvg-id="br#fish-tv-hd" tvg-name="FISH TV FHD" tvg-logo="https://img.hotice.site/icones_channels/FISH_TV.png" group-title="⭐ PESCA ESPORTIVA",FISH TV FHD
+#EXTINF:-1 tvg-id="br#fish-tv-hd" tvg-name="FISH TV FHD" tvg-logo="https://img.hotice.site/icones_channels/FISH_TV.png" group-title="02⭐ PESCA ESPORTIVA",FISH TV FHD
 http://enegf3.dynamic-router-backend-net.site:80/Anonymous100/Hacker100/4231172
-#EXTINF:-1 tvg-id="br#fish-tv-hd" tvg-name="FISH TV HD" tvg-logo="https://img.hotice.site/icones_channels/FISH_TV.png" group-title="⭐ PESCA ESPORTIVA",FISH TV HD
+#EXTINF:-1 tvg-id="br#fish-tv-hd" tvg-name="FISH TV HD" tvg-logo="https://img.hotice.site/icones_channels/FISH_TV.png" group-title="02⭐ PESCA ESPORTIVA",FISH TV HD
 http://enegf3.dynamic-router-backend-net.site:80/Anonymous100/Hacker100/4231173
-#EXTINF:-1 tvg-id="br#fish-tv-hd" tvg-name="FISH TV SD" tvg-logo="https://img.hotice.site/icones_channels/FISH_TV.png" group-title="⭐ PESCA ESPORTIVA",FISH TV SD
+#EXTINF:-1 tvg-id="br#fish-tv-hd" tvg-name="FISH TV SD" tvg-logo="https://img.hotice.site/icones_channels/FISH_TV.png" group-title="02⭐ PESCA ESPORTIVA",FISH TV SD
 http://enegf3.dynamic-router-backend-net.site:80/Anonymous100/Hacker100/4231174
-#EXTINF:-1 tvg-id="" tvg-name="MAX 01 HD" tvg-logo="https://img.inboxbr.pro/icones_channels/max.png" group-title="⚽ MAX-TNT SPORTS",MAX 01 HD
+#EXTINF:-1 tvg-id="" tvg-name="MAX 01 HD" tvg-logo="https://img.inboxbr.pro/icones_channels/max.png" group-title="02⚽ MAX-TNT SPORTS",MAX 01 HD
 http://enegf3.dynamic-router-backend-net.site:80/Anonymous100/Hacker100/4231611
-#EXTINF:-1 tvg-id="" tvg-name="MAX 02 HD" tvg-logo="https://img.inboxbr.pro/icones_channels/max.png" group-title="⚽ MAX-TNT SPORTS",MAX 02 HD
+#EXTINF:-1 tvg-id="" tvg-name="MAX 02 HD" tvg-logo="https://img.inboxbr.pro/icones_channels/max.png" group-title="02⚽ MAX-TNT SPORTS",MAX 02 HD
 http://enegf3.dynamic-router-backend-net.site:80/Anonymous100/Hacker100/4231612
-#EXTINF:-1 tvg-id="" tvg-name="MAX 03 HD" tvg-logo="https://img.inboxbr.pro/icones_channels/max.png" group-title="⚽ MAX-TNT SPORTS",MAX 03 HD
+#EXTINF:-1 tvg-id="" tvg-name="MAX 03 HD" tvg-logo="https://img.inboxbr.pro/icones_channels/max.png" group-title="02⚽ MAX-TNT SPORTS",MAX 03 HD
 http://enegf3.dynamic-router-backend-net.site:80/Anonymous100/Hacker100/4231613
-#EXTINF:-1 tvg-id="" tvg-name="NBA LAGUE PASS 01 HD" tvg-logo="https://img.inboxbr.pro/icones_channels/NBA League Pass.png" group-title="⛹ BASQUETE",NBA LAGUE PASS 01 HD
+#EXTINF:-1 tvg-id="" tvg-name="NBA LAGUE PASS 01 HD" tvg-logo="https://img.inboxbr.pro/icones_channels/NBA League Pass.png" group-title="02⛹ BASQUETE",NBA LAGUE PASS 01 HD
 http://enegf3.dynamic-router-backend-net.site:80/Anonymous100/Hacker100/4231637
-#EXTINF:-1 tvg-id="" tvg-name="NBA LEAGUE PASS 02 HD" tvg-logo="https://img.inboxbr.pro/icones_channels/NBA League Pass.png" group-title="⛹ BASQUETE",NBA LEAGUE PASS 02 HD
+#EXTINF:-1 tvg-id="" tvg-name="NBA LEAGUE PASS 02 HD" tvg-logo="https://img.inboxbr.pro/icones_channels/NBA League Pass.png" group-title="02⛹ BASQUETE",NBA LEAGUE PASS 02 HD
 http://enegf3.dynamic-router-backend-net.site:80/Anonymous100/Hacker100/4231638
-#EXTINF:-1 tvg-id="" tvg-name="NBA TV HD" tvg-logo="https://img.inboxbr.pro/icones_channels/NBA TV.png" group-title="⛹ BASQUETE",NBA TV HD
+#EXTINF:-1 tvg-id="" tvg-name="NBA TV HD" tvg-logo="https://img.inboxbr.pro/icones_channels/NBA TV.png" group-title="02⛹ BASQUETE",NBA TV HD
 http://enegf3.dynamic-router-backend-net.site:80/Anonymous100/Hacker100/4231644
-#EXTINF:-1 tvg-id="" tvg-name="NOSSO FUTEBOL + 02 FHD" tvg-logo="https://img.hotice.site/icones_channels/NOSSO_FUTEBOL_1_HD.png" group-title="⚽ ESPORTES",NOSSO FUTEBOL + 02 FHD
+#EXTINF:-1 tvg-id="" tvg-name="NOSSO FUTEBOL + 02 FHD" tvg-logo="https://img.hotice.site/icones_channels/NOSSO_FUTEBOL_1_HD.png" group-title="02⚽ ESPORTES",NOSSO FUTEBOL + 02 FHD
 http://enegf3.dynamic-router-backend-net.site:80/Anonymous100/Hacker100/4231652
-#EXTINF:-1 tvg-id="Nosso Futebol 01 HD" tvg-name="NOSSO FUTEBOL + 02 HD" tvg-logo="https://img.hotice.site/icones_channels/NOSSO_FUTEBOL_1_HD.png" group-title="⚽ ESPORTES",NOSSO FUTEBOL + 02 HD
+#EXTINF:-1 tvg-id="Nosso Futebol 01 HD" tvg-name="NOSSO FUTEBOL + 02 HD" tvg-logo="https://img.hotice.site/icones_channels/NOSSO_FUTEBOL_1_HD.png" group-title="02⚽ ESPORTES",NOSSO FUTEBOL + 02 HD
 http://enegf3.dynamic-router-backend-net.site:80/Anonymous100/Hacker100/4231653
-#EXTINF:-1 tvg-id="Nosso Futebol 01 HD" tvg-name="NOSSO FUTEBOL HD" tvg-logo="https://img.hotice.site/icones_channels/NOSSO_FUTEBOL_1_HD.png" group-title="⚽ ESPORTES",NOSSO FUTEBOL HD
+#EXTINF:-1 tvg-id="Nosso Futebol 01 HD" tvg-name="NOSSO FUTEBOL HD" tvg-logo="https://img.hotice.site/icones_channels/NOSSO_FUTEBOL_1_HD.png" group-title="02⚽ ESPORTES",NOSSO FUTEBOL HD
 http://enegf3.dynamic-router-backend-net.site:80/Anonymous100/Hacker100/4231659
-#EXTINF:-1 tvg-id="" tvg-name="NSPORTS FHD" tvg-logo="https://img.hotice.site/icones_channels/TV_NSPORTS_1.png" group-title="⚽ ESPORTES",NSPORTS FHD
+#EXTINF:-1 tvg-id="" tvg-name="NSPORTS FHD" tvg-logo="https://img.hotice.site/icones_channels/TV_NSPORTS_1.png" group-title="02⚽ ESPORTES",NSPORTS FHD
 http://enegf3.dynamic-router-backend-net.site:80/Anonymous100/Hacker100/4231662
-#EXTINF:-1 tvg-id="" tvg-name="NSPORTS HD" tvg-logo="https://img.hotice.site/icones_channels/TV_NSPORTS_1.png" group-title="⚽ ESPORTES",NSPORTS HD
+#EXTINF:-1 tvg-id="" tvg-name="NSPORTS HD" tvg-logo="https://img.hotice.site/icones_channels/TV_NSPORTS_1.png" group-title="02⚽ ESPORTES",NSPORTS HD
 http://enegf3.dynamic-router-backend-net.site:80/Anonymous100/Hacker100/4231663
-#EXTINF:-1 tvg-id="br#telecine-premium-hd" tvg-name="PREMIERE 01 CLUBES 4K" tvg-logo="https://img.inboxbr.pro/icones_channels/premiere-clubes-hd.png" group-title="⭐ 4K",PREMIERE 01 CLUBES 4K
+#EXTINF:-1 tvg-id="br#telecine-premium-hd" tvg-name="PREMIERE 01 CLUBES 4K" tvg-logo="https://img.inboxbr.pro/icones_channels/premiere-clubes-hd.png" group-title="02⭐ 4K",PREMIERE 01 CLUBES 4K
 http://enegf3.dynamic-router-backend-net.site:80/Anonymous100/Hacker100/4231677
-#EXTINF:-1 tvg-id="24HAnimes" tvg-name="PREMIERE 01 CLUBES FHD" tvg-logo="https://img.hotice.site/icones_channels/PREMIERE_CLUBES_1_HD.png" group-title="⚽ PREMIERE FC",PREMIERE 01 CLUBES FHD
+#EXTINF:-1 tvg-id="24HAnimes" tvg-name="PREMIERE 01 CLUBES FHD" tvg-logo="https://img.hotice.site/icones_channels/PREMIERE_CLUBES_1_HD.png" group-title="02⚽ PREMIERE FC",PREMIERE 01 CLUBES FHD
 http://enegf3.dynamic-router-backend-net.site:80/Anonymous100/Hacker100/4231678
-#EXTINF:-1 tvg-id="24HAnimes" tvg-name="PREMIERE 01 CLUBES HD" tvg-logo="https://img.hotice.site/icones_channels/PREMIERE_CLUBES_1_HD.png" group-title="⚽ PREMIERE FC",PREMIERE 01 CLUBES HD
+#EXTINF:-1 tvg-id="24HAnimes" tvg-name="PREMIERE 01 CLUBES HD" tvg-logo="https://img.hotice.site/icones_channels/PREMIERE_CLUBES_1_HD.png" group-title="02⚽ PREMIERE FC",PREMIERE 01 CLUBES HD
 http://enegf3.dynamic-router-backend-net.site:80/Anonymous100/Hacker100/4231679
-#EXTINF:-1 tvg-id="24HAnimes" tvg-name="PREMIERE 01 CLUBES SD" tvg-logo="https://img.hotice.site/icones_channels/PREMIERE_CLUBES_1_HD.png" group-title="⚽ PREMIERE FC",PREMIERE 01 CLUBES SD
+#EXTINF:-1 tvg-id="24HAnimes" tvg-name="PREMIERE 01 CLUBES SD" tvg-logo="https://img.hotice.site/icones_channels/PREMIERE_CLUBES_1_HD.png" group-title="02⚽ PREMIERE FC",PREMIERE 01 CLUBES SD
 http://enegf3.dynamic-router-backend-net.site:80/Anonymous100/Hacker100/4231680
-#EXTINF:-1 tvg-id="br#premiere-2" tvg-name="PREMIERE 02 4K" tvg-logo="https://img.hotice.site/icones_channels/PREMIERE_2_HD.png" group-title="⭐ 4K",PREMIERE 02 4K
+#EXTINF:-1 tvg-id="br#premiere-2" tvg-name="PREMIERE 02 4K" tvg-logo="https://img.hotice.site/icones_channels/PREMIERE_2_HD.png" group-title="02⭐ 4K",PREMIERE 02 4K
 http://enegf3.dynamic-router-backend-net.site:80/Anonymous100/Hacker100/4231681
-#EXTINF:-1 tvg-id="br#premiere-2" tvg-name="PREMIERE 02 FHD" tvg-logo="https://img.hotice.site/icones_channels/PREMIERE_2_HD.png" group-title="⚽ PREMIERE FC",PREMIERE 02 FHD
+#EXTINF:-1 tvg-id="br#premiere-2" tvg-name="PREMIERE 02 FHD" tvg-logo="https://img.hotice.site/icones_channels/PREMIERE_2_HD.png" group-title="02⚽ PREMIERE FC",PREMIERE 02 FHD
 http://enegf3.dynamic-router-backend-net.site:80/Anonymous100/Hacker100/4231682
-#EXTINF:-1 tvg-id="br#premiere-2" tvg-name="PREMIERE 02 HD" tvg-logo="https://img.hotice.site/icones_channels/PREMIERE_2_HD.png" group-title="⚽ PREMIERE FC",PREMIERE 02 HD
+#EXTINF:-1 tvg-id="br#premiere-2" tvg-name="PREMIERE 02 HD" tvg-logo="https://img.hotice.site/icones_channels/PREMIERE_2_HD.png" group-title="02⚽ PREMIERE FC",PREMIERE 02 HD
 http://enegf3.dynamic-router-backend-net.site:80/Anonymous100/Hacker100/4231683
-#EXTINF:-1 tvg-id="br#premiere-2" tvg-name="PREMIERE 02 SD" tvg-logo="https://img.hotice.site/icones_channels/PREMIERE_2_HD.png" group-title="⚽ PREMIERE FC",PREMIERE 02 SD
+#EXTINF:-1 tvg-id="br#premiere-2" tvg-name="PREMIERE 02 SD" tvg-logo="https://img.hotice.site/icones_channels/PREMIERE_2_HD.png" group-title="02⚽ PREMIERE FC",PREMIERE 02 SD
 http://enegf3.dynamic-router-backend-net.site:80/Anonymous100/Hacker100/4231684
-#EXTINF:-1 tvg-id="br#premiere-3" tvg-name="PREMIERE 03 4K" tvg-logo="https://img.hotice.site/icones_channels/PREMIERE_2_HD.png" group-title="⭐ 4K",PREMIERE 03 4K
+#EXTINF:-1 tvg-id="br#premiere-3" tvg-name="PREMIERE 03 4K" tvg-logo="https://img.hotice.site/icones_channels/PREMIERE_2_HD.png" group-title="02⭐ 4K",PREMIERE 03 4K
 http://enegf3.dynamic-router-backend-net.site:80/Anonymous100/Hacker100/4231685
-#EXTINF:-1 tvg-id="br#premiere-2" tvg-name="PREMIERE 03 FHD" tvg-logo="https://img.hotice.site/icones_channels/PREMIERE_2_HD.png" group-title="⚽ PREMIERE FC",PREMIERE 03 FHD
+#EXTINF:-1 tvg-id="br#premiere-2" tvg-name="PREMIERE 03 FHD" tvg-logo="https://img.hotice.site/icones_channels/PREMIERE_2_HD.png" group-title="02⚽ PREMIERE FC",PREMIERE 03 FHD
 http://enegf3.dynamic-router-backend-net.site:80/Anonymous100/Hacker100/4231686
-#EXTINF:-1 tvg-id="br#premiere-2" tvg-name="PREMIERE 03 HD" tvg-logo="https://img.hotice.site/icones_channels/PREMIERE_2_HD.png" group-title="⚽ PREMIERE FC",PREMIERE 03 HD
+#EXTINF:-1 tvg-id="br#premiere-2" tvg-name="PREMIERE 03 HD" tvg-logo="https://img.hotice.site/icones_channels/PREMIERE_2_HD.png" group-title="02⚽ PREMIERE FC",PREMIERE 03 HD
 http://enegf3.dynamic-router-backend-net.site:80/Anonymous100/Hacker100/4231687
-#EXTINF:-1 tvg-id="br#premiere-2" tvg-name="PREMIERE 03 SD" tvg-logo="https://img.hotice.site/icones_channels/PREMIERE_2_HD.png" group-title="⚽ PREMIERE FC",PREMIERE 03 SD
+#EXTINF:-1 tvg-id="br#premiere-2" tvg-name="PREMIERE 03 SD" tvg-logo="https://img.hotice.site/icones_channels/PREMIERE_2_HD.png" group-title="02⚽ PREMIERE FC",PREMIERE 03 SD
 http://enegf3.dynamic-router-backend-net.site:80/Anonymous100/Hacker100/4231688
-#EXTINF:-1 tvg-id="br#premiere-4" tvg-name="PREMIERE 04 4K" tvg-logo="https://img.hotice.site/icones_channels/PREMIERE_2_HD.png" group-title="⭐ 4K",PREMIERE 04 4K
+#EXTINF:-1 tvg-id="br#premiere-4" tvg-name="PREMIERE 04 4K" tvg-logo="https://img.hotice.site/icones_channels/PREMIERE_2_HD.png" group-title="02⭐ 4K",PREMIERE 04 4K
 http://enegf3.dynamic-router-backend-net.site:80/Anonymous100/Hacker100/4231689
-#EXTINF:-1 tvg-id="br#premiere-2" tvg-name="PREMIERE 04 FHD" tvg-logo="https://img.hotice.site/icones_channels/PREMIERE_2_HD.png" group-title="⚽ PREMIERE FC",PREMIERE 04 FHD
+#EXTINF:-1 tvg-id="br#premiere-2" tvg-name="PREMIERE 04 FHD" tvg-logo="https://img.hotice.site/icones_channels/PREMIERE_2_HD.png" group-title="02⚽ PREMIERE FC",PREMIERE 04 FHD
 http://enegf3.dynamic-router-backend-net.site:80/Anonymous100/Hacker100/4231690
-#EXTINF:-1 tvg-id="br#premiere-2" tvg-name="PREMIERE 04 HD" tvg-logo="https://img.hotice.site/icones_channels/PREMIERE_2_HD.png" group-title="⚽ PREMIERE FC",PREMIERE 04 HD
+#EXTINF:-1 tvg-id="br#premiere-2" tvg-name="PREMIERE 04 HD" tvg-logo="https://img.hotice.site/icones_channels/PREMIERE_2_HD.png" group-title="02⚽ PREMIERE FC",PREMIERE 04 HD
 http://enegf3.dynamic-router-backend-net.site:80/Anonymous100/Hacker100/4231691
-#EXTINF:-1 tvg-id="br#premiere-2" tvg-name="PREMIERE 04 SD" tvg-logo="https://img.hotice.site/icones_channels/PREMIERE_2_HD.png" group-title="⚽ PREMIERE FC",PREMIERE 04 SD
+#EXTINF:-1 tvg-id="br#premiere-2" tvg-name="PREMIERE 04 SD" tvg-logo="https://img.hotice.site/icones_channels/PREMIERE_2_HD.png" group-title="02⚽ PREMIERE FC",PREMIERE 04 SD
 http://enegf3.dynamic-router-backend-net.site:80/Anonymous100/Hacker100/4231692
-#EXTINF:-1 tvg-id="br#premiere-5-brazil" tvg-name="PREMIERE 05 4K" tvg-logo="https://img.hotice.site/icones_channels/PREMIERE_2_HD.png" group-title="⭐ 4K",PREMIERE 05 4K
+#EXTINF:-1 tvg-id="br#premiere-5-brazil" tvg-name="PREMIERE 05 4K" tvg-logo="https://img.hotice.site/icones_channels/PREMIERE_2_HD.png" group-title="02⭐ 4K",PREMIERE 05 4K
 http://enegf3.dynamic-router-backend-net.site:80/Anonymous100/Hacker100/4231693
-#EXTINF:-1 tvg-id="br#premiere-2" tvg-name="PREMIERE 05 FHD" tvg-logo="https://img.hotice.site/icones_channels/PREMIERE_2_HD.png" group-title="⚽ PREMIERE FC",PREMIERE 05 FHD
+#EXTINF:-1 tvg-id="br#premiere-2" tvg-name="PREMIERE 05 FHD" tvg-logo="https://img.hotice.site/icones_channels/PREMIERE_2_HD.png" group-title="02⚽ PREMIERE FC",PREMIERE 05 FHD
 http://enegf3.dynamic-router-backend-net.site:80/Anonymous100/Hacker100/4231694
-#EXTINF:-1 tvg-id="br#premiere-2" tvg-name="PREMIERE 05 HD" tvg-logo="https://img.hotice.site/icones_channels/PREMIERE_2_HD.png" group-title="⚽ PREMIERE FC",PREMIERE 05 HD
+#EXTINF:-1 tvg-id="br#premiere-2" tvg-name="PREMIERE 05 HD" tvg-logo="https://img.hotice.site/icones_channels/PREMIERE_2_HD.png" group-title="02⚽ PREMIERE FC",PREMIERE 05 HD
 http://enegf3.dynamic-router-backend-net.site:80/Anonymous100/Hacker100/4231695
-#EXTINF:-1 tvg-id="br#premiere-2" tvg-name="PREMIERE 05 SD" tvg-logo="https://img.hotice.site/icones_channels/PREMIERE_2_HD.png" group-title="⚽ PREMIERE FC",PREMIERE 05 SD
+#EXTINF:-1 tvg-id="br#premiere-2" tvg-name="PREMIERE 05 SD" tvg-logo="https://img.hotice.site/icones_channels/PREMIERE_2_HD.png" group-title="02⚽ PREMIERE FC",PREMIERE 05 SD
 http://enegf3.dynamic-router-backend-net.site:80/Anonymous100/Hacker100/4231696
-#EXTINF:-1 tvg-id="br#premiere-2" tvg-name="PREMIERE 06 FHD" tvg-logo="https://img.hotice.site/icones_channels/PREMIERE_2_HD.png" group-title="⚽ PREMIERE FC",PREMIERE 06 FHD
+#EXTINF:-1 tvg-id="br#premiere-2" tvg-name="PREMIERE 06 FHD" tvg-logo="https://img.hotice.site/icones_channels/PREMIERE_2_HD.png" group-title="02⚽ PREMIERE FC",PREMIERE 06 FHD
 http://enegf3.dynamic-router-backend-net.site:80/Anonymous100/Hacker100/4231697
-#EXTINF:-1 tvg-id="br#premiere-2" tvg-name="PREMIERE 06 HD" tvg-logo="https://img.hotice.site/icones_channels/PREMIERE_2_HD.png" group-title="⚽ PREMIERE FC",PREMIERE 06 HD
+#EXTINF:-1 tvg-id="br#premiere-2" tvg-name="PREMIERE 06 HD" tvg-logo="https://img.hotice.site/icones_channels/PREMIERE_2_HD.png" group-title="02⚽ PREMIERE FC",PREMIERE 06 HD
 http://enegf3.dynamic-router-backend-net.site:80/Anonymous100/Hacker100/4231698
-#EXTINF:-1 tvg-id="br#premiere-2" tvg-name="PREMIERE 06 SD" tvg-logo="https://img.hotice.site/icones_channels/PREMIERE_2_HD.png" group-title="⚽ PREMIERE FC",PREMIERE 06 SD
+#EXTINF:-1 tvg-id="br#premiere-2" tvg-name="PREMIERE 06 SD" tvg-logo="https://img.hotice.site/icones_channels/PREMIERE_2_HD.png" group-title="02⚽ PREMIERE FC",PREMIERE 06 SD
 http://enegf3.dynamic-router-backend-net.site:80/Anonymous100/Hacker100/4231699
-#EXTINF:-1 tvg-id="br#premiere-2" tvg-name="PREMIERE 07 FHD" tvg-logo="https://img.hotice.site/icones_channels/PREMIERE_2_HD.png" group-title="⚽ PREMIERE FC",PREMIERE 07 FHD
+#EXTINF:-1 tvg-id="br#premiere-2" tvg-name="PREMIERE 07 FHD" tvg-logo="https://img.hotice.site/icones_channels/PREMIERE_2_HD.png" group-title="02⚽ PREMIERE FC",PREMIERE 07 FHD
 http://enegf3.dynamic-router-backend-net.site:80/Anonymous100/Hacker100/4231700
-#EXTINF:-1 tvg-id="br#premiere-2" tvg-name="PREMIERE 07 HD" tvg-logo="https://img.hotice.site/icones_channels/PREMIERE_2_HD.png" group-title="⚽ PREMIERE FC",PREMIERE 07 HD
+#EXTINF:-1 tvg-id="br#premiere-2" tvg-name="PREMIERE 07 HD" tvg-logo="https://img.hotice.site/icones_channels/PREMIERE_2_HD.png" group-title="02⚽ PREMIERE FC",PREMIERE 07 HD
 http://enegf3.dynamic-router-backend-net.site:80/Anonymous100/Hacker100/4231701
-#EXTINF:-1 tvg-id="br#premiere-2" tvg-name="PREMIERE 07 SD" tvg-logo="https://img.hotice.site/icones_channels/PREMIERE_2_HD.png" group-title="⚽ PREMIERE FC",PREMIERE 07 SD
+#EXTINF:-1 tvg-id="br#premiere-2" tvg-name="PREMIERE 07 SD" tvg-logo="https://img.hotice.site/icones_channels/PREMIERE_2_HD.png" group-title="02⚽ PREMIERE FC",PREMIERE 07 SD
 http://enegf3.dynamic-router-backend-net.site:80/Anonymous100/Hacker100/4231702
-#EXTINF:-1 tvg-id="br#premiere-2" tvg-name="PREMIERE 08 FHD" tvg-logo="https://img.hotice.site/icones_channels/PREMIERE_2_HD.png" group-title="⚽ PREMIERE FC",PREMIERE 08 FHD
+#EXTINF:-1 tvg-id="br#premiere-2" tvg-name="PREMIERE 08 FHD" tvg-logo="https://img.hotice.site/icones_channels/PREMIERE_2_HD.png" group-title="02⚽ PREMIERE FC",PREMIERE 08 FHD
 http://enegf3.dynamic-router-backend-net.site:80/Anonymous100/Hacker100/4231703
-#EXTINF:-1 tvg-id="br#premiere-2" tvg-name="PREMIERE 08 HD" tvg-logo="https://img.hotice.site/icones_channels/PREMIERE_2_HD.png" group-title="⚽ PREMIERE FC",PREMIERE 08 HD
+#EXTINF:-1 tvg-id="br#premiere-2" tvg-name="PREMIERE 08 HD" tvg-logo="https://img.hotice.site/icones_channels/PREMIERE_2_HD.png" group-title="02⚽ PREMIERE FC",PREMIERE 08 HD
 http://enegf3.dynamic-router-backend-net.site:80/Anonymous100/Hacker100/4231704
-#EXTINF:-1 tvg-id="br#premiere-2" tvg-name="PREMIERE 08 SD" tvg-logo="https://img.hotice.site/icones_channels/PREMIERE_2_HD.png" group-title="⚽ PREMIERE FC",PREMIERE 08 SD
+#EXTINF:-1 tvg-id="br#premiere-2" tvg-name="PREMIERE 08 SD" tvg-logo="https://img.hotice.site/icones_channels/PREMIERE_2_HD.png" group-title="02⚽ PREMIERE FC",PREMIERE 08 SD
 http://enegf3.dynamic-router-backend-net.site:80/Anonymous100/Hacker100/4231705
-#EXTINF:-1 tvg-id="br#sportv2-hd" tvg-name="SPORTV 01 4K" tvg-logo="https://img.hotice.site/icones_channels/Sport_TV_1.png" group-title="⭐ 4K",SPORTV 01 4K
+#EXTINF:-1 tvg-id="br#sportv2-hd" tvg-name="SPORTV 01 4K" tvg-logo="https://img.hotice.site/icones_channels/Sport_TV_1.png" group-title="02⭐ 4K",SPORTV 01 4K
 http://enegf3.dynamic-router-backend-net.site:80/Anonymous100/Hacker100/4231853
-#EXTINF:-1 tvg-id="SporTV.br" tvg-name="SPORTV 01 FHD" tvg-logo="https://img.hotice.site/icones_channels/SporTV_HD.png" group-title="⚽ SPORTV",SPORTV 01 FHD
+#EXTINF:-1 tvg-id="SporTV.br" tvg-name="SPORTV 01 FHD" tvg-logo="https://img.hotice.site/icones_channels/SporTV_HD.png" group-title="02⚽ SPORTV",SPORTV 01 FHD
 http://enegf3.dynamic-router-backend-net.site:80/Anonymous100/Hacker100/4231854
-#EXTINF:-1 tvg-id="br#sportv-hd" tvg-name="SPORTV 01 HD" tvg-logo="http://longitudenow.site:80/images/9Nw9RlbJeU65ur_Bg0WfbA_AvdqbS_5PqAvxP8EonbrFEU8m4OuLtAWSx635SAjpTUBi3X3mHvQMfCbkahxbFA.png" group-title="⚽ SPORTV",SPORTV 01 HD
+#EXTINF:-1 tvg-id="br#sportv-hd" tvg-name="SPORTV 01 HD" tvg-logo="http://longitudenow.site:80/images/9Nw9RlbJeU65ur_Bg0WfbA_AvdqbS_5PqAvxP8EonbrFEU8m4OuLtAWSx635SAjpTUBi3X3mHvQMfCbkahxbFA.png" group-title="02⚽ SPORTV",SPORTV 01 HD
 http://enegf3.dynamic-router-backend-net.site:80/Anonymous100/Hacker100/4231856
-#EXTINF:-1 tvg-id="br#sportv-hd" tvg-name="SPORTV 01 SD" tvg-logo="https://img.hotice.site/icones_channels/SporTV_HD.png" group-title="⚽ SPORTV",SPORTV 01 SD
+#EXTINF:-1 tvg-id="br#sportv-hd" tvg-name="SPORTV 01 SD" tvg-logo="https://img.hotice.site/icones_channels/SporTV_HD.png" group-title="02⚽ SPORTV",SPORTV 01 SD
 http://enegf3.dynamic-router-backend-net.site:80/Anonymous100/Hacker100/4231857
-#EXTINF:-1 tvg-id="SporTV2.br" tvg-name="SPORTV 02 4K" tvg-logo="https://img.hotice.site/icones_channels/Sport_TV_2.png" group-title="⭐ 4K",SPORTV 02 4K
+#EXTINF:-1 tvg-id="SporTV2.br" tvg-name="SPORTV 02 4K" tvg-logo="https://img.hotice.site/icones_channels/Sport_TV_2.png" group-title="02⭐ 4K",SPORTV 02 4K
 http://enegf3.dynamic-router-backend-net.site:80/Anonymous100/Hacker100/4231858
-#EXTINF:-1 tvg-id="br#sportv2-hd" tvg-name="SPORTV 02 FHD" tvg-logo="https://img.hotice.site/icones_channels/SporTV2_HD.png" group-title="⚽ SPORTV",SPORTV 02 FHD
+#EXTINF:-1 tvg-id="br#sportv2-hd" tvg-name="SPORTV 02 FHD" tvg-logo="https://img.hotice.site/icones_channels/SporTV2_HD.png" group-title="02⚽ SPORTV",SPORTV 02 FHD
 http://enegf3.dynamic-router-backend-net.site:80/Anonymous100/Hacker100/4231859
-#EXTINF:-1 tvg-id="br#sportv2-hd" tvg-name="SPORTV 02 HD" tvg-logo="https://img.hotice.site/icones_channels/SporTV2_HD.png" group-title="⚽ SPORTV",SPORTV 02 HD
+#EXTINF:-1 tvg-id="br#sportv2-hd" tvg-name="SPORTV 02 HD" tvg-logo="https://img.hotice.site/icones_channels/SporTV2_HD.png" group-title="02⚽ SPORTV",SPORTV 02 HD
 http://enegf3.dynamic-router-backend-net.site:80/Anonymous100/Hacker100/4231860
-#EXTINF:-1 tvg-id="br#sportv2-hd" tvg-name="SPORTV 02 SD" tvg-logo="https://img.hotice.site/icones_channels/SporTV2_HD.png" group-title="⚽ SPORTV",SPORTV 02 SD
+#EXTINF:-1 tvg-id="br#sportv2-hd" tvg-name="SPORTV 02 SD" tvg-logo="https://img.hotice.site/icones_channels/SporTV2_HD.png" group-title="02⚽ SPORTV",SPORTV 02 SD
 http://enegf3.dynamic-router-backend-net.site:80/Anonymous100/Hacker100/4231862
-#EXTINF:-1 tvg-id="SporTV3.br" tvg-name="SPORTV 03 4K" tvg-logo="https://img.hotice.site/icones_channels/Sport_TV_3.png" group-title="⭐ 4K",SPORTV 03 4K
+#EXTINF:-1 tvg-id="SporTV3.br" tvg-name="SPORTV 03 4K" tvg-logo="https://img.hotice.site/icones_channels/Sport_TV_3.png" group-title="02⭐ 4K",SPORTV 03 4K
 http://enegf3.dynamic-router-backend-net.site:80/Anonymous100/Hacker100/4231863
-#EXTINF:-1 tvg-id="br#sportv3-hd" tvg-name="SPORTV 03 FHD" tvg-logo="https://img.hotice.site/icones_channels/SporTV3_HD.png" group-title="⚽ SPORTV",SPORTV 03 FHD
+#EXTINF:-1 tvg-id="br#sportv3-hd" tvg-name="SPORTV 03 FHD" tvg-logo="https://img.hotice.site/icones_channels/SporTV3_HD.png" group-title="02⚽ SPORTV",SPORTV 03 FHD
 http://enegf3.dynamic-router-backend-net.site:80/Anonymous100/Hacker100/4231864
-#EXTINF:-1 tvg-id="br#sportv3-hd" tvg-name="SPORTV 03 HD" tvg-logo="https://img.hotice.site/icones_channels/SporTV3_HD.png" group-title="⚽ SPORTV",SPORTV 03 HD
+#EXTINF:-1 tvg-id="br#sportv3-hd" tvg-name="SPORTV 03 HD" tvg-logo="https://img.hotice.site/icones_channels/SporTV3_HD.png" group-title="02⚽ SPORTV",SPORTV 03 HD
 http://enegf3.dynamic-router-backend-net.site:80/Anonymous100/Hacker100/4231865
-#EXTINF:-1 tvg-id="br#sportv3-hd" tvg-name="SPORTV 03 SD" tvg-logo="https://img.hotice.site/icones_channels/SporTV3_HD.png" group-title="⚽ SPORTV",SPORTV 03 SD
+#EXTINF:-1 tvg-id="br#sportv3-hd" tvg-name="SPORTV 03 SD" tvg-logo="https://img.hotice.site/icones_channels/SporTV3_HD.png" group-title="02⚽ SPORTV",SPORTV 03 SD
 http://enegf3.dynamic-router-backend-net.site:80/Anonymous100/Hacker100/4231866
-#EXTINF:-1 tvg-id="br#tnt-hd" tvg-name="TNT SPORTS 01 HD" tvg-logo="https://img.inboxbr.pro/icones_channels/estadio-tnt-sports.png" group-title="⚽ MAX-TNT SPORTS",TNT SPORTS 01 HD
+#EXTINF:-1 tvg-id="br#tnt-hd" tvg-name="TNT SPORTS 01 HD" tvg-logo="https://img.inboxbr.pro/icones_channels/estadio-tnt-sports.png" group-title="02⚽ MAX-TNT SPORTS",TNT SPORTS 01 HD
 http://enegf3.dynamic-router-backend-net.site:80/Anonymous100/Hacker100/4231917
-#EXTINF:-1 tvg-id="br#tnt-hd" tvg-name="TNT SPORTS 02 HD" tvg-logo="https://img.inboxbr.pro/icones_channels/estadio-tnt-sports.png" group-title="⚽ MAX-TNT SPORTS",TNT SPORTS 02 HD
+#EXTINF:-1 tvg-id="br#tnt-hd" tvg-name="TNT SPORTS 02 HD" tvg-logo="https://img.inboxbr.pro/icones_channels/estadio-tnt-sports.png" group-title="02⚽ MAX-TNT SPORTS",TNT SPORTS 02 HD
 http://enegf3.dynamic-router-backend-net.site:80/Anonymous100/Hacker100/4231918
-#EXTINF:-1 tvg-id="" tvg-name="TNT SPORTS 03 HD" tvg-logo="https://img.inboxbr.pro/icones_channels/estadio-tnt-sports.png" group-title="⚽ MAX-TNT SPORTS",TNT SPORTS 03 HD
+#EXTINF:-1 tvg-id="" tvg-name="TNT SPORTS 03 HD" tvg-logo="https://img.inboxbr.pro/icones_channels/estadio-tnt-sports.png" group-title="02⚽ MAX-TNT SPORTS",TNT SPORTS 03 HD
 http://enegf3.dynamic-router-backend-net.site:80/Anonymous100/Hacker100/4231919
-#EXTINF:-1 tvg-id="" tvg-name="UFC FIGHT PASS 01 HD  (AO VIVO)" tvg-logo="https://img.hotice.site/icones_channels/UFC_Fight_Pass_2.png" group-title="✊ COMBATE UFC",UFC FIGHT PASS 01 HD  (AO VIVO)
+#EXTINF:-1 tvg-id="" tvg-name="UFC FIGHT PASS 01 HD  (AO VIVO)" tvg-logo="https://img.hotice.site/icones_channels/UFC_Fight_Pass_2.png" group-title="02✊ COMBATE UFC",UFC FIGHT PASS 01 HD  (AO VIVO)
 http://enegf3.dynamic-router-backend-net.site:80/Anonymous100/Hacker100/4231933
-#EXTINF:-1 tvg-id="" tvg-name="UFC FIGHT PASS 02 HD (AO VIVO)" tvg-logo="https://img.hotice.site/icones_channels/UFC_Fight_Pass_2.png" group-title="✊ COMBATE UFC",UFC FIGHT PASS 02 HD (AO VIVO)
+#EXTINF:-1 tvg-id="" tvg-name="UFC FIGHT PASS 02 HD (AO VIVO)" tvg-logo="https://img.hotice.site/icones_channels/UFC_Fight_Pass_2.png" group-title="02✊ COMBATE UFC",UFC FIGHT PASS 02 HD (AO VIVO)
 http://enegf3.dynamic-router-backend-net.site:80/Anonymous100/Hacker100/4231934
+#EXTINF:-1 tvg-id="" tvg-name="ALL SPORTS HD¹" tvg-logo="http://7logos.top/logos/allsportshd.png" group-title="CANAIS | ESPORTES PAY PER VIEW",ALL SPORTS HD¹
+http://trabalho724.top:8080/carmem01/22carmem22/295486
+#EXTINF:-1 tvg-id="" tvg-name="APPLE TV 01 HD¹" tvg-logo="http://7logos.top/logos/appletvhd.png" group-title="CANAIS | ESPORTES PAY PER VIEW",APPLE TV 01 HD¹
+http://trabalho724.top:8080/carmem01/22carmem22/320632
+#EXTINF:-1 tvg-id="" tvg-name="APPLE TV 02 HD¹" tvg-logo="http://7logos.top/logos/appletvhd.png" group-title="CANAIS | ESPORTES PAY PER VIEW",APPLE TV 02 HD¹
+http://trabalho724.top:8080/carmem01/22carmem22/320633
+#EXTINF:-1 tvg-id="" tvg-name="APPLE TV 03 HD¹" tvg-logo="http://7logos.top/logos/appletvhd.png" group-title="CANAIS | ESPORTES PAY PER VIEW",APPLE TV 03 HD¹
+http://trabalho724.top:8080/carmem01/22carmem22/320634
+#EXTINF:-1 tvg-id="" tvg-name="APPLE TV 04 HD¹" tvg-logo="http://7logos.top/logos/appletvhd.png" group-title="CANAIS | ESPORTES PAY PER VIEW",APPLE TV 04 HD¹
+http://trabalho724.top:8080/carmem01/22carmem22/320635
+#EXTINF:-1 tvg-id="" tvg-name="CAZE TV 1 FHD¹" tvg-logo="http://7logos.top/logos/cazetvfhd.png" group-title="CANAIS | ESPORTES PAY PER VIEW",CAZE TV 1 FHD¹
+http://trabalho724.top:8080/carmem01/22carmem22/320640
+#EXTINF:-1 tvg-id="" tvg-name="CAZE TV 1 HD²" tvg-logo="http://7logos.top/logos/cazetvhd.png" group-title="CANAIS | ESPORTES PAY PER VIEW",CAZE TV 1 HD²
+http://trabalho724.top:8080/carmem01/22carmem22/327185
+#EXTINF:-1 tvg-id="" tvg-name="CAZE TV 1 HD²" tvg-logo="http://7logos.top/logos/cazetvhd.png" group-title="CANAIS | ESPORTES PAY PER VIEW",CAZE TV 1 HD²
+http://trabalho724.top:8080/carmem01/22carmem22/327186
+#EXTINF:-1 tvg-id="" tvg-name="CAZE TV 2 FHD¹" tvg-logo="http://7logos.top/logos/cazetvfhd.png" group-title="CANAIS | ESPORTES PAY PER VIEW",CAZE TV 2 FHD¹
+http://trabalho724.top:8080/carmem01/22carmem22/320641
+#EXTINF:-1 tvg-id="" tvg-name="CAZE TV 3 FHD¹" tvg-logo="http://7logos.top/logos/cazetvfhd.png" group-title="CANAIS | ESPORTES PAY PER VIEW",CAZE TV 3 FHD¹
+http://trabalho724.top:8080/carmem01/22carmem22/320642
+#EXTINF:-1 tvg-id="" tvg-name="CAZE TV 3 HD²" tvg-logo="http://7logos.top/logos/cazetvhd.png" group-title="CANAIS | ESPORTES PAY PER VIEW",CAZE TV 3 HD²
+http://trabalho724.top:8080/carmem01/22carmem22/327187
+#EXTINF:-1 tvg-id="" tvg-name="DIRECT TV GO SPORTS HD¹" tvg-logo="http://7logos.top/logos/directgohd.png" group-title="CANAIS | ESPORTES PAY PER VIEW",DIRECT TV GO SPORTS HD¹
+http://trabalho724.top:8080/carmem01/22carmem22/311394
+#EXTINF:-1 tvg-id="" tvg-name="ELEVEN SPORTS 1 HD¹" tvg-logo="http://7logos.top/logos/elevensportshd.png" group-title="CANAIS | ESPORTES PAY PER VIEW",ELEVEN SPORTS 1 HD¹
+http://trabalho724.top:8080/carmem01/22carmem22/64663
+#EXTINF:-1 tvg-id="" tvg-name="ELEVEN SPORTS 1 HD²" tvg-logo="http://7logos.top/logos/elevensportshd.png" group-title="CANAIS | ESPORTES PAY PER VIEW",ELEVEN SPORTS 1 HD²
+http://trabalho724.top:8080/carmem01/22carmem22/55339
+#EXTINF:-1 tvg-id="" tvg-name="ELEVEN SPORTS 2 HD¹" tvg-logo="http://7logos.top/logos/elevensportshd.png" group-title="CANAIS | ESPORTES PAY PER VIEW",ELEVEN SPORTS 2 HD¹
+http://trabalho724.top:8080/carmem01/22carmem22/64664
+#EXTINF:-1 tvg-id="" tvg-name="ELEVEN SPORTS 2 HD²" tvg-logo="http://7logos.top/logos/elevensportshd.png" group-title="CANAIS | ESPORTES PAY PER VIEW",ELEVEN SPORTS 2 HD²
+http://trabalho724.top:8080/carmem01/22carmem22/55350
+#EXTINF:-1 tvg-id="" tvg-name="ELEVEN SPORTS 3 HD¹" tvg-logo="http://7logos.top/logos/elevensportshd.png" group-title="CANAIS | ESPORTES PAY PER VIEW",ELEVEN SPORTS 3 HD¹
+http://trabalho724.top:8080/carmem01/22carmem22/64665
+#EXTINF:-1 tvg-id="" tvg-name="ELEVEN SPORTS 3 HD²" tvg-logo="http://7logos.top/logos/elevensportshd.png" group-title="CANAIS | ESPORTES PAY PER VIEW",ELEVEN SPORTS 3 HD²
+http://trabalho724.top:8080/carmem01/22carmem22/55351
+#EXTINF:-1 tvg-id="" tvg-name="ELEVEN SPORTS 4 HD¹" tvg-logo="http://7logos.top/logos/elevensportshd.png" group-title="CANAIS | ESPORTES PAY PER VIEW",ELEVEN SPORTS 4 HD¹
+http://trabalho724.top:8080/carmem01/22carmem22/64666
+#EXTINF:-1 tvg-id="" tvg-name="ELEVEN SPORTS 4 HD²" tvg-logo="http://7logos.top/logos/elevensportshd.png" group-title="CANAIS | ESPORTES PAY PER VIEW",ELEVEN SPORTS 4 HD²
+http://trabalho724.top:8080/carmem01/22carmem22/55352
+#EXTINF:-1 tvg-id="" tvg-name="ELEVEN SPORTS 5 HD¹" tvg-logo="http://7logos.top/logos/elevensportshd.png" group-title="CANAIS | ESPORTES PAY PER VIEW",ELEVEN SPORTS 5 HD¹
+http://trabalho724.top:8080/carmem01/22carmem22/64667
+#EXTINF:-1 tvg-id="" tvg-name="ELEVEN SPORTS 5 HD²" tvg-logo="http://7logos.top/logos/elevensportshd.png" group-title="CANAIS | ESPORTES PAY PER VIEW",ELEVEN SPORTS 5 HD²
+http://trabalho724.top:8080/carmem01/22carmem22/55353
+#EXTINF:-1 tvg-id="" tvg-name="ELEVEN SPORTS 6 HD¹" tvg-logo="http://7logos.top/logos/elevensportshd.png" group-title="CANAIS | ESPORTES PAY PER VIEW",ELEVEN SPORTS 6 HD¹
+http://trabalho724.top:8080/carmem01/22carmem22/64668
+#EXTINF:-1 tvg-id="" tvg-name="ELEVEN SPORTS 6 HD²" tvg-logo="http://7logos.top/logos/elevensportshd.png" group-title="CANAIS | ESPORTES PAY PER VIEW",ELEVEN SPORTS 6 HD²
+http://trabalho724.top:8080/carmem01/22carmem22/55354
+#EXTINF:-1 tvg-id="" tvg-name="ELEVEN SPORTS 7 HD¹" tvg-logo="http://7logos.top/logos/elevensportshd.png" group-title="CANAIS | ESPORTES PAY PER VIEW",ELEVEN SPORTS 7 HD¹
+http://trabalho724.top:8080/carmem01/22carmem22/64669
+#EXTINF:-1 tvg-id="" tvg-name="ELEVEN SPORTS 7 HD²" tvg-logo="http://7logos.top/logos/elevensportshd.png" group-title="CANAIS | ESPORTES PAY PER VIEW",ELEVEN SPORTS 7 HD²
+http://trabalho724.top:8080/carmem01/22carmem22/55355
+#EXTINF:-1 tvg-id="" tvg-name="ELEVEN SPORTS 8 HD¹" tvg-logo="http://7logos.top/logos/elevensportshd.png" group-title="CANAIS | ESPORTES PAY PER VIEW",ELEVEN SPORTS 8 HD¹
+http://trabalho724.top:8080/carmem01/22carmem22/64670
+#EXTINF:-1 tvg-id="" tvg-name="ELEVEN SPORTS 8 HD²" tvg-logo="http://7logos.top/logos/elevensportshd.png" group-title="CANAIS | ESPORTES PAY PER VIEW",ELEVEN SPORTS 8 HD²
+http://trabalho724.top:8080/carmem01/22carmem22/55356
+#EXTINF:-1 tvg-id="" tvg-name="ELEVEN SPORTS 9 HD¹" tvg-logo="http://7logos.top/logos/elevensportshd.png" group-title="CANAIS | ESPORTES PAY PER VIEW",ELEVEN SPORTS 9 HD¹
+http://trabalho724.top:8080/carmem01/22carmem22/64671
+#EXTINF:-1 tvg-id="" tvg-name="ELEVEN SPORTS 9 HD²" tvg-logo="http://7logos.top/logos/elevensportshd.png" group-title="CANAIS | ESPORTES PAY PER VIEW",ELEVEN SPORTS 9 HD²
+http://trabalho724.top:8080/carmem01/22carmem22/55357
+#EXTINF:-1 tvg-id="" tvg-name="ELEVEN SPORTS 10 HD¹" tvg-logo="http://7logos.top/logos/elevensportshd.png" group-title="CANAIS | ESPORTES PAY PER VIEW",ELEVEN SPORTS 10 HD¹
+http://trabalho724.top:8080/carmem01/22carmem22/64672
+#EXTINF:-1 tvg-id="" tvg-name="ELEVEN SPORTS 10 HD²" tvg-logo="http://7logos.top/logos/elevensportshd.png" group-title="CANAIS | ESPORTES PAY PER VIEW",ELEVEN SPORTS 10 HD²
+http://trabalho724.top:8080/carmem01/22carmem22/55340
+#EXTINF:-1 tvg-id="" tvg-name="ELEVEN SPORTS 11 HD¹" tvg-logo="http://7logos.top/logos/elevensportshd.png" group-title="CANAIS | ESPORTES PAY PER VIEW",ELEVEN SPORTS 11 HD¹
+http://trabalho724.top:8080/carmem01/22carmem22/55341
+#EXTINF:-1 tvg-id="" tvg-name="ELEVEN SPORTS 12 HD¹" tvg-logo="http://7logos.top/logos/elevensportshd.png" group-title="CANAIS | ESPORTES PAY PER VIEW",ELEVEN SPORTS 12 HD¹
+http://trabalho724.top:8080/carmem01/22carmem22/55342
+#EXTINF:-1 tvg-id="" tvg-name="ELEVEN SPORTS 13 HD¹" tvg-logo="http://7logos.top/logos/elevensportshd.png" group-title="CANAIS | ESPORTES PAY PER VIEW",ELEVEN SPORTS 13 HD¹
+http://trabalho724.top:8080/carmem01/22carmem22/55343
+#EXTINF:-1 tvg-id="" tvg-name="ELEVEN SPORTS 14 HD¹" tvg-logo="http://7logos.top/logos/elevensportshd.png" group-title="CANAIS | ESPORTES PAY PER VIEW",ELEVEN SPORTS 14 HD¹
+http://trabalho724.top:8080/carmem01/22carmem22/55344
+#EXTINF:-1 tvg-id="" tvg-name="ELEVEN SPORTS 15 HD¹" tvg-logo="http://7logos.top/logos/elevensportshd.png" group-title="CANAIS | ESPORTES PAY PER VIEW",ELEVEN SPORTS 15 HD¹
+http://trabalho724.top:8080/carmem01/22carmem22/55345
+#EXTINF:-1 tvg-id="" tvg-name="ELEVEN SPORTS 16 HD¹" tvg-logo="http://7logos.top/logos/elevensportshd.png" group-title="CANAIS | ESPORTES PAY PER VIEW",ELEVEN SPORTS 16 HD¹
+http://trabalho724.top:8080/carmem01/22carmem22/55346
+#EXTINF:-1 tvg-id="" tvg-name="ELEVEN SPORTS 17 HD¹" tvg-logo="http://7logos.top/logos/elevensportshd.png" group-title="CANAIS | ESPORTES PAY PER VIEW",ELEVEN SPORTS 17 HD¹
+http://trabalho724.top:8080/carmem01/22carmem22/55347
+#EXTINF:-1 tvg-id="" tvg-name="ELEVEN SPORTS 18 HD¹" tvg-logo="http://7logos.top/logos/elevensportshd.png" group-title="CANAIS | ESPORTES PAY PER VIEW",ELEVEN SPORTS 18 HD¹
+http://trabalho724.top:8080/carmem01/22carmem22/55348
+#EXTINF:-1 tvg-id="" tvg-name="ELEVEN SPORTS 19 HD¹" tvg-logo="http://7logos.top/logos/elevensportshd.png" group-title="CANAIS | ESPORTES PAY PER VIEW",ELEVEN SPORTS 19 HD¹
+http://trabalho724.top:8080/carmem01/22carmem22/55349
+#EXTINF:-1 tvg-id="" tvg-name="FLA TV HD²" tvg-logo="http://7logos.top/logos/flatvhd.png" group-title="CANAIS | ESPORTES PAY PER VIEW",FLA TV HD²
+http://trabalho724.top:8080/carmem01/22carmem22/70900
+#EXTINF:-1 tvg-id="" tvg-name="FURACAO LIVE HD" tvg-logo="http://7logos.top/logos/furacaolivehd.png" group-title="CANAIS | ESPORTES PAY PER VIEW",FURACAO LIVE HD
+http://trabalho724.top:8080/carmem01/22carmem22/167949
+#EXTINF:-1 tvg-id="" tvg-name="FURACAO LIVE HD¹" tvg-logo="http://7logos.top/logos/furacaolivehd.png" group-title="CANAIS | ESPORTES PAY PER VIEW",FURACAO LIVE HD¹
+http://trabalho724.top:8080/carmem01/22carmem22/59655
+#EXTINF:-1 tvg-id="" tvg-name="FURACAO LIVE HD²" tvg-logo="http://7logos.top/logos/furacaolivehd.png" group-title="CANAIS | ESPORTES PAY PER VIEW",FURACAO LIVE HD²
+http://trabalho724.top:8080/carmem01/22carmem22/58740
+#EXTINF:-1 tvg-id="" tvg-name="FORMULA 1 HD²" tvg-logo="http://7logos.top/logos/formula1hd.png" group-title="CANAIS | ESPORTES PAY PER VIEW",FORMULA 1 HD²
+http://trabalho724.top:8080/carmem01/22carmem22/70897
+#EXTINF:-1 tvg-id="" tvg-name="GLOBOPLAY+ FUTEBOL 1 HD¹" tvg-logo="http://7logos.top/logos/globoplayhd.png" group-title="CANAIS | ESPORTES PAY PER VIEW",GLOBOPLAY+ FUTEBOL 1 HD¹
+http://trabalho724.top:8080/carmem01/22carmem22/301261
+#EXTINF:-1 tvg-id="" tvg-name="GLOBOPLAY+ FUTEBOL 2 HD¹" tvg-logo="http://7logos.top/logos/globoplayhd.png" group-title="CANAIS | ESPORTES PAY PER VIEW",GLOBOPLAY+ FUTEBOL 2 HD¹
+http://trabalho724.top:8080/carmem01/22carmem22/301262
+#EXTINF:-1 tvg-id="" tvg-name="GOAT 01 HD¹" tvg-logo="http://7logos.top/logos/goathd.png" group-title="CANAIS | ESPORTES PAY PER VIEW",GOAT 01 HD¹
+http://trabalho724.top:8080/carmem01/22carmem22/320629
+#EXTINF:-1 tvg-id="" tvg-name="GOAT 01 HD²" tvg-logo="http://7logos.top/logos/goathd.png" group-title="CANAIS | ESPORTES PAY PER VIEW",GOAT 01 HD²
+http://trabalho724.top:8080/carmem01/22carmem22/318562
+#EXTINF:-1 tvg-id="" tvg-name="GOAT 02 HD¹" tvg-logo="http://7logos.top/logos/goathd.png" group-title="CANAIS | ESPORTES PAY PER VIEW",GOAT 02 HD¹
+http://trabalho724.top:8080/carmem01/22carmem22/320630
+#EXTINF:-1 tvg-id="" tvg-name="GOAT 02 HD²" tvg-logo="http://7logos.top/logos/goathd.png" group-title="CANAIS | ESPORTES PAY PER VIEW",GOAT 02 HD²
+http://trabalho724.top:8080/carmem01/22carmem22/327228
+#EXTINF:-1 tvg-id="" tvg-name="GOAT 03 HD¹" tvg-logo="http://7logos.top/logos/goathd.png" group-title="CANAIS | ESPORTES PAY PER VIEW",GOAT 03 HD¹
+http://trabalho724.top:8080/carmem01/22carmem22/320631
+#EXTINF:-1 tvg-id="" tvg-name="GOAT 03 HD²" tvg-logo="http://7logos.top/logos/goathd.png" group-title="CANAIS | ESPORTES PAY PER VIEW",GOAT 03 HD²
+http://trabalho724.top:8080/carmem01/22carmem22/327229
+#EXTINF:-1 tvg-id="" tvg-name="GOAT 04 HD²" tvg-logo="http://7logos.top/logos/goathd.png" group-title="CANAIS | ESPORTES PAY PER VIEW",GOAT 04 HD²
+http://trabalho724.top:8080/carmem01/22carmem22/327230
+#EXTINF:-1 tvg-id="" tvg-name="KINGPYN BOXE HD¹" tvg-logo="http://7logos.top/logos/kingpynhd.png" group-title="CANAIS | ESPORTES PAY PER VIEW",KINGPYN BOXE HD¹
+http://trabalho724.top:8080/carmem01/22carmem22/311392
+#EXTINF:-1 tvg-id="" tvg-name="KINGPYN BOXE HD²" tvg-logo="http://7logos.top/logos/kingpynhd.png" group-title="CANAIS | ESPORTES PAY PER VIEW",KINGPYN BOXE HD²
+http://trabalho724.top:8080/carmem01/22carmem22/311393
+#EXTINF:-1 tvg-id="" tvg-name="LIGA FUTSAL HD¹" tvg-logo="http://7logos.top/logos/ligafutsalhd.png" group-title="CANAIS | ESPORTES PAY PER VIEW",LIGA FUTSAL HD¹
+http://trabalho724.top:8080/carmem01/22carmem22/52763
+#EXTINF:-1 tvg-id="" tvg-name="LIGA FUTSAL HD²" tvg-logo="http://7logos.top/logos/ligafutsalhd.png" group-title="CANAIS | ESPORTES PAY PER VIEW",LIGA FUTSAL HD²
+http://trabalho724.top:8080/carmem01/22carmem22/64673
+#EXTINF:-1 tvg-id="" tvg-name="LIGA FUTSAL SD¹" tvg-logo="http://7logos.top/logos/ligafutsalsd.png" group-title="CANAIS | ESPORTES PAY PER VIEW",LIGA FUTSAL SD¹
+http://trabalho724.top:8080/carmem01/22carmem22/53246
+#EXTINF:-1 tvg-id="" tvg-name="LIGA FUTSAL 2 SD¹" tvg-logo="https://7vnx.xyz/logos/ligafutsalsd.png" group-title="CANAIS | ESPORTES PAY PER VIEW",LIGA FUTSAL 2 SD¹
+http://trabalho724.top:8080/carmem01/22carmem22/52765
+#EXTINF:-1 tvg-id="" tvg-name="LIGA FUTSAL 2 HD¹" tvg-logo="http://7logos.top/logos/ligafutsalhd.png" group-title="CANAIS | ESPORTES PAY PER VIEW",LIGA FUTSAL 2 HD¹
+http://trabalho724.top:8080/carmem01/22carmem22/52764
+#EXTINF:-1 tvg-id="" tvg-name="MISTER OLYMPIA 2025 HD²" tvg-logo="http://7logos.top/logos/mrolympiahd.png" group-title="CANAIS | ESPORTES PAY PER VIEW",MISTER OLYMPIA 2025 HD²
+http://trabalho724.top:8080/carmem01/22carmem22/277338
+#EXTINF:-1 tvg-id="" tvg-name="MLS - MAJOR LEAGUE SOCCER HD²" tvg-logo="http://7logos.top/logos/mlshd.png" group-title="CANAIS | ESPORTES PAY PER VIEW",MLS - MAJOR LEAGUE SOCCER HD²
+http://trabalho724.top:8080/carmem01/22carmem22/316493
+#EXTINF:-1 tvg-id="" tvg-name="NSPORTS 1 HD²" tvg-logo="http://7logos.top/logos/nsportshd.png" group-title="CANAIS | ESPORTES PAY PER VIEW",NSPORTS 1 HD²
+http://trabalho724.top:8080/carmem01/22carmem22/70905
+#EXTINF:-1 tvg-id="" tvg-name="NSPORTS 2 HD²" tvg-logo="http://7logos.top/logos/nsportshd.png" group-title="CANAIS | ESPORTES PAY PER VIEW",NSPORTS 2 HD²
+http://trabalho724.top:8080/carmem01/22carmem22/70906
+#EXTINF:-1 tvg-id="" tvg-name="NSPORTS 3 HD²" tvg-logo="http://7logos.top/logos/nsportshd.png" group-title="CANAIS | ESPORTES PAY PER VIEW",NSPORTS 3 HD²
+http://trabalho724.top:8080/carmem01/22carmem22/70907
+#EXTINF:-1 tvg-id="" tvg-name="ONEFOOTBALL 1 HD¹" tvg-logo="http://7logos.top/logos/onefootballhd.png" group-title="CANAIS | ESPORTES PAY PER VIEW",ONEFOOTBALL 1 HD¹
+http://trabalho724.top:8080/carmem01/22carmem22/320636
+#EXTINF:-1 tvg-id="" tvg-name="ONEFOOTBALL 2 HD¹" tvg-logo="http://7logos.top/logos/onefootballhd.png" group-title="CANAIS | ESPORTES PAY PER VIEW",ONEFOOTBALL 2 HD¹
+http://trabalho724.top:8080/carmem01/22carmem22/320637
+#EXTINF:-1 tvg-id="" tvg-name="ONEFOOTBALL 3 HD¹" tvg-logo="http://7logos.top/logos/onefootballhd.png" group-title="CANAIS | ESPORTES PAY PER VIEW",ONEFOOTBALL 3 HD¹
+http://trabalho724.top:8080/carmem01/22carmem22/320638
+#EXTINF:-1 tvg-id="" tvg-name="ONEFOOTBALL 4 HD¹" tvg-logo="http://7logos.top/logos/onefootballhd.png" group-title="CANAIS | ESPORTES PAY PER VIEW",ONEFOOTBALL 4 HD¹
+http://trabalho724.top:8080/carmem01/22carmem22/320639
+#EXTINF:-1 tvg-id="" tvg-name="RODEIO INTERNACIONAL HD²" tvg-logo="http://7logos.top/logos/pbrteamshd.png" group-title="CANAIS | ESPORTES PAY PER VIEW",RODEIO INTERNACIONAL HD²
+http://trabalho724.top:8080/carmem01/22carmem22/274280
+#EXTINF:-1 tvg-id="" tvg-name="VÔLEI BRASIL HD²" tvg-logo="http://7logos.top/logos/voleibrasilhd.png" group-title="CANAIS | ESPORTES PAY PER VIEW",VÔLEI BRASIL HD²
+http://trabalho724.top:8080/carmem01/22carmem22/274279
+#EXTINF:-1 tvg-id="" tvg-name="ZAPPING BRASILEIRÃO (SÉRIE C) 01 HD¹" tvg-logo="http://7logos.top/logos/zappinghd.png" group-title="CANAIS | ESPORTES PAY PER VIEW",ZAPPING BRASILEIRÃO (SÉRIE C) 01 HD¹
+http://trabalho724.top:8080/carmem01/22carmem22/332234
+#EXTINF:-1 tvg-id="" tvg-name="ZAPPING BRASILEIRÃO (SÉRIE C) 01 HD²" tvg-logo="http://7logos.top/logos/zappinghd.png" group-title="CANAIS | ESPORTES PAY PER VIEW",ZAPPING BRASILEIRÃO (SÉRIE C) 01 HD²
+http://trabalho724.top:8080/carmem01/22carmem22/332236
+#EXTINF:-1 tvg-id="" tvg-name="ZAPPING BRASILEIRÃO (SÉRIE C) 02 HD¹" tvg-logo="http://7logos.top/logos/zappinghd.png" group-title="CANAIS | ESPORTES PAY PER VIEW",ZAPPING BRASILEIRÃO (SÉRIE C) 02 HD¹
+http://trabalho724.top:8080/carmem01/22carmem22/332235
+#EXTINF:-1 tvg-id="paramount.br" tvg-name="PARAMOUNT FHD¹" tvg-logo="http://7logos.top/logos/paramountnetworkfhd.png" group-title="CANAIS | FILMES E SÉRIES",PARAMOUNT FHD¹
+http://trabalho724.top:8080/carmem01/22carmem22/45208
+#EXTINF:-1 tvg-id="paramount.br" tvg-name="PARAMOUNT FHD²" tvg-logo="http://7logos.top/logos/paramountnetworkfhd.png" group-title="CANAIS | FILMES E SÉRIES",PARAMOUNT FHD²
+http://trabalho724.top:8080/carmem01/22carmem22/22698
+#EXTINF:-1 tvg-id="paramount.br" tvg-name="PARAMOUNT HD¹" tvg-logo="http://7logos.top/logos/paramountnetworkhd.png" group-title="CANAIS | FILMES E SÉRIES",PARAMOUNT HD¹
+http://trabalho724.top:8080/carmem01/22carmem22/18852
+#EXTINF:-1 tvg-id="paramount.br" tvg-name="PARAMOUNT HD²" tvg-logo="http://7logos.top/logos/paramountnetworkhd.png" group-title="CANAIS | FILMES E SÉRIES",PARAMOUNT HD²
+http://trabalho724.top:8080/carmem01/22carmem22/22595
+#EXTINF:-1 tvg-id="paramount.br" tvg-name="PARAMOUNT SD¹" tvg-logo="http://7logos.top/logos/paramountnetworksd.png" group-title="CANAIS | FILMES E SÉRIES",PARAMOUNT SD¹
+http://trabalho724.top:8080/carmem01/22carmem22/18756
+#EXTINF:-1 tvg-id="paramount.br" tvg-name="PARAMOUNT SD²" tvg-logo="http://7logos.top/logos/paramountnetworksd.png" group-title="CANAIS | FILMES E SÉRIES",PARAMOUNT SD²
+http://trabalho724.top:8080/carmem01/22carmem22/22374
+#EXTINF:-1 tvg-id="fishtv.br" tvg-name="FISH TV FHD¹" tvg-logo="http://7logos.top/logos/fishtvfhd.png" group-title="CANAIS | ESPORTES GERAL",FISH TV FHD¹
+http://trabalho724.top:8080/carmem01/22carmem22/45223
+#EXTINF:-1 tvg-id="fishtv.br" tvg-name="FISH TV HD¹" tvg-logo="http://7logos.top/logos/fishtvhd.png" group-title="CANAIS | ESPORTES GERAL",FISH TV HD¹
+http://trabalho724.top:8080/carmem01/22carmem22/18665
+#EXTINF:-1 tvg-id="fishtv.br" tvg-name="FISH TV SD¹" tvg-logo="http://7logos.top/logos/fishtvsd.png" group-title="CANAIS | ESPORTES GERAL",FISH TV SD¹
+http://trabalho724.top:8080/carmem01/22carmem22/18677
+#EXTINF:-1 tvg-id="fishtv.br" tvg-name="FISH TV SD²" tvg-logo="http://7logos.top/logos/fishtvsd.png" group-title="CANAIS | ESPORTES GERAL",FISH TV SD²
+http://trabalho724.top:8080/carmem01/22carmem22/22337
+#EXTINF:-1 tvg-id="bandsports.br" tvg-name="BAND SPORTS FHD¹" tvg-logo="http://7logos.top/logos/bandsportsfhd.png" group-title="CANAIS | ESPORTES GERAL",BAND SPORTS FHD¹
+http://trabalho724.top:8080/carmem01/22carmem22/18637
+#EXTINF:-1 tvg-id="bandsports.br" tvg-name="BAND SPORTS FHD²" tvg-logo="http://7logos.top/logos/bandsportsfhd.png" group-title="CANAIS | ESPORTES GERAL",BAND SPORTS FHD²
+http://trabalho724.top:8080/carmem01/22carmem22/64654
+#EXTINF:-1 tvg-id="bandsports.br" tvg-name="BAND SPORTS HD¹" tvg-logo="http://7logos.top/logos/bandsportshd.png" group-title="CANAIS | ESPORTES GERAL",BAND SPORTS HD¹
+http://trabalho724.top:8080/carmem01/22carmem22/18623
+#EXTINF:-1 tvg-id="band.br" tvg-name="BAND SPORTS HD²" tvg-logo="http://7logos.top/logos/bandsportshd.png" group-title="CANAIS | ESPORTES GERAL",BAND SPORTS HD²
+http://trabalho724.top:8080/carmem01/22carmem22/22465
+#EXTINF:-1 tvg-id="bandsports.br" tvg-name="BAND SPORTS SD¹" tvg-logo="http://7logos.top/logos/bandsportssd.png" group-title="CANAIS | ESPORTES GERAL",BAND SPORTS SD¹
+http://trabalho724.top:8080/carmem01/22carmem22/18640
+#EXTINF:-1 tvg-id="bandsports.br" tvg-name="BAND SPORTS SD²" tvg-logo="http://7logos.top/logos/bandsportssd.png" group-title="CANAIS | ESPORTES GERAL",BAND SPORTS SD²
+http://trabalho724.top:8080/carmem01/22carmem22/22410
+#EXTINF:-1 tvg-id="" tvg-name="FIFA+ HD*" tvg-logo="http://7logos.top/logos/fifaplushd.png" group-title="CANAIS | ESPORTES GERAL",FIFA+ HD*
+http://trabalho724.top:8080/carmem01/22carmem22/325908
+#EXTINF:-1 tvg-id="" tvg-name="HARD KNOCKS FIGHTING CHAMPIONSHIP HD*" tvg-logo="http://7logos.top/logos/hardknocksfightinghd.png" group-title="CANAIS | ESPORTES GERAL",HARD KNOCKS FIGHTING CHAMPIONSHIP HD*
+http://trabalho724.top:8080/carmem01/22carmem22/325909
+#EXTINF:-1 tvg-id="" tvg-name="GLORY KICKBOXING HD*" tvg-logo="http://7logos.top/logos/glorykickboxinghd.png" group-title="CANAIS | ESPORTES GERAL",GLORY KICKBOXING HD*
+http://trabalho724.top:8080/carmem01/22carmem22/325910
+#EXTINF:-1 tvg-id="" tvg-name="WORLD BILLIARDS TV HD*" tvg-logo="http://7logos.top/logos/worldbilliardhd.png" group-title="CANAIS | ESPORTES GERAL",WORLD BILLIARDS TV HD*
+http://trabalho724.top:8080/carmem01/22carmem22/325911
+#EXTINF:-1 tvg-id="off.br" tvg-name="OFF FHD MAX²" tvg-logo="http://7logos.top/logos/offfhdmax.png" group-title="CANAIS | ESPORTES GERAL",OFF FHD MAX²
+http://trabalho724.top:8080/carmem01/22carmem22/54339
+#EXTINF:-1 tvg-id="off.br" tvg-name="OFF FHD¹" tvg-logo="http://7logos.top/logos/offfhd.png" group-title="CANAIS | ESPORTES GERAL",OFF FHD¹
+http://trabalho724.top:8080/carmem01/22carmem22/18946
+#EXTINF:-1 tvg-id="off.br" tvg-name="OFF FHD²" tvg-logo="http://7logos.top/logos/offfhd.png" group-title="CANAIS | ESPORTES GERAL",OFF FHD²
+http://trabalho724.top:8080/carmem01/22carmem22/64655
+#EXTINF:-1 tvg-id="off.br" tvg-name="OFF HD²" tvg-logo="http://7logos.top/logos/offhd.png" group-title="CANAIS | ESPORTES GERAL",OFF HD²
+http://trabalho724.top:8080/carmem01/22carmem22/22594
+#EXTINF:-1 tvg-id="off.br" tvg-name="OFF SD²" tvg-logo="http://7logos.top/logos/offsd.png" group-title="CANAIS | ESPORTES GERAL",OFF SD²
+http://trabalho724.top:8080/carmem01/22carmem22/22373
+#EXTINF:-1 tvg-id="off.br" tvg-name="OFF HD¹" tvg-logo="http://7logos.top/logos/offhd.png" group-title="CANAIS | ESPORTES GERAL",OFF HD¹
+http://trabalho724.top:8080/carmem01/22carmem22/116717
+#EXTINF:-1 tvg-id="off.br" tvg-name="OFF SD¹" tvg-logo="http://7logos.top/logos/offsd.png" group-title="CANAIS | ESPORTES GERAL",OFF SD¹
+http://trabalho724.top:8080/carmem01/22carmem22/116718
+#EXTINF:-1 tvg-id="" tvg-name="ONEFOOTBALL 1 HD²" tvg-logo="http://7logos.top/logos/onefootballhd.png" group-title="CANAIS | ESPORTES PAY PER VIEW",ONEFOOTBALL 1 HD²
+http://trabalho724.top:8080/carmem01/22carmem22/274281
+#EXTINF:-1 tvg-id="" tvg-name="ONEFOOTBALL 2 HD²" tvg-logo="http://7logos.top/logos/onefootballhd.png" group-title="CANAIS | ESPORTES PAY PER VIEW",ONEFOOTBALL 2 HD²
+http://trabalho724.top:8080/carmem01/22carmem22/303703
+#EXTINF:-1 tvg-id="" tvg-name="ONEFOOTBALL 3 HD²" tvg-logo="http://7logos.top/logos/onefootballhd.png" group-title="CANAIS | ESPORTES PAY PER VIEW",ONEFOOTBALL 3 HD²
+http://trabalho724.top:8080/carmem01/22carmem22/303704
+#EXTINF:-1 tvg-id="" tvg-name="ONEFOOTBALL 4 HD²" tvg-logo="http://7logos.top/logos/onefootballhd.png" group-title="CANAIS | ESPORTES PAY PER VIEW",ONEFOOTBALL 4 HD²
+http://trabalho724.top:8080/carmem01/22carmem22/303705
+#EXTINF:-1 tvg-id="sportv.br" tvg-name="SPORTV 4K¹" tvg-logo="http://7logos.top/logos/sportv4k.png" group-title="CANAIS | UHD (4K)",SPORTV 4K¹
+http://trabalho724.top:8080/carmem01/22carmem22/116636
+#EXTINF:-1 tvg-id="premiereclubes.br" tvg-name="PREMIERE CLUBES UHD¹" tvg-logo="http://7logos.top/logos/premiereclubes4k.png" group-title="CANAIS | PREMIERE FC",PREMIERE CLUBES UHD¹
+http://trabalho724.top:8080/carmem01/22carmem22/315114
+#EXTINF:-1 tvg-id="premiereclubes.br" tvg-name="PREMIERE CLUBES 4K¹" tvg-logo="http://7logos.top/logos/premiereclubes4k.png" group-title="CANAIS | UHD (4K)",PREMIERE CLUBES 4K¹
+http://trabalho724.top:8080/carmem01/22carmem22/28790
+#EXTINF:-1 tvg-id="premierefc.br" tvg-name="PREMIERE CLUBES FHD¹" tvg-logo="http://7logos.top/logos/premiereclubesfhd.png" group-title="CANAIS | PREMIERE FC",PREMIERE CLUBES FHD¹
+http://trabalho724.top:8080/carmem01/22carmem22/18950
+#EXTINF:-1 tvg-id="premiereclubes.br" tvg-name="PREMIERE CLUBES FHD²" tvg-logo="http://7logos.top/logos/premiereclubesfhd.png" group-title="CANAIS | PREMIERE FC",PREMIERE CLUBES FHD²
+http://trabalho724.top:8080/carmem01/22carmem22/58737
+#EXTINF:-1 tvg-id="premierefc.br" tvg-name="PREMIERE CLUBES FHD ᶜᴰᴺ²" tvg-logo="http://7logos.top/logos/premiereclubesfhd.png" group-title="CANAIS | PREMIERE FC",PREMIERE CLUBES FHD ᶜᴰᴺ²
+http://trabalho724.top:8080/carmem01/22carmem22/22254
+#EXTINF:-1 tvg-id="premierefc.br" tvg-name="PREMIERE CLUBES  HD¹" tvg-logo="http://7logos.top/logos/premiereclubeshd.png" group-title="CANAIS | PREMIERE FC",PREMIERE CLUBES  HD¹
+http://trabalho724.top:8080/carmem01/22carmem22/20949
+#EXTINF:-1 tvg-id="premiereclubes.br" tvg-name="PREMIERE CLUBES HD²" tvg-logo="http://7logos.top/logos/premiereclubeshd.png" group-title="CANAIS | PREMIERE FC",PREMIERE CLUBES HD²
+http://trabalho724.top:8080/carmem01/22carmem22/65745
+#EXTINF:-1 tvg-id="premierefc.br" tvg-name="PREMIERE CLUBES HD¹" tvg-logo="http://7logos.top/logos/premiereclubeshd.png" group-title="CANAIS | PREMIERE FC",PREMIERE CLUBES HD¹
+http://trabalho724.top:8080/carmem01/22carmem22/56943
+#EXTINF:-1 tvg-id="premierefc.br" tvg-name="PREMIERE CLUBES HD ᶜᴰᴺ²" tvg-logo="http://7logos.top/logos/premiereclubeshd.png" group-title="CANAIS | PREMIERE FC",PREMIERE CLUBES HD ᶜᴰᴺ²
+http://trabalho724.top:8080/carmem01/22carmem22/22255
+#EXTINF:-1 tvg-id="premiereclubes.br" tvg-name="PREMIERE CLUBES SD¹" tvg-logo="http://7logos.top/logos/premiereclubessd.png" group-title="CANAIS | PREMIERE FC",PREMIERE CLUBES SD¹
+http://trabalho724.top:8080/carmem01/22carmem22/18757
+#EXTINF:-1 tvg-id="premierefc.br" tvg-name="PREMIERE CLUBES SD²" tvg-logo="http://7logos.top/logos/premiereclubessd.png" group-title="CANAIS | PREMIERE FC",PREMIERE CLUBES SD²
+http://trabalho724.top:8080/carmem01/22carmem22/22256
+#EXTINF:-1 tvg-id="premierefc.br" tvg-name="PREMIERE CLUBES SD²" tvg-logo="http://7logos.top/logos/premiereclubessd.png" group-title="CANAIS | PREMIERE FC",PREMIERE CLUBES SD²
+http://trabalho724.top:8080/carmem01/22carmem22/22257
+#EXTINF:-1 tvg-id="premiereclubes.br" tvg-name="PREMIERE 2 FHD MAX²" tvg-logo="http://7logos.top/logos/premierefhdmax.png" group-title="CANAIS | PREMIERE FC",PREMIERE 2 FHD MAX²
+http://trabalho724.top:8080/carmem01/22carmem22/170241
+#EXTINF:-1 tvg-id="premiere2.br" tvg-name="PREMIERE 2 FHD¹" tvg-logo="http://7logos.top/logos/premiereclubesfhd.png" group-title="CANAIS | PREMIERE FC",PREMIERE 2 FHD¹
+http://trabalho724.top:8080/carmem01/22carmem22/18951
+#EXTINF:-1 tvg-id="premiere2.br" tvg-name="PREMIERE 2 FHD²" tvg-logo="http://7logos.top/logos/premiereclubesfhd.png" group-title="CANAIS | PREMIERE FC",PREMIERE 2 FHD²
+http://trabalho724.top:8080/carmem01/22carmem22/58738
+#EXTINF:-1 tvg-id="premiere2.br" tvg-name="PREMIERE 2 FHD ᶜᴰᴺ²" tvg-logo="http://7logos.top/logos/premiereclubesfhd.png" group-title="CANAIS | PREMIERE FC",PREMIERE 2 FHD ᶜᴰᴺ²
+http://trabalho724.top:8080/carmem01/22carmem22/22258
+#EXTINF:-1 tvg-id="premiere2.br" tvg-name="PREMIERE 2 HD¹" tvg-logo="http://7logos.top/logos/premiereclubeshd.png" group-title="CANAIS | PREMIERE FC",PREMIERE 2 HD¹
+http://trabalho724.top:8080/carmem01/22carmem22/18853
+#EXTINF:-1 tvg-id="premiere2.br" tvg-name="PREMIERE 2 HD²" tvg-logo="http://7logos.top/logos/premiereclubeshd.png" group-title="CANAIS | PREMIERE FC",PREMIERE 2 HD²
+http://trabalho724.top:8080/carmem01/22carmem22/22259
+#EXTINF:-1 tvg-id="premiere2.br" tvg-name="PREMIERE 2 HD ᶜᴰᴺ²" tvg-logo="http://7logos.top/logos/premiereclubeshd.png" group-title="CANAIS | PREMIERE FC",PREMIERE 2 HD ᶜᴰᴺ²
+http://trabalho724.top:8080/carmem01/22carmem22/32330
+#EXTINF:-1 tvg-id="premiere2.br" tvg-name="PREMIERE 2 SD¹" tvg-logo="http://7logos.top/logos/premiereclubessd.png" group-title="CANAIS | PREMIERE FC",PREMIERE 2 SD¹
+http://trabalho724.top:8080/carmem01/22carmem22/18758
+#EXTINF:-1 tvg-id="premiere2.br" tvg-name="PREMIERE 2 SD²" tvg-logo="http://7logos.top/logos/premiereclubessd.png" group-title="CANAIS | PREMIERE FC",PREMIERE 2 SD²
+http://trabalho724.top:8080/carmem01/22carmem22/22261
+#EXTINF:-1 tvg-id="premiere3.br" tvg-name="PREMIERE 3 FHD¹" tvg-logo="http://7logos.top/logos/premiereclubesfhd.png" group-title="CANAIS | PREMIERE FC",PREMIERE 3 FHD¹
+http://trabalho724.top:8080/carmem01/22carmem22/42914
+#EXTINF:-1 tvg-id="premiere3.br" tvg-name="PREMIERE 3 FHD²" tvg-logo="http://7logos.top/logos/premiereclubesfhd.png" group-title="CANAIS | PREMIERE FC",PREMIERE 3 FHD²
+http://trabalho724.top:8080/carmem01/22carmem22/22262
+#EXTINF:-1 tvg-id="premiere3.br" tvg-name="PREMIERE 3 HD¹" tvg-logo="http://7logos.top/logos/premiereclubeshd.png" group-title="CANAIS | PREMIERE FC",PREMIERE 3 HD¹
+http://trabalho724.top:8080/carmem01/22carmem22/18854
+#EXTINF:-1 tvg-id="premiere3.br" tvg-name="PREMIERE 3 HD²" tvg-logo="http://7logos.top/logos/premiereclubeshd.png" group-title="CANAIS | PREMIERE FC",PREMIERE 3 HD²
+http://trabalho724.top:8080/carmem01/22carmem22/22263
+#EXTINF:-1 tvg-id="premiere3.br" tvg-name="PREMIERE 3 HD ᶜᴰᴺ²" tvg-logo="http://7logos.top/logos/premiereclubeshd.png" group-title="CANAIS | PREMIERE FC",PREMIERE 3 HD ᶜᴰᴺ²
+http://trabalho724.top:8080/carmem01/22carmem22/58739
+#EXTINF:-1 tvg-id="premiere3.br" tvg-name="PREMIERE 3 SD¹" tvg-logo="http://7logos.top/logos/premiereclubessd.png" group-title="CANAIS | PREMIERE FC",PREMIERE 3 SD¹
+http://trabalho724.top:8080/carmem01/22carmem22/18759
+#EXTINF:-1 tvg-id="premiere3.br" tvg-name="PREMIERE 3 SD²" tvg-logo="http://7logos.top/logos/premiereclubessd.png" group-title="CANAIS | PREMIERE FC",PREMIERE 3 SD²
+http://trabalho724.top:8080/carmem01/22carmem22/22264
+#EXTINF:-1 tvg-id="premiere4.br" tvg-name="PREMIERE 4 FHD¹" tvg-logo="http://7logos.top/logos/premiereclubesfhd.png" group-title="CANAIS | PREMIERE FC",PREMIERE 4 FHD¹
+http://trabalho724.top:8080/carmem01/22carmem22/31456
+#EXTINF:-1 tvg-id="premiere4.br" tvg-name="PREMIERE 4 FHD²" tvg-logo="http://7logos.top/logos/premiereclubesfhd.png" group-title="CANAIS | PREMIERE FC",PREMIERE 4 FHD²
+http://trabalho724.top:8080/carmem01/22carmem22/22266
+#EXTINF:-1 tvg-id="premiere4.br" tvg-name="PREMIERE 4 HD¹" tvg-logo="http://7logos.top/logos/premiereclubeshd.png" group-title="CANAIS | PREMIERE FC",PREMIERE 4 HD¹
+http://trabalho724.top:8080/carmem01/22carmem22/18855
+#EXTINF:-1 tvg-id="premiere4.br" tvg-name="PREMIERE 4 HD²" tvg-logo="http://7logos.top/logos/premiereclubeshd.png" group-title="CANAIS | PREMIERE FC",PREMIERE 4 HD²
+http://trabalho724.top:8080/carmem01/22carmem22/22267
+#EXTINF:-1 tvg-id="premiere4.br" tvg-name="PREMIERE 4 HD ᶜᴰᴺ²" tvg-logo="http://7logos.top/logos/premiereclubeshd.png" group-title="CANAIS | PREMIERE FC",PREMIERE 4 HD ᶜᴰᴺ²
+http://trabalho724.top:8080/carmem01/22carmem22/31444
+#EXTINF:-1 tvg-id="premiere4.br" tvg-name="PREMIERE 4 SD¹" tvg-logo="http://7logos.top/logos/premiereclubessd.png" group-title="CANAIS | PREMIERE FC",PREMIERE 4 SD¹
+http://trabalho724.top:8080/carmem01/22carmem22/18760
+#EXTINF:-1 tvg-id="premiere4.br" tvg-name="PREMIERE 4 SD²" tvg-logo="http://7logos.top/logos/premiereclubessd.png" group-title="CANAIS | PREMIERE FC",PREMIERE 4 SD²
+http://trabalho724.top:8080/carmem01/22carmem22/22268
+#EXTINF:-1 tvg-id="premiere5.br" tvg-name="PREMIERE 5 FHD¹" tvg-logo="http://7logos.top/logos/premiereclubesfhd.png" group-title="CANAIS | PREMIERE FC",PREMIERE 5 FHD¹
+http://trabalho724.top:8080/carmem01/22carmem22/56787
+#EXTINF:-1 tvg-id="premiere5.br" tvg-name="PREMIERE 5 FHD²" tvg-logo="http://7logos.top/logos/premiereclubesfhd.png" group-title="CANAIS | PREMIERE FC",PREMIERE 5 FHD²
+http://trabalho724.top:8080/carmem01/22carmem22/22270
+#EXTINF:-1 tvg-id="premiere5.br" tvg-name="PREMIERE 5 HD¹" tvg-logo="http://7logos.top/logos/premiereclubeshd.png" group-title="CANAIS | PREMIERE FC",PREMIERE 5 HD¹
+http://trabalho724.top:8080/carmem01/22carmem22/18856
+#EXTINF:-1 tvg-id="premiere5.br" tvg-name="PREMIERE 5 HD²" tvg-logo="http://7logos.top/logos/premiereclubeshd.png" group-title="CANAIS | PREMIERE FC",PREMIERE 5 HD²
+http://trabalho724.top:8080/carmem01/22carmem22/22271
+#EXTINF:-1 tvg-id="premiere5.br" tvg-name="PREMIERE 5 HD³" tvg-logo="http://7logos.top/logos/premiereclubeshd.png" group-title="CANAIS | PREMIERE FC",PREMIERE 5 HD³
+http://trabalho724.top:8080/carmem01/22carmem22/65746
+#EXTINF:-1 tvg-id="premiere5.br" tvg-name="PREMIERE 5 SD²" tvg-logo="http://7logos.top/logos/premiereclubessd.png" group-title="CANAIS | PREMIERE FC",PREMIERE 5 SD²
+http://trabalho724.top:8080/carmem01/22carmem22/18761
+#EXTINF:-1 tvg-id="premiere5.br" tvg-name="PREMIERE 5 SD¹" tvg-logo="http://7logos.top/logos/premiereclubessd.png" group-title="CANAIS | PREMIERE FC",PREMIERE 5 SD¹
+http://trabalho724.top:8080/carmem01/22carmem22/22272
+#EXTINF:-1 tvg-id="premiere6.br" tvg-name="PREMIERE 6 FHD²" tvg-logo="http://7logos.top/logos/premiereclubesfhd.png" group-title="CANAIS | PREMIERE FC",PREMIERE 6 FHD²
+http://trabalho724.top:8080/carmem01/22carmem22/22383
+#EXTINF:-1 tvg-id="premiere6.br" tvg-name="PREMIERE 6 FHD²" tvg-logo="http://7logos.top/logos/premiereclubesfhd.png" group-title="CANAIS | PREMIERE FC",PREMIERE 6 FHD²
+http://trabalho724.top:8080/carmem01/22carmem22/22274
+#EXTINF:-1 tvg-id="premiere6.br" tvg-name="PREMIERE 6 HD²" tvg-logo="http://7logos.top/logos/premiereclubeshd.png" group-title="CANAIS | PREMIERE FC",PREMIERE 6 HD²
+http://trabalho724.top:8080/carmem01/22carmem22/18857
+#EXTINF:-1 tvg-id="premiere6.br" tvg-name="PREMIERE 6 HD²" tvg-logo="http://7logos.top/logos/premiereclubeshd.png" group-title="CANAIS | PREMIERE FC",PREMIERE 6 HD²
+http://trabalho724.top:8080/carmem01/22carmem22/22275
+#EXTINF:-1 tvg-id="premiere6.br" tvg-name="PREMIERE 6 HD³" tvg-logo="http://7logos.top/logos/premiereclubeshd.png" group-title="CANAIS | PREMIERE FC",PREMIERE 6 HD³
+http://trabalho724.top:8080/carmem01/22carmem22/123231
+#EXTINF:-1 tvg-id="premiere6.br" tvg-name="PREMIERE 6 SD²" tvg-logo="http://7logos.top/logos/premiereclubessd.png" group-title="CANAIS | PREMIERE FC",PREMIERE 6 SD²
+http://trabalho724.top:8080/carmem01/22carmem22/22276
+#EXTINF:-1 tvg-id="premiere6.br" tvg-name="PREMIERE 6 SD" tvg-logo="http://7logos.top/logos/premiereclubessd.png" group-title="CANAIS | PREMIERE FC",PREMIERE 6 SD
+http://trabalho724.top:8080/carmem01/22carmem22/22277
+#EXTINF:-1 tvg-id="premiere7.br" tvg-name="PREMIERE 7 FHD²" tvg-logo="http://7logos.top/logos/premiereclubesfhd.png" group-title="CANAIS | PREMIERE FC",PREMIERE 7 FHD²
+http://trabalho724.top:8080/carmem01/22carmem22/22278
+#EXTINF:-1 tvg-id="premiere7.br" tvg-name="PREMIERE 7 HD" tvg-logo="http://7logos.top/logos/premiereclubeshd.png" group-title="CANAIS | PREMIERE FC",PREMIERE 7 HD
+http://trabalho724.top:8080/carmem01/22carmem22/18858
+#EXTINF:-1 tvg-id="premiere7.br" tvg-name="PREMIERE 7 HD²" tvg-logo="http://7logos.top/logos/premiereclubeshd.png" group-title="CANAIS | PREMIERE FC",PREMIERE 7 HD²
+http://trabalho724.top:8080/carmem01/22carmem22/22279
+#EXTINF:-1 tvg-id="premiere7.br" tvg-name="PREMIERE 7 SD" tvg-logo="http://7logos.top/logos/premiereclubessd.png" group-title="CANAIS | PREMIERE FC",PREMIERE 7 SD
+http://trabalho724.top:8080/carmem01/22carmem22/18762
+#EXTINF:-1 tvg-id="premiere7.br" tvg-name="PREMIERE 7 SD*" tvg-logo="http://7logos.top/logos/premiereclubessd.png" group-title="CANAIS | PREMIERE FC",PREMIERE 7 SD*
+http://trabalho724.top:8080/carmem01/22carmem22/22280
+#EXTINF:-1 tvg-id="premiere7.br" tvg-name="PREMIERE 7 SD² " tvg-logo="http://7logos.top/logos/premiereclubessd.png" group-title="CANAIS | PREMIERE FC",PREMIERE 7 SD² 
+http://trabalho724.top:8080/carmem01/22carmem22/22281
+#EXTINF:-1 tvg-id="" tvg-name="WWE HD*" tvg-logo="http://7logos.top/logos/wwehd.png" group-title="CANAIS | ESPORTES GERAL",WWE HD*
+http://trabalho724.top:8080/carmem01/22carmem22/188345
+#EXTINF:-1 tvg-id="" tvg-name="WWE HD**" tvg-logo="http://7logos.top/logos/wwehd.png" group-title="CANAIS | ESPORTES GERAL",WWE HD**
+http://trabalho724.top:8080/carmem01/22carmem22/188348
+#EXTINF:-1 tvg-id="sportv.br" tvg-name="SPORTV UHD¹" tvg-logo="http://7logos.top/logos/sportv4k.png" group-title="CANAIS | SPORTV",SPORTV UHD¹
+http://trabalho724.top:8080/carmem01/22carmem22/315115
+#EXTINF:-1 tvg-id="foxsports.br" tvg-name="SPORTV FHD MAX¹" tvg-logo="http://7logos.top/logos/sportvfhdmax.png" group-title="CANAIS | SPORTV",SPORTV FHD MAX¹
+http://trabalho724.top:8080/carmem01/22carmem22/54377
+#EXTINF:-1 tvg-id="sportv.br" tvg-name="SPORTV FHD MAX²" tvg-logo="http://7logos.top/logos/sportvfhdmax.png" group-title="CANAIS | SPORTV",SPORTV FHD MAX²
+http://trabalho724.top:8080/carmem01/22carmem22/65744
+#EXTINF:-1 tvg-id="sportv.br" tvg-name="SPORTV FHD¹" tvg-logo="http://7logos.top/logos/sportvfhd.png" group-title="CANAIS | SPORTV",SPORTV FHD¹
+http://trabalho724.top:8080/carmem01/22carmem22/22708
+#EXTINF:-1 tvg-id="sportv.br" tvg-name="SPORTV FHD¹" tvg-logo="http://7logos.top/logos/sportvfhd.png" group-title="CANAIS | SPORTV",SPORTV FHD¹
+http://trabalho724.top:8080/carmem01/22carmem22/18680
+#EXTINF:-1 tvg-id="sportv.br" tvg-name="SPORTV FHD²" tvg-logo="http://7logos.top/logos/sportvfhd.png" group-title="CANAIS | SPORTV",SPORTV FHD²
+http://trabalho724.top:8080/carmem01/22carmem22/42906
+#EXTINF:-1 tvg-id="sportv.br" tvg-name="SPORTV FHD ᶜᴰᴺ²" tvg-logo="http://7logos.top/logos/sportvfhd.png" group-title="CANAIS | SPORTV",SPORTV FHD ᶜᴰᴺ²
+http://trabalho724.top:8080/carmem01/22carmem22/31594
+#EXTINF:-1 tvg-id="sportv.br" tvg-name="SPORTV HD¹" tvg-logo="http://7logos.top/logos/sportvhd.png" group-title="CANAIS | SPORTV",SPORTV HD¹
+http://trabalho724.top:8080/carmem01/22carmem22/18659
+#EXTINF:-1 tvg-id="sportv.br" tvg-name="SPORTV HD²" tvg-logo="http://7logos.top/logos/sportvhd.png" group-title="CANAIS | SPORTV",SPORTV HD²
+http://trabalho724.top:8080/carmem01/22carmem22/22614
+#EXTINF:-1 tvg-id="sportv.br" tvg-name="SPORTV HD ᶜᴰᴺ²" tvg-logo="http://7logos.top/logos/sportvhd.png" group-title="CANAIS | SPORTV",SPORTV HD ᶜᴰᴺ²
+http://trabalho724.top:8080/carmem01/22carmem22/59175
+#EXTINF:-1 tvg-id="sportv.br" tvg-name="SPORTV SD¹" tvg-logo="http://7logos.top/logos/sportvsd.png" group-title="CANAIS | SPORTV",SPORTV SD¹
+http://trabalho724.top:8080/carmem01/22carmem22/18670
+#EXTINF:-1 tvg-id="sportv.br" tvg-name="SPORTV SD²" tvg-logo="http://7logos.top/logos/sportvsd.png" group-title="CANAIS | SPORTV",SPORTV SD²
+http://trabalho724.top:8080/carmem01/22carmem22/22392
+#EXTINF:-1 tvg-id="foxsports2.br" tvg-name="SPORTV 2 FHD¹" tvg-logo="http://7logos.top/logos/sportv2fhd.png" group-title="CANAIS | SPORTV",SPORTV 2 FHD¹
+http://trabalho724.top:8080/carmem01/22carmem22/42907
+#EXTINF:-1 tvg-id="sportv2.br" tvg-name="SPORTV 2 FHD²" tvg-logo="http://7logos.top/logos/sportv2fhd.png" group-title="CANAIS | SPORTV",SPORTV 2 FHD²
+http://trabalho724.top:8080/carmem01/22carmem22/22706
+#EXTINF:-1 tvg-id="sportv2.br" tvg-name="SPORTV 2 HD¹" tvg-logo="http://7logos.top/logos/sportv2hd.png" group-title="CANAIS | SPORTV",SPORTV 2 HD¹
+http://trabalho724.top:8080/carmem01/22carmem22/18660
+#EXTINF:-1 tvg-id="sportv2.br" tvg-name="SPORTV 2 HD²" tvg-logo="http://7logos.top/logos/sportv2hd.png" group-title="CANAIS | SPORTV",SPORTV 2 HD²
+http://trabalho724.top:8080/carmem01/22carmem22/22612
+#EXTINF:-1 tvg-id="sportv2.br" tvg-name="SPORTV 2 HD ᶜᴰᴺ²" tvg-logo="http://7logos.top/logos/sportv2hd.png" group-title="CANAIS | SPORTV",SPORTV 2 HD ᶜᴰᴺ²
+http://trabalho724.top:8080/carmem01/22carmem22/59177
+#EXTINF:-1 tvg-id="sportv2.br" tvg-name="SPORTV 2 SD¹" tvg-logo="http://7logos.top/logos/sportv2sd.png" group-title="CANAIS | SPORTV",SPORTV 2 SD¹
+http://trabalho724.top:8080/carmem01/22carmem22/18668
+#EXTINF:-1 tvg-id="sportv.br" tvg-name="SPORTV 2 SD²" tvg-logo="http://7logos.top/logos/sportv2sd.png" group-title="CANAIS | SPORTV",SPORTV 2 SD²
+http://trabalho724.top:8080/carmem01/22carmem22/22390
+#EXTINF:-1 tvg-id="sportv3.br" tvg-name="SPORTV 3 FHD¹" tvg-logo="http://7logos.top/logos/sportv3fhd.png" group-title="CANAIS | SPORTV",SPORTV 3 FHD¹
+http://trabalho724.top:8080/carmem01/22carmem22/18679
+#EXTINF:-1 tvg-id="sportv3.br" tvg-name="SPORTV 3 FHD²" tvg-logo="http://7logos.top/logos/sportv3fhd.png" group-title="CANAIS | SPORTV",SPORTV 3 FHD²
+http://trabalho724.top:8080/carmem01/22carmem22/22707
+#EXTINF:-1 tvg-id="sportv3.br" tvg-name="SPORTV 3 HD¹" tvg-logo="http://7logos.top/logos/sportv3hd.png" group-title="CANAIS | SPORTV",SPORTV 3 HD¹
+http://trabalho724.top:8080/carmem01/22carmem22/18661
+#EXTINF:-1 tvg-id="sportv3.br" tvg-name="SPORTV 3 HD²" tvg-logo="http://7logos.top/logos/sportv3hd.png" group-title="CANAIS | SPORTV",SPORTV 3 HD²
+http://trabalho724.top:8080/carmem01/22carmem22/22613
+#EXTINF:-1 tvg-id="sportv3.br" tvg-name="SPORTV 3 SD¹" tvg-logo="http://7logos.top/logos/sportv3sd.png" group-title="CANAIS | SPORTV",SPORTV 3 SD¹
+http://trabalho724.top:8080/carmem01/22carmem22/18669
+#EXTINF:-1 tvg-id="sportv3.br" tvg-name="SPORTV 3 SD²" tvg-logo="http://7logos.top/logos/sportv3sd.png" group-title="CANAIS | SPORTV",SPORTV 3 SD²
+http://trabalho724.top:8080/carmem01/22carmem22/22391
+#EXTINF:-1 tvg-id="" tvg-name="FIGHT NETWORK HD²" tvg-logo="http://7logos.top/logos/fightnetworkhd.png" group-title="CANAIS | ESPORTES GERAL",FIGHT NETWORK HD²
+http://trabalho724.top:8080/carmem01/22carmem22/201863
+#EXTINF:-1 tvg-id="" tvg-name="FIGHT BOX HD²" tvg-logo="http://7logos.top/logos/fightboxhd.png" group-title="CANAIS | ESPORTES GERAL",FIGHT BOX HD²
+http://trabalho724.top:8080/carmem01/22carmem22/201864
+#EXTINF:-1 tvg-id="" tvg-name="PARAMOUNT+ 1 FHD¹" tvg-logo="http://7logos.top/logos/paramountfhd.png" group-title="CANAIS | PARAMOUNT+",PARAMOUNT+ 1 FHD¹
+http://trabalho724.top:8080/carmem01/22carmem22/299151
+#EXTINF:-1 tvg-id="" tvg-name="PARAMOUNT+ 1 HD²" tvg-logo="http://7logos.top/logos/paramounthd.png" group-title="CANAIS | PARAMOUNT+",PARAMOUNT+ 1 HD²
+http://trabalho724.top:8080/carmem01/22carmem22/299147
+#EXTINF:-1 tvg-id="" tvg-name="PARAMOUNT+ 2 FHD¹" tvg-logo="http://7logos.top/logos/paramountfhd.png" group-title="CANAIS | PARAMOUNT+",PARAMOUNT+ 2 FHD¹
+http://trabalho724.top:8080/carmem01/22carmem22/299152
+#EXTINF:-1 tvg-id="" tvg-name="PARAMOUNT+ 2 HD²" tvg-logo="http://7logos.top/logos/paramounthd.png" group-title="CANAIS | PARAMOUNT+",PARAMOUNT+ 2 HD²
+http://trabalho724.top:8080/carmem01/22carmem22/299148
+#EXTINF:-1 tvg-id="" tvg-name="PARAMOUNT+ 3 FHD¹" tvg-logo="http://7logos.top/logos/paramountfhd.png" group-title="CANAIS | PARAMOUNT+",PARAMOUNT+ 3 FHD¹
+http://trabalho724.top:8080/carmem01/22carmem22/299153
+#EXTINF:-1 tvg-id="" tvg-name="PARAMOUNT+ 3 HD²" tvg-logo="http://7logos.top/logos/paramounthd.png" group-title="CANAIS | PARAMOUNT+",PARAMOUNT+ 3 HD²
+http://trabalho724.top:8080/carmem01/22carmem22/299149
+#EXTINF:-1 tvg-id="" tvg-name="PARAMOUNT+ 4 FHD¹" tvg-logo="http://7logos.top/logos/paramountfhd.png" group-title="CANAIS | PARAMOUNT+",PARAMOUNT+ 4 FHD¹
+http://trabalho724.top:8080/carmem01/22carmem22/299154
+#EXTINF:-1 tvg-id="" tvg-name="PARAMOUNT+ 4 HD²" tvg-logo="http://7logos.top/logos/paramounthd.png" group-title="CANAIS | PARAMOUNT+",PARAMOUNT+ 4 HD²
+http://trabalho724.top:8080/carmem01/22carmem22/299150
+#EXTINF:-1 tvg-id="" tvg-name="COPA DO BRASIL PRIME VIDEO 1 HD¹" tvg-logo="http://7logos.top/logos/primevideohd.png" group-title="CANAIS | PRIME VIDEO ",COPA DO BRASIL PRIME VIDEO 1 HD¹
+http://trabalho724.top:8080/carmem01/22carmem22/129900
+#EXTINF:-1 tvg-id="" tvg-name="COPA DO BRASIL PRIME VIDEO 1 HD²" tvg-logo="http://7logos.top/logos/primevideohd.png" group-title="CANAIS | PRIME VIDEO ",COPA DO BRASIL PRIME VIDEO 1 HD²
+http://trabalho724.top:8080/carmem01/22carmem22/126616
+#EXTINF:-1 tvg-id="" tvg-name="COPA DO BRASIL PRIME VIDEO 1 HD ᶜᴰᴺ²" tvg-logo="http://7logos.top/logos/primevideohd.png" group-title="CANAIS | PRIME VIDEO ",COPA DO BRASIL PRIME VIDEO 1 HD ᶜᴰᴺ²
+http://trabalho724.top:8080/carmem01/22carmem22/311695
+#EXTINF:-1 tvg-id="" tvg-name="COPA DO BRASIL PRIME VIDEO 2 HD¹" tvg-logo="http://7logos.top/logos/primevideohd.png" group-title="CANAIS | PRIME VIDEO ",COPA DO BRASIL PRIME VIDEO 2 HD¹
+http://trabalho724.top:8080/carmem01/22carmem22/129893
+#EXTINF:-1 tvg-id="" tvg-name="COPA DO BRASIL PRIME VIDEO 2 HD²" tvg-logo="http://7logos.top/logos/primevideohd.png" group-title="CANAIS | PRIME VIDEO ",COPA DO BRASIL PRIME VIDEO 2 HD²
+http://trabalho724.top:8080/carmem01/22carmem22/126617
+#EXTINF:-1 tvg-id="" tvg-name="COPA DO BRASIL PRIME VIDEO 3 HD¹" tvg-logo="http://7logos.top/logos/primevideohd.png" group-title="CANAIS | PRIME VIDEO ",COPA DO BRASIL PRIME VIDEO 3 HD¹
+http://trabalho724.top:8080/carmem01/22carmem22/311691
+#EXTINF:-1 tvg-id="" tvg-name="COPA DO BRASIL PRIME VIDEO 3 HD²" tvg-logo="http://7logos.top/logos/primevideohd.png" group-title="CANAIS | PRIME VIDEO ",COPA DO BRASIL PRIME VIDEO 3 HD²
+http://trabalho724.top:8080/carmem01/22carmem22/311692
+#EXTINF:-1 tvg-id="" tvg-name="COPA DO BRASIL PRIME VIDEO 4 HD²" tvg-logo="http://7logos.top/logos/primevideohd.png" group-title="CANAIS | PRIME VIDEO ",COPA DO BRASIL PRIME VIDEO 4 HD²
+http://trabalho724.top:8080/carmem01/22carmem22/311693
+#EXTINF:-1 tvg-id="" tvg-name="COPA DO BRASIL PRIME VIDEO 5 HD²" tvg-logo="http://7logos.top/logos/primevideohd.png" group-title="CANAIS | PRIME VIDEO ",COPA DO BRASIL PRIME VIDEO 5 HD²
+http://trabalho724.top:8080/carmem01/22carmem22/311694
+#EXTINF:-1 tvg-id="" tvg-name="DISNEY+ 1 HD¹" tvg-logo="http://7logos.top/logos/disney+hd.png" group-title="CANAIS | DISNEY+",DISNEY+ 1 HD¹
+http://trabalho724.top:8080/carmem01/22carmem22/59969
+#EXTINF:-1 tvg-id="" tvg-name="DISNEY+ 1 HD²" tvg-logo="http://7logos.top/logos/disney+hd.png" group-title="CANAIS | DISNEY+",DISNEY+ 1 HD²
+http://trabalho724.top:8080/carmem01/22carmem22/59952
+#EXTINF:-1 tvg-id="" tvg-name="DISNEY+ 1  HD*" tvg-logo="http://7logos.top/logos/disney+hd.png" group-title="CANAIS | DISNEY+",DISNEY+ 1  HD*
+http://trabalho724.top:8080/carmem01/22carmem22/62457
+#EXTINF:-1 tvg-id="sportv3.br" tvg-name="DISNEY+ 1 HD ᶜᴰᴺ²" tvg-logo="http://7logos.top/logos/disney+hd.png" group-title="CANAIS | DISNEY+",DISNEY+ 1 HD ᶜᴰᴺ²
+http://trabalho724.top:8080/carmem01/22carmem22/162405
+#EXTINF:-1 tvg-id="" tvg-name="DISNEY+ 2 HD¹" tvg-logo="http://7logos.top/logos/disney+hd.png" group-title="CANAIS | DISNEY+",DISNEY+ 2 HD¹
+http://trabalho724.top:8080/carmem01/22carmem22/64734
+#EXTINF:-1 tvg-id="" tvg-name="DISNEY+ 2 HD²" tvg-logo="http://7logos.top/logos/disney+hd.png" group-title="CANAIS | DISNEY+",DISNEY+ 2 HD²
+http://trabalho724.top:8080/carmem01/22carmem22/59970
+#EXTINF:-1 tvg-id="" tvg-name="DISNEY+ 2 HD*" tvg-logo="http://7logos.top/logos/disney+hd.png" group-title="CANAIS | DISNEY+",DISNEY+ 2 HD*
+http://trabalho724.top:8080/carmem01/22carmem22/18959
+#EXTINF:-1 tvg-id="" tvg-name="DISNEY+ 3 HD¹" tvg-logo="http://7logos.top/logos/disney+hd.png" group-title="CANAIS | DISNEY+",DISNEY+ 3 HD¹
+http://trabalho724.top:8080/carmem01/22carmem22/64707
+#EXTINF:-1 tvg-id="" tvg-name="DISNEY+ 3 HD²" tvg-logo="http://7logos.top/logos/disney+hd.png" group-title="CANAIS | DISNEY+",DISNEY+ 3 HD²
+http://trabalho724.top:8080/carmem01/22carmem22/59971
+#EXTINF:-1 tvg-id="" tvg-name="DISNEY+ 4 HD¹" tvg-logo="http://7logos.top/logos/disney+hd.png" group-title="CANAIS | DISNEY+",DISNEY+ 4 HD¹
+http://trabalho724.top:8080/carmem01/22carmem22/64708
+#EXTINF:-1 tvg-id="" tvg-name="DISNEY+ 4 HD²" tvg-logo="http://7logos.top/logos/disney+hd.png" group-title="CANAIS | DISNEY+",DISNEY+ 4 HD²
+http://trabalho724.top:8080/carmem01/22carmem22/297171
+#EXTINF:-1 tvg-id="" tvg-name="DISNEY+ 5 HD¹" tvg-logo="http://7logos.top/logos/disney+hd.png" group-title="CANAIS | DISNEY+",DISNEY+ 5 HD¹
+http://trabalho724.top:8080/carmem01/22carmem22/59972
+#EXTINF:-1 tvg-id="" tvg-name="DISNEY+ 5 HD²" tvg-logo="http://7logos.top/logos/disney+hd.png" group-title="CANAIS | DISNEY+",DISNEY+ 5 HD²
+http://trabalho724.top:8080/carmem01/22carmem22/297172
+#EXTINF:-1 tvg-id="" tvg-name="DISNEY+ 6 HD²" tvg-logo="http://7logos.top/logos/disney+hd.png" group-title="CANAIS | DISNEY+",DISNEY+ 6 HD²
+http://trabalho724.top:8080/carmem01/22carmem22/297173
+#EXTINF:-1 tvg-id="premiere8.br" tvg-name="PREMIERE 8 HD¹" tvg-logo="http://7logos.top/logos/premiereclubeshd.png" group-title="CANAIS | PREMIERE FC",PREMIERE 8 HD¹
+http://trabalho724.top:8080/carmem01/22carmem22/324234
+#EXTINF:-1 tvg-id="" tvg-name="NBA LEAGUE PASS 1 HD¹" tvg-logo="http://7logos.top/logos/nbaleaguepasshd.png" group-title="CANAIS | NBA NHL MBL & LEAGUE PASS",NBA LEAGUE PASS 1 HD¹
+http://trabalho724.top:8080/carmem01/22carmem22/326565
+#EXTINF:-1 tvg-id="" tvg-name="NBA LEAGUE PASS 2 HD¹" tvg-logo="http://7logos.top/logos/nbaleaguepasshd.png" group-title="CANAIS | NBA NHL MBL & LEAGUE PASS",NBA LEAGUE PASS 2 HD¹
+http://trabalho724.top:8080/carmem01/22carmem22/326566
+#EXTINF:-1 tvg-id="" tvg-name="NBA LEAGUE PASS 3 HD¹" tvg-logo="http://7logos.top/logos/nbaleaguepasshd.png" group-title="CANAIS | NBA NHL MBL & LEAGUE PASS",NBA LEAGUE PASS 3 HD¹
+http://trabalho724.top:8080/carmem01/22carmem22/326567
+#EXTINF:-1 tvg-id="" tvg-name="NBA LEAGUE PASS 4 HD¹" tvg-logo="http://7logos.top/logos/nbaleaguepasshd.png" group-title="CANAIS | NBA NHL MBL & LEAGUE PASS",NBA LEAGUE PASS 4 HD¹
+http://trabalho724.top:8080/carmem01/22carmem22/326568
+#EXTINF:-1 tvg-id="" tvg-name="NBA LEAGUE PASS 5 HD¹" tvg-logo="http://7logos.top/logos/nbaleaguepasshd.png" group-title="CANAIS | NBA NHL MBL & LEAGUE PASS",NBA LEAGUE PASS 5 HD¹
+http://trabalho724.top:8080/carmem01/22carmem22/326569
+#EXTINF:-1 tvg-id="" tvg-name="PAULISTÃO PLAY 01 HD²" tvg-logo="http://7logos.top/logos/paulistaoplayhd.png" group-title="CANAIS | ESPORTES PAY PER VIEW",PAULISTÃO PLAY 01 HD²
+http://trabalho724.top:8080/carmem01/22carmem22/281709
+#EXTINF:-1 tvg-id="" tvg-name="PAULISTÃO PLAY 02 HD²" tvg-logo="http://7logos.top/logos/paulistaoplayhd.png" group-title="CANAIS | ESPORTES PAY PER VIEW",PAULISTÃO PLAY 02 HD²
+http://trabalho724.top:8080/carmem01/22carmem22/129892
+#EXTINF:-1 tvg-id="" tvg-name="PAULISTÃO PLAY 03 HD²" tvg-logo="http://7logos.top/logos/paulistaoplayhd.png" group-title="CANAIS | ESPORTES PAY PER VIEW",PAULISTÃO PLAY 03 HD²
+http://trabalho724.top:8080/carmem01/22carmem22/282156
+#EXTINF:-1 tvg-id="" tvg-name="PAULISTÃO PLAY 04 HD²" tvg-logo="http://7logos.top/logos/paulistaoplayhd.png" group-title="CANAIS | ESPORTES PAY PER VIEW",PAULISTÃO PLAY 04 HD²
+http://trabalho724.top:8080/carmem01/22carmem22/282157
+#EXTINF:-1 tvg-id="" tvg-name="RODEIO HD²" tvg-logo="http://7logos.top/logos/worldfinalshd.png" group-title="CANAIS | ESPORTES PAY PER VIEW",RODEIO HD²
+http://trabalho724.top:8080/carmem01/22carmem22/333043
+#EXTINF:-1 tvg-id="sportv.br" tvg-name="SporTV 4 4K¹" tvg-logo="http://7logos.top/logos/sportv44k.png" group-title="CANAIS | SPORTV",SporTV 4 4K¹
+http://trabalho724.top:8080/carmem01/22carmem22/336491
+#EXTINF:-1 tvg-id="sportv.br" tvg-name="SporTV 4 HD¹" tvg-logo="http://7logos.top/logos/sportv4hd.png" group-title="CANAIS | SPORTV",SporTV 4 HD¹
+http://trabalho724.top:8080/carmem01/22carmem22/336492
+#EXTINF:-1 tvg-id="" tvg-name="BRTVMAX HD¹" tvg-logo="http://7logos.top/logos/brtvmax.png" group-title="CANAIS | ESPORTES PAY PER VIEW",BRTVMAX HD¹
+http://trabalho724.top:8080/carmem01/22carmem22/341173
+#EXTINF:-1 tvg-id="" tvg-name="MAX MOSAICO DA CHAMPIONS" tvg-logo="http://7logos.top/logos/hbomaxhd.png" group-title="CANAIS | HBO MAX",MAX MOSAICO DA CHAMPIONS
+http://trabalho724.top:8080/carmem01/22carmem22/343396
+#EXTINF:-1 tvg-id="" tvg-name="HBO MAX CHAMPIONS LEAGUE FHD¹" tvg-logo="http://7logos.top/logos/hbomaxfhd.png" group-title="CANAIS | HBO MAX",HBO MAX CHAMPIONS LEAGUE FHD¹
+http://trabalho724.top:8080/carmem01/22carmem22/63009
+#EXTINF:-1 tvg-id="" tvg-name="HBO MAX CHAMPIONS LEAGUE  1 HD¹" tvg-logo="http://7logos.top/logos/hbomaxhd.png" group-title="CANAIS | HBO MAX",HBO MAX CHAMPIONS LEAGUE  1 HD¹
+http://trabalho724.top:8080/carmem01/22carmem22/64590
+#EXTINF:-1 tvg-id="" tvg-name="HBO MAX CHAMPIONS LEAGUE 1 HD*" tvg-logo="http://7logos.top/logos/hbomaxhd.png" group-title="CANAIS | HBO MAX",HBO MAX CHAMPIONS LEAGUE 1 HD*
+http://trabalho724.top:8080/carmem01/22carmem22/69819
+#EXTINF:-1 tvg-id="agromais.br" tvg-name="HBO MAX CHAMPIONS LEAGUE FHD²" tvg-logo="http://7logos.top/logos/hbomaxfhd.png" group-title="CANAIS | HBO MAX",HBO MAX CHAMPIONS LEAGUE FHD²
+http://trabalho724.top:8080/carmem01/22carmem22/59973
+#EXTINF:-1 tvg-id="" tvg-name="HBO MAX CHAMPIONS LEAGUE  1 HD²" tvg-logo="http://7logos.top/logos/hbomaxhd.png" group-title="CANAIS | HBO MAX",HBO MAX CHAMPIONS LEAGUE  1 HD²
+http://trabalho724.top:8080/carmem01/22carmem22/63011
+#EXTINF:-1 tvg-id="" tvg-name="HBO MAX CHAMPIONS LEAGUE 2 HD¹" tvg-logo="http://7logos.top/logos/hbomaxhd.png" group-title="CANAIS | HBO MAX",HBO MAX CHAMPIONS LEAGUE 2 HD¹
+http://trabalho724.top:8080/carmem01/22carmem22/59961
+#EXTINF:-1 tvg-id="" tvg-name="HBO MAX CHAMPIONS LEAGUE 2 HD²" tvg-logo="http://7logos.top/logos/hbomaxhd.png" group-title="CANAIS | HBO MAX",HBO MAX CHAMPIONS LEAGUE 2 HD²
+http://trabalho724.top:8080/carmem01/22carmem22/63010
+#EXTINF:-1 tvg-id="" tvg-name="HBO MAX CHAMPIONS LEAGUE 2 HD*" tvg-logo="http://7logos.top/logos/hbomaxhd.png" group-title="CANAIS | HBO MAX",HBO MAX CHAMPIONS LEAGUE 2 HD*
+http://trabalho724.top:8080/carmem01/22carmem22/69815
+#EXTINF:-1 tvg-id="" tvg-name="HBO MAX CHAMPIONS LEAGUE 3 HD¹" tvg-logo="http://7logos.top/logos/hbomaxhd.png" group-title="CANAIS | HBO MAX",HBO MAX CHAMPIONS LEAGUE 3 HD¹
+http://trabalho724.top:8080/carmem01/22carmem22/64591
+#EXTINF:-1 tvg-id="" tvg-name="HBO MAX CHAMPIONS LEAGUE 3 HD²" tvg-logo="http://7logos.top/logos/hbomaxhd.png" group-title="CANAIS | HBO MAX",HBO MAX CHAMPIONS LEAGUE 3 HD²
+http://trabalho724.top:8080/carmem01/22carmem22/59962
+#EXTINF:-1 tvg-id="" tvg-name="HBO MAX CHAMPIONS LEAGUE 3 HD*" tvg-logo="http://7logos.top/logos/hbomaxhd.png" group-title="CANAIS | HBO MAX",HBO MAX CHAMPIONS LEAGUE 3 HD*
+http://trabalho724.top:8080/carmem01/22carmem22/69816
+#EXTINF:-1 tvg-id="" tvg-name="HBO MAX CHAMPIONS LEAGUE 4 HD¹" tvg-logo="http://7logos.top/logos/hbomaxhd.png" group-title="CANAIS | HBO MAX",HBO MAX CHAMPIONS LEAGUE 4 HD¹
+http://trabalho724.top:8080/carmem01/22carmem22/69820
+#EXTINF:-1 tvg-id="" tvg-name="HBO MAX CHAMPIONS LEAGUE 4 HD²" tvg-logo="http://7logos.top/logos/hbomaxhd.png" group-title="CANAIS | HBO MAX",HBO MAX CHAMPIONS LEAGUE 4 HD²
+http://trabalho724.top:8080/carmem01/22carmem22/59963
+#EXTINF:-1 tvg-id="" tvg-name="HBO MAX CHAMPIONS LEAGUE 5 HD¹" tvg-logo="http://7logos.top/logos/hbomaxhd.png" group-title="CANAIS | HBO MAX",HBO MAX CHAMPIONS LEAGUE 5 HD¹
+http://trabalho724.top:8080/carmem01/22carmem22/59964
+#EXTINF:-1 tvg-id="" tvg-name="HBO MAX CHAMPIONS LEAGUE  5 HD²" tvg-logo="http://7logos.top/logos/hbomaxhd.png" group-title="CANAIS | HBO MAX",HBO MAX CHAMPIONS LEAGUE  5 HD²
+http://trabalho724.top:8080/carmem01/22carmem22/343392
+#EXTINF:-1 tvg-id="" tvg-name="HBO MAX CHAMPIONS LEAGUE 6 HD¹" tvg-logo="http://7logos.top/logos/hbomaxhd.png" group-title="CANAIS | HBO MAX",HBO MAX CHAMPIONS LEAGUE 6 HD¹
+http://trabalho724.top:8080/carmem01/22carmem22/69821
+#EXTINF:-1 tvg-id="" tvg-name="HBO MAX CHAMPIONS LEAGUE  6 HD²" tvg-logo="http://7logos.top/logos/hbomaxhd.png" group-title="CANAIS | HBO MAX",HBO MAX CHAMPIONS LEAGUE  6 HD²
+http://trabalho724.top:8080/carmem01/22carmem22/343393
+#EXTINF:-1 tvg-id="" tvg-name="HBO MAX CHAMPIONS LEAGUE  7 HD²" tvg-logo="http://7logos.top/logos/hbomaxhd.png" group-title="CANAIS | HBO MAX",HBO MAX CHAMPIONS LEAGUE  7 HD²
+http://trabalho724.top:8080/carmem01/22carmem22/343394
+#EXTINF:-1 tvg-id="" tvg-name="HBO MAX CHAMPIONS LEAGUE  8 HD²" tvg-logo="http://7logos.top/logos/hbomaxhd.png" group-title="CANAIS | HBO MAX",HBO MAX CHAMPIONS LEAGUE  8 HD²
+http://trabalho724.top:8080/carmem01/22carmem22/343395
+#EXTINF:-1 tvg-id="" tvg-name="HBO MAX CHAMPIONS LEAGUE  9 HD²" tvg-logo="http://7logos.top/logos/hbomaxhd.png" group-title="CANAIS | HBO MAX",HBO MAX CHAMPIONS LEAGUE  9 HD²
+http://trabalho724.top:8080/carmem01/22carmem22/343397
+#EXTINF:-1 tvg-id="" tvg-name="HBO MAX CHAMPIONS LEAGUE  10 HD²" tvg-logo="http://7logos.top/logos/hbomaxhd.png" group-title="CANAIS | HBO MAX",HBO MAX CHAMPIONS LEAGUE  10 HD²
+http://trabalho724.top:8080/carmem01/22carmem22/343398
+#EXTINF:-1 tvg-id="" tvg-name="HBO MAX CHAMPIONS LEAGUE  11 HD²" tvg-logo="http://7logos.top/logos/hbomaxhd.png" group-title="CANAIS | HBO MAX",HBO MAX CHAMPIONS LEAGUE  11 HD²
+http://trabalho724.top:8080/carmem01/22carmem22/343399
+#EXTINF:-1 tvg-id="" tvg-name="HBO MAX CHAMPIONS LEAGUE  12 HD²" tvg-logo="http://7logos.top/logos/hbomaxhd.png" group-title="CANAIS | HBO MAX",HBO MAX CHAMPIONS LEAGUE  12 HD²
+http://trabalho724.top:8080/carmem01/22carmem22/343400
+#EXTINF:-1 tvg-id="espn.br" tvg-name="ESPN  4K¹" tvg-logo="http://7logos.top/logos/espn4k.png" group-title="CANAIS | UHD (4K)",ESPN  4K¹
+http://trabalho724.top:8080/carmem01/22carmem22/28792
+#EXTINF:-1 tvg-id="espn.br" tvg-name="ESPN FHD MAX²" tvg-logo="http://7logos.top/logos/espnfhdmax.png" group-title="CANAIS | ESPN",ESPN FHD MAX²
+http://trabalho724.top:8080/carmem01/22carmem22/72979
+#EXTINF:-1 tvg-id="espn.br" tvg-name="ESPN FHD¹" tvg-logo="http://7logos.top/logos/espnfhd.png" group-title="CANAIS | ESPN",ESPN FHD¹
+http://trabalho724.top:8080/carmem01/22carmem22/29197
+#EXTINF:-1 tvg-id="espn.br" tvg-name="ESPN FHD²" tvg-logo="http://7logos.top/logos/espnfhd.png" group-title="CANAIS | ESPN",ESPN FHD²
+http://trabalho724.top:8080/carmem01/22carmem22/303462
+#EXTINF:-1 tvg-id="espn.br" tvg-name="ESPN FHD ᶜᴰᴺ²" tvg-logo="http://7logos.top/logos/espnfhd.png" group-title="CANAIS | ESPN",ESPN FHD ᶜᴰᴺ²
+http://trabalho724.top:8080/carmem01/22carmem22/65733
+#EXTINF:-1 tvg-id="espn.br" tvg-name="ESPN HD¹" tvg-logo="http://7logos.top/logos/espnhd.png" group-title="CANAIS | ESPN",ESPN HD¹
+http://trabalho724.top:8080/carmem01/22carmem22/153012
+#EXTINF:-1 tvg-id="espnbrasil.br" tvg-name="ESPN HD²" tvg-logo="http://7logos.top/logos/espnhd.png" group-title="CANAIS | ESPN",ESPN HD²
+http://trabalho724.top:8080/carmem01/22carmem22/22529
+#EXTINF:-1 tvg-id="espnbrasil.br" tvg-name="ESPN HD ᶜᴰᴺ²" tvg-logo="http://7logos.top/logos/espnhd.png" group-title="CANAIS | ESPN",ESPN HD ᶜᴰᴺ²
+http://trabalho724.top:8080/carmem01/22carmem22/18664
+#EXTINF:-1 tvg-id="espnbrasil.br" tvg-name="ESPN SD¹" tvg-logo="http://7logos.top/logos/espnsd.png" group-title="CANAIS | ESPN",ESPN SD¹
+http://trabalho724.top:8080/carmem01/22carmem22/22331
+#EXTINF:-1 tvg-id="espn.br" tvg-name="ESPN SD*" tvg-logo="http://7logos.top/logos/espnsd.png" group-title="CANAIS | ESPN",ESPN SD*
+http://trabalho724.top:8080/carmem01/22carmem22/303463
+#EXTINF:-1 tvg-id="espnbrasil.br" tvg-name="ESPN SD²" tvg-logo="http://7logos.top/logos/espnsd.png" group-title="CANAIS | ESPN",ESPN SD²
+http://trabalho724.top:8080/carmem01/22carmem22/18676
+#EXTINF:-1 tvg-id="espn2.br" tvg-name="ESPN 2 FHD¹" tvg-logo="http://7logos.top/logos/espn2fhd.png" group-title="CANAIS | ESPN",ESPN 2 FHD¹
+http://trabalho724.top:8080/carmem01/22carmem22/22669
+#EXTINF:-1 tvg-id="espn2.br" tvg-name="ESPN 2 FHD²" tvg-logo="http://7logos.top/logos/espn2fhd.png" group-title="CANAIS | ESPN",ESPN 2 FHD²
+http://trabalho724.top:8080/carmem01/22carmem22/31593
+#EXTINF:-1 tvg-id="espn2.br" tvg-name="ESPN 2 FHD*" tvg-logo="http://7logos.top/logos/espn2fhd.png" group-title="CANAIS | ESPN",ESPN 2 FHD*
+http://trabalho724.top:8080/carmem01/22carmem22/303464
+#EXTINF:-1 tvg-id="espn2.br" tvg-name="ESPN 2 HD¹" tvg-logo="http://7logos.top/logos/espn2hd.png" group-title="CANAIS | ESPN",ESPN 2 HD¹
+http://trabalho724.top:8080/carmem01/22carmem22/18662
+#EXTINF:-1 tvg-id="espn2.br" tvg-name="ESPN 2 HD²" tvg-logo="http://7logos.top/logos/espn2hd.png" group-title="CANAIS | ESPN",ESPN 2 HD²
+http://trabalho724.top:8080/carmem01/22carmem22/22530
+#EXTINF:-1 tvg-id="espn2.br" tvg-name="ESPN 2 HD*" tvg-logo="http://7logos.top/logos/espn2hd.png" group-title="CANAIS | ESPN",ESPN 2 HD*
+http://trabalho724.top:8080/carmem01/22carmem22/303465
+#EXTINF:-1 tvg-id="espn2.br" tvg-name="ESPN 2 SD¹" tvg-logo="http://7logos.top/logos/espn2sd.png" group-title="CANAIS | ESPN",ESPN 2 SD¹
+http://trabalho724.top:8080/carmem01/22carmem22/18674
+#EXTINF:-1 tvg-id="espn2.br" tvg-name="ESPN 2 SD²" tvg-logo="http://7logos.top/logos/espn2sd.png" group-title="CANAIS | ESPN",ESPN 2 SD²
+http://trabalho724.top:8080/carmem01/22carmem22/22334
+#EXTINF:-1 tvg-id="espn2.br" tvg-name="ESPN 2 SD*" tvg-logo="http://7logos.top/logos/espn2sd.png" group-title="CANAIS | ESPN",ESPN 2 SD*
+http://trabalho724.top:8080/carmem01/22carmem22/303466
+#EXTINF:-1 tvg-id="espn3.br" tvg-name="ESPN 3 FHD¹" tvg-logo="http://7logos.top/logos/espn3fhd.png" group-title="CANAIS | ESPN",ESPN 3 FHD¹
+http://trabalho724.top:8080/carmem01/22carmem22/99445
+#EXTINF:-1 tvg-id="espn3.br" tvg-name="ESPN 3 FHD²" tvg-logo="http://7logos.top/logos/espn3fhd.png" group-title="CANAIS | ESPN",ESPN 3 FHD²
+http://trabalho724.top:8080/carmem01/22carmem22/72980
+#EXTINF:-1 tvg-id="espn3.br" tvg-name="ESPN 3 FHD*" tvg-logo="http://7logos.top/logos/espn3fhd.png" group-title="CANAIS | ESPN",ESPN 3 FHD*
+http://trabalho724.top:8080/carmem01/22carmem22/303467
+#EXTINF:-1 tvg-id="espn3.br" tvg-name="ESPN 3 HD¹" tvg-logo="http://7logos.top/logos/espn3hd.png" group-title="CANAIS | ESPN",ESPN 3 HD¹
+http://trabalho724.top:8080/carmem01/22carmem22/22528
+#EXTINF:-1 tvg-id="espn3.br" tvg-name="ESPN 3 HD²" tvg-logo="http://7logos.top/logos/espn3hd.png" group-title="CANAIS | ESPN",ESPN 3 HD²
+http://trabalho724.top:8080/carmem01/22carmem22/18663
+#EXTINF:-1 tvg-id="espn3.br" tvg-name="ESPN 3 HD*" tvg-logo="http://7logos.top/logos/espn3hd.png" group-title="CANAIS | ESPN",ESPN 3 HD*
+http://trabalho724.top:8080/carmem01/22carmem22/303468
+#EXTINF:-1 tvg-id="espn3.br" tvg-name="ESPN 3 SD¹" tvg-logo="http://7logos.top/logos/espn3sd.png" group-title="CANAIS | ESPN",ESPN 3 SD¹
+http://trabalho724.top:8080/carmem01/22carmem22/64652
+#EXTINF:-1 tvg-id="espn3.br" tvg-name="ESPN 3 SD²" tvg-logo="http://7logos.top/logos/espn3sd.png" group-title="CANAIS | ESPN",ESPN 3 SD²
+http://trabalho724.top:8080/carmem01/22carmem22/18675
+#EXTINF:-1 tvg-id="espn3.br" tvg-name="ESPN 3 SD*" tvg-logo="http://7logos.top/logos/espn3sd.png" group-title="CANAIS | ESPN",ESPN 3 SD*
+http://trabalho724.top:8080/carmem01/22carmem22/303469
+#EXTINF:-1 tvg-id="" tvg-name="ESPN 4 4K¹" tvg-logo="http://7logos.top/logos/espn44k.png" group-title="CANAIS | UHD (4K)",ESPN 4 4K¹
+http://trabalho724.top:8080/carmem01/22carmem22/275370
+#EXTINF:-1 tvg-id="espn.br" tvg-name="ESPN 4 FHD MAX²" tvg-logo="http://7logos.top/logos/espn4fhdmax.png" group-title="CANAIS | ESPN",ESPN 4 FHD MAX²
+http://trabalho724.top:8080/carmem01/22carmem22/18653
+#EXTINF:-1 tvg-id="espn.br" tvg-name="ESPN 4 FHD¹" tvg-logo="http://7logos.top/logos/espn4fhd.png" group-title="CANAIS | ESPN",ESPN 4 FHD¹
+http://trabalho724.top:8080/carmem01/22carmem22/18656
+#EXTINF:-1 tvg-id="espn4.br" tvg-name="ESPN 4 FHD²" tvg-logo="http://7logos.top/logos/espn4fhd.png" group-title="CANAIS | ESPN",ESPN 4 FHD²
+http://trabalho724.top:8080/carmem01/22carmem22/22675
+#EXTINF:-1 tvg-id="espn4.br" tvg-name="ESPN 4 FHD*" tvg-logo="http://7logos.top/logos/espn4fhd.png" group-title="CANAIS | ESPN",ESPN 4 FHD*
+http://trabalho724.top:8080/carmem01/22carmem22/303470
+#EXTINF:-1 tvg-id="espn.br" tvg-name="ESPN 4 HD¹" tvg-logo="http://7logos.top/logos/espn4hd.png" group-title="CANAIS | ESPN",ESPN 4 HD¹
+http://trabalho724.top:8080/carmem01/22carmem22/18667
+#EXTINF:-1 tvg-id="espn4.br" tvg-name="ESPN 4 HD²" tvg-logo="http://7logos.top/logos/espn4hd.png" group-title="CANAIS | ESPN",ESPN 4 HD²
+http://trabalho724.top:8080/carmem01/22carmem22/22539
+#EXTINF:-1 tvg-id="espn4.br" tvg-name="ESPN 4 HD*" tvg-logo="http://7logos.top/logos/espn4hd.png" group-title="CANAIS | ESPN",ESPN 4 HD*
+http://trabalho724.top:8080/carmem01/22carmem22/303471
+#EXTINF:-1 tvg-id="espn4.br" tvg-name="ESPN 4 SD¹" tvg-logo="http://7logos.top/logos/espn4sd.png" group-title="CANAIS | ESPN",ESPN 4 SD¹
+http://trabalho724.top:8080/carmem01/22carmem22/18672
+#EXTINF:-1 tvg-id="espn4.br" tvg-name="ESPN 4 SD²" tvg-logo="http://7logos.top/logos/espn4sd.png" group-title="CANAIS | ESPN",ESPN 4 SD²
+http://trabalho724.top:8080/carmem01/22carmem22/22344
+#EXTINF:-1 tvg-id="espn4.br" tvg-name="ESPN 4 SD*" tvg-logo="http://7logos.top/logos/espn4sd.png" group-title="CANAIS | ESPN",ESPN 4 SD*
+http://trabalho724.top:8080/carmem01/22carmem22/303472
+#EXTINF:-1 tvg-id="foxsports2.br" tvg-name="ESPN 5 FHD MAX²" tvg-logo="http://7logos.top/logos/espn5fhdmax.png" group-title="CANAIS | ESPN",ESPN 5 FHD MAX²
+http://trabalho724.top:8080/carmem01/22carmem22/65735
+#EXTINF:-1 tvg-id="espn2.br" tvg-name="ESPN 5 FHD" tvg-logo="http://7logos.top/logos/espn5fhd.png" group-title="CANAIS | ESPN",ESPN 5 FHD
+http://trabalho724.top:8080/carmem01/22carmem22/64651
+#EXTINF:-1 tvg-id="foxsports2.br" tvg-name="ESPN 5 FHD²" tvg-logo="http://7logos.top/logos/espn5fhd.png" group-title="CANAIS | ESPN",ESPN 5 FHD²
+http://trabalho724.top:8080/carmem01/22carmem22/22674
+#EXTINF:-1 tvg-id="espn2.br" tvg-name="ESPN 5 HD" tvg-logo="http://7logos.top/logos/espn5hd.png" group-title="CANAIS | ESPN",ESPN 5 HD
+http://trabalho724.top:8080/carmem01/22carmem22/28801
+#EXTINF:-1 tvg-id="foxsports2.br" tvg-name="ESPN 5 HD²" tvg-logo="http://7logos.top/logos/espn5hd.png" group-title="CANAIS | ESPN",ESPN 5 HD²
+http://trabalho724.top:8080/carmem01/22carmem22/22538
+#EXTINF:-1 tvg-id="espn.br" tvg-name="ESPN 5 SD" tvg-logo="http://7logos.top/logos/espn5sd.png" group-title="CANAIS | ESPN",ESPN 5 SD
+http://trabalho724.top:8080/carmem01/22carmem22/18673
+#EXTINF:-1 tvg-id="foxsports2.br" tvg-name="ESPN 5 SD²" tvg-logo="http://7logos.top/logos/espn5sd.png" group-title="CANAIS | ESPN",ESPN 5 SD²
+http://trabalho724.top:8080/carmem01/22carmem22/22343
+#EXTINF:-1 tvg-id="" tvg-name="ESPN 6 FHD" tvg-logo="http://7logos.top/logos/espn6fhd.png" group-title="CANAIS | ESPN",ESPN 6 FHD
+http://trabalho724.top:8080/carmem01/22carmem22/329602
+#EXTINF:-1 tvg-id="" tvg-name="ESPN 6 HD" tvg-logo="http://7logos.top/logos/espn6hd.png" group-title="CANAIS | ESPN",ESPN 6 HD
+http://trabalho724.top:8080/carmem01/22carmem22/329603
+#EXTINF:-1 tvg-id="" tvg-name="ESPN 6 SD" tvg-logo="http://7logos.top/logos/espn6sd.png" group-title="CANAIS | ESPN",ESPN 6 SD
+http://trabalho724.top:8080/carmem01/22carmem22/329604
+#EXTINF:-1 tvg-id="espnextra.br" tvg-name="ESPN EXTRA FHD²" tvg-logo="http://7logos.top/logos/espnextrafhd.png" group-title="CANAIS | ESPN",ESPN EXTRA FHD²
+http://trabalho724.top:8080/carmem01/22carmem22/64653
+#EXTINF:-1 tvg-id="espnextra.br" tvg-name="ESPN EXTRA HD²" tvg-logo="http://7logos.top/logos/espnextrahd.png" group-title="CANAIS | ESPN",ESPN EXTRA HD²
+http://trabalho724.top:8080/carmem01/22carmem22/22332
+#EXTINF:-1 tvg-id="" tvg-name="TV COXA PRIME CURITIBA HD¹" tvg-logo="http://7logos.top/logos/tv_coxa_hd.png" group-title="CANAIS | ESPORTES PAY PER VIEW",TV COXA PRIME CURITIBA HD¹
+http://trabalho724.top:8080/carmem01/22carmem22/345335
+#EXTINF:-1 tvg-id="" tvg-name="DESIMPEDIDOS HD¹" tvg-logo="http://7logos.top/logos/desimpedidoshd.png" group-title="CANAIS | ESPORTES PAY PER VIEW",DESIMPEDIDOS HD¹
+http://trabalho724.top:8080/carmem01/22carmem22/347574
+#EXTINF:-1 tvg-id="" tvg-name="KINGS LEAGUE BRAZIL HD¹" tvg-logo="http://7logos.top/logos/kingsleaguebrazilhd.png" group-title="CANAIS | ESPORTES PAY PER VIEW",KINGS LEAGUE BRAZIL HD¹
+http://trabalho724.top:8080/carmem01/22carmem22/347575
+#EXTINF:-1 tvg-id="" tvg-name="FLAMENGO TV HD¹" tvg-logo="http://7logos.top/logos/flamengotvhd.png" group-title="CANAIS | ESPORTES PAY PER VIEW",FLAMENGO TV HD¹
+http://trabalho724.top:8080/carmem01/22carmem22/347576
+#EXTINF:-1 tvg-id="" tvg-name="X SPORTS HD²" tvg-logo="http://7logos.top/logos/xsportshd.png" group-title="CANAIS | ESPORTES GERAL",X SPORTS HD²
+http://trabalho724.top:8080/carmem01/22carmem22/354545
+#EXTINF:-1 tvg-id="" tvg-name="X SPORTS HD¹" tvg-logo="http://7logos.top/logos/xsportshd.png" group-title="CANAIS | ESPORTES GERAL",X SPORTS HD¹
+http://trabalho724.top:8080/carmem01/22carmem22/354546
+#EXTINF:-1 tvg-id="" tvg-name="X SPORTS FHD¹" tvg-logo="http://7logos.top/logos/xsportsfhd.png" group-title="CANAIS | ESPORTES GERAL",X SPORTS FHD¹
+http://trabalho724.top:8080/carmem01/22carmem22/354547
+#EXTINF:-1 tvg-id="" tvg-name="POWER SLAP 24HRS²" tvg-logo="http://7logos.top/logos/powerslap.png" group-title="CANAIS | ESPORTES PAY PER VIEW",POWER SLAP 24HRS²
+http://trabalho724.top:8080/carmem01/22carmem22/354548
+#EXTINF:-1 tvg-id="" tvg-name="GE TV HD²" tvg-logo="http://7logos.top/logos/getv.png" group-title="CANAIS | ESPORTES PAY PER VIEW",GE TV HD²
+http://trabalho724.top:8080/carmem01/22carmem22/355685
+#EXTINF:-1 tvg-id="" tvg-name="Mr Olympia 01 HD¹" tvg-logo="http://7logos.top/logos/mrolympiahd.png" group-title="CANAIS | ESPORTES PAY PER VIEW",Mr Olympia 01 HD¹
+http://trabalho724.top:8080/carmem01/22carmem22/357272
+#EXTINF:-1 tvg-id="" tvg-name="Mr Olympia 02 HD¹" tvg-logo="http://7logos.top/logos/mrolympiahd.png" group-title="CANAIS | ESPORTES PAY PER VIEW",Mr Olympia 02 HD¹
+http://trabalho724.top:8080/carmem01/22carmem22/357273
+#EXTINF:-1 tvg-id="" tvg-name="PT: A BOLA TV ( 4K )" tvg-logo="" group-title="CANAIS | ESPORTES PORTUGAL / MUNDO",PT: A BOLA TV ( 4K )
+http://trabalho724.top:8080/carmem01/22carmem22/307471
+#EXTINF:-1 tvg-id="abolatv.pt" tvg-name="PT: A Bola TV HD" tvg-logo="https://upload.wikimedia.org/wikipedia/en/b/b2/A_Bola_TV_logo.png" group-title="CANAIS | ESPORTES PORTUGAL / MUNDO",PT: A Bola TV HD
+http://trabalho724.top:8080/carmem01/22carmem22/307927
+#EXTINF:-1 tvg-id="abolatv.pt" tvg-name="PT: A BOLA TV*" tvg-logo="https://upload.wikimedia.org/wikipedia/en/b/b2/A_Bola_TV_logo.png" group-title="CANAIS | ESPORTES PORTUGAL / MUNDO",PT: A BOLA TV*
+http://trabalho724.top:8080/carmem01/22carmem22/297187
+#EXTINF:-1 tvg-id="benficatv.pt" tvg-name="PT: BTV 4K" tvg-logo="https://curl.pk/img/u/223787d64eb754b15c80b04558a11332452.png" group-title="CANAIS | ESPORTES PORTUGAL / MUNDO",PT: BTV 4K
+http://trabalho724.top:8080/carmem01/22carmem22/307464
+#EXTINF:-1 tvg-id="1plus1.pt" tvg-name="PT: BTV 1 FHD*" tvg-logo="https://media.slbenfica.pt/-/media/benficadp/images/generic_content_pages/btv/btv_logo.png" group-title="CANAIS | ESPORTES PORTUGAL / MUNDO",PT: BTV 1 FHD*
+http://trabalho724.top:8080/carmem01/22carmem22/297190
+#EXTINF:-1 tvg-id="1plus1.pt" tvg-name="PT: BTV 1 HD" tvg-logo="https://media.slbenfica.pt/-/media/benficadp/images/generic_content_pages/btv/btv_logo.png" group-title="CANAIS | ESPORTES PORTUGAL / MUNDO",PT: BTV 1 HD
+http://trabalho724.top:8080/carmem01/22carmem22/297189
+#EXTINF:-1 tvg-id="1plus1.pt" tvg-name="PT: BTV 1 SD*" tvg-logo="https://media.slbenfica.pt/-/media/benficadp/images/generic_content_pages/btv/btv_logo.png" group-title="CANAIS | ESPORTES PORTUGAL / MUNDO",PT: BTV 1 SD*
+http://trabalho724.top:8080/carmem01/22carmem22/297188
+#EXTINF:-1 tvg-id="" tvg-name="PT: BTV HD*" tvg-logo="https://curl.pk/img/u/223787d64eb754b15c80b04558a11332452.png" group-title="CANAIS | ESPORTES PORTUGAL / MUNDO",PT: BTV HD*
+http://trabalho724.top:8080/carmem01/22carmem22/307953
+#EXTINF:-1 tvg-id="" tvg-name="PT: BTV SD" tvg-logo="https://curl.pk/img/u/223787d64eb754b15c80b04558a11332452.png" group-title="CANAIS | ESPORTES PORTUGAL / MUNDO",PT: BTV SD
+http://trabalho724.top:8080/carmem01/22carmem22/307952
+#EXTINF:-1 tvg-id="" tvg-name="PT: Canal 11 FHD" tvg-logo="https://img-cdn.curl.pk/channels_icon/11509750541.png" group-title="CANAIS | ESPORTES PORTUGAL / MUNDO",PT: Canal 11 FHD
+http://trabalho724.top:8080/carmem01/22carmem22/307925
+#EXTINF:-1 tvg-id="canal11.pt" tvg-name="PT | Canal 11 FHD*" tvg-logo="https://img-cdn.curl.pk/channels_icon/11509750541.png" group-title="CANAIS | ESPORTES PORTUGAL / MUNDO",PT | Canal 11 FHD*
+http://trabalho724.top:8080/carmem01/22carmem22/306948
+#EXTINF:-1 tvg-id="canal11.pt" tvg-name="PT: CANAL 11" tvg-logo="https://img-cdn.curl.pk/channels_icon/11509750541.png" group-title="CANAIS | ESPORTES PORTUGAL / MUNDO",PT: CANAL 11
+http://trabalho724.top:8080/carmem01/22carmem22/307409
+#EXTINF:-1 tvg-id="" tvg-name="PT: Combat FHD" tvg-logo="https://img-cdn.curl.pk/channels_icon/67073602011.png" group-title="CANAIS | ESPORTES PORTUGAL / MUNDO",PT: Combat FHD
+http://trabalho724.top:8080/carmem01/22carmem22/307976
+#EXTINF:-1 tvg-id="elevensports1.pt" tvg-name="PT: ELEVEN SPORTS 1 4K" tvg-logo="https://img-cdn.curl.pk/channels_icon/35068844511.png" group-title="CANAIS | ESPORTES PORTUGAL / MUNDO",PT: ELEVEN SPORTS 1 4K
+http://trabalho724.top:8080/carmem01/22carmem22/307438
+#EXTINF:-1 tvg-id="elevensports1.pt" tvg-name="PT: ELEVEN SPORTS 1 FHD" tvg-logo="https://img-cdn.curl.pk/channels_icon/35068844511.png" group-title="CANAIS | ESPORTES PORTUGAL / MUNDO",PT: ELEVEN SPORTS 1 FHD
+http://trabalho724.top:8080/carmem01/22carmem22/116716
+#EXTINF:-1 tvg-id="elevensports1.pt" tvg-name="PT: Eleven Sports 1 FHD*" tvg-logo="https://img-cdn.curl.pk/channels_icon/90929690281.png" group-title="CANAIS | ESPORTES PORTUGAL / MUNDO",PT: Eleven Sports 1 FHD*
+http://trabalho724.top:8080/carmem01/22carmem22/307954
+#EXTINF:-1 tvg-id="elevensports1.pt" tvg-name="PT: ELEVEN SPORTS 1 HD" tvg-logo="https://img-cdn.curl.pk/channels_icon/35068844511.png" group-title="CANAIS | ESPORTES PORTUGAL / MUNDO",PT: ELEVEN SPORTS 1 HD
+http://trabalho724.top:8080/carmem01/22carmem22/53994
+#EXTINF:-1 tvg-id="elevensports1.pt" tvg-name="PT: Eleven Sports 1 HD*" tvg-logo="https://img-cdn.curl.pk/channels_icon/90921186001.png" group-title="CANAIS | ESPORTES PORTUGAL / MUNDO",PT: Eleven Sports 1 HD*
+http://trabalho724.top:8080/carmem01/22carmem22/307955
+#EXTINF:-1 tvg-id="elevensports1.pt" tvg-name="PT: ELEVEN SPORTS 1 SD" tvg-logo="https://img-cdn.curl.pk/channels_icon/35068844511.png" group-title="CANAIS | ESPORTES PORTUGAL / MUNDO",PT: ELEVEN SPORTS 1 SD
+http://trabalho724.top:8080/carmem01/22carmem22/53993
+#EXTINF:-1 tvg-id="elevensports1.pt" tvg-name="PT: Eleven Sports SD 1*" tvg-logo="https://img-cdn.curl.pk/channels_icon/35068844511.png" group-title="CANAIS | ESPORTES PORTUGAL / MUNDO",PT: Eleven Sports SD 1*
+http://trabalho724.top:8080/carmem01/22carmem22/307956
+#EXTINF:-1 tvg-id="elevensports1.pt" tvg-name="PT: ELEVEN SPORTS 2 4K" tvg-logo="https://img-cdn.curl.pk/channels_icon/26437584021.png" group-title="CANAIS | ESPORTES PORTUGAL / MUNDO",PT: ELEVEN SPORTS 2 4K
+http://trabalho724.top:8080/carmem01/22carmem22/307115
+#EXTINF:-1 tvg-id="elevensports2.pt" tvg-name="PT: ELEVEN SPORTS 2 FHD" tvg-logo="https://img-cdn.curl.pk/channels_icon/26437584021.png" group-title="CANAIS | ESPORTES PORTUGAL / MUNDO",PT: ELEVEN SPORTS 2 FHD
+http://trabalho724.top:8080/carmem01/22carmem22/53996
+#EXTINF:-1 tvg-id="elevensports2.pt" tvg-name="PT: Eleven Sports 2 FHD*" tvg-logo="https://img-cdn.curl.pk/channels_icon/26437584021.png" group-title="CANAIS | ESPORTES PORTUGAL / MUNDO",PT: Eleven Sports 2 FHD*
+http://trabalho724.top:8080/carmem01/22carmem22/307959
+#EXTINF:-1 tvg-id="elevensports2.pt" tvg-name="PT: ELEVEN SPORTS  2 FHD*" tvg-logo="https://img-cdn.curl.pk/channels_icon/26437584021.png" group-title="CANAIS | ESPORTES PORTUGAL / MUNDO",PT: ELEVEN SPORTS  2 FHD*
+http://trabalho724.top:8080/carmem01/22carmem22/297178
+#EXTINF:-1 tvg-id="elevensports2.pt" tvg-name="PT: Eleven Sports 2 HD" tvg-logo="https://img-cdn.curl.pk/channels_icon/66406572981.png" group-title="CANAIS | ESPORTES PORTUGAL / MUNDO",PT: Eleven Sports 2 HD
+http://trabalho724.top:8080/carmem01/22carmem22/307957
+#EXTINF:-1 tvg-id="elevensports2.pt" tvg-name="PT: Eleven Sports 2 HD*" tvg-logo="https://img-cdn.curl.pk/channels_icon/59228469501.png" group-title="CANAIS | ESPORTES PORTUGAL / MUNDO",PT: Eleven Sports 2 HD*
+http://trabalho724.top:8080/carmem01/22carmem22/307958
+#EXTINF:-1 tvg-id="elevensports2.pt" tvg-name="PT: ELEVEN SPORTS 2 SD" tvg-logo="https://img-cdn.curl.pk/channels_icon/26437584021.png" group-title="CANAIS | ESPORTES PORTUGAL / MUNDO",PT: ELEVEN SPORTS 2 SD
+http://trabalho724.top:8080/carmem01/22carmem22/53995
+#EXTINF:-1 tvg-id="elevensports3.pt" tvg-name="PT: ELEVEN SPORTS 3 SD" tvg-logo="https://img-cdn.curl.pk/channels_icon/80528221451.png" group-title="CANAIS | ESPORTES PORTUGAL / MUNDO",PT: ELEVEN SPORTS 3 SD
+http://trabalho724.top:8080/carmem01/22carmem22/53998
+#EXTINF:-1 tvg-id="elevensports3.pt" tvg-name="PT: ELEVEN SPORTS 3 FHD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/d/d6/Logo_Eleven_Sports_2020.png" group-title="CANAIS | ESPORTES PORTUGAL / MUNDO",PT: ELEVEN SPORTS 3 FHD
+http://trabalho724.top:8080/carmem01/22carmem22/53999
+#EXTINF:-1 tvg-id="elevensports3.pt" tvg-name="PT: ELEVEN SPORTS 3 FHD*" tvg-logo="https://img-cdn.curl.pk/channels_icon/92758271991.png" group-title="CANAIS | ESPORTES PORTUGAL / MUNDO",PT: ELEVEN SPORTS 3 FHD*
+http://trabalho724.top:8080/carmem01/22carmem22/307962
+#EXTINF:-1 tvg-id="elevensports3.pt" tvg-name="PT: ELEVEN SPORTS 3 HD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/d/d6/Logo_Eleven_Sports_2020.png" group-title="CANAIS | ESPORTES PORTUGAL / MUNDO",PT: ELEVEN SPORTS 3 HD
+http://trabalho724.top:8080/carmem01/22carmem22/54000
+#EXTINF:-1 tvg-id="" tvg-name="PT: Eleven Sports 3 HD" tvg-logo="https://img-cdn.curl.pk/channels_icon/21480419701.png" group-title="CANAIS | ESPORTES PORTUGAL / MUNDO",PT: Eleven Sports 3 HD
+http://trabalho724.top:8080/carmem01/22carmem22/307961
+#EXTINF:-1 tvg-id="elevensports3.pt" tvg-name="PT: ELEVEN SPORTS 3 SD*" tvg-logo="https://img-cdn.curl.pk/channels_icon/80528221451.png" group-title="CANAIS | ESPORTES PORTUGAL / MUNDO",PT: ELEVEN SPORTS 3 SD*
+http://trabalho724.top:8080/carmem01/22carmem22/307960
+#EXTINF:-1 tvg-id="" tvg-name="PT: ELEVEN SPORTS 4 FHD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/d/d6/Logo_Eleven_Sports_2020.png" group-title="CANAIS | ESPORTES PORTUGAL / MUNDO",PT: ELEVEN SPORTS 4 FHD
+http://trabalho724.top:8080/carmem01/22carmem22/54002
+#EXTINF:-1 tvg-id="" tvg-name="Pt: Eleven Sports 4 FHD" tvg-logo="https://img-cdn.curl.pk/channels_icon/55288435571.png" group-title="CANAIS | ESPORTES PORTUGAL / MUNDO",Pt: Eleven Sports 4 FHD
+http://trabalho724.top:8080/carmem01/22carmem22/307964
+#EXTINF:-1 tvg-id="" tvg-name="PT: ELEVEN SPORTS 4 HD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/d/d6/Logo_Eleven_Sports_2020.png" group-title="CANAIS | ESPORTES PORTUGAL / MUNDO",PT: ELEVEN SPORTS 4 HD
+http://trabalho724.top:8080/carmem01/22carmem22/54003
+#EXTINF:-1 tvg-id="" tvg-name="PT: Eleven Sports 4 HD" tvg-logo="https://img-cdn.curl.pk/channels_icon/33447846561.png" group-title="CANAIS | ESPORTES PORTUGAL / MUNDO",PT: Eleven Sports 4 HD
+http://trabalho724.top:8080/carmem01/22carmem22/307965
+#EXTINF:-1 tvg-id="" tvg-name="Pt: Eleven Sports 4" tvg-logo="https://img-cdn.curl.pk/channels_icon/55246952831.png" group-title="CANAIS | ESPORTES PORTUGAL / MUNDO",Pt: Eleven Sports 4
+http://trabalho724.top:8080/carmem01/22carmem22/307963
+#EXTINF:-1 tvg-id="" tvg-name="PT: ELEVEN SPORTS 4" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/d/d6/Logo_Eleven_Sports_2020.png" group-title="CANAIS | ESPORTES PORTUGAL / MUNDO",PT: ELEVEN SPORTS 4
+http://trabalho724.top:8080/carmem01/22carmem22/54001
+#EXTINF:-1 tvg-id="" tvg-name="PT: Eleven Sports 6 FHD" tvg-logo="https://img-cdn.curl.pk/channels_icon/56263321141.png" group-title="CANAIS | ESPORTES PORTUGAL / MUNDO",PT: Eleven Sports 6 FHD
+http://trabalho724.top:8080/carmem01/22carmem22/307971
+#EXTINF:-1 tvg-id="" tvg-name="Pt: Eleven Sports 6" tvg-logo="https://img-cdn.curl.pk/channels_icon/75473299161.png" group-title="CANAIS | ESPORTES PORTUGAL / MUNDO",Pt: Eleven Sports 6
+http://trabalho724.top:8080/carmem01/22carmem22/307969
+#EXTINF:-1 tvg-id="" tvg-name="PT: Eleven Sports 6 HD" tvg-logo="https://img-cdn.curl.pk/channels_icon/36475233501.png" group-title="CANAIS | ESPORTES PORTUGAL / MUNDO",PT: Eleven Sports 6 HD
+http://trabalho724.top:8080/carmem01/22carmem22/307970
+#EXTINF:-1 tvg-id="" tvg-name="PT: ELEVEN SPORTS 5 FHD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/d/d6/Logo_Eleven_Sports_2020.png" group-title="CANAIS | ESPORTES PORTUGAL / MUNDO",PT: ELEVEN SPORTS 5 FHD
+http://trabalho724.top:8080/carmem01/22carmem22/54005
+#EXTINF:-1 tvg-id="" tvg-name="PT: Eleven Sports 5 FHD" tvg-logo="https://img-cdn.curl.pk/channels_icon/13816943561.png" group-title="CANAIS | ESPORTES PORTUGAL / MUNDO",PT: Eleven Sports 5 FHD
+http://trabalho724.top:8080/carmem01/22carmem22/307968
+#EXTINF:-1 tvg-id="" tvg-name="PT: ELEVEN SPORTS 5 HD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/d/d6/Logo_Eleven_Sports_2020.png" group-title="CANAIS | ESPORTES PORTUGAL / MUNDO",PT: ELEVEN SPORTS 5 HD
+http://trabalho724.top:8080/carmem01/22carmem22/54006
+#EXTINF:-1 tvg-id="" tvg-name="PT: Eleven Sports 5 HD" tvg-logo="https://img-cdn.curl.pk/channels_icon/47038704951.png" group-title="CANAIS | ESPORTES PORTUGAL / MUNDO",PT: Eleven Sports 5 HD
+http://trabalho724.top:8080/carmem01/22carmem22/307967
+#EXTINF:-1 tvg-id="" tvg-name="PT: ELEVEN SPORTS 5" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/d/d6/Logo_Eleven_Sports_2020.png" group-title="CANAIS | ESPORTES PORTUGAL / MUNDO",PT: ELEVEN SPORTS 5
+http://trabalho724.top:8080/carmem01/22carmem22/54004
+#EXTINF:-1 tvg-id="" tvg-name="PT : Eleven Sports 5" tvg-logo="https://img-cdn.curl.pk/channels_icon/80858478501.png" group-title="CANAIS | ESPORTES PORTUGAL / MUNDO",PT : Eleven Sports 5
+http://trabalho724.top:8080/carmem01/22carmem22/307966
+#EXTINF:-1 tvg-id="" tvg-name="PT: ELEVEN SPORTS 6 FHD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/d/d6/Logo_Eleven_Sports_2020.png" group-title="CANAIS | ESPORTES PORTUGAL / MUNDO",PT: ELEVEN SPORTS 6 FHD
+http://trabalho724.top:8080/carmem01/22carmem22/54008
+#EXTINF:-1 tvg-id="" tvg-name="PT: ELEVEN SPORTS 6 HD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/d/d6/Logo_Eleven_Sports_2020.png" group-title="CANAIS | ESPORTES PORTUGAL / MUNDO",PT: ELEVEN SPORTS 6 HD
+http://trabalho724.top:8080/carmem01/22carmem22/54009
+#EXTINF:-1 tvg-id="" tvg-name="PT: ELEVEN SPORTS 6" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/d/d6/Logo_Eleven_Sports_2020.png" group-title="CANAIS | ESPORTES PORTUGAL / MUNDO",PT: ELEVEN SPORTS 6
+http://trabalho724.top:8080/carmem01/22carmem22/54007
+#EXTINF:-1 tvg-id="" tvg-name="PT: EUROSPORT 1 HD*" tvg-logo="http://i.imgur.com/x4ZTqDJ.png" group-title="CANAIS | ESPORTES PORTUGAL / MUNDO",PT: EUROSPORT 1 HD*
+http://trabalho724.top:8080/carmem01/22carmem22/297193
+#EXTINF:-1 tvg-id="" tvg-name="PT: EUROSPORT 1 SD*" tvg-logo="http://i.imgur.com/x4ZTqDJ.png" group-title="CANAIS | ESPORTES PORTUGAL / MUNDO",PT: EUROSPORT 1 SD*
+http://trabalho724.top:8080/carmem01/22carmem22/297192
+#EXTINF:-1 tvg-id="" tvg-name="PT: EUROSPORT 2 SD*" tvg-logo="http://i.imgur.com/x4ZTqDJ.png" group-title="CANAIS | ESPORTES PORTUGAL / MUNDO",PT: EUROSPORT 2 SD*
+http://trabalho724.top:8080/carmem01/22carmem22/297191
+#EXTINF:-1 tvg-id="" tvg-name="PT: Eurosports 1 HD" tvg-logo="https://img-cdn.curl.pk/channels_icon/84682087451.png" group-title="CANAIS | ESPORTES PORTUGAL / MUNDO",PT: Eurosports 1 HD
+http://trabalho724.top:8080/carmem01/22carmem22/307973
+#EXTINF:-1 tvg-id="" tvg-name="PT: Eurosports 2 HD" tvg-logo="https://img-cdn.curl.pk/channels_icon/29719204421.png" group-title="CANAIS | ESPORTES PORTUGAL / MUNDO",PT: Eurosports 2 HD
+http://trabalho724.top:8080/carmem01/22carmem22/307974
+#EXTINF:-1 tvg-id="" tvg-name="PT: FIGHT NETWORK FHD*" tvg-logo="http://i.imgur.com/jH4yzdq.png" group-title="CANAIS | ESPORTES PORTUGAL / MUNDO",PT: FIGHT NETWORK FHD*
+http://trabalho724.top:8080/carmem01/22carmem22/297179
+#EXTINF:-1 tvg-id="" tvg-name="PT: Motorvision FHD" tvg-logo="https://curl.pk/img/u/1e770b9d24c77bdf5f69209093b609888701.png" group-title="CANAIS | ESPORTES PORTUGAL / MUNDO",PT: Motorvision FHD
+http://trabalho724.top:8080/carmem01/22carmem22/307978
+#EXTINF:-1 tvg-id="" tvg-name="PT: MOTORVISION HD*" tvg-logo="http://i.imgur.com/3eBdDsv.png" group-title="CANAIS | ESPORTES PORTUGAL / MUNDO",PT: MOTORVISION HD*
+http://trabalho724.top:8080/carmem01/22carmem22/297185
+#EXTINF:-1 tvg-id="" tvg-name="PT: PFC HD" tvg-logo="https://img-cdn.curl.pk/channels_icon/71471791891.png" group-title="CANAIS | ESPORTES PORTUGAL / MUNDO",PT: PFC HD
+http://trabalho724.top:8080/carmem01/22carmem22/307975
+#EXTINF:-1 tvg-id="" tvg-name="PT: PFC SD*" tvg-logo="http://i.imgur.com/UlwiI1v.png" group-title="CANAIS | ESPORTES PORTUGAL / MUNDO",PT: PFC SD*
+http://trabalho724.top:8080/carmem01/22carmem22/297186
+#EXTINF:-1 tvg-id="sportingtv.pt" tvg-name="PT: SPORTING TV FHD" tvg-logo="https://img-cdn.curl.pk/channels_icon/96737784111.png" group-title="CANAIS | ESPORTES PORTUGAL / MUNDO",PT: SPORTING TV FHD
+http://trabalho724.top:8080/carmem01/22carmem22/307462
+#EXTINF:-1 tvg-id="sportingtv.pt" tvg-name="PT | Sporting TV FHD" tvg-logo="" group-title="CANAIS | ESPORTES PORTUGAL / MUNDO",PT | Sporting TV FHD
+http://trabalho724.top:8080/carmem01/22carmem22/306991
+#EXTINF:-1 tvg-id="sportingtv.pt" tvg-name="PT: SPORTING TV SD" tvg-logo="https://img-cdn.curl.pk/channels_icon/96737784111.png" group-title="CANAIS | ESPORTES PORTUGAL / MUNDO",PT: SPORTING TV SD
+http://trabalho724.top:8080/carmem01/22carmem22/307463
+#EXTINF:-1 tvg-id="sportingtv.pt" tvg-name="PT: SPORTING TV" tvg-logo="https://img-cdn.curl.pk/channels_icon/96737784111.png" group-title="CANAIS | ESPORTES PORTUGAL / MUNDO",PT: SPORTING TV
+http://trabalho724.top:8080/carmem01/22carmem22/307972
+#EXTINF:-1 tvg-id="elevensports1.pt" tvg-name="PT: SPORT TV 1 4K" tvg-logo="https://img-cdn.curl.pk/channels_icon/42194239471.png" group-title="CANAIS | ESPORTES PORTUGAL / MUNDO",PT: SPORT TV 1 4K
+http://trabalho724.top:8080/carmem01/22carmem22/307416
+#EXTINF:-1 tvg-id="" tvg-name="PT: Sport TV 1 FHD" tvg-logo="https://img-cdn.curl.pk/channels_icon/42194239471.png" group-title="CANAIS | ESPORTES PORTUGAL / MUNDO",PT: Sport TV 1 FHD
+http://trabalho724.top:8080/carmem01/22carmem22/307936
+#EXTINF:-1 tvg-id="sporttv1.pt" tvg-name="PT: SPORT TV 1 FHD*" tvg-logo="https://img-cdn.curl.pk/channels_icon/42194239471.png" group-title="CANAIS | ESPORTES PORTUGAL / MUNDO",PT: SPORT TV 1 FHD*
+http://trabalho724.top:8080/carmem01/22carmem22/307413
+#EXTINF:-1 tvg-id="" tvg-name="PT: Sport TV + HD" tvg-logo="https://img-cdn.curl.pk/channels_icon/37029653971.png" group-title="CANAIS | ESPORTES PORTUGAL / MUNDO",PT: Sport TV + HD
+http://trabalho724.top:8080/carmem01/22carmem22/307933
+#EXTINF:-1 tvg-id="sporttv1.pt" tvg-name="PT: SPORT TV 1 HD**" tvg-logo="https://img-cdn.curl.pk/channels_icon/42194239471.png" group-title="CANAIS | ESPORTES PORTUGAL / MUNDO",PT: SPORT TV 1 HD**
+http://trabalho724.top:8080/carmem01/22carmem22/307414
+#EXTINF:-1 tvg-id="elevensports1.pt" tvg-name="PT: Sport TV 1 HD" tvg-logo="https://img-cdn.curl.pk/channels_icon/99548243601.png" group-title="CANAIS | ESPORTES PORTUGAL / MUNDO",PT: Sport TV 1 HD
+http://trabalho724.top:8080/carmem01/22carmem22/307935
+#EXTINF:-1 tvg-id="sporttv1.pt" tvg-name="PT: SPORT TV 1 SD*" tvg-logo="https://img-cdn.curl.pk/channels_icon/63958668851.png" group-title="CANAIS | ESPORTES PORTUGAL / MUNDO",PT: SPORT TV 1 SD*
+http://trabalho724.top:8080/carmem01/22carmem22/307934
+#EXTINF:-1 tvg-id="sporttv1.pt" tvg-name="PT: SPORT TV 1 SD" tvg-logo="https://img-cdn.curl.pk/channels_icon/42194239471.png" group-title="CANAIS | ESPORTES PORTUGAL / MUNDO",PT: SPORT TV 1 SD
+http://trabalho724.top:8080/carmem01/22carmem22/307415
+#EXTINF:-1 tvg-id="" tvg-name="PT: SPORT TV*" tvg-logo="http://i.imgur.com/FknzN2L.png" group-title="CANAIS | ESPORTES PORTUGAL / MUNDO",PT: SPORT TV*
+http://trabalho724.top:8080/carmem01/22carmem22/297174
+#EXTINF:-1 tvg-id="sporttv2.pt" tvg-name="PT: SPORT TV 2 4K" tvg-logo="https://img-cdn.curl.pk/channels_icon/58849997341.png" group-title="CANAIS | ESPORTES PORTUGAL / MUNDO",PT: SPORT TV 2 4K
+http://trabalho724.top:8080/carmem01/22carmem22/307098
+#EXTINF:-1 tvg-id="" tvg-name="PT: Sport TV 2 FHD" tvg-logo="https://img-cdn.curl.pk/channels_icon/73219314261.png" group-title="CANAIS | ESPORTES PORTUGAL / MUNDO",PT: Sport TV 2 FHD
+http://trabalho724.top:8080/carmem01/22carmem22/307939
+#EXTINF:-1 tvg-id="" tvg-name="PT: Sport TV 2 HD" tvg-logo="https://img-cdn.curl.pk/channels_icon/60781612131.png" group-title="CANAIS | ESPORTES PORTUGAL / MUNDO",PT: Sport TV 2 HD
+http://trabalho724.top:8080/carmem01/22carmem22/307938
+#EXTINF:-1 tvg-id="sporttv2.pt" tvg-name="PT: SPORT TV 2 HD*" tvg-logo="https://img-cdn.curl.pk/channels_icon/58849997341.png" group-title="CANAIS | ESPORTES PORTUGAL / MUNDO",PT: SPORT TV 2 HD*
+http://trabalho724.top:8080/carmem01/22carmem22/307418
+#EXTINF:-1 tvg-id="" tvg-name="Pt: Sport TV 2 SD" tvg-logo="https://img-cdn.curl.pk/channels_icon/58849997341.png" group-title="CANAIS | ESPORTES PORTUGAL / MUNDO",Pt: Sport TV 2 SD
+http://trabalho724.top:8080/carmem01/22carmem22/307937
+#EXTINF:-1 tvg-id="sporttv3.pt" tvg-name="PT: Sport TV 3 FHD" tvg-logo="https://img-cdn.curl.pk/channels_icon/94780071621.png" group-title="CANAIS | ESPORTES PORTUGAL / MUNDO",PT: Sport TV 3 FHD
+http://trabalho724.top:8080/carmem01/22carmem22/306962
+#EXTINF:-1 tvg-id="" tvg-name="PT: Sport TV 3 FHD*" tvg-logo="https://img-cdn.curl.pk/channels_icon/94780071621.png" group-title="CANAIS | ESPORTES PORTUGAL / MUNDO",PT: Sport TV 3 FHD*
+http://trabalho724.top:8080/carmem01/22carmem22/307942
+#EXTINF:-1 tvg-id="" tvg-name="PT: Sport TV 3 HD" tvg-logo="https://img-cdn.curl.pk/channels_icon/71272654001.png" group-title="CANAIS | ESPORTES PORTUGAL / MUNDO",PT: Sport TV 3 HD
+http://trabalho724.top:8080/carmem01/22carmem22/307941
+#EXTINF:-1 tvg-id="sporttv3.pt" tvg-name="PT: SPORT TV 3 HD*" tvg-logo="https://img-cdn.curl.pk/channels_icon/71272654001.png" group-title="CANAIS | ESPORTES PORTUGAL / MUNDO",PT: SPORT TV 3 HD*
+http://trabalho724.top:8080/carmem01/22carmem22/307423
+#EXTINF:-1 tvg-id="sporttv3.pt" tvg-name="PT: SPORT TV 3 LOW*" tvg-logo="https://1.bp.blogspot.com/-5VEMXsL8q9Y/WT2FMruoncI/AAAAAAAAGhk/1RBFbRfw4m4CdlwfXpX1jxSkdYCu3w9XQCLcB/s1600/sport_tv_pt.png" group-title="CANAIS | ESPORTES PORTUGAL / MUNDO",PT: SPORT TV 3 LOW*
+http://trabalho724.top:8080/carmem01/22carmem22/293485
+#EXTINF:-1 tvg-id="" tvg-name="PT: SPORT TV+ LOW*" tvg-logo="" group-title="CANAIS | ESPORTES PORTUGAL / MUNDO",PT: SPORT TV+ LOW*
+http://trabalho724.top:8080/carmem01/22carmem22/293482
+#EXTINF:-1 tvg-id="" tvg-name="Pt: Sport TV 3 SD" tvg-logo="https://img-cdn.curl.pk/channels_icon/30700435421.png" group-title="CANAIS | ESPORTES PORTUGAL / MUNDO",Pt: Sport TV 3 SD
+http://trabalho724.top:8080/carmem01/22carmem22/307940
+#EXTINF:-1 tvg-id="sporttv4k.pt" tvg-name="PT: SPORT TV 4 4K" tvg-logo="" group-title="CANAIS | ESPORTES PORTUGAL / MUNDO",PT: SPORT TV 4 4K
+http://trabalho724.top:8080/carmem01/22carmem22/307426
+#EXTINF:-1 tvg-id="" tvg-name="PT: Sport TV 4 FHD" tvg-logo="https://img-cdn.curl.pk/channels_icon/92632581301.png" group-title="CANAIS | ESPORTES PORTUGAL / MUNDO",PT: Sport TV 4 FHD
+http://trabalho724.top:8080/carmem01/22carmem22/307945
+#EXTINF:-1 tvg-id="sporttv4.pt" tvg-name="PT: SPORT TV 4 FHD*" tvg-logo="https://img-cdn.curl.pk/channels_icon/92632581301.png" group-title="CANAIS | ESPORTES PORTUGAL / MUNDO",PT: SPORT TV 4 FHD*
+http://trabalho724.top:8080/carmem01/22carmem22/297176
+#EXTINF:-1 tvg-id="" tvg-name="PT: Sport TV 4 HD" tvg-logo="https://img-cdn.curl.pk/channels_icon/93955074211.png" group-title="CANAIS | ESPORTES PORTUGAL / MUNDO",PT: Sport TV 4 HD
+http://trabalho724.top:8080/carmem01/22carmem22/307944
+#EXTINF:-1 tvg-id="elevensports4.pt" tvg-name="PT: SPORT TV 4 HD*" tvg-logo="https://1.bp.blogspot.com/-5VEMXsL8q9Y/WT2FMruoncI/AAAAAAAAGhk/1RBFbRfw4m4CdlwfXpX1jxSkdYCu3w9XQCLcB/s1600/sport_tv_pt.png" group-title="CANAIS | ESPORTES PORTUGAL / MUNDO",PT: SPORT TV 4 HD*
+http://trabalho724.top:8080/carmem01/22carmem22/297181
+#EXTINF:-1 tvg-id="sporttv4.pt" tvg-name="PT: SPORT TV 4 LOW*" tvg-logo="https://1.bp.blogspot.com/-5VEMXsL8q9Y/WT2FMruoncI/AAAAAAAAGhk/1RBFbRfw4m4CdlwfXpX1jxSkdYCu3w9XQCLcB/s1600/sport_tv_pt.png" group-title="CANAIS | ESPORTES PORTUGAL / MUNDO",PT: SPORT TV 4 LOW*
+http://trabalho724.top:8080/carmem01/22carmem22/293484
+#EXTINF:-1 tvg-id="" tvg-name="PT: Sport TV 4 SD" tvg-logo="https://img-cdn.curl.pk/channels_icon/98962157641.png" group-title="CANAIS | ESPORTES PORTUGAL / MUNDO",PT: Sport TV 4 SD
+http://trabalho724.top:8080/carmem01/22carmem22/307943
+#EXTINF:-1 tvg-id="" tvg-name="PT: Sport TV 5 FHD" tvg-logo="https://img-cdn.curl.pk/channels_icon/32589196211.png" group-title="CANAIS | ESPORTES PORTUGAL / MUNDO",PT: Sport TV 5 FHD
+http://trabalho724.top:8080/carmem01/22carmem22/307948
+#EXTINF:-1 tvg-id="" tvg-name="PT: SPORT TV  5 FHD*" tvg-logo="http://i.imgur.com/FknzN2L.png" group-title="CANAIS | ESPORTES PORTUGAL / MUNDO",PT: SPORT TV  5 FHD*
+http://trabalho724.top:8080/carmem01/22carmem22/297175
+#EXTINF:-1 tvg-id="" tvg-name="PT: Sport TV 5 HD" tvg-logo="https://img-cdn.curl.pk/channels_icon/28051143461.png" group-title="CANAIS | ESPORTES PORTUGAL / MUNDO",PT: Sport TV 5 HD
+http://trabalho724.top:8080/carmem01/22carmem22/307947
+#EXTINF:-1 tvg-id="" tvg-name="PT: SPORT TV 5 HD *" tvg-logo="" group-title="CANAIS | ESPORTES PORTUGAL / MUNDO",PT: SPORT TV 5 HD *
+http://trabalho724.top:8080/carmem01/22carmem22/297180
+#EXTINF:-1 tvg-id="" tvg-name="PT: SPORT TV 5 LOW*" tvg-logo="" group-title="CANAIS | ESPORTES PORTUGAL / MUNDO",PT: SPORT TV 5 LOW*
+http://trabalho724.top:8080/carmem01/22carmem22/293483
+#EXTINF:-1 tvg-id="" tvg-name="Pt: Sport TV 5 SD" tvg-logo="https://img-cdn.curl.pk/channels_icon/13350691591.png" group-title="CANAIS | ESPORTES PORTUGAL / MUNDO",Pt: Sport TV 5 SD
+http://trabalho724.top:8080/carmem01/22carmem22/307946
+#EXTINF:-1 tvg-id="" tvg-name="PT: Sport TV 6 FHD" tvg-logo="https://img-cdn.curl.pk/channels_icon/41422634401.png" group-title="CANAIS | ESPORTES PORTUGAL / MUNDO",PT: Sport TV 6 FHD
+http://trabalho724.top:8080/carmem01/22carmem22/307950
+#EXTINF:-1 tvg-id="" tvg-name="PT: Sport TV 6 HD" tvg-logo="https://img-cdn.curl.pk/channels_icon/62783331421.png" group-title="CANAIS | ESPORTES PORTUGAL / MUNDO",PT: Sport TV 6 HD
+http://trabalho724.top:8080/carmem01/22carmem22/307949
+#EXTINF:-1 tvg-id="" tvg-name="PT: SPORT TV NBA FHD*" tvg-logo="" group-title="CANAIS | ESPORTES PORTUGAL / MUNDO",PT: SPORT TV NBA FHD*
+http://trabalho724.top:8080/carmem01/22carmem22/297194
+#EXTINF:-1 tvg-id="" tvg-name="PT: Sport TV Nba HD" tvg-logo="https://img-cdn.curl.pk/channels_icon/15105191281.png" group-title="CANAIS | ESPORTES PORTUGAL / MUNDO",PT: Sport TV Nba HD
+http://trabalho724.top:8080/carmem01/22carmem22/307951
