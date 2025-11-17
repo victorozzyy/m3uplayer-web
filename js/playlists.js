@@ -117,6 +117,12 @@ const PlaylistModule = {
             url: "http://kinder5.live:80/get.php?username=094279188&password=062038990&type=m3u_plus",
             needsCors: true
         },
+		{
+            name: "🔥 Anon",
+            description: "Lista 01 ",
+            url: "http://felas87dz.icu:80/get.php?username=Anonymous100&password=Hacker100&type=m3u_plus",
+            needsCors: true
+        },
         {
             name: "🔥 Minha 11",
             description: "Lista 02",
@@ -760,6 +766,7 @@ if (typeof module !== 'undefined' && module.exports) {
 }
 
 console.log('✅ PlaylistModule carregado (v3.0 - com suporte CORS)');
+
 
 
 
