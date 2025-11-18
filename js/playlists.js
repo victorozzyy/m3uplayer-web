@@ -128,7 +128,21 @@ const PlaylistModule = {
             description: "Lista 02",
             url: "http://kinder5.live:80/get.php?username=23156616732&password=42382360350&type=m3u_plus",
             needsCors: true
+        },
+		{
+            name: "🔥 PoAtt",
+            description: "Lista 02",
+            url: "http://xocu.in/get.php?username=427895596&password=B312H8244k&type=m3u_plus",
+            needsCors: true
+        },
+		{
+            name: "🔥 PoAtt2",
+            description: "Lista 02",
+            url: "http://xocu.in/get.php?username=994995942&password=y751261z&type=m3u_plus",
+            needsCors: true
         }
+		
+
     ],
     
     init() {
@@ -766,6 +780,7 @@ if (typeof module !== 'undefined' && module.exports) {
 }
 
 console.log('✅ PlaylistModule carregado (v3.0 - com suporte CORS)');
+
 
 
 
