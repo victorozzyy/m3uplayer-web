@@ -1,240 +1,519 @@
 #EXTM3U
-#EXTINF:-1 tvg-id="" tvg-name="Amazon Prime Video 01" tvg-logo="http://www.fontedecanais.org/logos/canais/primevideo.png" group-title="Canais | Prime Video",Amazon Prime Video 01
-http://rteomi.xyz:80/Edcarlos/ed302850/804987
-#EXTINF:-1 tvg-id="" tvg-name="Amazon Prime Video 02" tvg-logo="http://www.fontedecanais.org/logos/canais/primevideo.png" group-title="Canais | Prime Video",Amazon Prime Video 02
-http://rteomi.xyz:80/Edcarlos/ed302850/804988
-#EXTINF:-1 tvg-id="" tvg-name="Amazon Prime Video 03" tvg-logo="http://www.fontedecanais.org/logos/canais/primevideo.png" group-title="Canais | Prime Video",Amazon Prime Video 03
-http://rteomi.xyz:80/Edcarlos/ed302850/804989
-#EXTINF:-1 tvg-id="BANDSP" tvg-name="Band Sports FHD" tvg-logo="http://www.fontedecanais.org/logos/canais/bandsports.png" group-title="Canais | Esportes",Band Sports FHD
-http://rteomi.xyz:80/Edcarlos/ed302850/804978
-#EXTINF:-1 tvg-id="" tvg-name="Band Sports FHD [H265]" tvg-logo="http://www.fontedecanais.org/logos/canais/bandsports.png" group-title="Canais | Esportes",Band Sports FHD [H265]
-http://rteomi.xyz:80/Edcarlos/ed302850/805545
-#EXTINF:-1 tvg-id="BANDSP" tvg-name="Band Sports HD" tvg-logo="http://www.fontedecanais.org/logos/canais/bandsports.png" group-title="Canais | Esportes",Band Sports HD
-http://rteomi.xyz:80/Edcarlos/ed302850/804979
-#EXTINF:-1 tvg-id="BANDSP" tvg-name="Band Sports SD" tvg-logo="http://www.fontedecanais.org/logos/canais/bandsports.png" group-title="Canais | Esportes",Band Sports SD
-http://rteomi.xyz:80/Edcarlos/ed302850/804980
-#EXTINF:-1 tvg-id="" tvg-name="Canal Goat 01" tvg-logo="http://www.fontedecanais.org/logos/canais/canalgoat.png" group-title="Canais | PPV",Canal Goat 01
-http://rteomi.xyz:80/Edcarlos/ed302850/805283
-#EXTINF:-1 tvg-id="" tvg-name="Canal Goat 02" tvg-logo="http://www.fontedecanais.org/logos/canais/canalgoat.png" group-title="Canais | PPV",Canal Goat 02
-http://rteomi.xyz:80/Edcarlos/ed302850/805284
-#EXTINF:-1 tvg-id="" tvg-name="Canal Goat 03" tvg-logo="http://www.fontedecanais.org/logos/canais/canalgoat.png" group-title="Canais | PPV",Canal Goat 03
-http://rteomi.xyz:80/Edcarlos/ed302850/805285
-#EXTINF:-1 tvg-id="" tvg-name="CazeTV 01" tvg-logo="http://www.fontedecanais.org/logos/canais/cazetv.png" group-title="Canais | PPV",CazeTV 01
-http://rteomi.xyz:80/Edcarlos/ed302850/805274
-#EXTINF:-1 tvg-id="" tvg-name="CazeTV 02" tvg-logo="http://www.fontedecanais.org/logos/canais/cazetv.png" group-title="Canais | PPV",CazeTV 02
-http://rteomi.xyz:80/Edcarlos/ed302850/805275
-#EXTINF:-1 tvg-id="" tvg-name="CazeTV 03" tvg-logo="http://www.fontedecanais.org/logos/canais/cazetv.png" group-title="Canais | PPV",CazeTV 03
-http://rteomi.xyz:80/Edcarlos/ed302850/805276
-#EXTINF:-1 tvg-id="" tvg-name="Combate FHD" tvg-logo="http://www.fontedecanais.org/logos/canais/combate.png" group-title="Canais | Esportes",Combate FHD
-http://rteomi.xyz:80/Edcarlos/ed302850/804984
-#EXTINF:-1 tvg-id="" tvg-name="Combate FHD [H265]" tvg-logo="http://www.fontedecanais.org/logos/canais/combate.png" group-title="Canais | Esportes",Combate FHD [H265]
-http://rteomi.xyz:80/Edcarlos/ed302850/805546
-#EXTINF:-1 tvg-id="" tvg-name="Combate HD" tvg-logo="http://www.fontedecanais.org/logos/canais/combate.png" group-title="Canais | Esportes",Combate HD
-http://rteomi.xyz:80/Edcarlos/ed302850/804985
-#EXTINF:-1 tvg-id="" tvg-name="Combate SD" tvg-logo="http://www.fontedecanais.org/logos/canais/combate.png" group-title="Canais | Esportes",Combate SD
-http://rteomi.xyz:80/Edcarlos/ed302850/804986
-#EXTINF:-1 tvg-id="" tvg-name="DAZN 1" tvg-logo="http://www.fontedecanais.org/logos/canais/dazn.png" group-title="Canais | DAZN",DAZN 1
-http://rteomi.xyz:80/Edcarlos/ed302850/804994
-#EXTINF:-1 tvg-id="" tvg-name="DAZN 2" tvg-logo="http://www.fontedecanais.org/logos/canais/dazn.png" group-title="Canais | DAZN",DAZN 2
-http://rteomi.xyz:80/Edcarlos/ed302850/804995
-#EXTINF:-1 tvg-id="" tvg-name="DAZN 3" tvg-logo="http://www.fontedecanais.org/logos/canais/dazn.png" group-title="Canais | DAZN",DAZN 3
-http://rteomi.xyz:80/Edcarlos/ed302850/804996
-#EXTINF:-1 tvg-id="" tvg-name="Disney+ 1" tvg-logo="http://www.fontedecanais.org/logos/canais/starplus.png" group-title="Canais | Disney+",Disney+ 1
-http://rteomi.xyz:80/Edcarlos/ed302850/805003
-#EXTINF:-1 tvg-id="" tvg-name="Disney+ 2" tvg-logo="http://www.fontedecanais.org/logos/canais/starplus.png" group-title="Canais | Disney+",Disney+ 2
-http://rteomi.xyz:80/Edcarlos/ed302850/805004
-#EXTINF:-1 tvg-id="" tvg-name="Disney+ 3" tvg-logo="http://www.fontedecanais.org/logos/canais/starplus.png" group-title="Canais | Disney+",Disney+ 3
-http://rteomi.xyz:80/Edcarlos/ed302850/805005
-#EXTINF:-1 tvg-id="ELEVEN" tvg-name="ELEVEN SPORTS 1" tvg-logo="https://i.imgur.com/1DnqGWV.png" group-title="Canais | PPV",ELEVEN SPORTS 1
-http://rteomi.xyz:80/Edcarlos/ed302850/805008
-#EXTINF:-1 tvg-id="ELEVSP" tvg-name="ELEVEN SPORTS 2" tvg-logo="https://i.imgur.com/1DnqGWV.png" group-title="Canais | PPV",ELEVEN SPORTS 2
-http://rteomi.xyz:80/Edcarlos/ed302850/805009
-#EXTINF:-1 tvg-id="ELEVEN" tvg-name="ELEVEN SPORTS 3" tvg-logo="https://i.imgur.com/1DnqGWV.png" group-title="Canais | PPV",ELEVEN SPORTS 3
-http://rteomi.xyz:80/Edcarlos/ed302850/805010
-#EXTINF:-1 tvg-id="" tvg-name="ESPN 2 FHD" tvg-logo="http://www.fontedecanais.org/logos/canais/espn2.png" group-title="Canais | ESPN",ESPN 2 FHD
-http://rteomi.xyz:80/Edcarlos/ed302850/805325
-#EXTINF:-1 tvg-id="" tvg-name="ESPN 2 FHD [H265]" tvg-logo="http://www.fontedecanais.org/logos/canais/espn2.png" group-title="Canais | ESPN",ESPN 2 FHD [H265]
-http://rteomi.xyz:80/Edcarlos/ed302850/805561
-#EXTINF:-1 tvg-id="ESPNMBR" tvg-name="ESPN 2 HD" tvg-logo="http://www.fontedecanais.org/logos/canais/espn2.png" group-title="Canais | ESPN",ESPN 2 HD
-http://rteomi.xyz:80/Edcarlos/ed302850/805326
-#EXTINF:-1 tvg-id="ESPNMBR" tvg-name="ESPN 2 SD" tvg-logo="http://www.fontedecanais.org/logos/canais/espn2.png" group-title="Canais | ESPN",ESPN 2 SD
-http://rteomi.xyz:80/Edcarlos/ed302850/805327
-#EXTINF:-1 tvg-id="" tvg-name="ESPN 3 FHD" tvg-logo="http://www.fontedecanais.org/logos/canais/espn3.png" group-title="Canais | ESPN",ESPN 3 FHD
-http://rteomi.xyz:80/Edcarlos/ed302850/805328
-#EXTINF:-1 tvg-id="" tvg-name="ESPN 3 FHD [H265]" tvg-logo="http://www.fontedecanais.org/logos/canais/espn3.png" group-title="Canais | ESPN",ESPN 3 FHD [H265]
-http://rteomi.xyz:80/Edcarlos/ed302850/805562
-#EXTINF:-1 tvg-id="ESPN3D" tvg-name="ESPN 3 HD" tvg-logo="http://www.fontedecanais.org/logos/canais/espn3.png" group-title="Canais | ESPN",ESPN 3 HD
-http://rteomi.xyz:80/Edcarlos/ed302850/805329
-#EXTINF:-1 tvg-id="" tvg-name="ESPN 3 SD" tvg-logo="http://www.fontedecanais.org/logos/canais/espn3.png" group-title="Canais | ESPN",ESPN 3 SD
-http://rteomi.xyz:80/Edcarlos/ed302850/805330
-#EXTINF:-1 tvg-id="" tvg-name="ESPN 4 FHD" tvg-logo="http://www.fontedecanais.org/logos/canais/espn4.png" group-title="Canais | ESPN",ESPN 4 FHD
-http://rteomi.xyz:80/Edcarlos/ed302850/805331
-#EXTINF:-1 tvg-id="" tvg-name="ESPN 4 FHD [H265]" tvg-logo="http://www.fontedecanais.org/logos/canais/espn4.png" group-title="Canais | ESPN",ESPN 4 FHD [H265]
-http://rteomi.xyz:80/Edcarlos/ed302850/805563
-#EXTINF:-1 tvg-id="" tvg-name="ESPN 4 HD" tvg-logo="http://www.fontedecanais.org/logos/canais/espn4.png" group-title="Canais | ESPN",ESPN 4 HD
-http://rteomi.xyz:80/Edcarlos/ed302850/805332
-#EXTINF:-1 tvg-id="" tvg-name="ESPN 4 SD" tvg-logo="http://www.fontedecanais.org/logos/canais/espn4.png" group-title="Canais | ESPN",ESPN 4 SD
-http://rteomi.xyz:80/Edcarlos/ed302850/805333
-#EXTINF:-1 tvg-id="" tvg-name="ESPN 5 FHD" tvg-logo="http://www.fontedecanais.org/logos/canais/espn5.png" group-title="Canais | ESPN",ESPN 5 FHD
-http://rteomi.xyz:80/Edcarlos/ed302850/805334
-#EXTINF:-1 tvg-id="" tvg-name="ESPN 5 FHD [H265]" tvg-logo="http://www.fontedecanais.org/logos/canais/espn5.png" group-title="Canais | ESPN",ESPN 5 FHD [H265]
-http://rteomi.xyz:80/Edcarlos/ed302850/805564
-#EXTINF:-1 tvg-id="" tvg-name="ESPN 5 HD" tvg-logo="http://www.fontedecanais.org/logos/canais/espn5.png" group-title="Canais | ESPN",ESPN 5 HD
-http://rteomi.xyz:80/Edcarlos/ed302850/805335
-#EXTINF:-1 tvg-id="" tvg-name="ESPN 5 SD" tvg-logo="http://www.fontedecanais.org/logos/canais/espn5.png" group-title="Canais | ESPN",ESPN 5 SD
-http://rteomi.xyz:80/Edcarlos/ed302850/805336
-#EXTINF:-1 tvg-id="" tvg-name="ESPN 6 FHD" tvg-logo="http://www.fontedecanais.org/logos/canais/espn6.png" group-title="Canais | ESPN",ESPN 6 FHD
-http://rteomi.xyz:80/Edcarlos/ed302850/805337
-#EXTINF:-1 tvg-id="" tvg-name="ESPN 6 FHD [H265]" tvg-logo="http://www.fontedecanais.org/logos/canais/espn6.png" group-title="Canais | ESPN",ESPN 6 FHD [H265]
-http://rteomi.xyz:80/Edcarlos/ed302850/805565
-#EXTINF:-1 tvg-id="" tvg-name="ESPN 6 HD" tvg-logo="http://www.fontedecanais.org/logos/canais/espn6.png" group-title="Canais | ESPN",ESPN 6 HD
-http://rteomi.xyz:80/Edcarlos/ed302850/805338
-#EXTINF:-1 tvg-id="" tvg-name="ESPN 6 SD" tvg-logo="http://www.fontedecanais.org/logos/canais/espn6.png" group-title="Canais | ESPN",ESPN 6 SD
-http://rteomi.xyz:80/Edcarlos/ed302850/805339
-#EXTINF:-1 tvg-id="ESPN" tvg-name="ESPN FHD" tvg-logo="http://www.fontedecanais.org/logos/canais/espn.png" group-title="Canais | ESPN",ESPN FHD
-http://rteomi.xyz:80/Edcarlos/ed302850/805322
-#EXTINF:-1 tvg-id="" tvg-name="ESPN FHD [H265]" tvg-logo="http://www.fontedecanais.org/logos/canais/espn.png" group-title="Canais | ESPN",ESPN FHD [H265]
-http://rteomi.xyz:80/Edcarlos/ed302850/805560
-#EXTINF:-1 tvg-id="" tvg-name="ESPN HD" tvg-logo="http://www.fontedecanais.org/logos/canais/espn.png" group-title="Canais | ESPN",ESPN HD
-http://rteomi.xyz:80/Edcarlos/ed302850/805323
-#EXTINF:-1 tvg-id="ESPN" tvg-name="ESPN SD" tvg-logo="http://www.fontedecanais.org/logos/canais/espn.png" group-title="Canais | ESPN",ESPN SD
-http://rteomi.xyz:80/Edcarlos/ed302850/805324
-#EXTINF:-1 tvg-id="" tvg-name="FORMULA 1 TV" tvg-logo="https://i.imgur.com/wW2FygV.png" group-title="Canais | PPV",FORMULA 1 TV
-http://rteomi.xyz:80/Edcarlos/ed302850/805007
-#EXTINF:-1 tvg-id="" tvg-name="Furacão TV" tvg-logo="http://www.fontedecanais.org/logos/canais/furacaolive.png" group-title="Canais | PPV",Furacão TV
-http://rteomi.xyz:80/Edcarlos/ed302850/805006
-#EXTINF:-1 tvg-id="" tvg-name="Nosso Futebol 01" tvg-logo="http://www.fontedecanais.org/logos/canais/nossofutebol.png" group-title="Canais | PPV",Nosso Futebol 01
-http://rteomi.xyz:80/Edcarlos/ed302850/804990
-#EXTINF:-1 tvg-id="" tvg-name="Nosso Futebol 02" tvg-logo="http://www.fontedecanais.org/logos/canais/nossofutebol.png" group-title="Canais | PPV",Nosso Futebol 02
-http://rteomi.xyz:80/Edcarlos/ed302850/804991
-#EXTINF:-1 tvg-id="" tvg-name="Nosso Futebol 03" tvg-logo="http://www.fontedecanais.org/logos/canais/nossofutebol.png" group-title="Canais | PPV",Nosso Futebol 03
-http://rteomi.xyz:80/Edcarlos/ed302850/804992
-#EXTINF:-1 tvg-id="" tvg-name="Nosso Futebol 04" tvg-logo="http://www.fontedecanais.org/logos/canais/nossofutebol.png" group-title="Canais | PPV",Nosso Futebol 04
-http://rteomi.xyz:80/Edcarlos/ed302850/804993
-#EXTINF:-1 tvg-id="" tvg-name="NSports FHD" tvg-logo="http://www.fontedecanais.org/logos/canais/nsports.png" group-title="Canais | PPV",NSports FHD
-http://rteomi.xyz:80/Edcarlos/ed302850/805271
-#EXTINF:-1 tvg-id="" tvg-name="NSports FHD [H265]" tvg-logo="http://www.fontedecanais.org/logos/canais/nsports.png" group-title="Canais | Esportes",NSports FHD [H265]
-http://rteomi.xyz:80/Edcarlos/ed302850/805547
-#EXTINF:-1 tvg-id="" tvg-name="NSports HD" tvg-logo="http://www.fontedecanais.org/logos/canais/nsports.png" group-title="Canais | PPV",NSports HD
-http://rteomi.xyz:80/Edcarlos/ed302850/805272
-#EXTINF:-1 tvg-id="" tvg-name="NSports SD" tvg-logo="http://www.fontedecanais.org/logos/canais/nsports.png" group-title="Canais | PPV",NSports SD
-http://rteomi.xyz:80/Edcarlos/ed302850/805273
-#EXTINF:-1 tvg-id="" tvg-name="PapãoTV" tvg-logo="http://i.imgur.com/DkmiaX7.png" group-title="Canais | PPV",PapãoTV
-http://rteomi.xyz:80/Edcarlos/ed302850/805282
-#EXTINF:-1 tvg-id="" tvg-name="Paramount+ 1" tvg-logo="https://www.fontedecanais.org/logos/canais/paramountplus.png" group-title="Canais | Paramount+",Paramount+ 1
-http://rteomi.xyz:80/Edcarlos/ed302850/805277
-#EXTINF:-1 tvg-id="" tvg-name="Paramount+ 2" tvg-logo="https://www.fontedecanais.org/logos/canais/paramountplus.png" group-title="Canais | Paramount+",Paramount+ 2
-http://rteomi.xyz:80/Edcarlos/ed302850/805278
-#EXTINF:-1 tvg-id="" tvg-name="Paramount+ 3" tvg-logo="https://www.fontedecanais.org/logos/canais/paramountplus.png" group-title="Canais | Paramount+",Paramount+ 3
-http://rteomi.xyz:80/Edcarlos/ed302850/805279
-#EXTINF:-1 tvg-id="" tvg-name="Paramount+ 4" tvg-logo="https://www.fontedecanais.org/logos/canais/paramountplus.png" group-title="Canais | Paramount+",Paramount+ 4
-http://rteomi.xyz:80/Edcarlos/ed302850/805280
-#EXTINF:-1 tvg-id="" tvg-name="Paulistão" tvg-logo="http://i.imgur.com/RJ0zvXe.png" group-title="Canais | PPV",Paulistão
-http://rteomi.xyz:80/Edcarlos/ed302850/805002
-#EXTINF:-1 tvg-id="PRM10BR" tvg-name="Premiere 1 HD" tvg-logo="http://www.fontedecanais.org/logos/canais/premiere.png" group-title="Canais | Premiere",Premiere 1 HD
-http://rteomi.xyz:80/Edcarlos/ed302850/805287
-#EXTINF:-1 tvg-id="PRM10BR" tvg-name="Premiere 1 SD" tvg-logo="http://www.fontedecanais.org/logos/canais/premiere.png" group-title="Canais | Premiere",Premiere 1 SD
-http://rteomi.xyz:80/Edcarlos/ed302850/805288
-#EXTINF:-1 tvg-id="PR2SPO" tvg-name="Premiere 2 FHD" tvg-logo="http://www.fontedecanais.org/logos/canais/premiere.png" group-title="Canais | Premiere",Premiere 2 FHD
-http://rteomi.xyz:80/Edcarlos/ed302850/805289
-#EXTINF:-1 tvg-id="" tvg-name="Premiere 2 FHD [H265]" tvg-logo="http://www.fontedecanais.org/logos/canais/premiere.png" group-title="Canais | Premiere",Premiere 2 FHD [H265]
-http://rteomi.xyz:80/Edcarlos/ed302850/805549
-#EXTINF:-1 tvg-id="PR2SPO" tvg-name="Premiere 2 HD" tvg-logo="http://www.fontedecanais.org/logos/canais/premiere.png" group-title="Canais | Premiere",Premiere 2 HD
-http://rteomi.xyz:80/Edcarlos/ed302850/805290
-#EXTINF:-1 tvg-id="PR2SPO" tvg-name="Premiere 2 SD" tvg-logo="http://www.fontedecanais.org/logos/canais/premiere.png" group-title="Canais | Premiere",Premiere 2 SD
-http://rteomi.xyz:80/Edcarlos/ed302850/805291
-#EXTINF:-1 tvg-id="PR3UBE" tvg-name="Premiere 3 FHD" tvg-logo="http://www.fontedecanais.org/logos/canais/premiere.png" group-title="Canais | Premiere",Premiere 3 FHD
-http://rteomi.xyz:80/Edcarlos/ed302850/805292
-#EXTINF:-1 tvg-id="" tvg-name="Premiere 3 FHD [H265]" tvg-logo="http://www.fontedecanais.org/logos/canais/premiere.png" group-title="Canais | Premiere",Premiere 3 FHD [H265]
-http://rteomi.xyz:80/Edcarlos/ed302850/805550
-#EXTINF:-1 tvg-id="PR3UBE" tvg-name="Premiere 3 HD" tvg-logo="http://www.fontedecanais.org/logos/canais/premiere.png" group-title="Canais | Premiere",Premiere 3 HD
-http://rteomi.xyz:80/Edcarlos/ed302850/805293
-#EXTINF:-1 tvg-id="PR3UBE" tvg-name="Premiere 3 SD" tvg-logo="http://www.fontedecanais.org/logos/canais/premiere.png" group-title="Canais | Premiere",Premiere 3 SD
-http://rteomi.xyz:80/Edcarlos/ed302850/805294
-#EXTINF:-1 tvg-id="PRMR4" tvg-name="Premiere 4 FHD" tvg-logo="http://www.fontedecanais.org/logos/canais/premiere.png" group-title="Canais | Premiere",Premiere 4 FHD
-http://rteomi.xyz:80/Edcarlos/ed302850/805295
-#EXTINF:-1 tvg-id="" tvg-name="Premiere 4 FHD [H265]" tvg-logo="http://www.fontedecanais.org/logos/canais/premiere.png" group-title="Canais | Premiere",Premiere 4 FHD [H265]
-http://rteomi.xyz:80/Edcarlos/ed302850/805551
-#EXTINF:-1 tvg-id="PRMR4" tvg-name="Premiere 4 HD" tvg-logo="http://www.fontedecanais.org/logos/canais/premiere.png" group-title="Canais | Premiere",Premiere 4 HD
-http://rteomi.xyz:80/Edcarlos/ed302850/805296
-#EXTINF:-1 tvg-id="PRMR4" tvg-name="Premiere 4 SD" tvg-logo="http://www.fontedecanais.org/logos/canais/premiere.png" group-title="Canais | Premiere",Premiere 4 SD
-http://rteomi.xyz:80/Edcarlos/ed302850/805297
-#EXTINF:-1 tvg-id="PR2SPO" tvg-name="Premiere 5 FHD" tvg-logo="http://www.fontedecanais.org/logos/canais/premiere.png" group-title="Canais | Premiere",Premiere 5 FHD
-http://rteomi.xyz:80/Edcarlos/ed302850/805298
-#EXTINF:-1 tvg-id="" tvg-name="Premiere 5 FHD [H265]" tvg-logo="http://www.fontedecanais.org/logos/canais/premiere.png" group-title="Canais | Premiere",Premiere 5 FHD [H265]
-http://rteomi.xyz:80/Edcarlos/ed302850/805552
-#EXTINF:-1 tvg-id="PR2SPO" tvg-name="Premiere 5 HD" tvg-logo="http://www.fontedecanais.org/logos/canais/premiere.png" group-title="Canais | Premiere",Premiere 5 HD
-http://rteomi.xyz:80/Edcarlos/ed302850/805299
-#EXTINF:-1 tvg-id="PR2SPO" tvg-name="Premiere 5 SD" tvg-logo="http://www.fontedecanais.org/logos/canais/premiere.png" group-title="Canais | Premiere",Premiere 5 SD
-http://rteomi.xyz:80/Edcarlos/ed302850/805300
-#EXTINF:-1 tvg-id="PRM6BR" tvg-name="Premiere 6 FHD" tvg-logo="http://www.fontedecanais.org/logos/canais/premiere.png" group-title="Canais | Premiere",Premiere 6 FHD
-http://rteomi.xyz:80/Edcarlos/ed302850/805301
-#EXTINF:-1 tvg-id="" tvg-name="Premiere 6 FHD [H265]" tvg-logo="http://www.fontedecanais.org/logos/canais/premiere.png" group-title="Canais | Premiere",Premiere 6 FHD [H265]
-http://rteomi.xyz:80/Edcarlos/ed302850/805553
-#EXTINF:-1 tvg-id="PRM6BR" tvg-name="Premiere 6 HD" tvg-logo="http://www.fontedecanais.org/logos/canais/premiere.png" group-title="Canais | Premiere",Premiere 6 HD
-http://rteomi.xyz:80/Edcarlos/ed302850/805302
-#EXTINF:-1 tvg-id="PRM6BR" tvg-name="Premiere 6 SD" tvg-logo="http://www.fontedecanais.org/logos/canais/premiere.png" group-title="Canais | Premiere",Premiere 6 SD
-http://rteomi.xyz:80/Edcarlos/ed302850/805303
-#EXTINF:-1 tvg-id="PRM7BR" tvg-name="Premiere 7 FHD" tvg-logo="http://www.fontedecanais.org/logos/canais/premiere.png" group-title="Canais | Premiere",Premiere 7 FHD
-http://rteomi.xyz:80/Edcarlos/ed302850/805304
-#EXTINF:-1 tvg-id="" tvg-name="Premiere 7 FHD [H265]" tvg-logo="http://www.fontedecanais.org/logos/canais/premiere.png" group-title="Canais | Premiere",Premiere 7 FHD [H265]
-http://rteomi.xyz:80/Edcarlos/ed302850/805554
-#EXTINF:-1 tvg-id="PRM7BR" tvg-name="Premiere 7 HD" tvg-logo="http://www.fontedecanais.org/logos/canais/premiere.png" group-title="Canais | Premiere",Premiere 7 HD
-http://rteomi.xyz:80/Edcarlos/ed302850/805305
-#EXTINF:-1 tvg-id="PRM7BR" tvg-name="Premiere 7 SD" tvg-logo="http://www.fontedecanais.org/logos/canais/premiere.png" group-title="Canais | Premiere",Premiere 7 SD
-http://rteomi.xyz:80/Edcarlos/ed302850/805306
-#EXTINF:-1 tvg-id="PRM8BR" tvg-name="Premiere 8 FHD" tvg-logo="http://www.fontedecanais.org/logos/canais/premiere.png" group-title="Canais | Premiere",Premiere 8 FHD
-http://rteomi.xyz:80/Edcarlos/ed302850/805307
-#EXTINF:-1 tvg-id="" tvg-name="Premiere 8 FHD [H265]" tvg-logo="http://www.fontedecanais.org/logos/canais/premiere.png" group-title="Canais | Premiere",Premiere 8 FHD [H265]
-http://rteomi.xyz:80/Edcarlos/ed302850/805555
-#EXTINF:-1 tvg-id="PRM8BR" tvg-name="Premiere 8 HD" tvg-logo="http://www.fontedecanais.org/logos/canais/premiere.png" group-title="Canais | Premiere",Premiere 8 HD
-http://rteomi.xyz:80/Edcarlos/ed302850/805308
-#EXTINF:-1 tvg-id="PRM8BR" tvg-name="Premiere 8 SD" tvg-logo="http://www.fontedecanais.org/logos/canais/premiere.png" group-title="Canais | Premiere",Premiere 8 SD
-http://rteomi.xyz:80/Edcarlos/ed302850/805309
-#EXTINF:-1 tvg-id="" tvg-name="Remo TV" tvg-logo="https://i.imgur.com/8xs3GlH.png" group-title="Canais | PPV",Remo TV
-http://rteomi.xyz:80/Edcarlos/ed302850/805281
-#EXTINF:-1 tvg-id="SPORTV2" tvg-name="SporTV 2 FHD" tvg-logo="http://www.fontedecanais.org/logos/canais/sportv2.png" group-title="Canais | SporTV",SporTV 2 FHD
-http://rteomi.xyz:80/Edcarlos/ed302850/805313
-#EXTINF:-1 tvg-id="" tvg-name="SporTV 2 FHD [H265]" tvg-logo="http://www.fontedecanais.org/logos/canais/sportv2.png" group-title="Canais | SporTV",SporTV 2 FHD [H265]
-http://rteomi.xyz:80/Edcarlos/ed302850/805557
-#EXTINF:-1 tvg-id="" tvg-name="SporTV 2 HD" tvg-logo="http://www.fontedecanais.org/logos/canais/sportv2.png" group-title="Canais | SporTV",SporTV 2 HD
-http://rteomi.xyz:80/Edcarlos/ed302850/805314
-#EXTINF:-1 tvg-id="" tvg-name="SporTV 2 SD" tvg-logo="http://www.fontedecanais.org/logos/canais/sportv2.png" group-title="Canais | SporTV",SporTV 2 SD
-http://rteomi.xyz:80/Edcarlos/ed302850/805315
-#EXTINF:-1 tvg-id="SPORTV3" tvg-name="SporTV 3 FHD" tvg-logo="http://www.fontedecanais.org/logos/canais/sportv3.png" group-title="Canais | SporTV",SporTV 3 FHD
-http://rteomi.xyz:80/Edcarlos/ed302850/805316
-#EXTINF:-1 tvg-id="" tvg-name="SporTV 3 FHD [H265]" tvg-logo="http://www.fontedecanais.org/logos/canais/sportv3.png" group-title="Canais | SporTV",SporTV 3 FHD [H265]
-http://rteomi.xyz:80/Edcarlos/ed302850/805558
-#EXTINF:-1 tvg-id="" tvg-name="SporTV 3 HD" tvg-logo="http://www.fontedecanais.org/logos/canais/sportv3.png" group-title="Canais | SporTV",SporTV 3 HD
-http://rteomi.xyz:80/Edcarlos/ed302850/805317
-#EXTINF:-1 tvg-id="" tvg-name="SporTV 3 SD" tvg-logo="http://www.fontedecanais.org/logos/canais/sportv3.png" group-title="Canais | SporTV",SporTV 3 SD
-http://rteomi.xyz:80/Edcarlos/ed302850/805318
-#EXTINF:-1 tvg-id="" tvg-name="SporTV 4 FHD" tvg-logo="http://www.fontedecanais.org/logos/canais/sportv4.png" group-title="Canais | SporTV",SporTV 4 FHD
-http://rteomi.xyz:80/Edcarlos/ed302850/805319
-#EXTINF:-1 tvg-id="" tvg-name="SporTV 4 FHD [H265]" tvg-logo="http://www.fontedecanais.org/logos/canais/sportv4.png" group-title="Canais | SporTV",SporTV 4 FHD [H265]
-http://rteomi.xyz:80/Edcarlos/ed302850/805559
-#EXTINF:-1 tvg-id="" tvg-name="SporTV 4 HD" tvg-logo="http://www.fontedecanais.org/logos/canais/sportv4.png" group-title="Canais | SporTV",SporTV 4 HD
-http://rteomi.xyz:80/Edcarlos/ed302850/805320
-#EXTINF:-1 tvg-id="" tvg-name="SporTV 4 SD" tvg-logo="http://www.fontedecanais.org/logos/canais/sportv4.png" group-title="Canais | SporTV",SporTV 4 SD
-http://rteomi.xyz:80/Edcarlos/ed302850/805321
-#EXTINF:-1 tvg-id="SPORTV" tvg-name="SporTV FHD" tvg-logo="http://www.fontedecanais.org/logos/canais/sportv.png" group-title="Canais | SporTV",SporTV FHD
-http://rteomi.xyz:80/Edcarlos/ed302850/805310
-#EXTINF:-1 tvg-id="" tvg-name="SporTV FHD [H265]" tvg-logo="http://www.fontedecanais.org/logos/canais/sportv.png" group-title="Canais | SporTV",SporTV FHD [H265]
-http://rteomi.xyz:80/Edcarlos/ed302850/805556
-#EXTINF:-1 tvg-id="" tvg-name="SporTV HD" tvg-logo="http://www.fontedecanais.org/logos/canais/sportv.png" group-title="Canais | SporTV",SporTV HD
-http://rteomi.xyz:80/Edcarlos/ed302850/805311
-#EXTINF:-1 tvg-id="SPORTV" tvg-name="SporTV SD" tvg-logo="http://www.fontedecanais.org/logos/canais/sportv.png" group-title="Canais | SporTV",SporTV SD
-http://rteomi.xyz:80/Edcarlos/ed302850/805312
-#EXTINF:-1 tvg-id="" tvg-name="UFC Fight Pass 1 (reprises)" tvg-logo="http://www.fontedecanais.org/logos/canais/ufcfightpass.png" group-title="Canais | PPV",UFC Fight Pass 1 (reprises)
-http://rteomi.xyz:80/Edcarlos/ed302850/804981
-#EXTINF:-1 tvg-id="" tvg-name="UFC Fight Pass 2 (ao vivo)" tvg-logo="http://www.fontedecanais.org/logos/canais/ufcfightpass.png" group-title="Canais | PPV",UFC Fight Pass 2 (ao vivo)
-http://rteomi.xyz:80/Edcarlos/ed302850/804982
-#EXTINF:-1 tvg-id="" tvg-name="UFC Fight Pass 3 (ao vivo)" tvg-logo="http://www.fontedecanais.org/logos/canais/ufcfightpass.png" group-title="Canais | PPV",UFC Fight Pass 3 (ao vivo)
-http://rteomi.xyz:80/Edcarlos/ed302850/804983
-#EXTINF:-1 tvg-id="PRM10BR" tvg-name="﻿Premiere 1 FHD" tvg-logo="http://www.fontedecanais.org/logos/canais/premiere.png" group-title="Canais | Premiere",﻿Premiere 1 FHD
-http://rteomi.xyz:80/Edcarlos/ed302850/805286
-#EXTINF:-1 tvg-id="" tvg-name="﻿Premiere 1 FHD [H265]" tvg-logo="http://www.fontedecanais.org/logos/canais/premiere.png" group-title="Canais | Premiere",﻿Premiere 1 FHD [H265]
-http://rteomi.xyz:80/Edcarlos/ed302850/805548
+#EXTINF:-1 tvg-id="premiere.2.br" tvg-name="PFC 2 FHD" tvg-logo="https://1.bp.blogspot.com/-Q69ZX8drGfQ/YBxY5AmyO9I/AAAAAAAAJyw/Orw3y2kqi8UhcGjT2HIk4mbBUPpM89N7QCLcBGAsYHQ/s0/PREMIERE.png" group-title="attESPORTE 01",PREMIERES",PFC 2 FHD
+https://kinder5.live/82647069012/34033899350/71105
+#EXTINF:-1 tvg-id="premiere.2.br" tvg-name="PFC 2 H265" tvg-logo="https://blogger.googleusercontent.com/img/a/AVvXsEg81mGHD5E4yfk5QjWTEN-ANjUWGg-osBY_M2-lFnrIa46AlQK5e9SpJMge6Crfa0UvHV-GU2E_nOaXxzk3vCvKzXCSOyZMDDl47ea7icBSuQ6d6VMiuFyeAY_CRIyeX37cpR6_Tqw8k7UtjJE9y1aqyW1vdoPQBgJD4iTRE5O2P3fNkRxzdvpgFELR" group-title="attESPORTE 01",PREMIERES",PFC 2 H265
+https://kinder5.live/82647069012/34033899350/166815
+#EXTINF:-1 tvg-id="premiere.2.br" tvg-name="PFC 2 HD" tvg-logo="https://1.bp.blogspot.com/-Q69ZX8drGfQ/YBxY5AmyO9I/AAAAAAAAJyw/Orw3y2kqi8UhcGjT2HIk4mbBUPpM89N7QCLcBGAsYHQ/s0/PREMIERE.png" group-title="attESPORTE 01",PREMIERES",PFC 2 HD
+https://kinder5.live/82647069012/34033899350/71371
+#EXTINF:-1 tvg-id="premiere.2.br" tvg-name="PFC 2 SD" tvg-logo="https://1.bp.blogspot.com/-Q69ZX8drGfQ/YBxY5AmyO9I/AAAAAAAAJyw/Orw3y2kqi8UhcGjT2HIk4mbBUPpM89N7QCLcBGAsYHQ/s0/PREMIERE.png" group-title="attESPORTE 01",PREMIERES",PFC 2 SD
+https://kinder5.live/82647069012/34033899350/71241
+#EXTINF:-1 tvg-id="premiere.3.br" tvg-name="PFC 3 FHD" tvg-logo="https://1.bp.blogspot.com/-Q69ZX8drGfQ/YBxY5AmyO9I/AAAAAAAAJyw/Orw3y2kqi8UhcGjT2HIk4mbBUPpM89N7QCLcBGAsYHQ/s0/PREMIERE.png" group-title="attESPORTE 01",PREMIERES",PFC 3 FHD
+https://kinder5.live/82647069012/34033899350/71106
+#EXTINF:-1 tvg-id="premiere.3.br" tvg-name="PFC 3 H265" tvg-logo="https://blogger.googleusercontent.com/img/a/AVvXsEg81mGHD5E4yfk5QjWTEN-ANjUWGg-osBY_M2-lFnrIa46AlQK5e9SpJMge6Crfa0UvHV-GU2E_nOaXxzk3vCvKzXCSOyZMDDl47ea7icBSuQ6d6VMiuFyeAY_CRIyeX37cpR6_Tqw8k7UtjJE9y1aqyW1vdoPQBgJD4iTRE5O2P3fNkRxzdvpgFELR" group-title="attESPORTE 01",PREMIERES",PFC 3 H265
+https://kinder5.live/82647069012/34033899350/206478
+#EXTINF:-1 tvg-id="premiere.3.br" tvg-name="PFC 3 HD" tvg-logo="https://1.bp.blogspot.com/-Q69ZX8drGfQ/YBxY5AmyO9I/AAAAAAAAJyw/Orw3y2kqi8UhcGjT2HIk4mbBUPpM89N7QCLcBGAsYHQ/s0/PREMIERE.png" group-title="attESPORTE 01",PREMIERES",PFC 3 HD
+https://kinder5.live/82647069012/34033899350/71372
+#EXTINF:-1 tvg-id="premiere.3.br" tvg-name="PFC 3 SD" tvg-logo="https://1.bp.blogspot.com/-Q69ZX8drGfQ/YBxY5AmyO9I/AAAAAAAAJyw/Orw3y2kqi8UhcGjT2HIk4mbBUPpM89N7QCLcBGAsYHQ/s0/PREMIERE.png" group-title="attESPORTE 01",PREMIERES",PFC 3 SD
+https://kinder5.live/82647069012/34033899350/71242
+#EXTINF:-1 tvg-id="premiere.4.br" tvg-name="PFC 4 FHD" tvg-logo="https://1.bp.blogspot.com/-Q69ZX8drGfQ/YBxY5AmyO9I/AAAAAAAAJyw/Orw3y2kqi8UhcGjT2HIk4mbBUPpM89N7QCLcBGAsYHQ/s0/PREMIERE.png" group-title="attESPORTE 01",PREMIERES",PFC 4 FHD
+https://kinder5.live/82647069012/34033899350/71107
+#EXTINF:-1 tvg-id="premiere.4.br" tvg-name="PFC 4 H265" tvg-logo="https://blogger.googleusercontent.com/img/a/AVvXsEg81mGHD5E4yfk5QjWTEN-ANjUWGg-osBY_M2-lFnrIa46AlQK5e9SpJMge6Crfa0UvHV-GU2E_nOaXxzk3vCvKzXCSOyZMDDl47ea7icBSuQ6d6VMiuFyeAY_CRIyeX37cpR6_Tqw8k7UtjJE9y1aqyW1vdoPQBgJD4iTRE5O2P3fNkRxzdvpgFELR" group-title="attESPORTE 01",PREMIERES",PFC 4 H265
+https://kinder5.live/82647069012/34033899350/166854
+#EXTINF:-1 tvg-id="premiere.4.br" tvg-name="PFC 4 HD" tvg-logo="https://1.bp.blogspot.com/-Q69ZX8drGfQ/YBxY5AmyO9I/AAAAAAAAJyw/Orw3y2kqi8UhcGjT2HIk4mbBUPpM89N7QCLcBGAsYHQ/s0/PREMIERE.png" group-title="attESPORTE 01",PREMIERES",PFC 4 HD
+https://kinder5.live/82647069012/34033899350/71373
+#EXTINF:-1 tvg-id="premiere.4.br" tvg-name="PFC 4 SD" tvg-logo="https://1.bp.blogspot.com/-Q69ZX8drGfQ/YBxY5AmyO9I/AAAAAAAAJyw/Orw3y2kqi8UhcGjT2HIk4mbBUPpM89N7QCLcBGAsYHQ/s0/PREMIERE.png" group-title="attESPORTE 01",PREMIERES",PFC 4 SD
+https://kinder5.live/82647069012/34033899350/71243
+#EXTINF:-1 tvg-id="premiere.5.brazil.br" tvg-name="PFC 5 FHD" tvg-logo="https://1.bp.blogspot.com/-Q69ZX8drGfQ/YBxY5AmyO9I/AAAAAAAAJyw/Orw3y2kqi8UhcGjT2HIk4mbBUPpM89N7QCLcBGAsYHQ/s0/PREMIERE.png" group-title="attESPORTE 01",PREMIERES",PFC 5 FHD
+https://kinder5.live/82647069012/34033899350/71115
+#EXTINF:-1 tvg-id="premiere.5.br" tvg-name="PFC 5 H265" tvg-logo="https://blogger.googleusercontent.com/img/a/AVvXsEg81mGHD5E4yfk5QjWTEN-ANjUWGg-osBY_M2-lFnrIa46AlQK5e9SpJMge6Crfa0UvHV-GU2E_nOaXxzk3vCvKzXCSOyZMDDl47ea7icBSuQ6d6VMiuFyeAY_CRIyeX37cpR6_Tqw8k7UtjJE9y1aqyW1vdoPQBgJD4iTRE5O2P3fNkRxzdvpgFELR" group-title="attESPORTE 01",PREMIERES",PFC 5 H265
+https://kinder5.live/82647069012/34033899350/166817
+#EXTINF:-1 tvg-id="premiere.5.brazil.br" tvg-name="PFC 5 HD" tvg-logo="https://1.bp.blogspot.com/-Q69ZX8drGfQ/YBxY5AmyO9I/AAAAAAAAJyw/Orw3y2kqi8UhcGjT2HIk4mbBUPpM89N7QCLcBGAsYHQ/s0/PREMIERE.png" group-title="attESPORTE 01",PREMIERES",PFC 5 HD
+https://kinder5.live/82647069012/34033899350/71374
+#EXTINF:-1 tvg-id="premiere.5.brazil.br" tvg-name="PFC 5 SD" tvg-logo="https://1.bp.blogspot.com/-Q69ZX8drGfQ/YBxY5AmyO9I/AAAAAAAAJyw/Orw3y2kqi8UhcGjT2HIk4mbBUPpM89N7QCLcBGAsYHQ/s0/PREMIERE.png" group-title="attESPORTE 01",PREMIERES",PFC 5 SD
+https://kinder5.live/82647069012/34033899350/71244
+#EXTINF:-1 tvg-id="a.e.br" tvg-name="PFC 6 FHD" tvg-logo="https://1.bp.blogspot.com/-Q69ZX8drGfQ/YBxY5AmyO9I/AAAAAAAAJyw/Orw3y2kqi8UhcGjT2HIk4mbBUPpM89N7QCLcBGAsYHQ/s0/PREMIERE.png" group-title="attESPORTE 01",PREMIERES",PFC 6 FHD
+https://kinder5.live/82647069012/34033899350/71375
+#EXTINF:-1 tvg-id="premiere.6.br" tvg-name="PFC 6 H265" tvg-logo="https://blogger.googleusercontent.com/img/a/AVvXsEg81mGHD5E4yfk5QjWTEN-ANjUWGg-osBY_M2-lFnrIa46AlQK5e9SpJMge6Crfa0UvHV-GU2E_nOaXxzk3vCvKzXCSOyZMDDl47ea7icBSuQ6d6VMiuFyeAY_CRIyeX37cpR6_Tqw8k7UtjJE9y1aqyW1vdoPQBgJD4iTRE5O2P3fNkRxzdvpgFELR" group-title="attESPORTE 01",PREMIERES",PFC 6 H265
+https://kinder5.live/82647069012/34033899350/166855
+#EXTINF:-1 tvg-id="premiere.6.br" tvg-name="PFC 6 HD" tvg-logo="https://1.bp.blogspot.com/-Q69ZX8drGfQ/YBxY5AmyO9I/AAAAAAAAJyw/Orw3y2kqi8UhcGjT2HIk4mbBUPpM89N7QCLcBGAsYHQ/s0/PREMIERE.png" group-title="attESPORTE 01",PREMIERES",PFC 6 HD
+https://kinder5.live/82647069012/34033899350/71109
+#EXTINF:-1 tvg-id="premiere.6.br" tvg-name="PFC 6 SD" tvg-logo="https://1.bp.blogspot.com/-Q69ZX8drGfQ/YBxY5AmyO9I/AAAAAAAAJyw/Orw3y2kqi8UhcGjT2HIk4mbBUPpM89N7QCLcBGAsYHQ/s0/PREMIERE.png" group-title="attESPORTE 01",PREMIERES",PFC 6 SD
+https://kinder5.live/82647069012/34033899350/71245
+#EXTINF:-1 tvg-id="a.e.br" tvg-name="PFC 7 FHD" tvg-logo="https://1.bp.blogspot.com/-Q69ZX8drGfQ/YBxY5AmyO9I/AAAAAAAAJyw/Orw3y2kqi8UhcGjT2HIk4mbBUPpM89N7QCLcBGAsYHQ/s0/PREMIERE.png" group-title="attESPORTE 01",PREMIERES",PFC 7 FHD
+https://kinder5.live/82647069012/34033899350/71376
+#EXTINF:-1 tvg-id="premiere.7.br" tvg-name="PFC 7 H265" tvg-logo="https://blogger.googleusercontent.com/img/a/AVvXsEg81mGHD5E4yfk5QjWTEN-ANjUWGg-osBY_M2-lFnrIa46AlQK5e9SpJMge6Crfa0UvHV-GU2E_nOaXxzk3vCvKzXCSOyZMDDl47ea7icBSuQ6d6VMiuFyeAY_CRIyeX37cpR6_Tqw8k7UtjJE9y1aqyW1vdoPQBgJD4iTRE5O2P3fNkRxzdvpgFELR" group-title="attESPORTE 01",PREMIERES",PFC 7 H265
+https://kinder5.live/82647069012/34033899350/166856
+#EXTINF:-1 tvg-id="premiere.7.br" tvg-name="PFC 7 HD" tvg-logo="https://1.bp.blogspot.com/-Q69ZX8drGfQ/YBxY5AmyO9I/AAAAAAAAJyw/Orw3y2kqi8UhcGjT2HIk4mbBUPpM89N7QCLcBGAsYHQ/s0/PREMIERE.png" group-title="attESPORTE 01",PREMIERES",PFC 7 HD
+https://kinder5.live/82647069012/34033899350/71110
+#EXTINF:-1 tvg-id="premiere.7.br" tvg-name="PFC 7 SD" tvg-logo="https://1.bp.blogspot.com/-Q69ZX8drGfQ/YBxY5AmyO9I/AAAAAAAAJyw/Orw3y2kqi8UhcGjT2HIk4mbBUPpM89N7QCLcBGAsYHQ/s0/PREMIERE.png" group-title="attESPORTE 01",PREMIERES",PFC 7 SD
+https://kinder5.live/82647069012/34033899350/71246
+#EXTINF:-1 tvg-id="premiere.8.br" tvg-name="PFC 8 FHD" tvg-logo="https://1.bp.blogspot.com/-Q69ZX8drGfQ/YBxY5AmyO9I/AAAAAAAAJyw/Orw3y2kqi8UhcGjT2HIk4mbBUPpM89N7QCLcBGAsYHQ/s0/PREMIERE.png" group-title="attESPORTE 01",PREMIERES",PFC 8 FHD
+https://kinder5.live/82647069012/34033899350/306653
+#EXTINF:-1 tvg-id="premiere.8.br" tvg-name="PFC 8 H265" tvg-logo="https://blogger.googleusercontent.com/img/a/AVvXsEg81mGHD5E4yfk5QjWTEN-ANjUWGg-osBY_M2-lFnrIa46AlQK5e9SpJMge6Crfa0UvHV-GU2E_nOaXxzk3vCvKzXCSOyZMDDl47ea7icBSuQ6d6VMiuFyeAY_CRIyeX37cpR6_Tqw8k7UtjJE9y1aqyW1vdoPQBgJD4iTRE5O2P3fNkRxzdvpgFELR" group-title="attESPORTE 01",PREMIERES",PFC 8 H265
+https://kinder5.live/82647069012/34033899350/306654
+#EXTINF:-1 tvg-id="premiere.8.br" tvg-name="PFC 8 HD" tvg-logo="https://1.bp.blogspot.com/-Q69ZX8drGfQ/YBxY5AmyO9I/AAAAAAAAJyw/Orw3y2kqi8UhcGjT2HIk4mbBUPpM89N7QCLcBGAsYHQ/s0/PREMIERE.png" group-title="attESPORTE 01",PREMIERES",PFC 8 HD
+https://kinder5.live/82647069012/34033899350/306655
+#EXTINF:-1 tvg-id="premiere.8.br" tvg-name="PFC 8 SD" tvg-logo="https://1.bp.blogspot.com/-Q69ZX8drGfQ/YBxY5AmyO9I/AAAAAAAAJyw/Orw3y2kqi8UhcGjT2HIk4mbBUPpM89N7QCLcBGAsYHQ/s0/PREMIERE.png" group-title="attESPORTE 01",PREMIERES",PFC 8 SD
+https://kinder5.live/82647069012/34033899350/306652
+#EXTINF:-1 tvg-id="premiere.clubes.br" tvg-name="PFC CLUBES 4K" tvg-logo="https://blogger.googleusercontent.com/img/a/AVvXsEjIuyx-tJOG6UXqY_P4VPSIjhrFgmiNLlJSgUgSSnYlHwxdWKE03ISNx3D9KaYoL6mVLxPIy8LGKKuHLtIcW-JoqtnHm_HNRMmhFx5-wLwYg-3Dmiw3r-IxRmbkRS1NfIkxrzRJJtxnmsrFt-UFT0bmN5lQzMtq8Zoc3los-YmcCdrSUFTlZVhgSHWY" group-title="attESPORTE 01",PREMIERES",PFC CLUBES 4K
+https://kinder5.live/82647069012/34033899350/88411
+#EXTINF:-1 tvg-id="premiere.clubes.br" tvg-name="PFC CLUBES 4K¹" tvg-logo="https://blogger.googleusercontent.com/img/a/AVvXsEjIuyx-tJOG6UXqY_P4VPSIjhrFgmiNLlJSgUgSSnYlHwxdWKE03ISNx3D9KaYoL6mVLxPIy8LGKKuHLtIcW-JoqtnHm_HNRMmhFx5-wLwYg-3Dmiw3r-IxRmbkRS1NfIkxrzRJJtxnmsrFt-UFT0bmN5lQzMtq8Zoc3los-YmcCdrSUFTlZVhgSHWY" group-title="attESPORTE 01",PREMIERES",PFC CLUBES 4K¹
+https://kinder5.live/82647069012/34033899350/271997
+#EXTINF:-1 tvg-id="premiere.clubes.br" tvg-name="PFC CLUBES FHD" tvg-logo="https://blogger.googleusercontent.com/img/a/AVvXsEgA6LSXXzyvcfS3qj04QNt6dBMlJWKNsHRvK0-V0-wIFY93yByC7yd5_3qF3BZ85RYz1HUaJQHBmY5s9QFSvzOG4Eua_W4WVyLgLniml9Ug1IDPYRXYK1svuk_EyZMserEh-97OidJTF8Vg5AsidRigqhHXeja35o2rcSyQV6pMsG0_7fT3T9FwYWZ9" group-title="attESPORTE 01",PREMIERES",PFC CLUBES FHD
+https://kinder5.live/82647069012/34033899350/71104
+#EXTINF:-1 tvg-id="premiere.clubes.br" tvg-name="PFC CLUBES FHD¹" tvg-logo="https://blogger.googleusercontent.com/img/a/AVvXsEgA6LSXXzyvcfS3qj04QNt6dBMlJWKNsHRvK0-V0-wIFY93yByC7yd5_3qF3BZ85RYz1HUaJQHBmY5s9QFSvzOG4Eua_W4WVyLgLniml9Ug1IDPYRXYK1svuk_EyZMserEh-97OidJTF8Vg5AsidRigqhHXeja35o2rcSyQV6pMsG0_7fT3T9FwYWZ9" group-title="attESPORTE 01",PREMIERES",PFC CLUBES FHD¹
+https://kinder5.live/82647069012/34033899350/281022
+#EXTINF:-1 tvg-id="premiere.clubes.br" tvg-name="PFC CLUBES H265" tvg-logo="https://blogger.googleusercontent.com/img/a/AVvXsEha41WLBqSvqrkLTq958mpRh6YNlryr6tQFNdp-bv5gO4J3h8KCzPoZ8ZDfcvT1uPVqp5Zk9bIPO2Y0lwA_JUJRP3p2Tu78R_cyJTUwqr5cYn3ZIK5Vwo5lNaWSWYO0K5gT1mt7A8wcBT2r4gtuaeKt8qgd9-Gvb8pzqJxArVEtglroQ-0fO_NWQev7" group-title="attESPORTE 01",PREMIERES",PFC CLUBES H265
+https://kinder5.live/82647069012/34033899350/88457
+#EXTINF:-1 tvg-id="premiere.clubes.br" tvg-name="PFC CLUBES HD" tvg-logo="https://blogger.googleusercontent.com/img/a/AVvXsEgA6LSXXzyvcfS3qj04QNt6dBMlJWKNsHRvK0-V0-wIFY93yByC7yd5_3qF3BZ85RYz1HUaJQHBmY5s9QFSvzOG4Eua_W4WVyLgLniml9Ug1IDPYRXYK1svuk_EyZMserEh-97OidJTF8Vg5AsidRigqhHXeja35o2rcSyQV6pMsG0_7fT3T9FwYWZ9" group-title="attESPORTE 01",PREMIERES",PFC CLUBES HD
+https://kinder5.live/82647069012/34033899350/71377
+#EXTINF:-1 tvg-id="premiere.clubes.br" tvg-name="PFC CLUBES HD¹" tvg-logo="https://blogger.googleusercontent.com/img/a/AVvXsEgA6LSXXzyvcfS3qj04QNt6dBMlJWKNsHRvK0-V0-wIFY93yByC7yd5_3qF3BZ85RYz1HUaJQHBmY5s9QFSvzOG4Eua_W4WVyLgLniml9Ug1IDPYRXYK1svuk_EyZMserEh-97OidJTF8Vg5AsidRigqhHXeja35o2rcSyQV6pMsG0_7fT3T9FwYWZ9" group-title="attESPORTE 01",PREMIERES",PFC CLUBES HD¹
+https://kinder5.live/82647069012/34033899350/281019
+#EXTINF:-1 tvg-id="premiere.clubes.br" tvg-name="PFC CLUBES SD" tvg-logo="https://blogger.googleusercontent.com/img/a/AVvXsEgA6LSXXzyvcfS3qj04QNt6dBMlJWKNsHRvK0-V0-wIFY93yByC7yd5_3qF3BZ85RYz1HUaJQHBmY5s9QFSvzOG4Eua_W4WVyLgLniml9Ug1IDPYRXYK1svuk_EyZMserEh-97OidJTF8Vg5AsidRigqhHXeja35o2rcSyQV6pMsG0_7fT3T9FwYWZ9" group-title="attESPORTE 01",PREMIERES",PFC CLUBES SD
+https://kinder5.live/82647069012/34033899350/71249
+#EXTINF:-1 tvg-id="São.Paulo/SP..PREMIERE.HD.4.³.br" tvg-name="USA FHD H265" tvg-logo="https://blogger.googleusercontent.com/img/a/AVvXsEjvi-8mb9Gq-ND0vaqGj3c-Orm18NjWJfVkEKNj1cn9haxY9WncsCUZgCZnTReUypg5WX7iRpUTYz8Lyun9zt_y_jCdVM7N_nyze9iZueCKmF6frm_fn2SRpA7jjyZqW27nfsPx8WvY3OR2fiijJBQOS5-NY1vXGZHWV8Dqei2UkRweizrhKpkP-kzkmss" group-title="attESPORTE 01",FILMES E SERIES",USA FHD H265
+https://kinder5.live/82647069012/34033899350/363984
+#EXTINF:-1 tvg-id="São.Paulo/SP..PREMIERE.HD.4.³.br" tvg-name="USA FHD" tvg-logo="https://blogger.googleusercontent.com/img/a/AVvXsEiGktN0650IH7UNHG0X14iO2Fi8pStIqxvvmOgQEO-hZLjK5AWxBKdOhqfUwdDWpwgOc0GXwpHmf3UiipLEzulTAp4A57cm3vt1yBZYZMAk2-w9b2TSl_Cg8wbpJxzbt2V5l5K-D8en0IMXoHLQ2morqQrPj1ITKGnsYlFf8ADUmKRTW_gHqxc7bOXn7Ow" group-title="attESPORTE 01",FILMES E SERIES",USA FHD
+https://kinder5.live/82647069012/34033899350/363985
+#EXTINF:-1 tvg-id="ESPN.2.br" tvg-name="ESPN 2 FHD" tvg-logo="https://lh3.googleusercontent.com/-UX1SWYxIwGA/YB6sme8OSQI/AAAAAAAAJ_Y/IdcL3RYALwsTrRWgeL3hW6RQVGGErWfJgCLcBGAsYHQ/ESPN%2B2.png" group-title="attESPORTE 01",SPORTS",ESPN 2 FHD
+https://kinder5.live/82647069012/34033899350/71116
+#EXTINF:-1 tvg-id="ESPN.2.br" tvg-name="ESPN 2 H265" tvg-logo="https://blogger.googleusercontent.com/img/a/AVvXsEg-KQLT0eOEU889e7i2XpvqHcbTyZy-HLIAk-1QYp3tH6BdLtNDMsYgJYBm71uCsdmwMJoISKNTqXxCRqTAH7dF3FGlb-TVlS-Z_Kl_v_6Cgnm8MhTGODefIfDcPnxkia1We06arNWgYHnvrogVl202fBJHQkaZGe40wrIJH_lW2-C4Ux69sitzKy7_" group-title="attESPORTE 01",SPORTS",ESPN 2 H265
+https://kinder5.live/82647069012/34033899350/166845
+#EXTINF:-1 tvg-id="ESPN.2.br" tvg-name="ESPN 2 HD" tvg-logo="https://lh3.googleusercontent.com/-UX1SWYxIwGA/YB6sme8OSQI/AAAAAAAAJ_Y/IdcL3RYALwsTrRWgeL3hW6RQVGGErWfJgCLcBGAsYHQ/ESPN%2B2.png" group-title="attESPORTE 01",SPORTS",ESPN 2 HD
+https://kinder5.live/82647069012/34033899350/71335
+#EXTINF:-1 tvg-id="ESPN.2.br" tvg-name="ESPN 2 SD" tvg-logo="https://lh3.googleusercontent.com/-UX1SWYxIwGA/YB6sme8OSQI/AAAAAAAAJ_Y/IdcL3RYALwsTrRWgeL3hW6RQVGGErWfJgCLcBGAsYHQ/ESPN%2B2.png" group-title="attESPORTE 01",SPORTS",ESPN 2 SD
+https://kinder5.live/82647069012/34033899350/71192
+#EXTINF:-1 tvg-id="São.Paulo/SP..ESPN.3.HD.br" tvg-name="ESPN 3 FHD" tvg-logo="https://lh3.googleusercontent.com/-HDozjk3zhhU/Yew9A6OIrAI/AAAAAAAAK4U/akBM5wz6kiAIk9xENPTZdMd6sDPygz01QCNcBGAsYHQ/spn%2B3.png" group-title="attESPORTE 01",SPORTS",ESPN 3 FHD
+https://kinder5.live/82647069012/34033899350/71117
+#EXTINF:-1 tvg-id="ESPN.3.br" tvg-name="ESPN 3 H265" tvg-logo="https://blogger.googleusercontent.com/img/a/AVvXsEiB-5qkutNwrGDI9zfajyOwrSDadIRMAFkfFTRY6N7vqIzyfsGjSrMzyITvNYYcfJyIGp9zLOd1tPCInA9LhLDMPLkz_DHPqhuhrLvKm_Xl1dgHMMbJj3XHlt2dN4PMFoQ2Tn0Gh2_1gVl3xTj8Dvmv964Wz_UZTnEDSGl4dAxacJIB-z7jlA-g9eb-" group-title="attESPORTE 01",SPORTS",ESPN 3 H265
+https://kinder5.live/82647069012/34033899350/166795
+#EXTINF:-1 tvg-id="ESPN.3.br" tvg-name="ESPN 3 HD" tvg-logo="https://lh3.googleusercontent.com/-HDozjk3zhhU/Yew9A6OIrAI/AAAAAAAAK4U/akBM5wz6kiAIk9xENPTZdMd6sDPygz01QCNcBGAsYHQ/spn%2B3.png" group-title="attESPORTE 01",SPORTS",ESPN 3 HD
+https://kinder5.live/82647069012/34033899350/71333
+#EXTINF:-1 tvg-id="ESPN.3.br" tvg-name="ESPN 3 SD" tvg-logo="https://lh3.googleusercontent.com/-HDozjk3zhhU/Yew9A6OIrAI/AAAAAAAAK4U/akBM5wz6kiAIk9xENPTZdMd6sDPygz01QCNcBGAsYHQ/spn%2B3.png" group-title="attESPORTE 01",SPORTS",ESPN 3 SD
+https://kinder5.live/82647069012/34033899350/71193
+#EXTINF:-1 tvg-id="São.Paulo/SP..Curta!.HD.br" tvg-name="ESPN 4 4K" tvg-logo="https://lh3.googleusercontent.com/-4h5wLi-DGbM/YG2obFahJ5I/AAAAAAAAKKk/c05Ik85-8tknXkYRp93ZztZPBbAYlRI4gCLcBGAsYHQ/FOX%2BSPORTS%2B4K.png" group-title="attESPORTE 01",SPORTS",ESPN 4 4K
+https://kinder5.live/82647069012/34033899350/88413
+#EXTINF:-1 tvg-id="sportv3.br" tvg-name="ESPN 4 FHD" tvg-logo="https://lh3.googleusercontent.com/-7_5NBTKcQRk/Yew9A-zJZ5I/AAAAAAAAK4Y/4ff_gTmqMw8WEYyR0j3acfzXEL1ws8lSQCNcBGAsYHQ/spn%2B4.png" group-title="attESPORTE 01",SPORTS",ESPN 4 FHD
+https://kinder5.live/82647069012/34033899350/74903
+#EXTINF:-1 tvg-id="São.Paulo/SP..SporTV.2.br" tvg-name="ESPN 4 H265" tvg-logo="https://lh3.googleusercontent.com/-Vaa48i_GwwA/YG3ygzjll4I/AAAAAAAAKNA/WALfe02nrCwBYg2v4P9a9YDTY2vm3nSWACLcBGAsYHQ/FOX%2BSPORTS%2BFHD%2BH.265.png" group-title="attESPORTE 01",SPORTS",ESPN 4 H265
+https://kinder5.live/82647069012/34033899350/88461
+#EXTINF:-1 tvg-id="São.Paulo/SP..Venus.br" tvg-name="ESPN 4 HD" tvg-logo="https://lh3.googleusercontent.com/-7_5NBTKcQRk/Yew9A-zJZ5I/AAAAAAAAK4Y/4ff_gTmqMw8WEYyR0j3acfzXEL1ws8lSQCNcBGAsYHQ/spn%2B4.png" group-title="attESPORTE 01",SPORTS",ESPN 4 HD
+https://kinder5.live/82647069012/34033899350/71343
+#EXTINF:-1 tvg-id="ESPN.4.br" tvg-name="ESPN 4 SD" tvg-logo="https://lh3.googleusercontent.com/-7_5NBTKcQRk/Yew9A-zJZ5I/AAAAAAAAK4Y/4ff_gTmqMw8WEYyR0j3acfzXEL1ws8lSQCNcBGAsYHQ/spn%2B4.png" group-title="attESPORTE 01",SPORTS",ESPN 4 SD
+https://kinder5.live/82647069012/34033899350/71200
+#EXTINF:-1 tvg-id="ESPN.Extra.br" tvg-name="ESPN Extra FHD" tvg-logo="https://lh3.googleusercontent.com/-uIMmxZlg14c/YB6qM_sknAI/AAAAAAAAJ-8/oQdQdtvlYigJfDFjGJECfo4q0W9zHVqXwCLcBGAsYHQ/ESPN%2BEXTRA.png" group-title="attESPORTE 01",SPORTS",ESPN Extra FHD
+https://kinder5.live/82647069012/34033899350/168742
+#EXTINF:-1 tvg-id="São.Paulo/SP..Canal.Rural.br" tvg-name="ESPN EXTRA H265" tvg-logo="https://blogger.googleusercontent.com/img/a/AVvXsEhpFI7DJE-bnuAO1w-vpiuTbACkh6JkvBCe2fE55e9ZsLRznRU_iSjNxmjTtIv0huCVXNZvMEe7FWgjRCqAF4FPJoVsu8ybYeA8yU2yiv-jjr3_JzHhAvYPonmf1NJaagqlXphL_aG-myujRzBIsT99i5vvjfRqS3agsoA1vkfzkvkUYKBsLWP2IBxG" group-title="attESPORTE 01",SPORTS",ESPN EXTRA H265
+https://kinder5.live/82647069012/34033899350/166796
+#EXTINF:-1 tvg-id="ESPN.4.br" tvg-name="ESPN EXTRA HD" tvg-logo="https://lh3.googleusercontent.com/-uIMmxZlg14c/YB6qM_sknAI/AAAAAAAAJ-8/oQdQdtvlYigJfDFjGJECfo4q0W9zHVqXwCLcBGAsYHQ/ESPN%2BEXTRA.png" group-title="attESPORTE 01",SPORTS",ESPN EXTRA HD
+https://kinder5.live/82647069012/34033899350/71336
+#EXTINF:-1 tvg-id="espn.extra.br" tvg-name="ESPN EXTRA SD" tvg-logo="https://lh3.googleusercontent.com/-uIMmxZlg14c/YB6qM_sknAI/AAAAAAAAJ-8/oQdQdtvlYigJfDFjGJECfo4q0W9zHVqXwCLcBGAsYHQ/ESPN%2BEXTRA.png" group-title="attESPORTE 01",SPORTS",ESPN EXTRA SD
+https://kinder5.live/82647069012/34033899350/168743
+#EXTINF:-1 tvg-id="a.e.br" tvg-name="ESPN FHD" tvg-logo="https://lh3.googleusercontent.com/-61A23iAbdFg/YB6rzXvfSPI/AAAAAAAAJ_M/M1fl_stAkHcPOhzH3cZWMSH6Bl7oCqnFwCLcBGAsYHQ/ESPN.png" group-title="attESPORTE 01",SPORTS",ESPN FHD
+https://kinder5.live/82647069012/34033899350/71118
+#EXTINF:-1 tvg-id="espn.br" tvg-name="ESPN H265" tvg-logo="https://blogger.googleusercontent.com/img/a/AVvXsEjOddmBUmT5ZUhWO-mkXId8Vh73WGdpmMSaw9EQ309tcqr9lUfyddW87fd4U2iX4TCUoUP10hp27e16Hua7sT0T0yy3kCQGQIzYq4E7l85UtnzRE8sJTsTcC2dtI3eY3ISzMFTqxC_KNn9hgD-NBJw2h10NG2YZIBoON9P6rY21Dt8_POyFyVp8V9B3" group-title="attESPORTE 01",SPORTS",ESPN H265
+https://kinder5.live/82647069012/34033899350/166844
+#EXTINF:-1 tvg-id="espn.br" tvg-name="ESPN HD" tvg-logo="https://lh3.googleusercontent.com/-61A23iAbdFg/YB6rzXvfSPI/AAAAAAAAJ_M/M1fl_stAkHcPOhzH3cZWMSH6Bl7oCqnFwCLcBGAsYHQ/ESPN.png" group-title="attESPORTE 01",SPORTS",ESPN HD
+https://kinder5.live/82647069012/34033899350/71334
+#EXTINF:-1 tvg-id="ESPN.br" tvg-name="ESPN SD" tvg-logo="https://lh3.googleusercontent.com/-61A23iAbdFg/YB6rzXvfSPI/AAAAAAAAJ_M/M1fl_stAkHcPOhzH3cZWMSH6Bl7oCqnFwCLcBGAsYHQ/ESPN.png" group-title="attESPORTE 01",SPORTS",ESPN SD
+https://kinder5.live/82647069012/34033899350/71194
+#EXTINF:-1 tvg-id="ESPN.4.br" tvg-name="RECORD NEWS H265" tvg-logo="https://blogger.googleusercontent.com/img/a/AVvXsEjuZ7XCmImC-QuVJRU2uSlU4L6sZsrazgCODWyDLSgJ7u9JCGTWBD77VPuHxzyT28-dXOa-2Yz45SJkCel9WpwFL-ktuTUblvl1gxF0T4DlBLBFCRzALZNaiykoczHVjaoxZIaRCqyr-g6BYM-Wdypo0tSzs5GcckzYAER_FkoQFWKrJYJg6zgrvo1Q" group-title="attESPORTE 01",NOTICIAS ",RECORD NEWS H265
+https://kinder5.live/82647069012/34033899350/166864
+#EXTINF:-1 tvg-id="ESPN.4.br" tvg-name="REDE VIDA H265" tvg-logo="https://blogger.googleusercontent.com/img/a/AVvXsEhBq5T4naxPcsFr5ueJPz-I2xxB1Sd17S52heIiWA4V3AmDAnQUVbFfgm8-RCP4mDjznZebrublQZ1a5GFX3Z7Im87ekyqjg8omzgBcorrtU6N8l5OXTV-acxzNPeIpAZYNreQnCkNoQzJNZ-jBtn5Wrv7IE-m5dRZweSy4VMUV1tW5QLK-c7fPCjia" group-title="attESPORTE 01",RELIGIOSOS ",REDE VIDA H265
+https://kinder5.live/82647069012/34033899350/166819
+#EXTINF:-1 tvg-id="sportv2.br" tvg-name="SPORTV 2 4K" tvg-logo="https://lh3.googleusercontent.com/-yMHJ02dNK9g/YB6f_wf-mDI/AAAAAAAAJ94/vFcZhQbWZhQmMJEhLOCGelWrUgW8S9YQwCLcBGAsYHQ/sportv%2B2.png" group-title="attESPORTE 01",SPORTS",SPORTV 2 4K
+https://kinder5.live/82647069012/34033899350/237876
+#EXTINF:-1 tvg-id="sportv2.br" tvg-name="SPORTV 2 FHD" tvg-logo="https://lh3.googleusercontent.com/-yMHJ02dNK9g/YB6f_wf-mDI/AAAAAAAAJ94/vFcZhQbWZhQmMJEhLOCGelWrUgW8S9YQwCLcBGAsYHQ/sportv%2B2.png" group-title="attESPORTE 01",SPORTS",SPORTV 2 FHD
+https://kinder5.live/82647069012/34033899350/71121
+#EXTINF:-1 tvg-id="Sportv.2.HD.br" tvg-name="SPORTV 2 H265" tvg-logo="https://blogger.googleusercontent.com/img/a/AVvXsEi6kvoyfSttlQ1KHZ46M70QEa41eWQo1SkDToziTGWJhaX_sNCp3xzFS4uV8tH5fMiV0XGcq0ckef-IShevw1l3Yx4DMoS4Muy1oFDoHOO2TvoM9cIq--BEWVy-ryRHx09PLcEnC76a5P4jCXjlvBwRhuxsQUno-8biEEG_5L6niIMK852ATPJrsBKO" group-title="attESPORTE 01",SPORTS",SPORTV 2 H265
+https://kinder5.live/82647069012/34033899350/166820
+#EXTINF:-1 tvg-id="sportv2.br" tvg-name="SPORTV 2 HD" tvg-logo="https://lh3.googleusercontent.com/-yMHJ02dNK9g/YB6f_wf-mDI/AAAAAAAAJ94/vFcZhQbWZhQmMJEhLOCGelWrUgW8S9YQwCLcBGAsYHQ/sportv%2B2.png" group-title="attESPORTE 01",SPORTS",SPORTV 2 HD
+https://kinder5.live/82647069012/34033899350/71381
+#EXTINF:-1 tvg-id="sportv2.br" tvg-name="SPORTV 2 SD" tvg-logo="https://lh3.googleusercontent.com/-yMHJ02dNK9g/YB6f_wf-mDI/AAAAAAAAJ94/vFcZhQbWZhQmMJEhLOCGelWrUgW8S9YQwCLcBGAsYHQ/sportv%2B2.png" group-title="attESPORTE 01",SPORTS",SPORTV 2 SD
+https://kinder5.live/82647069012/34033899350/71264
+#EXTINF:-1 tvg-id="sportv3.br" tvg-name="SPORTV 3 FHD" tvg-logo="https://lh3.googleusercontent.com/-dE1ypIW76e8/YB6guOuT1QI/AAAAAAAAJ-A/xiQ8mZfBkIIHXme611oxJFrWrg9-OmYeACLcBGAsYHQ/sport%2B3.png" group-title="attESPORTE 01",SPORTS",SPORTV 3 FHD
+https://kinder5.live/82647069012/34033899350/71122
+#EXTINF:-1 tvg-id="sportv3.br" tvg-name="SPORTV 3 H265" tvg-logo="https://lh3.googleusercontent.com/-ntH6fnvr980/YG30ZmzbkrI/AAAAAAAAKOg/kWmJqWQVUu4lrkZ46HRlo5iF-JHVHRx3gCLcBGAsYHQ/Sportv%2BFHD%2B3%2BH.265.png" group-title="attESPORTE 01",SPORTS",SPORTV 3 H265
+https://kinder5.live/82647069012/34033899350/88459
+#EXTINF:-1 tvg-id="SporTV.3.HD.br" tvg-name="SPORTV 3 HD" tvg-logo="https://lh3.googleusercontent.com/-dE1ypIW76e8/YB6guOuT1QI/AAAAAAAAJ-A/xiQ8mZfBkIIHXme611oxJFrWrg9-OmYeACLcBGAsYHQ/sport%2B3.png" group-title="attESPORTE 01",SPORTS",SPORTV 3 HD
+https://kinder5.live/82647069012/34033899350/164284
+#EXTINF:-1 tvg-id="sportv3.br" tvg-name="SPORTV 3 SD" tvg-logo="https://lh3.googleusercontent.com/-dE1ypIW76e8/YB6guOuT1QI/AAAAAAAAJ-A/xiQ8mZfBkIIHXme611oxJFrWrg9-OmYeACLcBGAsYHQ/sport%2B3.png" group-title="attESPORTE 01",SPORTS",SPORTV 3 SD
+https://kinder5.live/82647069012/34033899350/71265
+#EXTINF:-1 tvg-id="sportv.br" tvg-name="SPORTV 4K" tvg-logo="https://lh3.googleusercontent.com/-Zb5Jg9iGj-4/YG2obFDviQI/AAAAAAAAKKs/Ycy5WeWqmocD5ilbECPvPbuYwkmEd3nvgCLcBGAsYHQ/SPORTV%2B4K.png" group-title="attESPORTE 01",SPORTS",SPORTV 4K
+https://kinder5.live/82647069012/34033899350/88416
+#EXTINF:-1 tvg-id="sportv.br" tvg-name="SPORTV 4K¹" tvg-logo="https://lh3.googleusercontent.com/-0sRUj9WounA/YB6fB_a5ZyI/AAAAAAAAJ9w/cVHJ8v9mS00I5xP0PGtkf9hzkzgfPjU3ACLcBGAsYHQ/SPORTV.png" group-title="attESPORTE 01",SPORTS",SPORTV 4K¹
+https://kinder5.live/82647069012/34033899350/281023
+#EXTINF:-1 tvg-id="sportv.br" tvg-name="SPORTV FHD" tvg-logo="https://lh3.googleusercontent.com/-0sRUj9WounA/YB6fB_a5ZyI/AAAAAAAAJ9w/cVHJ8v9mS00I5xP0PGtkf9hzkzgfPjU3ACLcBGAsYHQ/SPORTV.png" group-title="attESPORTE 01",SPORTS",SPORTV FHD
+https://kinder5.live/82647069012/34033899350/71120
+#EXTINF:-1 tvg-id="sportv.br" tvg-name="SPORTV FHD¹" tvg-logo="https://lh3.googleusercontent.com/-0sRUj9WounA/YB6fB_a5ZyI/AAAAAAAAJ9w/cVHJ8v9mS00I5xP0PGtkf9hzkzgfPjU3ACLcBGAsYHQ/SPORTV.png" group-title="attESPORTE 01",SPORTS",SPORTV FHD¹
+https://kinder5.live/82647069012/34033899350/281021
+#EXTINF:-1 tvg-id="sportv.br" tvg-name="SPORTV H265" tvg-logo="https://lh3.googleusercontent.com/-oGuL7zzH_20/YG3yiBiQgHI/AAAAAAAAKNM/9_H3Eg0hUJA5wkH4RiUfodBum9vY_wNHgCLcBGAsYHQ/SPORTV%2BFHD%2BH.265.png" group-title="attESPORTE 01",SPORTS",SPORTV H265
+https://kinder5.live/82647069012/34033899350/88458
+#EXTINF:-1 tvg-id="sportv.br" tvg-name="SPORTV HD" tvg-logo="https://lh3.googleusercontent.com/-0sRUj9WounA/YB6fB_a5ZyI/AAAAAAAAJ9w/cVHJ8v9mS00I5xP0PGtkf9hzkzgfPjU3ACLcBGAsYHQ/SPORTV.png" group-title="attESPORTE 01",SPORTS",SPORTV HD
+https://kinder5.live/82647069012/34033899350/71382
+#EXTINF:-1 tvg-id="sportv.br" tvg-name="SPORTV HD¹" tvg-logo="https://lh3.googleusercontent.com/-0sRUj9WounA/YB6fB_a5ZyI/AAAAAAAAJ9w/cVHJ8v9mS00I5xP0PGtkf9hzkzgfPjU3ACLcBGAsYHQ/SPORTV.png" group-title="attESPORTE 01",SPORTS",SPORTV HD¹
+https://kinder5.live/82647069012/34033899350/281020
+#EXTINF:-1 tvg-id="sportv.br" tvg-name="SPORTV SD" tvg-logo="https://lh3.googleusercontent.com/-0sRUj9WounA/YB6fB_a5ZyI/AAAAAAAAJ9w/cVHJ8v9mS00I5xP0PGtkf9hzkzgfPjU3ACLcBGAsYHQ/SPORTV.png" group-title="attESPORTE 01",SPORTS",SPORTV SD
+https://kinder5.live/82647069012/34033899350/71263
+#EXTINF:-1 tvg-id="a.e.br" tvg-name="Disney+ 1" tvg-logo="https://blogger.googleusercontent.com/img/a/AVvXsEinOZaW8Xk5Bn2_A2MSSjxjltwWDfB0VqY_a9GIMEID-p-P6uNPfTuaefKXI-rDGXyB9M-CkghOCWjBn57JuiNUms68GJhwHCphYYk3xiZUIWRWxhx6prX1JHElPEuo6HFWsooa_UQOLIMca3MX6sXM7Tiku0mVAzGuNpP0eIyj1jU7zOrqT5VG-xT3DQ4" group-title="attESPORTE 01",PAY-PER-VIEW",Disney+ 1
+https://kinder5.live/82647069012/34033899350/122062
+#EXTINF:-1 tvg-id="agromais.br" tvg-name="Disney+ 2" tvg-logo="https://blogger.googleusercontent.com/img/a/AVvXsEinOZaW8Xk5Bn2_A2MSSjxjltwWDfB0VqY_a9GIMEID-p-P6uNPfTuaefKXI-rDGXyB9M-CkghOCWjBn57JuiNUms68GJhwHCphYYk3xiZUIWRWxhx6prX1JHElPEuo6HFWsooa_UQOLIMca3MX6sXM7Tiku0mVAzGuNpP0eIyj1jU7zOrqT5VG-xT3DQ4" group-title="attESPORTE 01",PAY-PER-VIEW",Disney+ 2
+https://kinder5.live/82647069012/34033899350/136165
+#EXTINF:-1 tvg-id="a.e.br" tvg-name="Disney+ 3" tvg-logo="https://blogger.googleusercontent.com/img/a/AVvXsEinOZaW8Xk5Bn2_A2MSSjxjltwWDfB0VqY_a9GIMEID-p-P6uNPfTuaefKXI-rDGXyB9M-CkghOCWjBn57JuiNUms68GJhwHCphYYk3xiZUIWRWxhx6prX1JHElPEuo6HFWsooa_UQOLIMca3MX6sXM7Tiku0mVAzGuNpP0eIyj1jU7zOrqT5VG-xT3DQ4" group-title="attESPORTE 01",PAY-PER-VIEW",Disney+ 3
+https://kinder5.live/82647069012/34033899350/136166
+#EXTINF:-1 tvg-id="a.e.br" tvg-name="Disney+ 4" tvg-logo="https://blogger.googleusercontent.com/img/a/AVvXsEinOZaW8Xk5Bn2_A2MSSjxjltwWDfB0VqY_a9GIMEID-p-P6uNPfTuaefKXI-rDGXyB9M-CkghOCWjBn57JuiNUms68GJhwHCphYYk3xiZUIWRWxhx6prX1JHElPEuo6HFWsooa_UQOLIMca3MX6sXM7Tiku0mVAzGuNpP0eIyj1jU7zOrqT5VG-xT3DQ4" group-title="attESPORTE 01",PAY-PER-VIEW",Disney+ 4
+https://kinder5.live/82647069012/34033899350/136167
+#EXTINF:-1 tvg-id="a.e.br" tvg-name="Disney+ 5" tvg-logo="https://blogger.googleusercontent.com/img/a/AVvXsEinOZaW8Xk5Bn2_A2MSSjxjltwWDfB0VqY_a9GIMEID-p-P6uNPfTuaefKXI-rDGXyB9M-CkghOCWjBn57JuiNUms68GJhwHCphYYk3xiZUIWRWxhx6prX1JHElPEuo6HFWsooa_UQOLIMca3MX6sXM7Tiku0mVAzGuNpP0eIyj1jU7zOrqT5VG-xT3DQ4" group-title="attESPORTE 01",PAY-PER-VIEW",Disney+ 5
+https://kinder5.live/82647069012/34033899350/136168
+#EXTINF:-1 tvg-id="a.e.br" tvg-name="Disney+ 6" tvg-logo="https://blogger.googleusercontent.com/img/a/AVvXsEinOZaW8Xk5Bn2_A2MSSjxjltwWDfB0VqY_a9GIMEID-p-P6uNPfTuaefKXI-rDGXyB9M-CkghOCWjBn57JuiNUms68GJhwHCphYYk3xiZUIWRWxhx6prX1JHElPEuo6HFWsooa_UQOLIMca3MX6sXM7Tiku0mVAzGuNpP0eIyj1jU7zOrqT5VG-xT3DQ4" group-title="attESPORTE 01",PAY-PER-VIEW",Disney+ 6
+https://kinder5.live/82647069012/34033899350/136169
+#EXTINF:-1 tvg-id="São.Paulo/SP..Band.News.br" tvg-name="SPORTV 4 SD" tvg-logo="https://blogger.googleusercontent.com/img/a/AVvXsEjf4H8Cw2_XYv-kxT8VZytRU9aLl5Uf3J9HFCuyK7pCM46xgtDSwSSqUMyRfBMRunjVICDlYl5gLZckhUIGdnbENCltHQUFtGLJ1VXqVHI1EYHPhhIW_T8qZpgIWamd4COUw-5Z7ZnSllZzAWZPGZMZhyOzcKe1ib7jtEEKsAs7yAQvRz8rorpT_ki-KK8" group-title="attESPORTE 01",SPORTS",SPORTV 4 SD
+https://kinder5.live/82647069012/34033899350/356398
+#EXTINF:-1 tvg-id="ESPN.2.br" tvg-name="ESPN 2 FHD" tvg-logo="https://lh3.googleusercontent.com/-UX1SWYxIwGA/YB6sme8OSQI/AAAAAAAAJ_Y/IdcL3RYALwsTrRWgeL3hW6RQVGGErWfJgCLcBGAsYHQ/ESPN%2B2.png" group-title="attESPORTE 02",SPORTS",ESPN 2 FHD
+https://kinder5.live/23156616732/42382360350/71116
+#EXTINF:-1 tvg-id="ESPN.2.br" tvg-name="ESPN 2 H265" tvg-logo="https://blogger.googleusercontent.com/img/a/AVvXsEg-KQLT0eOEU889e7i2XpvqHcbTyZy-HLIAk-1QYp3tH6BdLtNDMsYgJYBm71uCsdmwMJoISKNTqXxCRqTAH7dF3FGlb-TVlS-Z_Kl_v_6Cgnm8MhTGODefIfDcPnxkia1We06arNWgYHnvrogVl202fBJHQkaZGe40wrIJH_lW2-C4Ux69sitzKy7_" group-title="attESPORTE 02",SPORTS",ESPN 2 H265
+https://kinder5.live/23156616732/42382360350/166845
+#EXTINF:-1 tvg-id="ESPN.2.br" tvg-name="ESPN 2 HD" tvg-logo="https://lh3.googleusercontent.com/-UX1SWYxIwGA/YB6sme8OSQI/AAAAAAAAJ_Y/IdcL3RYALwsTrRWgeL3hW6RQVGGErWfJgCLcBGAsYHQ/ESPN%2B2.png" group-title="attESPORTE 02",SPORTS",ESPN 2 HD
+https://kinder5.live/23156616732/42382360350/71335
+#EXTINF:-1 tvg-id="ESPN.2.br" tvg-name="ESPN 2 SD" tvg-logo="https://lh3.googleusercontent.com/-UX1SWYxIwGA/YB6sme8OSQI/AAAAAAAAJ_Y/IdcL3RYALwsTrRWgeL3hW6RQVGGErWfJgCLcBGAsYHQ/ESPN%2B2.png" group-title="attESPORTE 02",SPORTS",ESPN 2 SD
+https://kinder5.live/23156616732/42382360350/71192
+#EXTINF:-1 tvg-id="São.Paulo/SP..ESPN.3.HD.br" tvg-name="ESPN 3 FHD" tvg-logo="https://lh3.googleusercontent.com/-HDozjk3zhhU/Yew9A6OIrAI/AAAAAAAAK4U/akBM5wz6kiAIk9xENPTZdMd6sDPygz01QCNcBGAsYHQ/spn%2B3.png" group-title="attESPORTE 02",SPORTS",ESPN 3 FHD
+https://kinder5.live/23156616732/42382360350/71117
+#EXTINF:-1 tvg-id="ESPN.3.br" tvg-name="ESPN 3 H265" tvg-logo="https://blogger.googleusercontent.com/img/a/AVvXsEiB-5qkutNwrGDI9zfajyOwrSDadIRMAFkfFTRY6N7vqIzyfsGjSrMzyITvNYYcfJyIGp9zLOd1tPCInA9LhLDMPLkz_DHPqhuhrLvKm_Xl1dgHMMbJj3XHlt2dN4PMFoQ2Tn0Gh2_1gVl3xTj8Dvmv964Wz_UZTnEDSGl4dAxacJIB-z7jlA-g9eb-" group-title="attESPORTE 02",SPORTS",ESPN 3 H265
+https://kinder5.live/23156616732/42382360350/166795
+#EXTINF:-1 tvg-id="ESPN.3.br" tvg-name="ESPN 3 HD" tvg-logo="https://lh3.googleusercontent.com/-HDozjk3zhhU/Yew9A6OIrAI/AAAAAAAAK4U/akBM5wz6kiAIk9xENPTZdMd6sDPygz01QCNcBGAsYHQ/spn%2B3.png" group-title="attESPORTE 02",SPORTS",ESPN 3 HD
+https://kinder5.live/23156616732/42382360350/71333
+#EXTINF:-1 tvg-id="ESPN.3.br" tvg-name="ESPN 3 SD" tvg-logo="https://lh3.googleusercontent.com/-HDozjk3zhhU/Yew9A6OIrAI/AAAAAAAAK4U/akBM5wz6kiAIk9xENPTZdMd6sDPygz01QCNcBGAsYHQ/spn%2B3.png" group-title="attESPORTE 02",SPORTS",ESPN 3 SD
+https://kinder5.live/23156616732/42382360350/71193
+#EXTINF:-1 tvg-id="São.Paulo/SP..Curta!.HD.br" tvg-name="ESPN 4 4K" tvg-logo="https://lh3.googleusercontent.com/-4h5wLi-DGbM/YG2obFahJ5I/AAAAAAAAKKk/c05Ik85-8tknXkYRp93ZztZPBbAYlRI4gCLcBGAsYHQ/FOX%2BSPORTS%2B4K.png" group-title="attESPORTE 02",SPORTS",ESPN 4 4K
+https://kinder5.live/23156616732/42382360350/88413
+#EXTINF:-1 tvg-id="sportv3.br" tvg-name="ESPN 4 FHD" tvg-logo="https://lh3.googleusercontent.com/-7_5NBTKcQRk/Yew9A-zJZ5I/AAAAAAAAK4Y/4ff_gTmqMw8WEYyR0j3acfzXEL1ws8lSQCNcBGAsYHQ/spn%2B4.png" group-title="attESPORTE 02",SPORTS",ESPN 4 FHD
+https://kinder5.live/23156616732/42382360350/74903
+#EXTINF:-1 tvg-id="São.Paulo/SP..SporTV.2.br" tvg-name="ESPN 4 H265" tvg-logo="https://lh3.googleusercontent.com/-Vaa48i_GwwA/YG3ygzjll4I/AAAAAAAAKNA/WALfe02nrCwBYg2v4P9a9YDTY2vm3nSWACLcBGAsYHQ/FOX%2BSPORTS%2BFHD%2BH.265.png" group-title="attESPORTE 02",SPORTS",ESPN 4 H265
+https://kinder5.live/23156616732/42382360350/88461
+#EXTINF:-1 tvg-id="São.Paulo/SP..Venus.br" tvg-name="ESPN 4 HD" tvg-logo="https://lh3.googleusercontent.com/-7_5NBTKcQRk/Yew9A-zJZ5I/AAAAAAAAK4Y/4ff_gTmqMw8WEYyR0j3acfzXEL1ws8lSQCNcBGAsYHQ/spn%2B4.png" group-title="attESPORTE 02",SPORTS",ESPN 4 HD
+https://kinder5.live/23156616732/42382360350/71343
+#EXTINF:-1 tvg-id="ESPN.4.br" tvg-name="ESPN 4 SD" tvg-logo="https://lh3.googleusercontent.com/-7_5NBTKcQRk/Yew9A-zJZ5I/AAAAAAAAK4Y/4ff_gTmqMw8WEYyR0j3acfzXEL1ws8lSQCNcBGAsYHQ/spn%2B4.png" group-title="attESPORTE 02",SPORTS",ESPN 4 SD
+https://kinder5.live/23156616732/42382360350/71200
+#EXTINF:-1 tvg-id="ESPN.Extra.br" tvg-name="ESPN Extra FHD" tvg-logo="https://lh3.googleusercontent.com/-uIMmxZlg14c/YB6qM_sknAI/AAAAAAAAJ-8/oQdQdtvlYigJfDFjGJECfo4q0W9zHVqXwCLcBGAsYHQ/ESPN%2BEXTRA.png" group-title="attESPORTE 02",SPORTS",ESPN Extra FHD
+https://kinder5.live/23156616732/42382360350/168742
+#EXTINF:-1 tvg-id="São.Paulo/SP..Canal.Rural.br" tvg-name="ESPN EXTRA H265" tvg-logo="https://blogger.googleusercontent.com/img/a/AVvXsEhpFI7DJE-bnuAO1w-vpiuTbACkh6JkvBCe2fE55e9ZsLRznRU_iSjNxmjTtIv0huCVXNZvMEe7FWgjRCqAF4FPJoVsu8ybYeA8yU2yiv-jjr3_JzHhAvYPonmf1NJaagqlXphL_aG-myujRzBIsT99i5vvjfRqS3agsoA1vkfzkvkUYKBsLWP2IBxG" group-title="attESPORTE 02",SPORTS",ESPN EXTRA H265
+https://kinder5.live/23156616732/42382360350/166796
+#EXTINF:-1 tvg-id="ESPN.4.br" tvg-name="ESPN EXTRA HD" tvg-logo="https://lh3.googleusercontent.com/-uIMmxZlg14c/YB6qM_sknAI/AAAAAAAAJ-8/oQdQdtvlYigJfDFjGJECfo4q0W9zHVqXwCLcBGAsYHQ/ESPN%2BEXTRA.png" group-title="attESPORTE 02",SPORTS",ESPN EXTRA HD
+https://kinder5.live/23156616732/42382360350/71336
+#EXTINF:-1 tvg-id="espn.extra.br" tvg-name="ESPN EXTRA SD" tvg-logo="https://lh3.googleusercontent.com/-uIMmxZlg14c/YB6qM_sknAI/AAAAAAAAJ-8/oQdQdtvlYigJfDFjGJECfo4q0W9zHVqXwCLcBGAsYHQ/ESPN%2BEXTRA.png" group-title="attESPORTE 02",SPORTS",ESPN EXTRA SD
+https://kinder5.live/23156616732/42382360350/168743
+#EXTINF:-1 tvg-id="a.e.br" tvg-name="ESPN FHD" tvg-logo="https://lh3.googleusercontent.com/-61A23iAbdFg/YB6rzXvfSPI/AAAAAAAAJ_M/M1fl_stAkHcPOhzH3cZWMSH6Bl7oCqnFwCLcBGAsYHQ/ESPN.png" group-title="attESPORTE 02",SPORTS",ESPN FHD
+https://kinder5.live/23156616732/42382360350/71118
+#EXTINF:-1 tvg-id="espn.br" tvg-name="ESPN H265" tvg-logo="https://blogger.googleusercontent.com/img/a/AVvXsEjOddmBUmT5ZUhWO-mkXId8Vh73WGdpmMSaw9EQ309tcqr9lUfyddW87fd4U2iX4TCUoUP10hp27e16Hua7sT0T0yy3kCQGQIzYq4E7l85UtnzRE8sJTsTcC2dtI3eY3ISzMFTqxC_KNn9hgD-NBJw2h10NG2YZIBoON9P6rY21Dt8_POyFyVp8V9B3" group-title="attESPORTE 02",SPORTS",ESPN H265
+https://kinder5.live/23156616732/42382360350/166844
+#EXTINF:-1 tvg-id="espn.br" tvg-name="ESPN HD" tvg-logo="https://lh3.googleusercontent.com/-61A23iAbdFg/YB6rzXvfSPI/AAAAAAAAJ_M/M1fl_stAkHcPOhzH3cZWMSH6Bl7oCqnFwCLcBGAsYHQ/ESPN.png" group-title="attESPORTE 02",SPORTS",ESPN HD
+https://kinder5.live/23156616732/42382360350/71334
+#EXTINF:-1 tvg-id="ESPN.br" tvg-name="ESPN SD" tvg-logo="https://lh3.googleusercontent.com/-61A23iAbdFg/YB6rzXvfSPI/AAAAAAAAJ_M/M1fl_stAkHcPOhzH3cZWMSH6Bl7oCqnFwCLcBGAsYHQ/ESPN.png" group-title="attESPORTE 02",SPORTS",ESPN SD
+https://kinder5.live/23156616732/42382360350/71194
+#EXTINF:-1 tvg-id="premiere.2.br" tvg-name="PFC 2 FHD" tvg-logo="https://1.bp.blogspot.com/-Q69ZX8drGfQ/YBxY5AmyO9I/AAAAAAAAJyw/Orw3y2kqi8UhcGjT2HIk4mbBUPpM89N7QCLcBGAsYHQ/s0/PREMIERE.png" group-title="attESPORTE 02",PREMIERES",PFC 2 FHD
+https://kinder5.live/23156616732/42382360350/71105
+#EXTINF:-1 tvg-id="premiere.2.br" tvg-name="PFC 2 H265" tvg-logo="https://blogger.googleusercontent.com/img/a/AVvXsEg81mGHD5E4yfk5QjWTEN-ANjUWGg-osBY_M2-lFnrIa46AlQK5e9SpJMge6Crfa0UvHV-GU2E_nOaXxzk3vCvKzXCSOyZMDDl47ea7icBSuQ6d6VMiuFyeAY_CRIyeX37cpR6_Tqw8k7UtjJE9y1aqyW1vdoPQBgJD4iTRE5O2P3fNkRxzdvpgFELR" group-title="attESPORTE 02",PREMIERES",PFC 2 H265
+https://kinder5.live/23156616732/42382360350/166815
+#EXTINF:-1 tvg-id="premiere.2.br" tvg-name="PFC 2 HD" tvg-logo="https://1.bp.blogspot.com/-Q69ZX8drGfQ/YBxY5AmyO9I/AAAAAAAAJyw/Orw3y2kqi8UhcGjT2HIk4mbBUPpM89N7QCLcBGAsYHQ/s0/PREMIERE.png" group-title="attESPORTE 02",PREMIERES",PFC 2 HD
+https://kinder5.live/23156616732/42382360350/71371
+#EXTINF:-1 tvg-id="premiere.2.br" tvg-name="PFC 2 SD" tvg-logo="https://1.bp.blogspot.com/-Q69ZX8drGfQ/YBxY5AmyO9I/AAAAAAAAJyw/Orw3y2kqi8UhcGjT2HIk4mbBUPpM89N7QCLcBGAsYHQ/s0/PREMIERE.png" group-title="attESPORTE 02",PREMIERES",PFC 2 SD
+https://kinder5.live/23156616732/42382360350/71241
+#EXTINF:-1 tvg-id="premiere.3.br" tvg-name="PFC 3 FHD" tvg-logo="https://1.bp.blogspot.com/-Q69ZX8drGfQ/YBxY5AmyO9I/AAAAAAAAJyw/Orw3y2kqi8UhcGjT2HIk4mbBUPpM89N7QCLcBGAsYHQ/s0/PREMIERE.png" group-title="attESPORTE 02",PREMIERES",PFC 3 FHD
+https://kinder5.live/23156616732/42382360350/71106
+#EXTINF:-1 tvg-id="premiere.3.br" tvg-name="PFC 3 H265" tvg-logo="https://blogger.googleusercontent.com/img/a/AVvXsEg81mGHD5E4yfk5QjWTEN-ANjUWGg-osBY_M2-lFnrIa46AlQK5e9SpJMge6Crfa0UvHV-GU2E_nOaXxzk3vCvKzXCSOyZMDDl47ea7icBSuQ6d6VMiuFyeAY_CRIyeX37cpR6_Tqw8k7UtjJE9y1aqyW1vdoPQBgJD4iTRE5O2P3fNkRxzdvpgFELR" group-title="attESPORTE 02",PREMIERES",PFC 3 H265
+https://kinder5.live/23156616732/42382360350/206478
+#EXTINF:-1 tvg-id="premiere.3.br" tvg-name="PFC 3 HD" tvg-logo="https://1.bp.blogspot.com/-Q69ZX8drGfQ/YBxY5AmyO9I/AAAAAAAAJyw/Orw3y2kqi8UhcGjT2HIk4mbBUPpM89N7QCLcBGAsYHQ/s0/PREMIERE.png" group-title="attESPORTE 02",PREMIERES",PFC 3 HD
+https://kinder5.live/23156616732/42382360350/71372
+#EXTINF:-1 tvg-id="premiere.3.br" tvg-name="PFC 3 SD" tvg-logo="https://1.bp.blogspot.com/-Q69ZX8drGfQ/YBxY5AmyO9I/AAAAAAAAJyw/Orw3y2kqi8UhcGjT2HIk4mbBUPpM89N7QCLcBGAsYHQ/s0/PREMIERE.png" group-title="attESPORTE 02",PREMIERES",PFC 3 SD
+https://kinder5.live/23156616732/42382360350/71242
+#EXTINF:-1 tvg-id="premiere.4.br" tvg-name="PFC 4 FHD" tvg-logo="https://1.bp.blogspot.com/-Q69ZX8drGfQ/YBxY5AmyO9I/AAAAAAAAJyw/Orw3y2kqi8UhcGjT2HIk4mbBUPpM89N7QCLcBGAsYHQ/s0/PREMIERE.png" group-title="attESPORTE 02",PREMIERES",PFC 4 FHD
+https://kinder5.live/23156616732/42382360350/71107
+#EXTINF:-1 tvg-id="premiere.4.br" tvg-name="PFC 4 H265" tvg-logo="https://blogger.googleusercontent.com/img/a/AVvXsEg81mGHD5E4yfk5QjWTEN-ANjUWGg-osBY_M2-lFnrIa46AlQK5e9SpJMge6Crfa0UvHV-GU2E_nOaXxzk3vCvKzXCSOyZMDDl47ea7icBSuQ6d6VMiuFyeAY_CRIyeX37cpR6_Tqw8k7UtjJE9y1aqyW1vdoPQBgJD4iTRE5O2P3fNkRxzdvpgFELR" group-title="attESPORTE 02",PREMIERES",PFC 4 H265
+https://kinder5.live/23156616732/42382360350/166854
+#EXTINF:-1 tvg-id="premiere.4.br" tvg-name="PFC 4 HD" tvg-logo="https://1.bp.blogspot.com/-Q69ZX8drGfQ/YBxY5AmyO9I/AAAAAAAAJyw/Orw3y2kqi8UhcGjT2HIk4mbBUPpM89N7QCLcBGAsYHQ/s0/PREMIERE.png" group-title="attESPORTE 02",PREMIERES",PFC 4 HD
+https://kinder5.live/23156616732/42382360350/71373
+#EXTINF:-1 tvg-id="premiere.4.br" tvg-name="PFC 4 SD" tvg-logo="https://1.bp.blogspot.com/-Q69ZX8drGfQ/YBxY5AmyO9I/AAAAAAAAJyw/Orw3y2kqi8UhcGjT2HIk4mbBUPpM89N7QCLcBGAsYHQ/s0/PREMIERE.png" group-title="attESPORTE 02",PREMIERES",PFC 4 SD
+https://kinder5.live/23156616732/42382360350/71243
+#EXTINF:-1 tvg-id="premiere.5.brazil.br" tvg-name="PFC 5 FHD" tvg-logo="https://1.bp.blogspot.com/-Q69ZX8drGfQ/YBxY5AmyO9I/AAAAAAAAJyw/Orw3y2kqi8UhcGjT2HIk4mbBUPpM89N7QCLcBGAsYHQ/s0/PREMIERE.png" group-title="attESPORTE 02",PREMIERES",PFC 5 FHD
+https://kinder5.live/23156616732/42382360350/71115
+#EXTINF:-1 tvg-id="premiere.5.br" tvg-name="PFC 5 H265" tvg-logo="https://blogger.googleusercontent.com/img/a/AVvXsEg81mGHD5E4yfk5QjWTEN-ANjUWGg-osBY_M2-lFnrIa46AlQK5e9SpJMge6Crfa0UvHV-GU2E_nOaXxzk3vCvKzXCSOyZMDDl47ea7icBSuQ6d6VMiuFyeAY_CRIyeX37cpR6_Tqw8k7UtjJE9y1aqyW1vdoPQBgJD4iTRE5O2P3fNkRxzdvpgFELR" group-title="attESPORTE 02",PREMIERES",PFC 5 H265
+https://kinder5.live/23156616732/42382360350/166817
+#EXTINF:-1 tvg-id="premiere.5.brazil.br" tvg-name="PFC 5 HD" tvg-logo="https://1.bp.blogspot.com/-Q69ZX8drGfQ/YBxY5AmyO9I/AAAAAAAAJyw/Orw3y2kqi8UhcGjT2HIk4mbBUPpM89N7QCLcBGAsYHQ/s0/PREMIERE.png" group-title="attESPORTE 02",PREMIERES",PFC 5 HD
+https://kinder5.live/23156616732/42382360350/71374
+#EXTINF:-1 tvg-id="premiere.5.brazil.br" tvg-name="PFC 5 SD" tvg-logo="https://1.bp.blogspot.com/-Q69ZX8drGfQ/YBxY5AmyO9I/AAAAAAAAJyw/Orw3y2kqi8UhcGjT2HIk4mbBUPpM89N7QCLcBGAsYHQ/s0/PREMIERE.png" group-title="attESPORTE 02",PREMIERES",PFC 5 SD
+https://kinder5.live/23156616732/42382360350/71244
+#EXTINF:-1 tvg-id="a.e.br" tvg-name="PFC 6 FHD" tvg-logo="https://1.bp.blogspot.com/-Q69ZX8drGfQ/YBxY5AmyO9I/AAAAAAAAJyw/Orw3y2kqi8UhcGjT2HIk4mbBUPpM89N7QCLcBGAsYHQ/s0/PREMIERE.png" group-title="attESPORTE 02",PREMIERES",PFC 6 FHD
+https://kinder5.live/23156616732/42382360350/71375
+#EXTINF:-1 tvg-id="premiere.6.br" tvg-name="PFC 6 H265" tvg-logo="https://blogger.googleusercontent.com/img/a/AVvXsEg81mGHD5E4yfk5QjWTEN-ANjUWGg-osBY_M2-lFnrIa46AlQK5e9SpJMge6Crfa0UvHV-GU2E_nOaXxzk3vCvKzXCSOyZMDDl47ea7icBSuQ6d6VMiuFyeAY_CRIyeX37cpR6_Tqw8k7UtjJE9y1aqyW1vdoPQBgJD4iTRE5O2P3fNkRxzdvpgFELR" group-title="attESPORTE 02",PREMIERES",PFC 6 H265
+https://kinder5.live/23156616732/42382360350/166855
+#EXTINF:-1 tvg-id="premiere.6.br" tvg-name="PFC 6 HD" tvg-logo="https://1.bp.blogspot.com/-Q69ZX8drGfQ/YBxY5AmyO9I/AAAAAAAAJyw/Orw3y2kqi8UhcGjT2HIk4mbBUPpM89N7QCLcBGAsYHQ/s0/PREMIERE.png" group-title="attESPORTE 02",PREMIERES",PFC 6 HD
+https://kinder5.live/23156616732/42382360350/71109
+#EXTINF:-1 tvg-id="premiere.6.br" tvg-name="PFC 6 SD" tvg-logo="https://1.bp.blogspot.com/-Q69ZX8drGfQ/YBxY5AmyO9I/AAAAAAAAJyw/Orw3y2kqi8UhcGjT2HIk4mbBUPpM89N7QCLcBGAsYHQ/s0/PREMIERE.png" group-title="attESPORTE 02",PREMIERES",PFC 6 SD
+https://kinder5.live/23156616732/42382360350/71245
+#EXTINF:-1 tvg-id="a.e.br" tvg-name="PFC 7 FHD" tvg-logo="https://1.bp.blogspot.com/-Q69ZX8drGfQ/YBxY5AmyO9I/AAAAAAAAJyw/Orw3y2kqi8UhcGjT2HIk4mbBUPpM89N7QCLcBGAsYHQ/s0/PREMIERE.png" group-title="attESPORTE 02",PREMIERES",PFC 7 FHD
+https://kinder5.live/23156616732/42382360350/71376
+#EXTINF:-1 tvg-id="premiere.7.br" tvg-name="PFC 7 H265" tvg-logo="https://blogger.googleusercontent.com/img/a/AVvXsEg81mGHD5E4yfk5QjWTEN-ANjUWGg-osBY_M2-lFnrIa46AlQK5e9SpJMge6Crfa0UvHV-GU2E_nOaXxzk3vCvKzXCSOyZMDDl47ea7icBSuQ6d6VMiuFyeAY_CRIyeX37cpR6_Tqw8k7UtjJE9y1aqyW1vdoPQBgJD4iTRE5O2P3fNkRxzdvpgFELR" group-title="attESPORTE 02",PREMIERES",PFC 7 H265
+https://kinder5.live/23156616732/42382360350/166856
+#EXTINF:-1 tvg-id="premiere.7.br" tvg-name="PFC 7 HD" tvg-logo="https://1.bp.blogspot.com/-Q69ZX8drGfQ/YBxY5AmyO9I/AAAAAAAAJyw/Orw3y2kqi8UhcGjT2HIk4mbBUPpM89N7QCLcBGAsYHQ/s0/PREMIERE.png" group-title="attESPORTE 02",PREMIERES",PFC 7 HD
+https://kinder5.live/23156616732/42382360350/71110
+#EXTINF:-1 tvg-id="premiere.7.br" tvg-name="PFC 7 SD" tvg-logo="https://1.bp.blogspot.com/-Q69ZX8drGfQ/YBxY5AmyO9I/AAAAAAAAJyw/Orw3y2kqi8UhcGjT2HIk4mbBUPpM89N7QCLcBGAsYHQ/s0/PREMIERE.png" group-title="attESPORTE 02",PREMIERES",PFC 7 SD
+https://kinder5.live/23156616732/42382360350/71246
+#EXTINF:-1 tvg-id="premiere.8.br" tvg-name="PFC 8 FHD" tvg-logo="https://1.bp.blogspot.com/-Q69ZX8drGfQ/YBxY5AmyO9I/AAAAAAAAJyw/Orw3y2kqi8UhcGjT2HIk4mbBUPpM89N7QCLcBGAsYHQ/s0/PREMIERE.png" group-title="attESPORTE 02",PREMIERES",PFC 8 FHD
+https://kinder5.live/23156616732/42382360350/306653
+#EXTINF:-1 tvg-id="premiere.8.br" tvg-name="PFC 8 H265" tvg-logo="https://blogger.googleusercontent.com/img/a/AVvXsEg81mGHD5E4yfk5QjWTEN-ANjUWGg-osBY_M2-lFnrIa46AlQK5e9SpJMge6Crfa0UvHV-GU2E_nOaXxzk3vCvKzXCSOyZMDDl47ea7icBSuQ6d6VMiuFyeAY_CRIyeX37cpR6_Tqw8k7UtjJE9y1aqyW1vdoPQBgJD4iTRE5O2P3fNkRxzdvpgFELR" group-title="attESPORTE 02",PREMIERES",PFC 8 H265
+https://kinder5.live/23156616732/42382360350/306654
+#EXTINF:-1 tvg-id="premiere.8.br" tvg-name="PFC 8 HD" tvg-logo="https://1.bp.blogspot.com/-Q69ZX8drGfQ/YBxY5AmyO9I/AAAAAAAAJyw/Orw3y2kqi8UhcGjT2HIk4mbBUPpM89N7QCLcBGAsYHQ/s0/PREMIERE.png" group-title="attESPORTE 02",PREMIERES",PFC 8 HD
+https://kinder5.live/23156616732/42382360350/306655
+#EXTINF:-1 tvg-id="premiere.8.br" tvg-name="PFC 8 SD" tvg-logo="https://1.bp.blogspot.com/-Q69ZX8drGfQ/YBxY5AmyO9I/AAAAAAAAJyw/Orw3y2kqi8UhcGjT2HIk4mbBUPpM89N7QCLcBGAsYHQ/s0/PREMIERE.png" group-title="attESPORTE 02",PREMIERES",PFC 8 SD
+https://kinder5.live/23156616732/42382360350/306652
+#EXTINF:-1 tvg-id="premiere.clubes.br" tvg-name="PFC CLUBES 4K" tvg-logo="https://blogger.googleusercontent.com/img/a/AVvXsEjIuyx-tJOG6UXqY_P4VPSIjhrFgmiNLlJSgUgSSnYlHwxdWKE03ISNx3D9KaYoL6mVLxPIy8LGKKuHLtIcW-JoqtnHm_HNRMmhFx5-wLwYg-3Dmiw3r-IxRmbkRS1NfIkxrzRJJtxnmsrFt-UFT0bmN5lQzMtq8Zoc3los-YmcCdrSUFTlZVhgSHWY" group-title="attESPORTE 02",PREMIERES",PFC CLUBES 4K
+https://kinder5.live/23156616732/42382360350/88411
+#EXTINF:-1 tvg-id="premiere.clubes.br" tvg-name="PFC CLUBES 4K¹" tvg-logo="https://blogger.googleusercontent.com/img/a/AVvXsEjIuyx-tJOG6UXqY_P4VPSIjhrFgmiNLlJSgUgSSnYlHwxdWKE03ISNx3D9KaYoL6mVLxPIy8LGKKuHLtIcW-JoqtnHm_HNRMmhFx5-wLwYg-3Dmiw3r-IxRmbkRS1NfIkxrzRJJtxnmsrFt-UFT0bmN5lQzMtq8Zoc3los-YmcCdrSUFTlZVhgSHWY" group-title="attESPORTE 02",PREMIERES",PFC CLUBES 4K¹
+https://kinder5.live/23156616732/42382360350/271997
+#EXTINF:-1 tvg-id="premiere.clubes.br" tvg-name="PFC CLUBES FHD" tvg-logo="https://blogger.googleusercontent.com/img/a/AVvXsEgA6LSXXzyvcfS3qj04QNt6dBMlJWKNsHRvK0-V0-wIFY93yByC7yd5_3qF3BZ85RYz1HUaJQHBmY5s9QFSvzOG4Eua_W4WVyLgLniml9Ug1IDPYRXYK1svuk_EyZMserEh-97OidJTF8Vg5AsidRigqhHXeja35o2rcSyQV6pMsG0_7fT3T9FwYWZ9" group-title="attESPORTE 02",PREMIERES",PFC CLUBES FHD
+https://kinder5.live/23156616732/42382360350/71104
+#EXTINF:-1 tvg-id="premiere.clubes.br" tvg-name="PFC CLUBES FHD¹" tvg-logo="https://blogger.googleusercontent.com/img/a/AVvXsEgA6LSXXzyvcfS3qj04QNt6dBMlJWKNsHRvK0-V0-wIFY93yByC7yd5_3qF3BZ85RYz1HUaJQHBmY5s9QFSvzOG4Eua_W4WVyLgLniml9Ug1IDPYRXYK1svuk_EyZMserEh-97OidJTF8Vg5AsidRigqhHXeja35o2rcSyQV6pMsG0_7fT3T9FwYWZ9" group-title="attESPORTE 02",PREMIERES",PFC CLUBES FHD¹
+https://kinder5.live/23156616732/42382360350/281022
+#EXTINF:-1 tvg-id="premiere.clubes.br" tvg-name="PFC CLUBES H265" tvg-logo="https://blogger.googleusercontent.com/img/a/AVvXsEha41WLBqSvqrkLTq958mpRh6YNlryr6tQFNdp-bv5gO4J3h8KCzPoZ8ZDfcvT1uPVqp5Zk9bIPO2Y0lwA_JUJRP3p2Tu78R_cyJTUwqr5cYn3ZIK5Vwo5lNaWSWYO0K5gT1mt7A8wcBT2r4gtuaeKt8qgd9-Gvb8pzqJxArVEtglroQ-0fO_NWQev7" group-title="attESPORTE 02",PREMIERES",PFC CLUBES H265
+https://kinder5.live/23156616732/42382360350/88457
+#EXTINF:-1 tvg-id="premiere.clubes.br" tvg-name="PFC CLUBES HD" tvg-logo="https://blogger.googleusercontent.com/img/a/AVvXsEgA6LSXXzyvcfS3qj04QNt6dBMlJWKNsHRvK0-V0-wIFY93yByC7yd5_3qF3BZ85RYz1HUaJQHBmY5s9QFSvzOG4Eua_W4WVyLgLniml9Ug1IDPYRXYK1svuk_EyZMserEh-97OidJTF8Vg5AsidRigqhHXeja35o2rcSyQV6pMsG0_7fT3T9FwYWZ9" group-title="attESPORTE 02",PREMIERES",PFC CLUBES HD
+https://kinder5.live/23156616732/42382360350/71377
+#EXTINF:-1 tvg-id="premiere.clubes.br" tvg-name="PFC CLUBES HD¹" tvg-logo="https://blogger.googleusercontent.com/img/a/AVvXsEgA6LSXXzyvcfS3qj04QNt6dBMlJWKNsHRvK0-V0-wIFY93yByC7yd5_3qF3BZ85RYz1HUaJQHBmY5s9QFSvzOG4Eua_W4WVyLgLniml9Ug1IDPYRXYK1svuk_EyZMserEh-97OidJTF8Vg5AsidRigqhHXeja35o2rcSyQV6pMsG0_7fT3T9FwYWZ9" group-title="attESPORTE 02",PREMIERES",PFC CLUBES HD¹
+https://kinder5.live/23156616732/42382360350/281019
+#EXTINF:-1 tvg-id="premiere.clubes.br" tvg-name="PFC CLUBES SD" tvg-logo="https://blogger.googleusercontent.com/img/a/AVvXsEgA6LSXXzyvcfS3qj04QNt6dBMlJWKNsHRvK0-V0-wIFY93yByC7yd5_3qF3BZ85RYz1HUaJQHBmY5s9QFSvzOG4Eua_W4WVyLgLniml9Ug1IDPYRXYK1svuk_EyZMserEh-97OidJTF8Vg5AsidRigqhHXeja35o2rcSyQV6pMsG0_7fT3T9FwYWZ9" group-title="attESPORTE 02",PREMIERES",PFC CLUBES SD
+https://kinder5.live/23156616732/42382360350/71249
+#EXTINF:-1 tvg-id="ESPN.4.br" tvg-name="RECORD NEWS H265" tvg-logo="https://blogger.googleusercontent.com/img/a/AVvXsEjuZ7XCmImC-QuVJRU2uSlU4L6sZsrazgCODWyDLSgJ7u9JCGTWBD77VPuHxzyT28-dXOa-2Yz45SJkCel9WpwFL-ktuTUblvl1gxF0T4DlBLBFCRzALZNaiykoczHVjaoxZIaRCqyr-g6BYM-Wdypo0tSzs5GcckzYAER_FkoQFWKrJYJg6zgrvo1Q" group-title="attESPORTE 02",NOTICIAS ",RECORD NEWS H265
+https://kinder5.live/23156616732/42382360350/166864
+#EXTINF:-1 tvg-id="ESPN.4.br" tvg-name="REDE VIDA H265" tvg-logo="https://blogger.googleusercontent.com/img/a/AVvXsEhBq5T4naxPcsFr5ueJPz-I2xxB1Sd17S52heIiWA4V3AmDAnQUVbFfgm8-RCP4mDjznZebrublQZ1a5GFX3Z7Im87ekyqjg8omzgBcorrtU6N8l5OXTV-acxzNPeIpAZYNreQnCkNoQzJNZ-jBtn5Wrv7IE-m5dRZweSy4VMUV1tW5QLK-c7fPCjia" group-title="attESPORTE 02",RELIGIOSOS ",REDE VIDA H265
+https://kinder5.live/23156616732/42382360350/166819
+#EXTINF:-1 tvg-id="sportv2.br" tvg-name="SPORTV 2 4K" tvg-logo="https://lh3.googleusercontent.com/-yMHJ02dNK9g/YB6f_wf-mDI/AAAAAAAAJ94/vFcZhQbWZhQmMJEhLOCGelWrUgW8S9YQwCLcBGAsYHQ/sportv%2B2.png" group-title="attESPORTE 02",SPORTS",SPORTV 2 4K
+https://kinder5.live/23156616732/42382360350/237876
+#EXTINF:-1 tvg-id="sportv2.br" tvg-name="SPORTV 2 FHD" tvg-logo="https://lh3.googleusercontent.com/-yMHJ02dNK9g/YB6f_wf-mDI/AAAAAAAAJ94/vFcZhQbWZhQmMJEhLOCGelWrUgW8S9YQwCLcBGAsYHQ/sportv%2B2.png" group-title="attESPORTE 02",SPORTS",SPORTV 2 FHD
+https://kinder5.live/23156616732/42382360350/71121
+#EXTINF:-1 tvg-id="Sportv.2.HD.br" tvg-name="SPORTV 2 H265" tvg-logo="https://blogger.googleusercontent.com/img/a/AVvXsEi6kvoyfSttlQ1KHZ46M70QEa41eWQo1SkDToziTGWJhaX_sNCp3xzFS4uV8tH5fMiV0XGcq0ckef-IShevw1l3Yx4DMoS4Muy1oFDoHOO2TvoM9cIq--BEWVy-ryRHx09PLcEnC76a5P4jCXjlvBwRhuxsQUno-8biEEG_5L6niIMK852ATPJrsBKO" group-title="attESPORTE 02",SPORTS",SPORTV 2 H265
+https://kinder5.live/23156616732/42382360350/166820
+#EXTINF:-1 tvg-id="sportv2.br" tvg-name="SPORTV 2 HD" tvg-logo="https://lh3.googleusercontent.com/-yMHJ02dNK9g/YB6f_wf-mDI/AAAAAAAAJ94/vFcZhQbWZhQmMJEhLOCGelWrUgW8S9YQwCLcBGAsYHQ/sportv%2B2.png" group-title="attESPORTE 02",SPORTS",SPORTV 2 HD
+https://kinder5.live/23156616732/42382360350/71381
+#EXTINF:-1 tvg-id="sportv2.br" tvg-name="SPORTV 2 SD" tvg-logo="https://lh3.googleusercontent.com/-yMHJ02dNK9g/YB6f_wf-mDI/AAAAAAAAJ94/vFcZhQbWZhQmMJEhLOCGelWrUgW8S9YQwCLcBGAsYHQ/sportv%2B2.png" group-title="attESPORTE 02",SPORTS",SPORTV 2 SD
+https://kinder5.live/23156616732/42382360350/71264
+#EXTINF:-1 tvg-id="sportv3.br" tvg-name="SPORTV 3 FHD" tvg-logo="https://lh3.googleusercontent.com/-dE1ypIW76e8/YB6guOuT1QI/AAAAAAAAJ-A/xiQ8mZfBkIIHXme611oxJFrWrg9-OmYeACLcBGAsYHQ/sport%2B3.png" group-title="attESPORTE 02",SPORTS",SPORTV 3 FHD
+https://kinder5.live/23156616732/42382360350/71122
+#EXTINF:-1 tvg-id="sportv3.br" tvg-name="SPORTV 3 H265" tvg-logo="https://lh3.googleusercontent.com/-ntH6fnvr980/YG30ZmzbkrI/AAAAAAAAKOg/kWmJqWQVUu4lrkZ46HRlo5iF-JHVHRx3gCLcBGAsYHQ/Sportv%2BFHD%2B3%2BH.265.png" group-title="attESPORTE 02",SPORTS",SPORTV 3 H265
+https://kinder5.live/23156616732/42382360350/88459
+#EXTINF:-1 tvg-id="SporTV.3.HD.br" tvg-name="SPORTV 3 HD" tvg-logo="https://lh3.googleusercontent.com/-dE1ypIW76e8/YB6guOuT1QI/AAAAAAAAJ-A/xiQ8mZfBkIIHXme611oxJFrWrg9-OmYeACLcBGAsYHQ/sport%2B3.png" group-title="attESPORTE 02",SPORTS",SPORTV 3 HD
+https://kinder5.live/23156616732/42382360350/164284
+#EXTINF:-1 tvg-id="sportv3.br" tvg-name="SPORTV 3 SD" tvg-logo="https://lh3.googleusercontent.com/-dE1ypIW76e8/YB6guOuT1QI/AAAAAAAAJ-A/xiQ8mZfBkIIHXme611oxJFrWrg9-OmYeACLcBGAsYHQ/sport%2B3.png" group-title="attESPORTE 02",SPORTS",SPORTV 3 SD
+https://kinder5.live/23156616732/42382360350/71265
+#EXTINF:-1 tvg-id="sportv.br" tvg-name="SPORTV 4K" tvg-logo="https://lh3.googleusercontent.com/-Zb5Jg9iGj-4/YG2obFDviQI/AAAAAAAAKKs/Ycy5WeWqmocD5ilbECPvPbuYwkmEd3nvgCLcBGAsYHQ/SPORTV%2B4K.png" group-title="attESPORTE 02",SPORTS",SPORTV 4K
+https://kinder5.live/23156616732/42382360350/88416
+#EXTINF:-1 tvg-id="sportv.br" tvg-name="SPORTV 4K¹" tvg-logo="https://lh3.googleusercontent.com/-0sRUj9WounA/YB6fB_a5ZyI/AAAAAAAAJ9w/cVHJ8v9mS00I5xP0PGtkf9hzkzgfPjU3ACLcBGAsYHQ/SPORTV.png" group-title="attESPORTE 02",SPORTS",SPORTV 4K¹
+https://kinder5.live/23156616732/42382360350/281023
+#EXTINF:-1 tvg-id="sportv.br" tvg-name="SPORTV FHD" tvg-logo="https://lh3.googleusercontent.com/-0sRUj9WounA/YB6fB_a5ZyI/AAAAAAAAJ9w/cVHJ8v9mS00I5xP0PGtkf9hzkzgfPjU3ACLcBGAsYHQ/SPORTV.png" group-title="attESPORTE 02",SPORTS",SPORTV FHD
+https://kinder5.live/23156616732/42382360350/71120
+#EXTINF:-1 tvg-id="sportv.br" tvg-name="SPORTV FHD¹" tvg-logo="https://lh3.googleusercontent.com/-0sRUj9WounA/YB6fB_a5ZyI/AAAAAAAAJ9w/cVHJ8v9mS00I5xP0PGtkf9hzkzgfPjU3ACLcBGAsYHQ/SPORTV.png" group-title="attESPORTE 02",SPORTS",SPORTV FHD¹
+https://kinder5.live/23156616732/42382360350/281021
+#EXTINF:-1 tvg-id="sportv.br" tvg-name="SPORTV H265" tvg-logo="https://lh3.googleusercontent.com/-oGuL7zzH_20/YG3yiBiQgHI/AAAAAAAAKNM/9_H3Eg0hUJA5wkH4RiUfodBum9vY_wNHgCLcBGAsYHQ/SPORTV%2BFHD%2BH.265.png" group-title="attESPORTE 02",SPORTS",SPORTV H265
+https://kinder5.live/23156616732/42382360350/88458
+#EXTINF:-1 tvg-id="sportv.br" tvg-name="SPORTV HD" tvg-logo="https://lh3.googleusercontent.com/-0sRUj9WounA/YB6fB_a5ZyI/AAAAAAAAJ9w/cVHJ8v9mS00I5xP0PGtkf9hzkzgfPjU3ACLcBGAsYHQ/SPORTV.png" group-title="attESPORTE 02",SPORTS",SPORTV HD
+https://kinder5.live/23156616732/42382360350/71382
+#EXTINF:-1 tvg-id="sportv.br" tvg-name="SPORTV HD¹" tvg-logo="https://lh3.googleusercontent.com/-0sRUj9WounA/YB6fB_a5ZyI/AAAAAAAAJ9w/cVHJ8v9mS00I5xP0PGtkf9hzkzgfPjU3ACLcBGAsYHQ/SPORTV.png" group-title="attESPORTE 02",SPORTS",SPORTV HD¹
+https://kinder5.live/23156616732/42382360350/281020
+#EXTINF:-1 tvg-id="sportv.br" tvg-name="SPORTV SD" tvg-logo="https://lh3.googleusercontent.com/-0sRUj9WounA/YB6fB_a5ZyI/AAAAAAAAJ9w/cVHJ8v9mS00I5xP0PGtkf9hzkzgfPjU3ACLcBGAsYHQ/SPORTV.png" group-title="attESPORTE 02",SPORTS",SPORTV SD
+https://kinder5.live/23156616732/42382360350/71263
+#EXTINF:-1 tvg-id="a.e.br" tvg-name="Disney+ 1" tvg-logo="https://blogger.googleusercontent.com/img/a/AVvXsEinOZaW8Xk5Bn2_A2MSSjxjltwWDfB0VqY_a9GIMEID-p-P6uNPfTuaefKXI-rDGXyB9M-CkghOCWjBn57JuiNUms68GJhwHCphYYk3xiZUIWRWxhx6prX1JHElPEuo6HFWsooa_UQOLIMca3MX6sXM7Tiku0mVAzGuNpP0eIyj1jU7zOrqT5VG-xT3DQ4" group-title="attESPORTE 02",PAY-PER-VIEW",Disney+ 1
+https://kinder5.live/23156616732/42382360350/122062
+#EXTINF:-1 tvg-id="agromais.br" tvg-name="Disney+ 2" tvg-logo="https://blogger.googleusercontent.com/img/a/AVvXsEinOZaW8Xk5Bn2_A2MSSjxjltwWDfB0VqY_a9GIMEID-p-P6uNPfTuaefKXI-rDGXyB9M-CkghOCWjBn57JuiNUms68GJhwHCphYYk3xiZUIWRWxhx6prX1JHElPEuo6HFWsooa_UQOLIMca3MX6sXM7Tiku0mVAzGuNpP0eIyj1jU7zOrqT5VG-xT3DQ4" group-title="attESPORTE 02",PAY-PER-VIEW",Disney+ 2
+https://kinder5.live/23156616732/42382360350/136165
+#EXTINF:-1 tvg-id="a.e.br" tvg-name="Disney+ 3" tvg-logo="https://blogger.googleusercontent.com/img/a/AVvXsEinOZaW8Xk5Bn2_A2MSSjxjltwWDfB0VqY_a9GIMEID-p-P6uNPfTuaefKXI-rDGXyB9M-CkghOCWjBn57JuiNUms68GJhwHCphYYk3xiZUIWRWxhx6prX1JHElPEuo6HFWsooa_UQOLIMca3MX6sXM7Tiku0mVAzGuNpP0eIyj1jU7zOrqT5VG-xT3DQ4" group-title="attESPORTE 02",PAY-PER-VIEW",Disney+ 3
+https://kinder5.live/23156616732/42382360350/136166
+#EXTINF:-1 tvg-id="a.e.br" tvg-name="Disney+ 4" tvg-logo="https://blogger.googleusercontent.com/img/a/AVvXsEinOZaW8Xk5Bn2_A2MSSjxjltwWDfB0VqY_a9GIMEID-p-P6uNPfTuaefKXI-rDGXyB9M-CkghOCWjBn57JuiNUms68GJhwHCphYYk3xiZUIWRWxhx6prX1JHElPEuo6HFWsooa_UQOLIMca3MX6sXM7Tiku0mVAzGuNpP0eIyj1jU7zOrqT5VG-xT3DQ4" group-title="attESPORTE 02",PAY-PER-VIEW",Disney+ 4
+https://kinder5.live/23156616732/42382360350/136167
+#EXTINF:-1 tvg-id="a.e.br" tvg-name="Disney+ 5" tvg-logo="https://blogger.googleusercontent.com/img/a/AVvXsEinOZaW8Xk5Bn2_A2MSSjxjltwWDfB0VqY_a9GIMEID-p-P6uNPfTuaefKXI-rDGXyB9M-CkghOCWjBn57JuiNUms68GJhwHCphYYk3xiZUIWRWxhx6prX1JHElPEuo6HFWsooa_UQOLIMca3MX6sXM7Tiku0mVAzGuNpP0eIyj1jU7zOrqT5VG-xT3DQ4" group-title="attESPORTE 02",PAY-PER-VIEW",Disney+ 5
+https://kinder5.live/23156616732/42382360350/136168
+#EXTINF:-1 tvg-id="a.e.br" tvg-name="Disney+ 6" tvg-logo="https://blogger.googleusercontent.com/img/a/AVvXsEinOZaW8Xk5Bn2_A2MSSjxjltwWDfB0VqY_a9GIMEID-p-P6uNPfTuaefKXI-rDGXyB9M-CkghOCWjBn57JuiNUms68GJhwHCphYYk3xiZUIWRWxhx6prX1JHElPEuo6HFWsooa_UQOLIMca3MX6sXM7Tiku0mVAzGuNpP0eIyj1jU7zOrqT5VG-xT3DQ4" group-title="attESPORTE 02",PAY-PER-VIEW",Disney+ 6
+https://kinder5.live/23156616732/42382360350/136169
+#EXTINF:-1 tvg-id="ESPN.4.br" tvg-name="TV EVANGELIZAR" tvg-logo="https://lh3.googleusercontent.com/-heaDxFLkgnM/YB7ua_QVHWI/AAAAAAAAKDY/QCq61JtiTuU-FZaO6nWibZwNeqFwpL8-QCLcBGAsYHQ/TV%2BEVANGELIZAR.png" group-title="attESPORTE 02",RELIGIOSOS ",TV EVANGELIZAR
+https://kinder5.live/23156616732/42382360350/167165
+#EXTINF:-1 tvg-id="São.Paulo/SP..PREMIERE.HD.4.³.br" tvg-name="USA FHD H265" tvg-logo="https://blogger.googleusercontent.com/img/a/AVvXsEjvi-8mb9Gq-ND0vaqGj3c-Orm18NjWJfVkEKNj1cn9haxY9WncsCUZgCZnTReUypg5WX7iRpUTYz8Lyun9zt_y_jCdVM7N_nyze9iZueCKmF6frm_fn2SRpA7jjyZqW27nfsPx8WvY3OR2fiijJBQOS5-NY1vXGZHWV8Dqei2UkRweizrhKpkP-kzkmss" group-title="attESPORTE 02",FILMES E SERIES",USA FHD H265
+https://kinder5.live/23156616732/42382360350/363984
+#EXTINF:-1 tvg-id="São.Paulo/SP..PREMIERE.HD.4.³.br" tvg-name="USA FHD" tvg-logo="https://blogger.googleusercontent.com/img/a/AVvXsEiGktN0650IH7UNHG0X14iO2Fi8pStIqxvvmOgQEO-hZLjK5AWxBKdOhqfUwdDWpwgOc0GXwpHmf3UiipLEzulTAp4A57cm3vt1yBZYZMAk2-w9b2TSl_Cg8wbpJxzbt2V5l5K-D8en0IMXoHLQ2morqQrPj1ITKGnsYlFf8ADUmKRTW_gHqxc7bOXn7Ow" group-title="attESPORTE 02",FILMES E SERIES",USA FHD
+https://kinder5.live/23156616732/42382360350/363985
+#EXTINF:-1 tvg-id="São.Paulo/SP..Band.News.br" tvg-name="SPORTV 4 SD" tvg-logo="https://blogger.googleusercontent.com/img/a/AVvXsEjf4H8Cw2_XYv-kxT8VZytRU9aLl5Uf3J9HFCuyK7pCM46xgtDSwSSqUMyRfBMRunjVICDlYl5gLZckhUIGdnbENCltHQUFtGLJ1VXqVHI1EYHPhhIW_T8qZpgIWamd4COUw-5Z7ZnSllZzAWZPGZMZhyOzcKe1ib7jtEEKsAs7yAQvRz8rorpT_ki-KK8" group-title="attESPORTE 02",SPORTS",SPORTV 4 SD
+https://kinder5.live/23156616732/42382360350/356398
+#EXTINF:-1 tvg-id="ESPN.2.br" tvg-name="ESPN 2 FHD" tvg-logo="https://lh3.googleusercontent.com/-UX1SWYxIwGA/YB6sme8OSQI/AAAAAAAAJ_Y/IdcL3RYALwsTrRWgeL3hW6RQVGGErWfJgCLcBGAsYHQ/ESPN%2B2.png" group-title="attESPORTE 04",SPORTS",ESPN 2 FHD
+https://kinder5.live/094279188/062038990/71116
+#EXTINF:-1 tvg-id="ESPN.2.br" tvg-name="ESPN 2 H265" tvg-logo="https://blogger.googleusercontent.com/img/a/AVvXsEg-KQLT0eOEU889e7i2XpvqHcbTyZy-HLIAk-1QYp3tH6BdLtNDMsYgJYBm71uCsdmwMJoISKNTqXxCRqTAH7dF3FGlb-TVlS-Z_Kl_v_6Cgnm8MhTGODefIfDcPnxkia1We06arNWgYHnvrogVl202fBJHQkaZGe40wrIJH_lW2-C4Ux69sitzKy7_" group-title="attESPORTE 04",SPORTS",ESPN 2 H265
+https://kinder5.live/094279188/062038990/166845
+#EXTINF:-1 tvg-id="ESPN.2.br" tvg-name="ESPN 2 HD" tvg-logo="https://lh3.googleusercontent.com/-UX1SWYxIwGA/YB6sme8OSQI/AAAAAAAAJ_Y/IdcL3RYALwsTrRWgeL3hW6RQVGGErWfJgCLcBGAsYHQ/ESPN%2B2.png" group-title="attESPORTE 04",SPORTS",ESPN 2 HD
+https://kinder5.live/094279188/062038990/71335
+#EXTINF:-1 tvg-id="ESPN.2.br" tvg-name="ESPN 2 SD" tvg-logo="https://lh3.googleusercontent.com/-UX1SWYxIwGA/YB6sme8OSQI/AAAAAAAAJ_Y/IdcL3RYALwsTrRWgeL3hW6RQVGGErWfJgCLcBGAsYHQ/ESPN%2B2.png" group-title="attESPORTE 04",SPORTS",ESPN 2 SD
+https://kinder5.live/094279188/062038990/71192
+#EXTINF:-1 tvg-id="São.Paulo/SP..ESPN.3.HD.br" tvg-name="ESPN 3 FHD" tvg-logo="https://lh3.googleusercontent.com/-HDozjk3zhhU/Yew9A6OIrAI/AAAAAAAAK4U/akBM5wz6kiAIk9xENPTZdMd6sDPygz01QCNcBGAsYHQ/spn%2B3.png" group-title="attESPORTE 04",SPORTS",ESPN 3 FHD
+https://kinder5.live/094279188/062038990/71117
+#EXTINF:-1 tvg-id="ESPN.3.br" tvg-name="ESPN 3 H265" tvg-logo="https://blogger.googleusercontent.com/img/a/AVvXsEiB-5qkutNwrGDI9zfajyOwrSDadIRMAFkfFTRY6N7vqIzyfsGjSrMzyITvNYYcfJyIGp9zLOd1tPCInA9LhLDMPLkz_DHPqhuhrLvKm_Xl1dgHMMbJj3XHlt2dN4PMFoQ2Tn0Gh2_1gVl3xTj8Dvmv964Wz_UZTnEDSGl4dAxacJIB-z7jlA-g9eb-" group-title="attESPORTE 04",SPORTS",ESPN 3 H265
+https://kinder5.live/094279188/062038990/166795
+#EXTINF:-1 tvg-id="ESPN.3.br" tvg-name="ESPN 3 HD" tvg-logo="https://lh3.googleusercontent.com/-HDozjk3zhhU/Yew9A6OIrAI/AAAAAAAAK4U/akBM5wz6kiAIk9xENPTZdMd6sDPygz01QCNcBGAsYHQ/spn%2B3.png" group-title="attESPORTE 04",SPORTS",ESPN 3 HD
+https://kinder5.live/094279188/062038990/71333
+#EXTINF:-1 tvg-id="ESPN.3.br" tvg-name="ESPN 3 SD" tvg-logo="https://lh3.googleusercontent.com/-HDozjk3zhhU/Yew9A6OIrAI/AAAAAAAAK4U/akBM5wz6kiAIk9xENPTZdMd6sDPygz01QCNcBGAsYHQ/spn%2B3.png" group-title="attESPORTE 04",SPORTS",ESPN 3 SD
+https://kinder5.live/094279188/062038990/71193
+#EXTINF:-1 tvg-id="São.Paulo/SP..Curta!.HD.br" tvg-name="ESPN 4 4K" tvg-logo="https://lh3.googleusercontent.com/-4h5wLi-DGbM/YG2obFahJ5I/AAAAAAAAKKk/c05Ik85-8tknXkYRp93ZztZPBbAYlRI4gCLcBGAsYHQ/FOX%2BSPORTS%2B4K.png" group-title="attESPORTE 04",SPORTS",ESPN 4 4K
+https://kinder5.live/094279188/062038990/88413
+#EXTINF:-1 tvg-id="sportv3.br" tvg-name="ESPN 4 FHD" tvg-logo="https://lh3.googleusercontent.com/-7_5NBTKcQRk/Yew9A-zJZ5I/AAAAAAAAK4Y/4ff_gTmqMw8WEYyR0j3acfzXEL1ws8lSQCNcBGAsYHQ/spn%2B4.png" group-title="attESPORTE 04",SPORTS",ESPN 4 FHD
+https://kinder5.live/094279188/062038990/74903
+#EXTINF:-1 tvg-id="São.Paulo/SP..SporTV.2.br" tvg-name="ESPN 4 H265" tvg-logo="https://lh3.googleusercontent.com/-Vaa48i_GwwA/YG3ygzjll4I/AAAAAAAAKNA/WALfe02nrCwBYg2v4P9a9YDTY2vm3nSWACLcBGAsYHQ/FOX%2BSPORTS%2BFHD%2BH.265.png" group-title="attESPORTE 04",SPORTS",ESPN 4 H265
+https://kinder5.live/094279188/062038990/88461
+#EXTINF:-1 tvg-id="São.Paulo/SP..Venus.br" tvg-name="ESPN 4 HD" tvg-logo="https://lh3.googleusercontent.com/-7_5NBTKcQRk/Yew9A-zJZ5I/AAAAAAAAK4Y/4ff_gTmqMw8WEYyR0j3acfzXEL1ws8lSQCNcBGAsYHQ/spn%2B4.png" group-title="attESPORTE 04",SPORTS",ESPN 4 HD
+https://kinder5.live/094279188/062038990/71343
+#EXTINF:-1 tvg-id="ESPN.4.br" tvg-name="ESPN 4 SD" tvg-logo="https://lh3.googleusercontent.com/-7_5NBTKcQRk/Yew9A-zJZ5I/AAAAAAAAK4Y/4ff_gTmqMw8WEYyR0j3acfzXEL1ws8lSQCNcBGAsYHQ/spn%2B4.png" group-title="attESPORTE 04",SPORTS",ESPN 4 SD
+https://kinder5.live/094279188/062038990/71200
+#EXTINF:-1 tvg-id="ESPN.Extra.br" tvg-name="ESPN Extra FHD" tvg-logo="https://lh3.googleusercontent.com/-uIMmxZlg14c/YB6qM_sknAI/AAAAAAAAJ-8/oQdQdtvlYigJfDFjGJECfo4q0W9zHVqXwCLcBGAsYHQ/ESPN%2BEXTRA.png" group-title="attESPORTE 04",SPORTS",ESPN Extra FHD
+https://kinder5.live/094279188/062038990/168742
+#EXTINF:-1 tvg-id="São.Paulo/SP..Canal.Rural.br" tvg-name="ESPN EXTRA H265" tvg-logo="https://blogger.googleusercontent.com/img/a/AVvXsEhpFI7DJE-bnuAO1w-vpiuTbACkh6JkvBCe2fE55e9ZsLRznRU_iSjNxmjTtIv0huCVXNZvMEe7FWgjRCqAF4FPJoVsu8ybYeA8yU2yiv-jjr3_JzHhAvYPonmf1NJaagqlXphL_aG-myujRzBIsT99i5vvjfRqS3agsoA1vkfzkvkUYKBsLWP2IBxG" group-title="attESPORTE 04",SPORTS",ESPN EXTRA H265
+https://kinder5.live/094279188/062038990/166796
+#EXTINF:-1 tvg-id="ESPN.4.br" tvg-name="ESPN EXTRA HD" tvg-logo="https://lh3.googleusercontent.com/-uIMmxZlg14c/YB6qM_sknAI/AAAAAAAAJ-8/oQdQdtvlYigJfDFjGJECfo4q0W9zHVqXwCLcBGAsYHQ/ESPN%2BEXTRA.png" group-title="attESPORTE 04",SPORTS",ESPN EXTRA HD
+https://kinder5.live/094279188/062038990/71336
+#EXTINF:-1 tvg-id="espn.extra.br" tvg-name="ESPN EXTRA SD" tvg-logo="https://lh3.googleusercontent.com/-uIMmxZlg14c/YB6qM_sknAI/AAAAAAAAJ-8/oQdQdtvlYigJfDFjGJECfo4q0W9zHVqXwCLcBGAsYHQ/ESPN%2BEXTRA.png" group-title="attESPORTE 04",SPORTS",ESPN EXTRA SD
+https://kinder5.live/094279188/062038990/168743
+#EXTINF:-1 tvg-id="a.e.br" tvg-name="ESPN FHD" tvg-logo="https://lh3.googleusercontent.com/-61A23iAbdFg/YB6rzXvfSPI/AAAAAAAAJ_M/M1fl_stAkHcPOhzH3cZWMSH6Bl7oCqnFwCLcBGAsYHQ/ESPN.png" group-title="attESPORTE 04",SPORTS",ESPN FHD
+https://kinder5.live/094279188/062038990/71118
+#EXTINF:-1 tvg-id="espn.br" tvg-name="ESPN H265" tvg-logo="https://blogger.googleusercontent.com/img/a/AVvXsEjOddmBUmT5ZUhWO-mkXId8Vh73WGdpmMSaw9EQ309tcqr9lUfyddW87fd4U2iX4TCUoUP10hp27e16Hua7sT0T0yy3kCQGQIzYq4E7l85UtnzRE8sJTsTcC2dtI3eY3ISzMFTqxC_KNn9hgD-NBJw2h10NG2YZIBoON9P6rY21Dt8_POyFyVp8V9B3" group-title="attESPORTE 04",SPORTS",ESPN H265
+https://kinder5.live/094279188/062038990/166844
+#EXTINF:-1 tvg-id="espn.br" tvg-name="ESPN HD" tvg-logo="https://lh3.googleusercontent.com/-61A23iAbdFg/YB6rzXvfSPI/AAAAAAAAJ_M/M1fl_stAkHcPOhzH3cZWMSH6Bl7oCqnFwCLcBGAsYHQ/ESPN.png" group-title="attESPORTE 04",SPORTS",ESPN HD
+https://kinder5.live/094279188/062038990/71334
+#EXTINF:-1 tvg-id="ESPN.br" tvg-name="ESPN SD" tvg-logo="https://lh3.googleusercontent.com/-61A23iAbdFg/YB6rzXvfSPI/AAAAAAAAJ_M/M1fl_stAkHcPOhzH3cZWMSH6Bl7oCqnFwCLcBGAsYHQ/ESPN.png" group-title="attESPORTE 04",SPORTS",ESPN SD
+https://kinder5.live/094279188/062038990/71194
+#EXTINF:-1 tvg-id="premiere.2.br" tvg-name="PFC 2 FHD" tvg-logo="https://1.bp.blogspot.com/-Q69ZX8drGfQ/YBxY5AmyO9I/AAAAAAAAJyw/Orw3y2kqi8UhcGjT2HIk4mbBUPpM89N7QCLcBGAsYHQ/s0/PREMIERE.png" group-title="attESPORTE 04",PREMIERES",PFC 2 FHD
+https://kinder5.live/094279188/062038990/71105
+#EXTINF:-1 tvg-id="premiere.2.br" tvg-name="PFC 2 H265" tvg-logo="https://blogger.googleusercontent.com/img/a/AVvXsEg81mGHD5E4yfk5QjWTEN-ANjUWGg-osBY_M2-lFnrIa46AlQK5e9SpJMge6Crfa0UvHV-GU2E_nOaXxzk3vCvKzXCSOyZMDDl47ea7icBSuQ6d6VMiuFyeAY_CRIyeX37cpR6_Tqw8k7UtjJE9y1aqyW1vdoPQBgJD4iTRE5O2P3fNkRxzdvpgFELR" group-title="attESPORTE 04",PREMIERES",PFC 2 H265
+https://kinder5.live/094279188/062038990/166815
+#EXTINF:-1 tvg-id="premiere.2.br" tvg-name="PFC 2 HD" tvg-logo="https://1.bp.blogspot.com/-Q69ZX8drGfQ/YBxY5AmyO9I/AAAAAAAAJyw/Orw3y2kqi8UhcGjT2HIk4mbBUPpM89N7QCLcBGAsYHQ/s0/PREMIERE.png" group-title="attESPORTE 04",PREMIERES",PFC 2 HD
+https://kinder5.live/094279188/062038990/71371
+#EXTINF:-1 tvg-id="premiere.2.br" tvg-name="PFC 2 SD" tvg-logo="https://1.bp.blogspot.com/-Q69ZX8drGfQ/YBxY5AmyO9I/AAAAAAAAJyw/Orw3y2kqi8UhcGjT2HIk4mbBUPpM89N7QCLcBGAsYHQ/s0/PREMIERE.png" group-title="attESPORTE 04",PREMIERES",PFC 2 SD
+https://kinder5.live/094279188/062038990/71241
+#EXTINF:-1 tvg-id="premiere.3.br" tvg-name="PFC 3 FHD" tvg-logo="https://1.bp.blogspot.com/-Q69ZX8drGfQ/YBxY5AmyO9I/AAAAAAAAJyw/Orw3y2kqi8UhcGjT2HIk4mbBUPpM89N7QCLcBGAsYHQ/s0/PREMIERE.png" group-title="attESPORTE 04",PREMIERES",PFC 3 FHD
+https://kinder5.live/094279188/062038990/71106
+#EXTINF:-1 tvg-id="premiere.3.br" tvg-name="PFC 3 H265" tvg-logo="https://blogger.googleusercontent.com/img/a/AVvXsEg81mGHD5E4yfk5QjWTEN-ANjUWGg-osBY_M2-lFnrIa46AlQK5e9SpJMge6Crfa0UvHV-GU2E_nOaXxzk3vCvKzXCSOyZMDDl47ea7icBSuQ6d6VMiuFyeAY_CRIyeX37cpR6_Tqw8k7UtjJE9y1aqyW1vdoPQBgJD4iTRE5O2P3fNkRxzdvpgFELR" group-title="attESPORTE 04",PREMIERES",PFC 3 H265
+https://kinder5.live/094279188/062038990/206478
+#EXTINF:-1 tvg-id="premiere.3.br" tvg-name="PFC 3 HD" tvg-logo="https://1.bp.blogspot.com/-Q69ZX8drGfQ/YBxY5AmyO9I/AAAAAAAAJyw/Orw3y2kqi8UhcGjT2HIk4mbBUPpM89N7QCLcBGAsYHQ/s0/PREMIERE.png" group-title="attESPORTE 04",PREMIERES",PFC 3 HD
+https://kinder5.live/094279188/062038990/71372
+#EXTINF:-1 tvg-id="premiere.3.br" tvg-name="PFC 3 SD" tvg-logo="https://1.bp.blogspot.com/-Q69ZX8drGfQ/YBxY5AmyO9I/AAAAAAAAJyw/Orw3y2kqi8UhcGjT2HIk4mbBUPpM89N7QCLcBGAsYHQ/s0/PREMIERE.png" group-title="attESPORTE 04",PREMIERES",PFC 3 SD
+https://kinder5.live/094279188/062038990/71242
+#EXTINF:-1 tvg-id="premiere.4.br" tvg-name="PFC 4 FHD" tvg-logo="https://1.bp.blogspot.com/-Q69ZX8drGfQ/YBxY5AmyO9I/AAAAAAAAJyw/Orw3y2kqi8UhcGjT2HIk4mbBUPpM89N7QCLcBGAsYHQ/s0/PREMIERE.png" group-title="attESPORTE 04",PREMIERES",PFC 4 FHD
+https://kinder5.live/094279188/062038990/71107
+#EXTINF:-1 tvg-id="premiere.4.br" tvg-name="PFC 4 H265" tvg-logo="https://blogger.googleusercontent.com/img/a/AVvXsEg81mGHD5E4yfk5QjWTEN-ANjUWGg-osBY_M2-lFnrIa46AlQK5e9SpJMge6Crfa0UvHV-GU2E_nOaXxzk3vCvKzXCSOyZMDDl47ea7icBSuQ6d6VMiuFyeAY_CRIyeX37cpR6_Tqw8k7UtjJE9y1aqyW1vdoPQBgJD4iTRE5O2P3fNkRxzdvpgFELR" group-title="attESPORTE 04",PREMIERES",PFC 4 H265
+https://kinder5.live/094279188/062038990/166854
+#EXTINF:-1 tvg-id="premiere.4.br" tvg-name="PFC 4 HD" tvg-logo="https://1.bp.blogspot.com/-Q69ZX8drGfQ/YBxY5AmyO9I/AAAAAAAAJyw/Orw3y2kqi8UhcGjT2HIk4mbBUPpM89N7QCLcBGAsYHQ/s0/PREMIERE.png" group-title="attESPORTE 04",PREMIERES",PFC 4 HD
+https://kinder5.live/094279188/062038990/71373
+#EXTINF:-1 tvg-id="premiere.4.br" tvg-name="PFC 4 SD" tvg-logo="https://1.bp.blogspot.com/-Q69ZX8drGfQ/YBxY5AmyO9I/AAAAAAAAJyw/Orw3y2kqi8UhcGjT2HIk4mbBUPpM89N7QCLcBGAsYHQ/s0/PREMIERE.png" group-title="attESPORTE 04",PREMIERES",PFC 4 SD
+https://kinder5.live/094279188/062038990/71243
+#EXTINF:-1 tvg-id="premiere.5.brazil.br" tvg-name="PFC 5 FHD" tvg-logo="https://1.bp.blogspot.com/-Q69ZX8drGfQ/YBxY5AmyO9I/AAAAAAAAJyw/Orw3y2kqi8UhcGjT2HIk4mbBUPpM89N7QCLcBGAsYHQ/s0/PREMIERE.png" group-title="attESPORTE 04",PREMIERES",PFC 5 FHD
+https://kinder5.live/094279188/062038990/71115
+#EXTINF:-1 tvg-id="premiere.5.br" tvg-name="PFC 5 H265" tvg-logo="https://blogger.googleusercontent.com/img/a/AVvXsEg81mGHD5E4yfk5QjWTEN-ANjUWGg-osBY_M2-lFnrIa46AlQK5e9SpJMge6Crfa0UvHV-GU2E_nOaXxzk3vCvKzXCSOyZMDDl47ea7icBSuQ6d6VMiuFyeAY_CRIyeX37cpR6_Tqw8k7UtjJE9y1aqyW1vdoPQBgJD4iTRE5O2P3fNkRxzdvpgFELR" group-title="attESPORTE 04",PREMIERES",PFC 5 H265
+https://kinder5.live/094279188/062038990/166817
+#EXTINF:-1 tvg-id="premiere.5.brazil.br" tvg-name="PFC 5 HD" tvg-logo="https://1.bp.blogspot.com/-Q69ZX8drGfQ/YBxY5AmyO9I/AAAAAAAAJyw/Orw3y2kqi8UhcGjT2HIk4mbBUPpM89N7QCLcBGAsYHQ/s0/PREMIERE.png" group-title="attESPORTE 04",PREMIERES",PFC 5 HD
+https://kinder5.live/094279188/062038990/71374
+#EXTINF:-1 tvg-id="premiere.5.brazil.br" tvg-name="PFC 5 SD" tvg-logo="https://1.bp.blogspot.com/-Q69ZX8drGfQ/YBxY5AmyO9I/AAAAAAAAJyw/Orw3y2kqi8UhcGjT2HIk4mbBUPpM89N7QCLcBGAsYHQ/s0/PREMIERE.png" group-title="attESPORTE 04",PREMIERES",PFC 5 SD
+https://kinder5.live/094279188/062038990/71244
+#EXTINF:-1 tvg-id="a.e.br" tvg-name="PFC 6 FHD" tvg-logo="https://1.bp.blogspot.com/-Q69ZX8drGfQ/YBxY5AmyO9I/AAAAAAAAJyw/Orw3y2kqi8UhcGjT2HIk4mbBUPpM89N7QCLcBGAsYHQ/s0/PREMIERE.png" group-title="attESPORTE 04",PREMIERES",PFC 6 FHD
+https://kinder5.live/094279188/062038990/71375
+#EXTINF:-1 tvg-id="premiere.6.br" tvg-name="PFC 6 H265" tvg-logo="https://blogger.googleusercontent.com/img/a/AVvXsEg81mGHD5E4yfk5QjWTEN-ANjUWGg-osBY_M2-lFnrIa46AlQK5e9SpJMge6Crfa0UvHV-GU2E_nOaXxzk3vCvKzXCSOyZMDDl47ea7icBSuQ6d6VMiuFyeAY_CRIyeX37cpR6_Tqw8k7UtjJE9y1aqyW1vdoPQBgJD4iTRE5O2P3fNkRxzdvpgFELR" group-title="attESPORTE 04",PREMIERES",PFC 6 H265
+https://kinder5.live/094279188/062038990/166855
+#EXTINF:-1 tvg-id="premiere.6.br" tvg-name="PFC 6 HD" tvg-logo="https://1.bp.blogspot.com/-Q69ZX8drGfQ/YBxY5AmyO9I/AAAAAAAAJyw/Orw3y2kqi8UhcGjT2HIk4mbBUPpM89N7QCLcBGAsYHQ/s0/PREMIERE.png" group-title="attESPORTE 04",PREMIERES",PFC 6 HD
+https://kinder5.live/094279188/062038990/71109
+#EXTINF:-1 tvg-id="premiere.6.br" tvg-name="PFC 6 SD" tvg-logo="https://1.bp.blogspot.com/-Q69ZX8drGfQ/YBxY5AmyO9I/AAAAAAAAJyw/Orw3y2kqi8UhcGjT2HIk4mbBUPpM89N7QCLcBGAsYHQ/s0/PREMIERE.png" group-title="attESPORTE 04",PREMIERES",PFC 6 SD
+https://kinder5.live/094279188/062038990/71245
+#EXTINF:-1 tvg-id="a.e.br" tvg-name="PFC 7 FHD" tvg-logo="https://1.bp.blogspot.com/-Q69ZX8drGfQ/YBxY5AmyO9I/AAAAAAAAJyw/Orw3y2kqi8UhcGjT2HIk4mbBUPpM89N7QCLcBGAsYHQ/s0/PREMIERE.png" group-title="attESPORTE 04",PREMIERES",PFC 7 FHD
+https://kinder5.live/094279188/062038990/71376
+#EXTINF:-1 tvg-id="premiere.7.br" tvg-name="PFC 7 H265" tvg-logo="https://blogger.googleusercontent.com/img/a/AVvXsEg81mGHD5E4yfk5QjWTEN-ANjUWGg-osBY_M2-lFnrIa46AlQK5e9SpJMge6Crfa0UvHV-GU2E_nOaXxzk3vCvKzXCSOyZMDDl47ea7icBSuQ6d6VMiuFyeAY_CRIyeX37cpR6_Tqw8k7UtjJE9y1aqyW1vdoPQBgJD4iTRE5O2P3fNkRxzdvpgFELR" group-title="attESPORTE 04",PREMIERES",PFC 7 H265
+https://kinder5.live/094279188/062038990/166856
+#EXTINF:-1 tvg-id="premiere.7.br" tvg-name="PFC 7 HD" tvg-logo="https://1.bp.blogspot.com/-Q69ZX8drGfQ/YBxY5AmyO9I/AAAAAAAAJyw/Orw3y2kqi8UhcGjT2HIk4mbBUPpM89N7QCLcBGAsYHQ/s0/PREMIERE.png" group-title="attESPORTE 04",PREMIERES",PFC 7 HD
+https://kinder5.live/094279188/062038990/71110
+#EXTINF:-1 tvg-id="premiere.7.br" tvg-name="PFC 7 SD" tvg-logo="https://1.bp.blogspot.com/-Q69ZX8drGfQ/YBxY5AmyO9I/AAAAAAAAJyw/Orw3y2kqi8UhcGjT2HIk4mbBUPpM89N7QCLcBGAsYHQ/s0/PREMIERE.png" group-title="attESPORTE 04",PREMIERES",PFC 7 SD
+https://kinder5.live/094279188/062038990/71246
+#EXTINF:-1 tvg-id="premiere.8.br" tvg-name="PFC 8 FHD" tvg-logo="https://1.bp.blogspot.com/-Q69ZX8drGfQ/YBxY5AmyO9I/AAAAAAAAJyw/Orw3y2kqi8UhcGjT2HIk4mbBUPpM89N7QCLcBGAsYHQ/s0/PREMIERE.png" group-title="attESPORTE 04",PREMIERES",PFC 8 FHD
+https://kinder5.live/094279188/062038990/306653
+#EXTINF:-1 tvg-id="premiere.8.br" tvg-name="PFC 8 H265" tvg-logo="https://blogger.googleusercontent.com/img/a/AVvXsEg81mGHD5E4yfk5QjWTEN-ANjUWGg-osBY_M2-lFnrIa46AlQK5e9SpJMge6Crfa0UvHV-GU2E_nOaXxzk3vCvKzXCSOyZMDDl47ea7icBSuQ6d6VMiuFyeAY_CRIyeX37cpR6_Tqw8k7UtjJE9y1aqyW1vdoPQBgJD4iTRE5O2P3fNkRxzdvpgFELR" group-title="attESPORTE 04",PREMIERES",PFC 8 H265
+https://kinder5.live/094279188/062038990/306654
+#EXTINF:-1 tvg-id="premiere.8.br" tvg-name="PFC 8 HD" tvg-logo="https://1.bp.blogspot.com/-Q69ZX8drGfQ/YBxY5AmyO9I/AAAAAAAAJyw/Orw3y2kqi8UhcGjT2HIk4mbBUPpM89N7QCLcBGAsYHQ/s0/PREMIERE.png" group-title="attESPORTE 04",PREMIERES",PFC 8 HD
+https://kinder5.live/094279188/062038990/306655
+#EXTINF:-1 tvg-id="premiere.8.br" tvg-name="PFC 8 SD" tvg-logo="https://1.bp.blogspot.com/-Q69ZX8drGfQ/YBxY5AmyO9I/AAAAAAAAJyw/Orw3y2kqi8UhcGjT2HIk4mbBUPpM89N7QCLcBGAsYHQ/s0/PREMIERE.png" group-title="attESPORTE 04",PREMIERES",PFC 8 SD
+https://kinder5.live/094279188/062038990/306652
+#EXTINF:-1 tvg-id="premiere.clubes.br" tvg-name="PFC CLUBES 4K" tvg-logo="https://blogger.googleusercontent.com/img/a/AVvXsEjIuyx-tJOG6UXqY_P4VPSIjhrFgmiNLlJSgUgSSnYlHwxdWKE03ISNx3D9KaYoL6mVLxPIy8LGKKuHLtIcW-JoqtnHm_HNRMmhFx5-wLwYg-3Dmiw3r-IxRmbkRS1NfIkxrzRJJtxnmsrFt-UFT0bmN5lQzMtq8Zoc3los-YmcCdrSUFTlZVhgSHWY" group-title="attESPORTE 04",PREMIERES",PFC CLUBES 4K
+https://kinder5.live/094279188/062038990/88411
+#EXTINF:-1 tvg-id="premiere.clubes.br" tvg-name="PFC CLUBES 4K¹" tvg-logo="https://blogger.googleusercontent.com/img/a/AVvXsEjIuyx-tJOG6UXqY_P4VPSIjhrFgmiNLlJSgUgSSnYlHwxdWKE03ISNx3D9KaYoL6mVLxPIy8LGKKuHLtIcW-JoqtnHm_HNRMmhFx5-wLwYg-3Dmiw3r-IxRmbkRS1NfIkxrzRJJtxnmsrFt-UFT0bmN5lQzMtq8Zoc3los-YmcCdrSUFTlZVhgSHWY" group-title="attESPORTE 04",PREMIERES",PFC CLUBES 4K¹
+https://kinder5.live/094279188/062038990/271997
+#EXTINF:-1 tvg-id="premiere.clubes.br" tvg-name="PFC CLUBES FHD" tvg-logo="https://blogger.googleusercontent.com/img/a/AVvXsEgA6LSXXzyvcfS3qj04QNt6dBMlJWKNsHRvK0-V0-wIFY93yByC7yd5_3qF3BZ85RYz1HUaJQHBmY5s9QFSvzOG4Eua_W4WVyLgLniml9Ug1IDPYRXYK1svuk_EyZMserEh-97OidJTF8Vg5AsidRigqhHXeja35o2rcSyQV6pMsG0_7fT3T9FwYWZ9" group-title="attESPORTE 04",PREMIERES",PFC CLUBES FHD
+https://kinder5.live/094279188/062038990/71104
+#EXTINF:-1 tvg-id="premiere.clubes.br" tvg-name="PFC CLUBES FHD¹" tvg-logo="https://blogger.googleusercontent.com/img/a/AVvXsEgA6LSXXzyvcfS3qj04QNt6dBMlJWKNsHRvK0-V0-wIFY93yByC7yd5_3qF3BZ85RYz1HUaJQHBmY5s9QFSvzOG4Eua_W4WVyLgLniml9Ug1IDPYRXYK1svuk_EyZMserEh-97OidJTF8Vg5AsidRigqhHXeja35o2rcSyQV6pMsG0_7fT3T9FwYWZ9" group-title="attESPORTE 04",PREMIERES",PFC CLUBES FHD¹
+https://kinder5.live/094279188/062038990/281022
+#EXTINF:-1 tvg-id="premiere.clubes.br" tvg-name="PFC CLUBES H265" tvg-logo="https://blogger.googleusercontent.com/img/a/AVvXsEha41WLBqSvqrkLTq958mpRh6YNlryr6tQFNdp-bv5gO4J3h8KCzPoZ8ZDfcvT1uPVqp5Zk9bIPO2Y0lwA_JUJRP3p2Tu78R_cyJTUwqr5cYn3ZIK5Vwo5lNaWSWYO0K5gT1mt7A8wcBT2r4gtuaeKt8qgd9-Gvb8pzqJxArVEtglroQ-0fO_NWQev7" group-title="attESPORTE 04",PREMIERES",PFC CLUBES H265
+https://kinder5.live/094279188/062038990/88457
+#EXTINF:-1 tvg-id="premiere.clubes.br" tvg-name="PFC CLUBES HD" tvg-logo="https://blogger.googleusercontent.com/img/a/AVvXsEgA6LSXXzyvcfS3qj04QNt6dBMlJWKNsHRvK0-V0-wIFY93yByC7yd5_3qF3BZ85RYz1HUaJQHBmY5s9QFSvzOG4Eua_W4WVyLgLniml9Ug1IDPYRXYK1svuk_EyZMserEh-97OidJTF8Vg5AsidRigqhHXeja35o2rcSyQV6pMsG0_7fT3T9FwYWZ9" group-title="attESPORTE 04",PREMIERES",PFC CLUBES HD
+https://kinder5.live/094279188/062038990/71377
+#EXTINF:-1 tvg-id="premiere.clubes.br" tvg-name="PFC CLUBES HD¹" tvg-logo="https://blogger.googleusercontent.com/img/a/AVvXsEgA6LSXXzyvcfS3qj04QNt6dBMlJWKNsHRvK0-V0-wIFY93yByC7yd5_3qF3BZ85RYz1HUaJQHBmY5s9QFSvzOG4Eua_W4WVyLgLniml9Ug1IDPYRXYK1svuk_EyZMserEh-97OidJTF8Vg5AsidRigqhHXeja35o2rcSyQV6pMsG0_7fT3T9FwYWZ9" group-title="attESPORTE 04",PREMIERES",PFC CLUBES HD¹
+https://kinder5.live/094279188/062038990/281019
+#EXTINF:-1 tvg-id="premiere.clubes.br" tvg-name="PFC CLUBES SD" tvg-logo="https://blogger.googleusercontent.com/img/a/AVvXsEgA6LSXXzyvcfS3qj04QNt6dBMlJWKNsHRvK0-V0-wIFY93yByC7yd5_3qF3BZ85RYz1HUaJQHBmY5s9QFSvzOG4Eua_W4WVyLgLniml9Ug1IDPYRXYK1svuk_EyZMserEh-97OidJTF8Vg5AsidRigqhHXeja35o2rcSyQV6pMsG0_7fT3T9FwYWZ9" group-title="attESPORTE 04",PREMIERES",PFC CLUBES SD
+https://kinder5.live/094279188/062038990/71249
+#EXTINF:-1 tvg-id="ESPN.4.br" tvg-name="RECORD NEWS H265" tvg-logo="https://blogger.googleusercontent.com/img/a/AVvXsEjuZ7XCmImC-QuVJRU2uSlU4L6sZsrazgCODWyDLSgJ7u9JCGTWBD77VPuHxzyT28-dXOa-2Yz45SJkCel9WpwFL-ktuTUblvl1gxF0T4DlBLBFCRzALZNaiykoczHVjaoxZIaRCqyr-g6BYM-Wdypo0tSzs5GcckzYAER_FkoQFWKrJYJg6zgrvo1Q" group-title="attESPORTE 04",NOTICIAS ",RECORD NEWS H265
+https://kinder5.live/094279188/062038990/166864
+#EXTINF:-1 tvg-id="ESPN.4.br" tvg-name="REDE VIDA H265" tvg-logo="https://blogger.googleusercontent.com/img/a/AVvXsEhBq5T4naxPcsFr5ueJPz-I2xxB1Sd17S52heIiWA4V3AmDAnQUVbFfgm8-RCP4mDjznZebrublQZ1a5GFX3Z7Im87ekyqjg8omzgBcorrtU6N8l5OXTV-acxzNPeIpAZYNreQnCkNoQzJNZ-jBtn5Wrv7IE-m5dRZweSy4VMUV1tW5QLK-c7fPCjia" group-title="attESPORTE 04",RELIGIOSOS ",REDE VIDA H265
+https://kinder5.live/094279188/062038990/166819
+#EXTINF:-1 tvg-id="sportv2.br" tvg-name="SPORTV 2 4K" tvg-logo="https://lh3.googleusercontent.com/-yMHJ02dNK9g/YB6f_wf-mDI/AAAAAAAAJ94/vFcZhQbWZhQmMJEhLOCGelWrUgW8S9YQwCLcBGAsYHQ/sportv%2B2.png" group-title="attESPORTE 04",SPORTS",SPORTV 2 4K
+https://kinder5.live/094279188/062038990/237876
+#EXTINF:-1 tvg-id="sportv2.br" tvg-name="SPORTV 2 FHD" tvg-logo="https://lh3.googleusercontent.com/-yMHJ02dNK9g/YB6f_wf-mDI/AAAAAAAAJ94/vFcZhQbWZhQmMJEhLOCGelWrUgW8S9YQwCLcBGAsYHQ/sportv%2B2.png" group-title="attESPORTE 04",SPORTS",SPORTV 2 FHD
+https://kinder5.live/094279188/062038990/71121
+#EXTINF:-1 tvg-id="Sportv.2.HD.br" tvg-name="SPORTV 2 H265" tvg-logo="https://blogger.googleusercontent.com/img/a/AVvXsEi6kvoyfSttlQ1KHZ46M70QEa41eWQo1SkDToziTGWJhaX_sNCp3xzFS4uV8tH5fMiV0XGcq0ckef-IShevw1l3Yx4DMoS4Muy1oFDoHOO2TvoM9cIq--BEWVy-ryRHx09PLcEnC76a5P4jCXjlvBwRhuxsQUno-8biEEG_5L6niIMK852ATPJrsBKO" group-title="attESPORTE 04",SPORTS",SPORTV 2 H265
+https://kinder5.live/094279188/062038990/166820
+#EXTINF:-1 tvg-id="sportv2.br" tvg-name="SPORTV 2 HD" tvg-logo="https://lh3.googleusercontent.com/-yMHJ02dNK9g/YB6f_wf-mDI/AAAAAAAAJ94/vFcZhQbWZhQmMJEhLOCGelWrUgW8S9YQwCLcBGAsYHQ/sportv%2B2.png" group-title="attESPORTE 04",SPORTS",SPORTV 2 HD
+https://kinder5.live/094279188/062038990/71381
+#EXTINF:-1 tvg-id="sportv2.br" tvg-name="SPORTV 2 SD" tvg-logo="https://lh3.googleusercontent.com/-yMHJ02dNK9g/YB6f_wf-mDI/AAAAAAAAJ94/vFcZhQbWZhQmMJEhLOCGelWrUgW8S9YQwCLcBGAsYHQ/sportv%2B2.png" group-title="attESPORTE 04",SPORTS",SPORTV 2 SD
+https://kinder5.live/094279188/062038990/71264
+#EXTINF:-1 tvg-id="sportv3.br" tvg-name="SPORTV 3 FHD" tvg-logo="https://lh3.googleusercontent.com/-dE1ypIW76e8/YB6guOuT1QI/AAAAAAAAJ-A/xiQ8mZfBkIIHXme611oxJFrWrg9-OmYeACLcBGAsYHQ/sport%2B3.png" group-title="attESPORTE 04",SPORTS",SPORTV 3 FHD
+https://kinder5.live/094279188/062038990/71122
+#EXTINF:-1 tvg-id="sportv3.br" tvg-name="SPORTV 3 H265" tvg-logo="https://lh3.googleusercontent.com/-ntH6fnvr980/YG30ZmzbkrI/AAAAAAAAKOg/kWmJqWQVUu4lrkZ46HRlo5iF-JHVHRx3gCLcBGAsYHQ/Sportv%2BFHD%2B3%2BH.265.png" group-title="attESPORTE 04",SPORTS",SPORTV 3 H265
+https://kinder5.live/094279188/062038990/88459
+#EXTINF:-1 tvg-id="SporTV.3.HD.br" tvg-name="SPORTV 3 HD" tvg-logo="https://lh3.googleusercontent.com/-dE1ypIW76e8/YB6guOuT1QI/AAAAAAAAJ-A/xiQ8mZfBkIIHXme611oxJFrWrg9-OmYeACLcBGAsYHQ/sport%2B3.png" group-title="attESPORTE 04",SPORTS",SPORTV 3 HD
+https://kinder5.live/094279188/062038990/164284
+#EXTINF:-1 tvg-id="sportv3.br" tvg-name="SPORTV 3 SD" tvg-logo="https://lh3.googleusercontent.com/-dE1ypIW76e8/YB6guOuT1QI/AAAAAAAAJ-A/xiQ8mZfBkIIHXme611oxJFrWrg9-OmYeACLcBGAsYHQ/sport%2B3.png" group-title="attESPORTE 04",SPORTS",SPORTV 3 SD
+https://kinder5.live/094279188/062038990/71265
+#EXTINF:-1 tvg-id="sportv.br" tvg-name="SPORTV 4K" tvg-logo="https://lh3.googleusercontent.com/-Zb5Jg9iGj-4/YG2obFDviQI/AAAAAAAAKKs/Ycy5WeWqmocD5ilbECPvPbuYwkmEd3nvgCLcBGAsYHQ/SPORTV%2B4K.png" group-title="attESPORTE 04",SPORTS",SPORTV 4K
+https://kinder5.live/094279188/062038990/88416
+#EXTINF:-1 tvg-id="sportv.br" tvg-name="SPORTV 4K¹" tvg-logo="https://lh3.googleusercontent.com/-0sRUj9WounA/YB6fB_a5ZyI/AAAAAAAAJ9w/cVHJ8v9mS00I5xP0PGtkf9hzkzgfPjU3ACLcBGAsYHQ/SPORTV.png" group-title="attESPORTE 04",SPORTS",SPORTV 4K¹
+https://kinder5.live/094279188/062038990/281023
+#EXTINF:-1 tvg-id="sportv.br" tvg-name="SPORTV FHD" tvg-logo="https://lh3.googleusercontent.com/-0sRUj9WounA/YB6fB_a5ZyI/AAAAAAAAJ9w/cVHJ8v9mS00I5xP0PGtkf9hzkzgfPjU3ACLcBGAsYHQ/SPORTV.png" group-title="attESPORTE 04",SPORTS",SPORTV FHD
+https://kinder5.live/094279188/062038990/71120
+#EXTINF:-1 tvg-id="sportv.br" tvg-name="SPORTV FHD¹" tvg-logo="https://lh3.googleusercontent.com/-0sRUj9WounA/YB6fB_a5ZyI/AAAAAAAAJ9w/cVHJ8v9mS00I5xP0PGtkf9hzkzgfPjU3ACLcBGAsYHQ/SPORTV.png" group-title="attESPORTE 04",SPORTS",SPORTV FHD¹
+https://kinder5.live/094279188/062038990/281021
+#EXTINF:-1 tvg-id="sportv.br" tvg-name="SPORTV H265" tvg-logo="https://lh3.googleusercontent.com/-oGuL7zzH_20/YG3yiBiQgHI/AAAAAAAAKNM/9_H3Eg0hUJA5wkH4RiUfodBum9vY_wNHgCLcBGAsYHQ/SPORTV%2BFHD%2BH.265.png" group-title="attESPORTE 04",SPORTS",SPORTV H265
+https://kinder5.live/094279188/062038990/88458
+#EXTINF:-1 tvg-id="sportv.br" tvg-name="SPORTV HD" tvg-logo="https://lh3.googleusercontent.com/-0sRUj9WounA/YB6fB_a5ZyI/AAAAAAAAJ9w/cVHJ8v9mS00I5xP0PGtkf9hzkzgfPjU3ACLcBGAsYHQ/SPORTV.png" group-title="attESPORTE 04",SPORTS",SPORTV HD
+https://kinder5.live/094279188/062038990/71382
+#EXTINF:-1 tvg-id="sportv.br" tvg-name="SPORTV HD¹" tvg-logo="https://lh3.googleusercontent.com/-0sRUj9WounA/YB6fB_a5ZyI/AAAAAAAAJ9w/cVHJ8v9mS00I5xP0PGtkf9hzkzgfPjU3ACLcBGAsYHQ/SPORTV.png" group-title="attESPORTE 04",SPORTS",SPORTV HD¹
+https://kinder5.live/094279188/062038990/281020
+#EXTINF:-1 tvg-id="sportv.br" tvg-name="SPORTV SD" tvg-logo="https://lh3.googleusercontent.com/-0sRUj9WounA/YB6fB_a5ZyI/AAAAAAAAJ9w/cVHJ8v9mS00I5xP0PGtkf9hzkzgfPjU3ACLcBGAsYHQ/SPORTV.png" group-title="attESPORTE 04",SPORTS",SPORTV SD
+https://kinder5.live/094279188/062038990/71263
+#EXTINF:-1 tvg-id="a.e.br" tvg-name="Disney+ 1" tvg-logo="https://blogger.googleusercontent.com/img/a/AVvXsEinOZaW8Xk5Bn2_A2MSSjxjltwWDfB0VqY_a9GIMEID-p-P6uNPfTuaefKXI-rDGXyB9M-CkghOCWjBn57JuiNUms68GJhwHCphYYk3xiZUIWRWxhx6prX1JHElPEuo6HFWsooa_UQOLIMca3MX6sXM7Tiku0mVAzGuNpP0eIyj1jU7zOrqT5VG-xT3DQ4" group-title="attESPORTE 04",PAY-PER-VIEW",Disney+ 1
+https://kinder5.live/094279188/062038990/122062
+#EXTINF:-1 tvg-id="agromais.br" tvg-name="Disney+ 2" tvg-logo="https://blogger.googleusercontent.com/img/a/AVvXsEinOZaW8Xk5Bn2_A2MSSjxjltwWDfB0VqY_a9GIMEID-p-P6uNPfTuaefKXI-rDGXyB9M-CkghOCWjBn57JuiNUms68GJhwHCphYYk3xiZUIWRWxhx6prX1JHElPEuo6HFWsooa_UQOLIMca3MX6sXM7Tiku0mVAzGuNpP0eIyj1jU7zOrqT5VG-xT3DQ4" group-title="attESPORTE 04",PAY-PER-VIEW",Disney+ 2
+https://kinder5.live/094279188/062038990/136165
+#EXTINF:-1 tvg-id="a.e.br" tvg-name="Disney+ 3" tvg-logo="https://blogger.googleusercontent.com/img/a/AVvXsEinOZaW8Xk5Bn2_A2MSSjxjltwWDfB0VqY_a9GIMEID-p-P6uNPfTuaefKXI-rDGXyB9M-CkghOCWjBn57JuiNUms68GJhwHCphYYk3xiZUIWRWxhx6prX1JHElPEuo6HFWsooa_UQOLIMca3MX6sXM7Tiku0mVAzGuNpP0eIyj1jU7zOrqT5VG-xT3DQ4" group-title="attESPORTE 04",PAY-PER-VIEW",Disney+ 3
+https://kinder5.live/094279188/062038990/136166
+#EXTINF:-1 tvg-id="a.e.br" tvg-name="Disney+ 4" tvg-logo="https://blogger.googleusercontent.com/img/a/AVvXsEinOZaW8Xk5Bn2_A2MSSjxjltwWDfB0VqY_a9GIMEID-p-P6uNPfTuaefKXI-rDGXyB9M-CkghOCWjBn57JuiNUms68GJhwHCphYYk3xiZUIWRWxhx6prX1JHElPEuo6HFWsooa_UQOLIMca3MX6sXM7Tiku0mVAzGuNpP0eIyj1jU7zOrqT5VG-xT3DQ4" group-title="attESPORTE 04",PAY-PER-VIEW",Disney+ 4
+https://kinder5.live/094279188/062038990/136167
+#EXTINF:-1 tvg-id="a.e.br" tvg-name="Disney+ 5" tvg-logo="https://blogger.googleusercontent.com/img/a/AVvXsEinOZaW8Xk5Bn2_A2MSSjxjltwWDfB0VqY_a9GIMEID-p-P6uNPfTuaefKXI-rDGXyB9M-CkghOCWjBn57JuiNUms68GJhwHCphYYk3xiZUIWRWxhx6prX1JHElPEuo6HFWsooa_UQOLIMca3MX6sXM7Tiku0mVAzGuNpP0eIyj1jU7zOrqT5VG-xT3DQ4" group-title="attESPORTE 04",PAY-PER-VIEW",Disney+ 5
+https://kinder5.live/094279188/062038990/136168
+#EXTINF:-1 tvg-id="a.e.br" tvg-name="Disney+ 6" tvg-logo="https://blogger.googleusercontent.com/img/a/AVvXsEinOZaW8Xk5Bn2_A2MSSjxjltwWDfB0VqY_a9GIMEID-p-P6uNPfTuaefKXI-rDGXyB9M-CkghOCWjBn57JuiNUms68GJhwHCphYYk3xiZUIWRWxhx6prX1JHElPEuo6HFWsooa_UQOLIMca3MX6sXM7Tiku0mVAzGuNpP0eIyj1jU7zOrqT5VG-xT3DQ4" group-title="attESPORTE 04",PAY-PER-VIEW",Disney+ 6
+https://kinder5.live/094279188/062038990/136169
+#EXTINF:-1 tvg-id="ESPN.4.br" tvg-name="TV EVANGELIZAR" tvg-logo="https://lh3.googleusercontent.com/-heaDxFLkgnM/YB7ua_QVHWI/AAAAAAAAKDY/QCq61JtiTuU-FZaO6nWibZwNeqFwpL8-QCLcBGAsYHQ/TV%2BEVANGELIZAR.png" group-title="attESPORTE 04",RELIGIOSOS ",TV EVANGELIZAR
+https://kinder5.live/094279188/062038990/167165
+#EXTINF:-1 tvg-id="São.Paulo/SP..PREMIERE.HD.4.³.br" tvg-name="USA FHD H265" tvg-logo="https://blogger.googleusercontent.com/img/a/AVvXsEjvi-8mb9Gq-ND0vaqGj3c-Orm18NjWJfVkEKNj1cn9haxY9WncsCUZgCZnTReUypg5WX7iRpUTYz8Lyun9zt_y_jCdVM7N_nyze9iZueCKmF6frm_fn2SRpA7jjyZqW27nfsPx8WvY3OR2fiijJBQOS5-NY1vXGZHWV8Dqei2UkRweizrhKpkP-kzkmss" group-title="attESPORTE 04",FILMES E SERIES",USA FHD H265
+https://kinder5.live/094279188/062038990/363984
+#EXTINF:-1 tvg-id="São.Paulo/SP..PREMIERE.HD.4.³.br" tvg-name="USA FHD" tvg-logo="https://blogger.googleusercontent.com/img/a/AVvXsEiGktN0650IH7UNHG0X14iO2Fi8pStIqxvvmOgQEO-hZLjK5AWxBKdOhqfUwdDWpwgOc0GXwpHmf3UiipLEzulTAp4A57cm3vt1yBZYZMAk2-w9b2TSl_Cg8wbpJxzbt2V5l5K-D8en0IMXoHLQ2morqQrPj1ITKGnsYlFf8ADUmKRTW_gHqxc7bOXn7Ow" group-title="attESPORTE 04",FILMES E SERIES",USA FHD
+https://kinder5.live/094279188/062038990/363985
+#EXTINF:-1 tvg-id="São.Paulo/SP..Band.News.br" tvg-name="SPORTV 4 SD" tvg-logo="https://blogger.googleusercontent.com/img/a/AVvXsEjf4H8Cw2_XYv-kxT8VZytRU9aLl5Uf3J9HFCuyK7pCM46xgtDSwSSqUMyRfBMRunjVICDlYl5gLZckhUIGdnbENCltHQUFtGLJ1VXqVHI1EYHPhhIW_T8qZpgIWamd4COUw-5Z7ZnSllZzAWZPGZMZhyOzcKe1ib7jtEEKsAs7yAQvRz8rorpT_ki-KK8" group-title="attESPORTE 04",SPORTS",SPORTV 4 SD
+https://kinder5.live/094279188/062038990/356398
+
 #EXTINF:-1 tvg-id="" tvg-name="Amazon Prime Video 01" tvg-logo="http://www.fontedecanais.org/logos/canais/primevideo.png" group-title="esportes 02",Canais | Prime Video",Amazon Prime Video 01
 http://rteomi.xyz:80/2912861/151063/804987
 #EXTINF:-1 tvg-id="" tvg-name="Amazon Prime Video 02" tvg-logo="http://www.fontedecanais.org/logos/canais/primevideo.png" group-title="esportes 02",Canais | Prime Video",Amazon Prime Video 02
