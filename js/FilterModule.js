@@ -2,11 +2,11 @@
 
 const FilterModule = {
     // Palavras proibidas (tudo minúsculo)
-    blockedWords: [
+   /* blockedWords: [
         "porno", "porn",
         "adulto", "adultos", "adult", "adults",
         "+18", "18+", "xxx", "hot"
-    ],
+    ],*/
 
     // Extensões que serão aceitas
     allowedExtensions: [
@@ -68,3 +68,4 @@ const FilterModule = {
 if (typeof module !== "undefined" && module.exports) {
     module.exports = FilterModule;
 }
+
