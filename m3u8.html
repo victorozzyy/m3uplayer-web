@@ -44,10 +44,39 @@
   <!-- Scripts modulares - ORDEM IMPORTANTE! -->
   <script src="js/state.js"></script>
   <script src="js/player.js"></script>
+  <script src="js/search.js"></script>
   <script src="js/channels.js"></script>
   <script src="js/playlists.js"></script>
   <script src="js/FilterModule.js"></script>
   <script src="js/navigation.js"></script>
   <script src="js/app.js"></script>
+
+  <script>
+        // Log de verificação de carregamento
+        console.log('╔══════════════════════════════════════╗');
+        console.log('📦 VERIFICAÇÃO DE MÓDULOS CARREGADOS');
+        console.log('╚══════════════════════════════════════╝');
+        
+        const modules = {
+            'PlaylistConfig': typeof PlaylistConfig !== 'undefined',
+            'AppState': typeof AppState !== 'undefined',
+            'StateManager': typeof StateManager !== 'undefined',
+            'DocumentsManager': typeof DocumentsManager !== 'undefined',
+            'ChannelModule': typeof ChannelModule !== 'undefined',
+            'PlaylistModule': typeof PlaylistModule !== 'undefined',
+            'NavigationModule': typeof NavigationModule !== 'undefined',
+            'InlinePlayerModule': typeof InlinePlayerModule !== 'undefined',
+            'PlayerModule': typeof PlayerModule !== 'undefined',
+            'SearchModule': typeof SearchModule !== 'undefined'
+        };
+        
+        Object.entries(modules).forEach(([name, loaded]) => {
+            console.log(`${loaded ? '✅' : '❌'} ${name}`);
+        });
+        
+        const allLoaded = Object.values(modules).every(v => v);
+        console.log(allLoaded ? '✅ Todos os módulos carregados!' : '❌ Alguns módulos faltando!');
+        console.log('╚══════════════════════════════════════╝');
+    </script>
 </body>
 </html>
