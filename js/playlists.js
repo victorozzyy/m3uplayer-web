@@ -18,44 +18,183 @@ const PlaylistModule = {
     
     // Configurações de playlists remotas
     remotePlaylistsConfig: [
-        {name: "🏆 Esportes 1", description: "Canais esportivos em alta definição", url: "https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/esportes.m3u8", category: "Esportes"},
-      {name: "🏆 Esportes 2", description: "Canais esportivos em alta definição", url: "https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/playlist_esportes.m3u", category: "Esportes"},
-      {name: "🎬 Canais 24 Hs", description: "Canais variados de alta qualidade", url: "https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/playlist_24h.m3u", category: "Filmes e Series"},
-      {name: "🎬 Canais", description: "Canais variados de alta qualidade", url: "https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/canais24h.m3u8", category: "Filmes"},
-      {name: "🎬 Filmes1 ", description: "Canais variados de alta qualidade", url: "https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/playlist_mp4_part1.m3u", category: "Mp4"},
-      {name: "🎬 Series1 ", description: "Canais variados de alta qualidade", url: "https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/seriesmp4.m3u8", category: "Mp4"},
-      {name: "🎬 Filmes e Series", description: "Canais variados de alta qualidade", url: "https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/filmes-series.m3u8", category: "Mp4"},
-      {name: "🎬 Filmes e Series2", description: "Canais variados de alta qualidade", url: "https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/playlist_filmes_series.m3u", category: "Filmes e Series"},
-      {name: "🎬 Series2 mp4", description: "Big sequencia, series boas.", url: "https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists2/series2-mp4.m3u8", category: "Mp4"},
-      {name: "🎬 Series3 mp4", description: "Rancho, Dexter, Suits, Justfield", url: "https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists2/series3-mp4.m3u8", category: "Mp4"},
-      {name: "🎬 Filmes2 mp4", description: "Canais variados de alta qualidade", url: "https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists2/filmes2-mp4.m3u8", category: "Mp4"},
-      {name: "🎬 Canais2 mp4", description: "Canais variados de alta qualidade", url: "https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/canais2.m3u8", category: "Mp4"},
-      {name: "🎬 Mp4 1", description: "Canais variados de alta qualidade", url: "https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/playlist_mp4_part1.m3u", category: "Mp4"},
-      {name: "🎬 Mp4 2", description: "Canais variados de alta qualidade", url: "https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/playlist_mp4_part2.m3u", category: "Mp4"},
-      {name: "🎬 Mp4 3", description: "Canais variados de alta qualidade", url: "https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/playlist_mp4_part3.m3u", category: "Filmes"},
-      {name: "🎬 Mp4 4", description: "Canais variados de alta qualidade", url: "https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/playlist_mp4_part4.m3u", category: "Filmes"},
-      {name: "🎭 Educativo", description: "Canais de séries, filmes e shows", url: "https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/educativo.m3u8", category: "Pt"},
-      {name: "🎭 Aqueles", description: "Canais de séries, filmes e shows", url: "https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/aqules.m3u8", category: "Pt"},
-      {name: "🎭 Educativo3", description: "Canais de séries, filmes e shows", url: "https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/new.m3u8", category: "Pt"},
-      {name: "🎭 teste", description: "Canais de séries, filmes e shows", url: "https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/teste.m3u8", category: "Pt"},
-      {name: "🎭 Funcional00", description: "Canais de séries, filmes e shows", url: "https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/teste2.m3u8", category: "Pt"},
-      {name: "🎭 Funcional Mp4", description: "Canais de séries, filmes e shows", url: "https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/putria2.m3u8", category: "Pt"},
-      {name: "🎭 Funcional4", description: "Canais de séries, filmes e shows", url: "https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/putria3.m3u8", category: "Pt"},
-      {name: "🎭 Funcional Pov Mp4", description: "Canais de séries, filmes e shows", url: "https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/putria4.m3u8", category: "Pt"},
-      {name: "🎭 Funcional3", description: "Canais de séries, filmes e shows", url: "https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/putria.m3u8", category: "Pt"},
-      {name: "🎭 NovoPono Instavel", description: "Conteúdo seguro para crianças", url: "https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists2/novopono.m3u8", category: "Pt"},
-      {name: "👶 Desenhos", description: "Conteúdo seguro para crianças", url: "https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/playlist_desenhos.m3u", category: "Infantil"}
+        {
+        name: "🏆 Esportes 1",
+        description: "Canais esportivos em alta definição",
+        url: "https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/esportes.m3u8",
+        category: "Esportes"
+      },{
+        name: "🏆 Esportes 2",
+        description: "Canais esportivos em alta definição",
+        url: "https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/playlist_esportes.m3u",
+        category: "Esportes"
+      },{
+        name: "🎬 Canais 24 Hs",
+        description: "Canais variados de alta qualidade",
+        url: "https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/playlist_24h.m3u",
+        category: "Filmes e Series"
+      },
+	  {
+        name: "🎬 Canais",
+        description: "Canais variados de alta qualidade",
+        url: "https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/canais24h.m3u8",
+        category: "Filmes"
+      },
+	  
+	  {
+        name: "🎬 Filmes1 ",
+        description: "Canais variados de alta qualidade",
+        url: "https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/playlist_mp4_part1.m3u",
+        category: "Mp4"
+      },
+      {
+        name: "🎬 Series1 ",
+        description: "Canais variados de alta qualidade",
+        url: "https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/seriesmp4.m3u8",
+        category: "Mp4"
+      },
+      {
+        name: "🎬 Filmes e Series",
+        description: "Canais variados de alta qualidade",
+        url: "https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/filmes-series.m3u8",
+        category: "Mp4"
+      },{
+        name: "🎬 Filmes e Series2",
+        description: "Canais variados de alta qualidade",
+        url: "https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/playlist_filmes_series.m3u",
+        category: "Filmes e Series"
+      },
+      {
+        name: "🎬 Series2 mp4",
+        description: "Big sequencia, series boas.",
+        url: "https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists2/series2-mp4.m3u8",
+        category: "Mp4"
+      },{
+        name: "🎬 Series3 mp4",
+        description: "Rancho, Dexter, Suits, Justfield",
+        url: "https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists2/series3-mp4.m3u8",
+        category: "Mp4"
+      },{
+        name: "🎬 Filmes2 mp4",
+        description: "Canais variados de alta qualidade",
+        url: "https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists2/filmes2-mp4.m3u8",
+        category: "Mp4"
+      },{
+        name: "🎬 Canais2 mp4",
+        description: "Canais variados de alta qualidade",
+        url: "https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/canais2.m3u8",
+        category: "Mp4"
+      },
+	  {
+        name: "🎬 Mp4 1",
+        description: "Canais variados de alta qualidade",
+        url: "https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/playlist_mp4_part1.m3u",
+        category: "Mp4"
+      },{
+        name: "🎬 Mp4 2",
+        description: "Canais variados de alta qualidade",
+        url: "https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/playlist_mp4_part2.m3u",
+        category: "Mp4"
+      },
+	  /* Atualizar essas playlists*/
+	  {
+        name: "🎬 Mp4 3",
+        description: "Canais variados de alta qualidade",
+        url: "https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/playlist_mp4_part3.m3u",
+        category: "Filmes"
+      },
+	  {
+        name: "🎬 Mp4 4",
+        description: "Canais variados de alta qualidade",
+        url: "https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/playlist_mp4_part4.m3u",
+        category: "Filmes"
+      },
+	  
+      
+      {
+        name: "🎭 Educativo",
+        description: "Canais de séries, filmes e shows",
+        url: "https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/educativo.m3u8",
+        category: "Pt"
+      },
+      {
+        name: "🎭 Aqueles",
+        description: "Canais de séries, filmes e shows",
+        url: "https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/aqules.m3u8",
+        category: "Pt"
+      },
+      {
+        name: "🎭 Educativo3",
+        description: "Canais de séries, filmes e shows",
+        url: "https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/new.m3u8",
+        category: "Pt"
+      },
+      {
+        name: "🎭 teste",
+        description: "Canais de séries, filmes e shows",
+        url: "https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/teste.m3u8",
+        category: "Pt"
+      },
+      {
+        name: "🎭 Funcional00",
+        description: "Canais de séries, filmes e shows",
+        url: "https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/teste2.m3u8",
+        category: "Pt"
+      },
+      {
+        name: "🎭 Funcional Mp4",
+        description: "Canais de séries, filmes e shows",
+        url: "https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/putria2.m3u8",
+        category: "Pt"
+      },
+      {
+        name: "🎭 Funcional4 Mp4",
+        description: "Canais de séries, filmes e shows",
+        url: "https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/putria3.m3u8",
+        category: "Pt"
+      },
+      {
+        name: "🎭 Funcional Pov Mp4",
+        description: "Canais de séries, filmes e shows",
+        url: "https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/putria4.m3u8",
+        category: "Pt"
+      },
+      {
+        name: "🎭 Funcional3 Mp4",
+        description: "Canais de séries, filmes e shows",
+        url: "https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/putria.m3u8",
+        category: "Pt"
+      },
+      {
+        name: "🎭 NovoPono Instavel",
+        description: "Conteúdo seguro para crianças",
+        url: "https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists2/novopono.m3u8",
+        category: "Pt"
+      },
+	  {
+        name: "👶 Desenhos",
+        description: "Conteúdo seguro para crianças",
+        url: "https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/playlist_desenhos.m3u",
+        category: "Infantil"
+      }
     ],
     
      // Playlists locais
     availablePlaylists: [
-        { name: "Lista 01", filename: "lista01.m3u8" },
-       
-        { name: "Lista 02", filename: "lista02.m3u" }
+        { name: "24Hs", filename: "playlist_24h.m3u" },
+        { name: "esportes", filename: "esportes.m3u8" },
+        { name: "Mp4", filename: "playlist_mp4_part4.m3u" },
+		{ name: "fs", filename: "filmes-series.m3u8" },
+		{ name: "fs2", filename: "playlist_filmes_series.m3u" },
+        { name: "pt", filename: "putria3.m3u8" },
+        { name: "tv", filename: "tv_channels_994995942_plus.m3u" },
+        { name: "tv2", filename: "tv_channels_164485614_plus.m3u" },
+        { name: "teste", filename: "test.m3u" }
     ],
     
     // Minhas Listas (personalizadas) - COM MARCAÇÃO CORS
     minhasListasConfig: [
+        
         {
             name: "🔥 Lista 01",
             description: "Lista 04 ",
@@ -117,16 +256,16 @@ const PlaylistModule = {
             url: "http://kinder5.live:80/get.php?username=094279188&password=062038990&type=m3u_plus",
             needsCors: true
         },
-		{
-            name: "🔥 Anon",
-            description: "Lista 01 ",
-            url: "http://felas87dz.icu:80/get.php?username=Anonymous100&password=Hacker100&type=m3u_plus",
-            needsCors: true
-        },
         {
             name: "🔥 Minha 11",
             description: "Lista 02",
             url: "http://kinder5.live:80/get.php?username=23156616732&password=42382360350&type=m3u_plus",
+            needsCors: true
+        },
+		{
+            name: "🔥 Anon",
+            description: "Lista 01 ",
+            url: "http://felas87dz.icu:80/get.php?username=Anonymous100&password=Hacker100&type=m3u_plus",
             needsCors: true
         },
 		{
@@ -141,8 +280,6 @@ const PlaylistModule = {
             url: "http://xocu.in/get.php?username=994995942&password=y751261z&type=m3u_plus",
             needsCors: true
         }
-		
-
     ],
     
     init() {
@@ -193,66 +330,80 @@ const PlaylistModule = {
     },
     
     // Mostra seletor de Minhas Listas
-    showMinhasListasSelector() {
-        this.hideAllSelectors();
-        this.remotePlaylistSelector.style.display = 'block';
-        this.updateMinhasListasList();
-        AppState.currentView = 'minhasListas';
-        
-        setTimeout(() => {
-            AppState.remotePlaylistItems = Array.from(document.querySelectorAll('.remote-playlist-item'));
-            if (AppState.remotePlaylistItems.length > 0) {
-                AppState.remoteFocusIndex = 0;
-                const firstItem = AppState.remotePlaylistItems[0];
+showMinhasListasSelector() {
+    this.hideAllSelectors();
+    this.remotePlaylistSelector.style.display = 'block'; // Garantir que está visível
+    this.updateMinhasListasList();
+    AppState.currentView = 'minhasListas';
+    
+    setTimeout(() => {
+        AppState.remotePlaylistItems = Array.from(document.querySelectorAll('.remote-playlist-item'));
+        if (AppState.remotePlaylistItems.length > 0) {
+            AppState.remoteFocusIndex = 0;
+            const firstItem = AppState.remotePlaylistItems[0];
+            if (firstItem) {
                 firstItem.focus();
                 firstItem.classList.add('focused');
             }
-        }, 100);
-    },
+        }
+    }, 200); // Aumentado de 100 para 200ms
+},
     
     // Atualiza lista de Minhas Listas
-    updateMinhasListasList() {
-        try {
-            const fragment = document.createDocumentFragment();
+updateMinhasListasList() {
+    try {
+        if (!this.remotePlaylistList) {
+            console.error('❌ remotePlaylistList não encontrado');
+            return;
+        }
+
+        const fragment = document.createDocumentFragment();
+        
+        const header = document.createElement('li');
+        header.innerHTML = '<strong>🔥 Suas Listas Fixas:</strong>';
+        header.className = 'section-header';
+        header.style.cssText = 'color: #6bff6b; padding: 10px 0; list-style: none;';
+        fragment.appendChild(header);
+        
+        this.minhasListasConfig.forEach((playlist, index) => {
+            const li = document.createElement('li');
+            li.className = 'remote-playlist-item';
+            li.setAttribute('tabindex', '0');
+            li.dataset.url = playlist.url;
+            li.dataset.name = playlist.name;
+            li.dataset.needsCors = playlist.needsCors || 'false';
+            li.dataset.index = index;
             
-            const header = document.createElement('li');
-            header.innerHTML = '<strong>🔥 Suas Listas Fixas:</strong>';
-            header.className = 'section-header';
-            header.style.cssText = 'color: #6bff6b; padding: 10px 0;';
-            fragment.appendChild(header);
+            li.innerHTML = `
+                <div style="margin-bottom: 5px;">
+                    <strong>${playlist.name}</strong>
+                </div>
+                <div style="font-size: 0.9em; color: #ccc; margin-left: 10px;">
+                    ${playlist.description}
+                </div>
+            `;
             
-            this.minhasListasConfig.forEach(playlist => {
-                const li = document.createElement('li');
-                li.className = 'remote-playlist-item';
-                li.setAttribute('tabindex', '0');
-                li.dataset.url = playlist.url;
-                li.dataset.name = playlist.name;
-                li.dataset.needsCors = playlist.needsCors || false;
-                
-                li.innerHTML = `
-                    <div style="margin-bottom: 5px;">
-                        <strong>${playlist.name}</strong>
-                    </div>
-                    <div style="font-size: 0.9em; color: #ccc; margin-left: 10px;">
-                        ${playlist.description}
-                    </div>
-                `;
-                
-                li.onclick = () => this.loadRemotePlaylist(playlist.url, playlist.name, playlist.needsCors);
-                fragment.appendChild(li);
+            li.addEventListener('click', () => {
+                console.log('🔥 Carregando:', playlist.name);
+                this.loadRemotePlaylist(playlist.url, playlist.name, playlist.needsCors);
             });
             
-            this.remotePlaylistList.innerHTML = '';
-            this.remotePlaylistList.appendChild(fragment);
-            
-            AppState.remotePlaylistItems = Array.from(document.querySelectorAll('.remote-playlist-item'));
-            ChannelModule.showMessage(`🔥 ${this.minhasListasConfig.length} listas fixas disponíveis`, 'success');
-            
-        } catch (error) {
-            console.error('Erro ao atualizar Minhas Listas:', error);
-            ChannelModule.showMessage('❌ Erro ao carregar Minhas Listas', 'error');
-        }
-    },
+            fragment.appendChild(li);
+        });
+        
+        this.remotePlaylistList.innerHTML = '';
+        this.remotePlaylistList.appendChild(fragment);
+        
+        AppState.remotePlaylistItems = Array.from(document.querySelectorAll('.remote-playlist-item'));
+        
+        console.log(`✅ ${this.minhasListasConfig.length} listas carregadas`);
+        ChannelModule.showMessage(`🔥 ${this.minhasListasConfig.length} listas fixas disponíveis`, 'success');
+        
+    } catch (error) {
+        console.error('❌ Erro ao atualizar Minhas Listas:', error);
+        ChannelModule.showMessage('❌ Erro ao carregar Minhas Listas', 'error');
+    }
+},
     
     // Mostra seletor de playlists remotas
     showRemotePlaylistSelector() {
@@ -316,62 +467,89 @@ const PlaylistModule = {
     },
     
     // Carrega playlist remota - COM SUPORTE CORS
-    async loadRemotePlaylist(url, name, needsCors = false) {
-        try {
-            if (!this.isValidUrl(url)) {
-                throw new Error('URL da playlist inválida');
-            }
-            
-            // Verificar cache
-            const cached = AppState.getCachedPlaylist(url);
-            if (cached) {
-                console.log('📦 Usando playlist em cache:', name);
-                this.setPlaylist(cached, name, 'remote');
-                return;
-            }
-            
-            ChannelModule.showMessage(`📄 Carregando ${name}... Aguarde...`, 'loading');
-            
-            let response;
-            
-            // Se precisa de CORS, usar proxy
-            if (needsCors) {
-                response = await this.fetchWithCorsProxy(url, { cache: 'no-cache' });
-            } else {
-                // Fetch normal
-                response = await fetch(url, { cache: 'no-cache' });
-            }
-            
-            if (!response.ok) {
-                throw new Error(`Falha ao carregar ${name} (${response.status})`);
-            }
-            
-            ChannelModule.showMessage(`⏳ Processando dados de ${name}...`, 'loading');
-            
-            const data = await response.text();
-            const parsedPlaylist = this.parsePlaylist(data);
-            
-            if (parsedPlaylist.length === 0) {
-                throw new Error('Playlist vazia ou formato inválido');
-            }
-            
-            AppState.cachePlaylist(url, parsedPlaylist);
-            this.setPlaylist(parsedPlaylist, name, 'remote');
-            
-        } catch (error) {
-            console.error('Erro ao carregar playlist remota:', error);
-            
-            // Mensagem de erro mais detalhada
-            let errorMsg = `❌ Erro: ${error.message}`;
-            
-            if (error.message.includes('CORS') || error.message.includes('proxy')) {
-                errorMsg += '\n💡 Dica: Tente hospedar a playlist no GitHub ou usar servidor com CORS habilitado';
-            }
-            
-            ChannelModule.showMessage(errorMsg, 'error');
+async loadRemotePlaylist(url, name, needsCors = false) {
+    try {
+        if (!this.isValidUrl(url)) {
+            throw new Error('URL da playlist inválida');
         }
-    },
+        
+        // Verificar cache primeiro
+        const cached = AppState.getCachedPlaylist(url);
+        if (cached) {
+            console.log('📦 Usando playlist em cache:', name);
+            this.setPlaylist(cached, name, 'remote');
+            return;
+        }
+        
+        ChannelModule.showMessage(`📄 Carregando ${name}... Aguarde (pode levar até 30s)`, 'loading');
+        
+        let response;
+        
+        // Se precisa de CORS, usar proxy
+        if (needsCors) {
+            console.log('🔧 Usando proxy CORS para:', url);
+            response = await this.fetchWithCorsProxy(url, { 
+                cache: 'no-cache',
+                headers: {
+                    'Accept': 'application/x-mpegURL, text/plain, */*'
+                }
+            });
+        } else {
+            // Fetch normal com timeout de 30s
+            const controller = new AbortController();
+            const timeoutId = setTimeout(() => controller.abort(), 30000);
+            
+            try {
+                response = await fetch(url, { 
+                    cache: 'no-cache',
+                    signal: controller.signal,
+                    headers: {
+                        'Accept': 'application/x-mpegURL, text/plain, */*'
+                    }
+                });
+                clearTimeout(timeoutId);
+            } catch (fetchError) {
+                clearTimeout(timeoutId);
+                if (fetchError.name === 'AbortError') {
+                    throw new Error('Timeout: requisição levou mais de 30 segundos');
+                }
+                throw fetchError;
+            }
+        }
+        
+        if (!response.ok) {
+            throw new Error(`Falha ao carregar ${name} (${response.status})`);
+        }
+        
+        ChannelModule.showMessage(`⏳ Processando dados de ${name}...`, 'loading');
+        
+        const data = await response.text();
+        const parsedPlaylist = this.parsePlaylist(data);
+        
+        if (parsedPlaylist.length === 0) {
+            throw new Error('Playlist vazia ou formato inválido');
+        }
+        
+        // Salvar no cache
+        AppState.cachePlaylist(url, parsedPlaylist);
+        this.setPlaylist(parsedPlaylist, name, 'remote');
+        
+    } catch (error) {
+        console.error('❌ Erro ao carregar playlist remota:', error);
+        
+        let errorMsg = `❌ Erro: ${error.message}`;
+        
+        if (error.message.includes('CORS') || error.message.includes('proxy')) {
+            errorMsg += '\n💡 Tente usar proxy CORS ou hospede em servidor com CORS';
+        } else if (error.message.includes('Timeout')) {
+            errorMsg += '\n💡 Servidor muito lento. Tente novamente.';
+        }
+        
+        ChannelModule.showMessage(errorMsg, 'error');
+    }
+},
     
+	
     // Mostra seletor de playlists locais
     async showPlaylistSelector() {
         this.hideAllSelectors();
@@ -682,6 +860,36 @@ const PlaylistModule = {
     },
     
     // Parser de playlist
+    
+// USB Playlist Scan (Tizen Filesystem API)
+async scanUSBPlaylists() {
+    try {
+        if (typeof tizen === 'undefined' || !tizen.filesystem) {
+            ChannelModule.showMessage('❌ Tizen filesystem não disponível', 'error');
+            return;
+        }
+
+        tizen.filesystem.resolve('removable', (removable) => {
+            removable.listFiles((files) => {
+                const m3u = files.filter(f => f.name.endsWith('.m3u') || f.name.endsWith('.m3u8'));
+                if (m3u.length === 0) {
+                    ChannelModule.showMessage('❌ Nenhuma playlist encontrada no USB', 'error');
+                    return;
+                }
+
+                const file = m3u[0];
+                file.readAsText((content) => {
+                    const parsed = this.parsePlaylist(content);
+                    this.setPlaylist(parsed, file.name, 'usb');
+                });
+            });
+        });
+    } catch (e) {
+        console.error(e);
+        ChannelModule.showMessage('Erro ao ler pendrive', 'error');
+    }
+},
+
     parsePlaylist(content) {
         try {
             if (!content || typeof content !== 'string') {
@@ -780,8 +988,3 @@ if (typeof module !== 'undefined' && module.exports) {
 }
 
 console.log('✅ PlaylistModule carregado (v3.0 - com suporte CORS)');
-
-
-
-
-
