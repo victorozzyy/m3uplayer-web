@@ -308,3 +308,274 @@ input[type="file"] {
 @keyframes spin {
     to { transform: rotate(360deg); }
 }
+
+/* ================================================
+   ESTILOS PARA O SEARCHMODULE INTEGRADO
+   Busca como categoria + Overlay de resultados
+   ================================================ */
+
+/* Item de busca na lista (categoria especial) */
+.search-category {
+    animation: slideInLeft 0.4s ease-out;
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Efeito de pulso quando focado */
+.search-category:focus {
+    animation: searchPulse 2s ease-in-out infinite;
+}
+
+@keyframes searchPulse {
+    0%, 100% {
+        box-shadow: 0 0 20px rgba(0, 230, 118, 0.3);
+    }
+    50% {
+        box-shadow: 0 0 35px rgba(0, 230, 118, 0.6);
+    }
+}
+
+/* Overlay de busca */
+#searchOverlay {
+    animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+#searchOverlayContent {
+    animation: slideDown 0.4s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Grid de canais no overlay */
+#searchOverlayChannelGrid {
+    scrollbar-width: thin;
+    scrollbar-color: #00e676 #1a1a1a;
+}
+
+#searchOverlayChannelGrid::-webkit-scrollbar {
+    width: 10px;
+}
+
+#searchOverlayChannelGrid::-webkit-scrollbar-track {
+    background: #1a1a1a;
+    border-radius: 5px;
+}
+
+#searchOverlayChannelGrid::-webkit-scrollbar-thumb {
+    background: #00e676;
+    border-radius: 5px;
+}
+
+#searchOverlayChannelGrid::-webkit-scrollbar-thumb:hover {
+    background: #00ff88;
+}
+
+/* Cards de canais no overlay */
+.search-channel-item {
+    animation: channelFadeIn 0.3s ease-out backwards;
+}
+
+.search-channel-item:nth-child(1) { animation-delay: 0.05s; }
+.search-channel-item:nth-child(2) { animation-delay: 0.08s; }
+.search-channel-item:nth-child(3) { animation-delay: 0.11s; }
+.search-channel-item:nth-child(4) { animation-delay: 0.14s; }
+.search-channel-item:nth-child(5) { animation-delay: 0.17s; }
+.search-channel-item:nth-child(6) { animation-delay: 0.20s; }
+.search-channel-item:nth-child(7) { animation-delay: 0.23s; }
+.search-channel-item:nth-child(8) { animation-delay: 0.26s; }
+
+@keyframes channelFadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Efeito hover nos cards */
+.search-channel-item:hover {
+    border-color: #00e676;
+    background: #1a3a1a;
+    transform: scale(1.05);
+}
+
+/* Botão fechar do overlay */
+#searchOverlayCloseBtn:hover,
+#searchOverlayCloseBtn:focus {
+    background: #ff6666;
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255, 68, 68, 0.5);
+}
+
+/* Título do overlay */
+#searchOverlayTitle {
+    text-shadow: 0 0 15px rgba(0, 230, 118, 0.5);
+}
+
+/* Responsivo para Smart TVs */
+@media (hover: none) {
+    .search-category {
+        padding: 20px 15px;
+        font-size: 1.15em;
+    }
+
+    .search-channel-item {
+        padding: 20px;
+        border-width: 4px;
+        min-height: 120px;
+    }
+
+    #searchOverlayCloseBtn {
+        padding: 12px 24px;
+        font-size: 18px;
+    }
+
+    #searchOverlayChannelGrid {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 20px;
+    }
+}
+
+/* Responsivo para telas pequenas */
+@media (max-width: 768px) {
+    #searchOverlayChannelGrid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 12px;
+    }
+
+    .search-channel-item {
+        padding: 12px;
+        font-size: 0.95em;
+    }
+
+    #searchOverlayContent {
+        padding: 15px;
+    }
+}
+
+/* Badge MP4 */
+.search-channel-item span[style*="ffd700"] {
+    animation: badgePulse 2s ease-in-out infinite;
+}
+
+@keyframes badgePulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.7;
+    }
+}
+
+/* Indicador de carregamento (futuro) */
+.search-channel-item.loading {
+    pointer-events: none;
+    opacity: 0.6;
+}
+
+.search-channel-item.loading::after {
+    content: '⏳';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 32px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    from { transform: translate(-50%, -50%) rotate(0deg); }
+    to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* Efeito de destaque ao focar */
+.search-channel-item:focus {
+    outline: none;
+    z-index: 10;
+}
+
+/* Transição suave ao mudar foco */
+.search-channel-item {
+    will-change: transform, box-shadow;
+}
+
+/* Overlay escurecido */
+#searchOverlay {
+    backdrop-filter: blur(5px);
+}
+
+/* Container do overlay com sombra */
+#searchOverlayContent {
+    box-shadow: 
+        0 0 40px rgba(0, 230, 118, 0.3),
+        0 20px 60px rgba(0, 0, 0, 0.8);
+}
+
+/* Texto do grupo nos cards */
+.search-channel-item div[style*="color: #aaa"] {
+    transition: color 0.3s ease;
+}
+
+.search-channel-item:focus div[style*="color: #aaa"] {
+    color: #00e676 !important;
+}
+
+/* Melhorar legibilidade */
+.search-channel-item div[style*="font-weight: bold"] {
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* Grid responsivo melhorado */
+@media (min-width: 1600px) {
+    #searchOverlayChannelGrid {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+@media (max-width: 1200px) {
+    #searchOverlayChannelGrid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 900px) {
+    #searchOverlayChannelGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    #searchOverlayChannelGrid {
+        grid-template-columns: 1fr;
+    }
+}
