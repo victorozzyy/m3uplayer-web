@@ -1,57 +1,72 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
-  <meta charset="utf-8"/>
-  <title>M3U8 Player</title>
-  <link rel="stylesheet" href="css/stylem3u8.css">
-  <!-- HLS.js para reprodução de streams m3u8 -->
-  <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M3U8 Player - Smart TV</title>
+    <link rel="stylesheet" href="css/stylem3u8.css">
 </head>
 <body>
-  <h2>🎬 M3U8 Player</h2>
+    <h2>🎬 M3U8 Player v4.3</h2>
 
-  <div class="section" style="display:flex; flex-wrap: wrap; gap: 10px;">
-    <button class="navigable" id="btnHome" tabindex="0">🏠 Home</button>
-    <button class="navigable" id="btnMinhasListas" tabindex="0">🔥 Minhas Listas</button>
-    <button class="navigable" id="btnLoadPlaylist" tabindex="0">📡 Playlists Remotas</button>
-    <button class="navigable" id="btnLocal" tabindex="0">📁 Playlists Locais</button>
-    <button class="navigable" id="btnUrl" tabindex="0">🌐 Playlist por URL</button>
+    <!-- Botões principais -->
+    <div class="section" style="display:flex; flex-wrap: wrap; gap: 10px;">
+        <button class="navigable" id="btnMinhasListas" tabindex="0">🔥 Minhas Listas</button>
+        <button class="navigable" id="btnLoadPlaylist" tabindex="0">📡 Playlists Remotas</button>
+        <button class="navigable" id="btnUrl" tabindex="0">🌐 Playlist por URL</button>
     <button class="navigable" id="btnSingle" tabindex="0">🔗 Canal Único</button>
     <button class="navigable" id="btnUpload" tabindex="0">📤 Upload Arquivo</button>
-    <button id="btnFiltroLista" class="navigable" onclick="window.open('filtroLISTA.html', '_blank')">🧩 Filtro de Lista
-</button>
-  </div>
+      <button id="btnFiltroLista" class="navigable" onclick="window.open('filtroLISTA.html', '_blank')">🧩 Filtro de Lista</button>
+    </div>
 
-  <div class="section" id="remotePlaylistSelector" style="display:none; margin-top:10px;">
-    <h3>📡 Playlists Remotas Disponíveis:</h3>
-    <ul id="remotePlaylistList"></ul>
-    <button class="navigable" id="btnBackFromRemote" style="margin-top:10px;">⬅️ Voltar</button>
-  </div>
+    <!-- Seletor de playlists remotas -->
+    <div class="section" id="remotePlaylistSelector" style="display:none; margin-top:10px;">
+        <h3>📡 Playlists Remotas Disponíveis:</h3>
+        <ul id="remotePlaylistList"></ul>
+        <button class="navigable" id="btnBackFromRemote" style="margin-top:10px;">⬅️ Voltar</button>
+    </div>
 
-  <div class="section" id="playlistSelector" style="display:none; margin-top:10px;">
-    <h3>📂 Playlists Locais:</h3>
-    <ul id="playlistList"></ul>
-    <button class="navigable" id="btnBackFromLocal" style="margin-top:10px;">⬅️ Voltar</button>
-  </div>
+    <!-- Seletor de playlists locais -->
+    <div class="section" id="playlistSelector" style="display:none; margin-top:10px;">
+        <h3>📂 Playlists Locais:</h3>
+        <ul id="playlistList"></ul>
+        <button class="navigable" id="btnBackFromLocal" style="margin-top:10px;">⬅️ Voltar</button>
+    </div>
 
-  <div class="section">
-    <label>📺 Canais:</label>
-    <ul id="channelList"></ul>
-  </div>
+    <!-- Lista de canais -->
+    <div class="section">
+        <label>📺 Canais:</label>
+        <ul id="channelList"></ul>
+    </div>
 
-  <div id="messageArea"></div>
+    <!-- Área de mensagens -->
+    <div id="messageArea"></div>
 
-  <!-- Scripts modulares - ORDEM IMPORTANTE! -->
-  <script src="js/state.js"></script>
-  <script src="js/player.js"></script>
-  <script src="js/search.js"></script>
-  <script src="js/channels.js"></script>
-  <script src="js/playlists.js"></script>
-  <script src="js/FilterModule.js"></script>
-  <script src="js/navigation.js"></script>
-  <script src="js/app.js"></script>
+    <!-- ORDEM CRÍTICA DE CARREGAMENTO -->
+    
+    <!-- 1. CONFIGURAÇÕES (primeiro) -->
+    <script src="js/playlist-config.js"></script>
+    <script src="js/local-playlist-loader.js"></script>
+    <script src="js/playlist-loader-local.js"></script>
+    
+    <!-- 2. MÓDULOS BASE -->
+    <script src="js/state.js"></script>
+    <script src="js/state-manager.js"></script>
+    <script src="js/documents-manager.js"></script>
+    
+    <!-- 3. MÓDULOS DE UI E FUNCIONALIDADE -->
+	<script src="js/favorites.js"></script>
+    <script src="js/channels.js"></script>
+    <script src="js/playlists-core.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/inline-player.js"></script>
+    <script src="js/player.js"></script>
+    <script src="js/search.js"></script>
+    
+    <!-- 4. INICIALIZAÇÃO (último) -->
+    <script src="js/app.js"></script>
 
-  <script>
+    <script>
         // Log de verificação de carregamento
         console.log('╔══════════════════════════════════════╗');
         console.log('📦 VERIFICAÇÃO DE MÓDULOS CARREGADOS');
