@@ -1,330 +1,342 @@
-// state-manager.js - Gerenciador de estado entre páginas
-// VERSÃO COMPLETA E CORRIGIDA - v2.0
+// state-manager.js - Gerenciamento de estado SEM salvar playlist completa
+// Versão 3.1 - COM savePlaylistContext
 
 const StateManager = {
     
-    // Chaves do localStorage
-    KEYS: {
-        PLAYER_STATE: 'playerState',
-        RETURN_FLAG: 'returningFromPlayer',
-        RETURN_URL: 'playerReturnUrl',
-        RETURN_VIEW: 'playerReturnView',
-        PLAYLIST_CONTEXT: 'playlistContext',
-        CATEGORY_CONTEXT: 'categoryContext'
-    },
-    
-    // ==========================================
-    // SALVAR ESTADO DO PLAYER
-    // ==========================================
-    savePlayerState(url, name, channelIndex, playlist) {
-        console.log('═══════════════════════════════════════');
-        console.log('💾 StateManager.savePlayerState()');
-        console.log('═══════════════════════════════════════');
-        console.log('URL:', url);
-        console.log('Nome:', name);
-        console.log('Índice:', channelIndex);
-        console.log('Playlist:', playlist?.length || 0, 'canais');
-        
+    // ========================================
+    // 💾 SALVAR CONTEXTO DA PLAYLIST (NOVA FUNÇÃO)
+    // ========================================
+    savePlaylistContext(playlistName, playlistType, category) {
         try {
-            const state = {
-                url,
-                name,
-                channelIndex: channelIndex >= 0 ? channelIndex : 0,
-                playlist: playlist || [],
-                timestamp: Date.now(),
-                version: '2.0'
-            };
-            
-            localStorage.setItem(this.KEYS.PLAYER_STATE, JSON.stringify(state));
-            
-            const currentUrl = window.location.href;
-            sessionStorage.setItem(this.KEYS.RETURN_URL, currentUrl);
-            
-            console.log('✅ Estado salvo com sucesso');
-            console.log('   - Timestamp:', state.timestamp);
-            console.log('   - URL origem:', currentUrl);
+            console.log('═══════════════════════════════════════');
+            console.log('💾 StateManager.savePlaylistContext()');
+            console.log('   Playlist:', playlistName);
+            console.log('   Tipo:', playlistType);
+            console.log('   Categoria:', category);
             console.log('═══════════════════════════════════════');
             
+            // Salvar contexto mínimo no sessionStorage
+            const context = {
+                playlistName,
+                playlistType,
+                category,
+                timestamp: Date.now()
+            };
+            
+            const contextJson = JSON.stringify(context);
+            sessionStorage.setItem('playlistContext', contextJson);
+            
+            // Salvar também no AppState
+            AppState.currentPlaylistName = playlistName;
+            AppState.currentPlaylistType = playlistType;
+            AppState.currentCategory = category;
+            
+            console.log('✅ Contexto da playlist salvo');
+            return true;
+            
+        } catch (error) {
+            console.error('❌ Erro ao salvar contexto da playlist:', error);
+            return false;
+        }
+    },
+    
+    // ========================================
+    // 🔄 RESTAURAR CONTEXTO DA PLAYLIST
+    // ========================================
+    restorePlaylistContext() {
+        try {
+            const contextJson = sessionStorage.getItem('playlistContext');
+            
+            if (!contextJson) {
+                console.log('ℹ️ Nenhum contexto de playlist salvo');
+                return null;
+            }
+            
+            const context = JSON.parse(contextJson);
+            console.log('🔄 Contexto restaurado:', context);
+            
+            return context;
+            
+        } catch (error) {
+            console.error('❌ Erro ao restaurar contexto:', error);
+            return null;
+        }
+    },
+    
+    // ========================================
+    // 💾 SALVAR ESTADO DO PLAYER (OTIMIZADO)
+    // ========================================
+    savePlayerState(channelUrl, channelName, channelIndex, playlistName) {
+        try {
+            console.log('╔═══════════════════════════════════════╗');
+            console.log('💾 StateManager.savePlayerState()');
+            console.log('   Canal:', channelName);
+            console.log('   Índice:', channelIndex);
+            console.log('   Playlist:', playlistName);
+            console.log('╚═══════════════════════════════════════╝');
+            
+            // ⚠️ CRÍTICO: NÃO SALVAR A PLAYLIST COMPLETA
+            // Salvar apenas METADADOS mínimos
+            const minimalState = {
+                url: channelUrl,
+                name: channelName,
+                index: channelIndex,
+                playlistName: playlistName,
+                timestamp: Date.now(),
+                // NÃO incluir: playlist, currentPlaylist, ou arrays grandes
+            };
+            
+            // Converter para JSON e verificar tamanho
+            const stateJson = JSON.stringify(minimalState);
+            const sizeKB = (stateJson.length / 1024).toFixed(2);
+            
+            console.log(`📊 Tamanho do estado: ${sizeKB} KB`);
+            
+            // Limite de segurança: 50KB
+            if (stateJson.length > 50 * 1024) {
+                console.warn('⚠️ Estado muito grande, salvando versão reduzida');
+                // Salvar apenas o essencial
+                const ultraMinimal = {
+                    url: channelUrl,
+                    name: channelName,
+                    index: channelIndex,
+                    timestamp: Date.now()
+                };
+                sessionStorage.setItem('playerState', JSON.stringify(ultraMinimal));
+            } else {
+                sessionStorage.setItem('playerState', stateJson);
+            }
+            
+            // Marcar que estamos indo para o player
+            sessionStorage.setItem('returningFromPlayer', 'true');
+            sessionStorage.setItem('playerOriginUrl', window.location.href);
+            
+            console.log('✅ Estado salvo com sucesso');
             return true;
             
         } catch (error) {
             console.error('❌ Erro ao salvar estado:', error);
             console.error('Stack:', error.stack);
-            console.log('═══════════════════════════════════════');
+            
+            // Fallback: salvar apenas o mínimo absoluto
+            try {
+                const emergencyState = {
+                    index: channelIndex,
+                    name: channelName,
+                    timestamp: Date.now()
+                };
+                sessionStorage.setItem('playerState', JSON.stringify(emergencyState));
+                sessionStorage.setItem('returningFromPlayer', 'true');
+                console.log('⚠️ Estado de emergência salvo (dados mínimos)');
+            } catch (e) {
+                console.error('❌ Falha total ao salvar estado:', e);
+                // Limpar sessionStorage corrupto
+                this.clearCorruptedStorage();
+            }
+            
             return false;
         }
     },
     
-    // ==========================================
-    // CARREGAR ESTADO DO PLAYER
-    // ==========================================
-    loadPlayerState() {
-        console.log('📖 StateManager.loadPlayerState()');
-        
+    // ========================================
+    // 🔄 RESTAURAR ESTADO DO PLAYER
+    // ========================================
+    restorePlayerState() {
         try {
-            const stateJson = localStorage.getItem(this.KEYS.PLAYER_STATE);
+            console.log('╔═══════════════════════════════════════╗');
+            console.log('🔄 StateManager.restorePlayerState()');
+            console.log('╚═══════════════════════════════════════╝');
+            
+            const stateJson = sessionStorage.getItem('playerState');
             
             if (!stateJson) {
-                console.warn('⚠️ Nenhum estado encontrado');
+                console.log('ℹ️ Nenhum estado salvo');
                 return null;
             }
             
             const state = JSON.parse(stateJson);
             
-            console.log('✅ Estado carregado:');
-            console.log('   - Nome:', state.name);
-            console.log('   - Índice:', state.channelIndex);
-            console.log('   - Playlist:', state.playlist?.length || 0);
-            console.log('   - Timestamp:', state.timestamp);
-            
-            return state;
-            
-        } catch (error) {
-            console.error('❌ Erro ao carregar estado:', error);
-            return null;
-        }
-    },
-    
-    // ==========================================
-    // SALVAR CONTEXTO DA PLAYLIST
-    // ==========================================
-    savePlaylistContext(playlistName, playlistType, categoryName) {
-        console.log('═══════════════════════════════════════');
-        console.log('💾 StateManager.savePlaylistContext()');
-        console.log('═══════════════════════════════════════');
-        console.log('Playlist:', playlistName);
-        console.log('Tipo:', playlistType);
-        console.log('Categoria:', categoryName);
-        
-        try {
-            const context = {
-                playlistName: playlistName || '',
-                playlistType: playlistType || 'unknown',
-                categoryName: categoryName || null,
-                timestamp: Date.now()
-            };
-            
-            localStorage.setItem(this.KEYS.PLAYLIST_CONTEXT, JSON.stringify(context));
-            
-            console.log('✅ Contexto da playlist salvo');
-            console.log('═══════════════════════════════════════');
-            return true;
-            
-        } catch (error) {
-            console.error('❌ Erro ao salvar contexto:', error);
-            console.log('═══════════════════════════════════════');
-            return false;
-        }
-    },
-    
-    // ==========================================
-    // CARREGAR CONTEXTO DA PLAYLIST
-    // ==========================================
-    loadPlaylistContext() {
-        console.log('📖 StateManager.loadPlaylistContext()');
-        
-        try {
-            const contextJson = localStorage.getItem(this.KEYS.PLAYLIST_CONTEXT);
-            
-            if (!contextJson) {
-                console.warn('⚠️ Nenhum contexto de playlist encontrado');
-                return null;
-            }
-            
-            const context = JSON.parse(contextJson);
-            
-            console.log('✅ Contexto carregado:');
-            console.log('   - Playlist:', context.playlistName);
-            console.log('   - Tipo:', context.playlistType);
-            console.log('   - Categoria:', context.categoryName);
-            
-            return context;
-            
-        } catch (error) {
-            console.error('❌ Erro ao carregar contexto:', error);
-            return null;
-        }
-    },
-    
-    // ==========================================
-    // MARCAR RETORNO DO PLAYER
-    // ==========================================
-    markReturnFromPlayer() {
-        console.log('🔙 StateManager.markReturnFromPlayer()');
-        
-        try {
-            sessionStorage.setItem(this.KEYS.RETURN_FLAG, 'true');
-            console.log('✅ Flag de retorno definida');
-            return true;
-        } catch (error) {
-            console.error('❌ Erro ao marcar retorno:', error);
-            return false;
-        }
-    },
-    
-    // ==========================================
-    // VERIFICAR SE ESTÁ RETORNANDO
-    // ==========================================
-    isReturningFromPlayer() {
-        const flag = sessionStorage.getItem(this.KEYS.RETURN_FLAG);
-        const isReturning = flag === 'true';
-        
-        if (isReturning) {
-            console.log('✅ Flag de retorno detectada');
-            sessionStorage.removeItem(this.KEYS.RETURN_FLAG);
-        }
-        
-        return isReturning;
-    },
-    
-    // ==========================================
-    // OBTER URL DE RETORNO
-    // ==========================================
-    getReturnUrl() {
-        const savedUrl = sessionStorage.getItem(this.KEYS.RETURN_URL);
-        
-        if (savedUrl && savedUrl !== 'null' && savedUrl !== 'undefined') {
-            console.log('📍 URL de retorno encontrada:', savedUrl);
-            return savedUrl;
-        }
-        
-        console.log('📍 Usando fallback: index.html');
-        return 'index.html';
-    },
-    
-    // ==========================================
-    // RESTAURAR PARA APPSTATE
-    // ==========================================
-    restoreToAppState(AppState) {
-        console.log('═══════════════════════════════════════');
-        console.log('🔄 StateManager.restoreToAppState()');
-        console.log('═══════════════════════════════════════');
-        
-        if (!AppState) {
-            console.error('❌ AppState não fornecido');
-            return null;
-        }
-        
-        const state = this.loadPlayerState();
-        
-        if (!state) {
-            console.warn('⚠️ Sem estado para restaurar');
-            console.log('═══════════════════════════════════════');
-            return null;
-        }
-        
-        try {
-            AppState.currentPlaylist = state.playlist || [];
-            AppState.currentChannelIndex = state.channelIndex || 0;
-            AppState.currentPlaylistName = state.name || 'Playlist';
-            AppState.currentView = 'channels';
-            
-            console.log('✅ Estado restaurado no AppState:');
-            console.log('   - Playlist:', AppState.currentPlaylist.length);
-            console.log('   - Índice:', AppState.currentChannelIndex);
-            console.log('   - Nome:', AppState.currentPlaylistName);
-            console.log('   - View:', AppState.currentView);
-            console.log('═══════════════════════════════════════');
+            console.log('📦 Estado restaurado:');
+            console.log('   Nome:', state.name);
+            console.log('   Índice:', state.index);
+            console.log('   Playlist:', state.playlistName || 'N/A');
             
             return state;
             
         } catch (error) {
             console.error('❌ Erro ao restaurar estado:', error);
-            console.log('═══════════════════════════════════════');
+            this.clearCorruptedStorage();
             return null;
         }
     },
     
-    // ==========================================
-    // ATUALIZAR ÍNDICE DO CANAL
-    // ==========================================
-    updateChannelIndex(newIndex) {
-        console.log('🔄 StateManager.updateChannelIndex():', newIndex);
+    // ========================================
+    // 🔙 VERIFICAR RETORNO DO PLAYER
+    // ========================================
+    isReturningFromPlayer() {
+        const flag = sessionStorage.getItem('returningFromPlayer');
+        const originUrl = sessionStorage.getItem('playerOriginUrl');
+        const currentUrl = window.location.href;
         
+        // Verificar se está voltando E se a URL está correta
+        const isReturning = flag === 'true' && 
+                           originUrl && 
+                           (currentUrl === originUrl || currentUrl.includes('index.html'));
+        
+        if (isReturning) {
+            console.log('🔙 Detectado retorno do player');
+        }
+        
+        return isReturning;
+    },
+    
+    // ========================================
+    // 🔄 RESTAURAR PARA AppState (OTIMIZADO)
+    // ========================================
+    restoreToAppState(AppState) {
         try {
-            const state = this.loadPlayerState();
+            const state = this.restorePlayerState();
             
             if (!state) {
-                console.warn('⚠️ Nenhum estado para atualizar');
-                return false;
+                console.log('ℹ️ Nenhum estado para restaurar');
+                return null;
             }
             
-            state.channelIndex = newIndex;
-            state.timestamp = Date.now();
-            
-            localStorage.setItem(this.KEYS.PLAYER_STATE, JSON.stringify(state));
-            
-            console.log('✅ Índice atualizado para:', newIndex);
-            return true;
-            
-        } catch (error) {
-            console.error('❌ Erro ao atualizar índice:', error);
-            return false;
-        }
-    },
-    
-    // ==========================================
-    // LIMPAR ESTADO
-    // ==========================================
-    clearState() {
-        console.log('🗑️ StateManager.clearState()');
-        
-        try {
-            localStorage.removeItem(this.KEYS.PLAYER_STATE);
-            localStorage.removeItem(this.KEYS.PLAYLIST_CONTEXT);
-            sessionStorage.removeItem(this.KEYS.RETURN_FLAG);
-            sessionStorage.removeItem(this.KEYS.RETURN_URL);
-            sessionStorage.removeItem(this.KEYS.RETURN_VIEW);
-            
-            console.log('✅ Estado limpo');
-            return true;
-            
-        } catch (error) {
-            console.error('❌ Erro ao limpar estado:', error);
-            return false;
-        }
-    },
-    
-    // ==========================================
-    // DIAGNÓSTICO
-    // ==========================================
-    checkStorageSpace() {
-        console.log('📊 Verificando espaço de armazenamento...');
-        
-        try {
-            let totalSize = 0;
-            
-            for (let key in localStorage) {
-                if (localStorage.hasOwnProperty(key)) {
-                    const size = localStorage[key].length + key.length;
-                    totalSize += size;
-                    
-                    if (key.includes('player') || key.includes('State') || key.includes('playlist')) {
-                        console.log(`   - ${key}: ${(size / 1024).toFixed(2)} KB`);
-                    }
+            // ⚠️ IMPORTANTE: Playlist já está carregada no AppState
+            // Apenas restaurar o índice do canal
+            if (state.index !== undefined && AppState.currentPlaylist) {
+                AppState.currentChannelIndex = state.index;
+                
+                const channel = AppState.currentPlaylist[state.index];
+                if (channel) {
+                    AppState.currentChannel = channel;
+                    console.log('✅ Canal restaurado:', channel.name);
                 }
             }
             
-            console.log(`📦 Total usado: ${(totalSize / 1024).toFixed(2)} KB`);
-            console.log(`📊 Limite típico: ~5-10 MB`);
+            // Limpar flags de retorno
+            this.clearReturnFlags();
             
-            const percentUsed = (totalSize / (5 * 1024 * 1024)) * 100;
-            console.log(`📈 Uso estimado: ${percentUsed.toFixed(2)}%`);
+            return state;
+            
+        } catch (error) {
+            console.error('❌ Erro ao restaurar para AppState:', error);
+            this.clearReturnFlags();
+            return null;
+        }
+    },
+    
+    // ========================================
+    // 🧹 LIMPAR FLAGS DE RETORNO
+    // ========================================
+    clearReturnFlags() {
+        sessionStorage.removeItem('returningFromPlayer');
+        sessionStorage.removeItem('playerOriginUrl');
+        // NÃO remover playerState (pode ser útil para debug)
+        console.log('🧹 Flags de retorno limpas');
+    },
+    
+    // ========================================
+    // 🗑️ LIMPAR STORAGE CORROMPIDO
+    // ========================================
+    clearCorruptedStorage() {
+        console.warn('🗑️ Limpando sessionStorage corrompido');
+        try {
+            sessionStorage.removeItem('playerState');
+            sessionStorage.removeItem('returningFromPlayer');
+            sessionStorage.removeItem('playerOriginUrl');
+            sessionStorage.removeItem('playlistContext');
+        } catch (e) {
+            console.error('❌ Erro ao limpar storage:', e);
+            // Última tentativa: limpar tudo
+            try {
+                sessionStorage.clear();
+            } catch (e2) {
+                console.error('❌ Falha crítica no sessionStorage');
+            }
+        }
+    },
+    
+    // ========================================
+    // 📊 DIAGNÓSTICO DE ESTADO
+    // ========================================
+    diagnose() {
+        console.log('╔═══════════════════════════════════════╗');
+        console.log('🔍 DIAGNÓSTICO DO STATE MANAGER');
+        console.log('╚═══════════════════════════════════════╝');
+        
+        try {
+            const state = sessionStorage.getItem('playerState');
+            const context = sessionStorage.getItem('playlistContext');
+            const returning = sessionStorage.getItem('returningFromPlayer');
+            const origin = sessionStorage.getItem('playerOriginUrl');
+            
+            console.log('playerState:', state ? 'presente' : 'ausente');
+            if (state) {
+                const parsed = JSON.parse(state);
+                console.log('  - Tamanho:', (state.length / 1024).toFixed(2), 'KB');
+                console.log('  - Campos:', Object.keys(parsed));
+            }
+            
+            console.log('playlistContext:', context ? 'presente' : 'ausente');
+            if (context) {
+                const parsed = JSON.parse(context);
+                console.log('  - Conteúdo:', parsed);
+            }
+            
+            console.log('returningFromPlayer:', returning);
+            console.log('playerOriginUrl:', origin);
+            
+            // Verificar quota disponível
+            this.checkStorageQuota();
+            
+        } catch (error) {
+            console.error('❌ Erro no diagnóstico:', error);
+        }
+        
+        console.log('╚═══════════════════════════════════════╝');
+    },
+    
+    // ========================================
+    // 💾 VERIFICAR QUOTA DE STORAGE
+    // ========================================
+    checkStorageQuota() {
+        try {
+            // Tentar calcular uso aproximado
+            let totalSize = 0;
+            for (let key in sessionStorage) {
+                if (sessionStorage.hasOwnProperty(key)) {
+                    totalSize += sessionStorage[key].length + key.length;
+                }
+            }
+            
+            const usedKB = (totalSize / 1024).toFixed(2);
+            console.log(`📊 sessionStorage usado: ${usedKB} KB`);
+            
+            // Limite típico é 5-10MB
+            const limitMB = 5;
+            const percentUsed = ((totalSize / (limitMB * 1024 * 1024)) * 100).toFixed(1);
+            console.log(`📊 Uso aproximado: ${percentUsed}%`);
             
             if (percentUsed > 80) {
-                console.warn('⚠️ Armazenamento quase cheio!');
+                console.warn('⚠️ sessionStorage quase cheio!');
             }
             
         } catch (error) {
-            console.error('❌ Erro ao verificar armazenamento:', error);
+            console.warn('⚠️ Não foi possível verificar quota:', error);
         }
     }
 };
 
-// Log de carregamento
-console.log('✅ StateManager carregado (v2.0)');
+// ========================================
+// 🔧 ATALHO PARA DEBUG
+// ========================================
+window.debugStateManager = () => StateManager.diagnose();
 
-// Export para uso em outros módulos
+// Log de carregamento
+console.log('✅ StateManager carregado (v3.1 - COM savePlaylistContext)');
+
+// Export
 if (typeof module !== 'undefined' && module.exports) {
     module.exports = StateManager;
 }
