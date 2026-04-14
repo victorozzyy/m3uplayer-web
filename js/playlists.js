@@ -198,7 +198,7 @@ const PlaylistModule = {
         {
             name: "🔥 Lista 01",
             description: "Lista 04 ",
-            url: "https://felas87dz.icu/get.php?username=854191413&password=383942274&type=m3u_plus",
+            url: "https://raw.githubusercontent.com/Ramys/Iptv-Brasil-2026/refs/heads/master/CanaisBR06.m3u",
             needsCors: true
         },
 		{
