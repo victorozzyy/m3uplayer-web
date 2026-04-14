@@ -21,7 +21,7 @@ const PlaylistModule = {
         {
         name: "🏆 Esportes 1",
         description: "Canais esportivos em alta definição",
-        url: "https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/esportes.m3u8",
+        url: "https://raw.githubusercontent.com/Ramys/Iptv-Brasil-2026/refs/heads/master/CanaisBR06.m3u",
         category: "Esportes"
       },{
         name: "🏆 Esportes 2",
