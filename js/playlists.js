@@ -88,12 +88,12 @@ const PlaylistModule = {
 	  {
         name: "🎬 Mp4 1",
         description: "Canais variados de alta qualidade",
-        url: "https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/playlist_mp4_part1.m3u",
+        url: "https://raw.githubusercontent.com/Ramys/Iptv-Brasil-2026/refs/heads/master/CanaisBR01.m3u8",
         category: "Mp4"
       },{
         name: "🎬 Mp4 2",
         description: "Canais variados de alta qualidade",
-        url: "https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/playlist_mp4_part2.m3u",
+        url: "https://raw.githubusercontent.com/Ramys/Iptv-Brasil-2026/refs/heads/master/Lista%20Mundial01.m3u8",
         category: "Mp4"
       },
 	  /* Atualizar essas playlists*/
@@ -106,7 +106,7 @@ const PlaylistModule = {
 	  {
         name: "🎬 Mp4 4",
         description: "Canais variados de alta qualidade",
-        url: "https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/refs/heads/main/playlists/playlist_mp4_part4.m3u",
+        url: "https://raw.githubusercontent.com/Ramys/Iptv-Brasil-2026/refs/heads/master/Lista%20Mundial02.m3u",
         category: "Filmes"
       },
 	  
