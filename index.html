@@ -1,292 +1,133 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Player IPTV</title>
-<style>
-:root{--bg:#1a1d27;--panel:#242938;--line:#343b50;--tx:#e9edf5;--mute:#98a2b8;--ac:#ffb454;--acx:#2a1c00;--bad:#ff7a7a}
-*{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--tx);font:15px/1.45 "Segoe UI",system-ui,sans-serif;height:100vh;display:flex;flex-direction:column}
-button,input,select,textarea{font:inherit;color:inherit}
-button{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:7px 12px;cursor:pointer}
-button:hover{border-color:var(--ac)}
-:focus-visible{outline:2px solid var(--ac);outline-offset:2px}
-input,select,textarea{background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:8px 10px;width:100%}
-header{display:flex;gap:12px;align-items:center;padding:10px 16px;border-bottom:1px solid var(--line);flex-wrap:wrap}
-h1{font-size:17px;margin:0;font-weight:700;letter-spacing:.2px}
-nav{display:flex;gap:4px}
-nav button{border:0;border-bottom:3px solid transparent;border-radius:0;background:none;padding:6px 12px}
-nav button.on{border-color:var(--ac);color:var(--ac);font-weight:600}
-header select{width:auto;max-width:240px}
-header input{max-width:220px;margin-left:auto}
-main{flex:1;display:flex;min-height:0}
-aside{width:230px;border-right:1px solid var(--line);overflow:auto;padding:8px}
-aside button{display:flex;justify-content:space-between;gap:8px;width:100%;border:0;background:none;text-align:left;padding:6px 8px;border-radius:5px}
-aside button.on{background:var(--panel);color:var(--ac)}
-aside small{color:var(--mute)}
-#list{flex:1;overflow:auto;padding:14px}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px}
-.card{padding:0;text-align:left;overflow:hidden;display:flex;flex-direction:column}
-.card .im{aspect-ratio:2/3;background:#0003 center/cover no-repeat;display:grid;place-items:center;color:var(--mute);font-size:28px}
-.live .card .im{aspect-ratio:16/10;background-size:contain}
-.card span{padding:7px 9px;font-size:13px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
-.note{color:var(--mute);padding:12px 0}
-.err{color:var(--bad)}
-#cfg{flex:1;overflow:auto;padding:20px;max-width:720px}
-#cfg section{border:1px solid var(--line);border-radius:8px;padding:14px 16px;margin-bottom:14px;background:var(--panel)}
-#cfg h2{font-size:15px;margin:0 0 10px}
-#cfg label{display:block;margin:6px 0}
-#cfg label input[type=radio]{width:auto;margin-right:8px}
-.row{display:flex;gap:8px;margin-top:10px;flex-wrap:wrap;align-items:center}
-dialog{border:1px solid var(--line);background:var(--bg);color:var(--tx);border-radius:10px;padding:0;width:min(960px,96vw)}
-dialog::backdrop{background:#000b}
-.dh{display:flex;justify-content:space-between;align-items:center;padding:10px 14px;gap:10px}
-video{width:100%;max-height:70vh;background:#000;display:block}
-#msg{padding:8px 14px;color:var(--mute);min-height:36px}
-#eps{max-height:60vh;overflow:auto;padding:0 14px 14px}
-#eps h3{margin:14px 0 6px;font-size:14px;color:var(--ac)}
-#eps .ep{display:block;width:100%;text-align:left;margin:4px 0}
-@media(max-width:700px){aside{width:130px}header input{margin-left:0;max-width:none;flex:1}}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>IPTV Player</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<header>
-  <h1>Player IPTV</h1>
-  <nav id="tabs">
-    <button data-t="live" class="on">Ao vivo</button><button data-t="movies">Filmes</button><button data-t="series">Séries</button><button data-t="cfg">Config</button>
+  <header class="topbar">
+    <h1 class="brand">📺 IPTV Player</h1>
+    <div class="source-picker">
+      <select id="sourceSelect" aria-label="Lista"></select>
+      <button id="btnRemoveList" class="icon-btn" title="Remover esta lista" hidden>🗑</button>
+      <button id="btnAddList" class="btn">+ Lista</button>
+      <button id="btnReload" class="icon-btn" title="Recarregar (ignora cache)">⟳</button>
+      <button id="btnSettings" class="icon-btn" title="Proxy e cache">⚙</button>
+    </div>
+  </header>
+
+  <nav class="tabs">
+    <button class="tab active" data-section="live">Ao vivo</button>
+    <button class="tab" data-section="movies">Filmes</button>
+    <button class="tab" data-section="series">Séries</button>
+    <input id="search" type="search" placeholder="Buscar nesta aba…" autocomplete="off">
   </nav>
-  <select id="src" aria-label="Lista"></select>
-  <span id="px" class="note" style="padding:0" role="status"></span>
-  <input id="q" type="search" placeholder="Buscar nesta categoria…">
-</header>
-<main id="mainv">
-  <aside id="cats"></aside>
-  <div id="list"></div>
-</main>
-<div id="cfg" hidden>
-  <section id="httpsnote" hidden>
-    <h2>Rodando no GitHub Pages (HTTPS)</h2>
-    <p class="note" style="margin:0">Streams com link <code>http://</code> são bloqueados pelo navegador nesta página. Use "Local completo" e deixe o proxy rodando no seu computador com <code>ALLOW_ORIGINS</code> apontando para este site. Se o status do proxy aparecer offline, aceite a permissão de rede local do navegador.</p>
-  </section>
-  <section>
-    <h2>Tipo de proxy</h2>
-    <label><input type="radio" name="mode" value="full">Local completo: manifest e segmentos passam pelo proxy (resolve CORS e links quebrados)</label>
-    <label><input type="radio" name="mode" value="manifest">Local só manifest: reescreve links relativos para absolutos, segmentos vão direto</label>
-    <label><input type="radio" name="mode" value="direct">Direto: sem proxy (só funciona se o servidor liberar CORS)</label>
-    <label><input type="radio" name="mode" value="custom">Proxy externo: use <code>{url}</code> no modelo abaixo</label>
-    <div class="row"><input id="proxy" placeholder="http://127.0.0.1:8787" aria-label="Endereço do proxy local"></div>
-    <div class="row"><input id="custom" placeholder="https://meuproxy.exemplo/?u={url}" aria-label="Modelo do proxy externo"></div>
-    <div class="row"><button id="save">Salvar</button><button id="test">Testar proxy</button><span id="tres" class="note"></span></div>
-  </section>
-  <section>
-    <h2>Cache</h2>
-    <p class="note" style="margin-top:0">Apaga o cache do proxy e o da página. Use quando uma lista não atualiza ou um canal trava.</p>
-    <div class="row"><button id="clear">Limpar cache</button><span id="cres" class="note"></span></div>
-  </section>
-  <section>
-    <h2>Listas</h2>
-    <label>Lista padrão (arquivo com links ou conteúdo M3U)<input id="deflist"></label>
-    <label>Adicionar lista: cole um link M3U, um link <code>get.php?username=…&amp;password=…</code> ou o texto M3U
-      <textarea id="newlist" rows="4"></textarea></label>
-    <div class="row"><button id="add">Adicionar lista</button><button id="reload">Recarregar listas</button><span id="lres" class="note"></span></div>
-    <div id="mine"></div>
-  </section>
-</div>
-<dialog id="pl">
-  <div class="dh"><strong id="pt"></strong><span><button id="retry">Recarregar</button> <button id="close">Fechar</button></span></div>
-  <video id="v" controls playsinline></video>
-  <div id="msg"></div>
-</dialog>
-<dialog id="epd">
-  <div class="dh"><strong id="et"></strong><button id="eclose">Fechar</button></div>
-  <div id="eps"></div>
-</dialog>
 
-<script src="https://cdn.jsdelivr.net/npm/hls.js@1.5.17/dist/hls.min.js"></script>
-<script>
-const $=s=>document.querySelector(s);
-const LS=(k,v)=>v===undefined?JSON.parse(localStorage.getItem(k)||'null'):localStorage.setItem(k,JSON.stringify(v));
-const DEF='https://raw.githubusercontent.com/victorozzyy/m3uplayer-web/main/playlists2/listaauto004.m3u';
-let cfg=Object.assign({mode:'full',proxy:'http://127.0.0.1:8787',custom:'',deflist:DEF},LS('cfg')||{});
-let mine=LS('mine')||[], sources=[], cur=0, tab='live', cat='all', store={}, mem=new Map(), hls, last=null;
+  <main class="layout">
+    <aside id="categories" class="panel categories"></aside>
+    <section id="content" class="panel content"></section>
 
-const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
-function wrap(u){
-  if(cfg.mode==='direct')return u;
-  if(cfg.mode==='custom')return cfg.custom.replace('{url}',encodeURIComponent(u));
-  return `${cfg.proxy.replace(/\/$/,'')}/p?m=${cfg.mode==='manifest'?'manifest':'full'}&u=${encodeURIComponent(u)}`;
-}
-async function getTxt(u){
-  if(mem.has(u))return mem.get(u);
-  const r=await fetch(wrap(u)); if(!r.ok)throw new Error('HTTP '+r.status);
-  const t=await r.text(); mem.set(u,t); return t;
-}
+    <section class="player-panel">
+      <div class="video-wrap">
+        <video id="video" controls playsinline></video>
+        <div id="videoOverlay" class="video-overlay">Selecione um conteúdo para assistir</div>
+      </div>
+      <div class="now-playing">
+        <div id="nowTitle" class="now-title">—</div>
+        <div id="nowStatus" class="now-status"></div>
+        <div class="np-actions">
+          <button id="btnCopy" class="btn">Copiar link</button>
+          <button id="btnStop" class="btn">Parar</button>
+        </div>
+      </div>
+    </section>
+  </main>
 
-// ---------- listas ----------
-function parseSource(u){
-  try{const x=new URL(u),user=x.searchParams.get('username'),pass=x.searchParams.get('password');
-    if(/get\.php$/.test(x.pathname)&&user&&pass)return{name:`${user} @ ${x.host}`,type:'x',base:x.origin,user,pass};}catch{}
-  return{name:u.split('/').pop().slice(0,32)||u,type:'m',url:u};
-}
-function fromText(t,name){
-  if(/#EXTINF/i.test(t))return[{name,type:'m',text:t}];
-  return t.split(/\r?\n/).map(l=>l.trim()).filter(l=>/^https?:\/\//i.test(l)).map(parseSource);
-}
-async function loadSources(){
-  sources=[]; const err=[];
-  try{
-    const tries=cfg.deflist===DEF?['playlists2/listaauto004.m3u',DEF]:[cfg.deflist];
-    let t; for(const u of tries){try{const r=await fetch(u); if(r.ok){t=await r.text(); break;}}catch{}}
-    if(!t)t=await getTxt(cfg.deflist);
-    sources.push(...fromText(t,'Lista padrão'));
-  }catch(e){err.push('lista padrão: '+e.message)}
-  mine.forEach((m,i)=>sources.push(...fromText(m,'Minha lista '+(i+1)).map(s=>s.type==='m'&&!s.text?s:s)));
-  mine.forEach((m,i)=>{ if(!/#EXTINF|^https?:\/\//i.test(m.trim())) err.push('item inválido '+(i+1)); });
-  // links diretos adicionados pelo usuário (uma linha só) já passam por fromText
-  const seen=new Set(); sources=sources.filter(s=>{const k=s.url||s.text?.slice(0,80)||s.base+s.user;if(seen.has(k))return false;seen.add(k);return true;});
-  $('#src').innerHTML=sources.map((s,i)=>`<option value="${i}">${esc(s.name)}</option>`).join('')||'<option>Sem listas</option>';
-  $('#lres').textContent=err.join(' | ')||`${sources.length} lista(s) carregada(s)`;
-  cur=0; store={}; show();
-}
+  <!-- Adicionar lista -->
+  <dialog id="dlgAdd">
+    <form id="formAdd" class="dlg">
+      <h2>Adicionar lista</h2>
+      <label>Nome (opcional)<input name="name" type="text" autocomplete="off"></label>
+      <label>Tipo
+        <select name="type" id="addType">
+          <option value="url">Link M3U / M3U8 (inclui links get.php)</option>
+          <option value="xtream">Xtream (servidor, usuário e senha)</option>
+          <option value="text">Colar conteúdo / enviar arquivo</option>
+        </select>
+      </label>
 
-// ---------- dados ----------
-function parseM3U(t){
-  const d={live:{cats:[],items:[]},movies:{cats:[],items:[]},series:{cats:[],items:[]}},sm={};
-  const L=t.split(/\r?\n/); let inf=null;
-  for(const raw of L){const l=raw.trim();
-    if(l.startsWith('#EXTINF')){inf={name:l.slice(l.lastIndexOf(',')+1).trim(),logo:(l.match(/tvg-logo="([^"]*)"/)||[])[1],cat:(l.match(/group-title="([^"]*)"/)||[])[1]||'Sem grupo'};}
-    else if(inf&&l&&!l.startsWith('#')){
-      const k=/\/series\//i.test(l)||/S\d+\s*E\d+/i.test(inf.name)?'series':/\/movie\//i.test(l)?'movies':'live';
-      if(k==='series'){
-        const key=inf.name.replace(/\s*[-–]?\s*S\d+\s*E\d+.*$/i,'').trim()||inf.name, m=inf.name.match(/S(\d+)\s*E(\d+)/i);
-        let s=sm[key]; if(!s){s=sm[key]={name:key,logo:inf.logo,cat:inf.cat,eps:[]};d.series.items.push(s);}
-        s.eps.push({title:inf.name,url:l,s:m?+m[1]:1,e:m?+m[2]:s.eps.length+1});
-      }else d[k].items.push({name:inf.name,logo:inf.logo,cat:inf.cat,url:l});
-      inf=null;
-    }
-  }
-  for(const k in d){d[k].cats=[...new Set(d[k].items.map(i=>i.cat))].map(c=>({id:c,name:c}));}
-  return d;
-}
-const ACT={live:['get_live_categories','get_live_streams'],movies:['get_vod_categories','get_vod_streams'],series:['get_series_categories','get_series']};
-async function api(s,a,extra=''){return JSON.parse(await getTxt(`${s.base}/player_api.php?username=${encodeURIComponent(s.user)}&password=${encodeURIComponent(s.pass)}&action=${a}${extra}`));}
-async function ensure(t){
-  const s=sources[cur]; store[cur]=store[cur]||{}; if(store[cur][t])return store[cur][t];
-  let r;
-  if(s.type==='x'){
-    const [c,i]=await Promise.all(ACT[t].map(a=>api(s,a)));
-    r={cats:(c||[]).map(x=>({id:String(x.category_id),name:x.category_name})),items:(i||[]).map(x=>{
-      const b=`${s.base}/${t==='live'?'live':'movie'}/${s.user}/${s.pass}/`;
-      if(t==='live')return{name:x.name,logo:x.stream_icon,cat:String(x.category_id),url:`${b}${x.stream_id}.m3u8`};
-      if(t==='movies')return{name:x.name,logo:x.stream_icon,cat:String(x.category_id),url:`${b}${x.stream_id}.${x.container_extension||'mp4'}`};
-      return{name:x.name,logo:x.cover,cat:String(x.category_id),sid:x.series_id};})};
-  }else{
-    store[cur].all=store[cur].all||parseM3U(s.text||await getTxt(s.url)); r=store[cur].all[t];
-  }
-  return store[cur][t]=r;
-}
+      <div data-type="url">
+        <label>URL da lista
+          <input name="url" type="text" placeholder="http://servidor/get.php?username=...&password=...&type=m3u_plus">
+        </label>
+      </div>
+      <div data-type="xtream" hidden>
+        <label>Servidor<input name="server" type="text" placeholder="http://servidor:porta"></label>
+        <label>Usuário<input name="username" type="text" autocomplete="off"></label>
+        <label>Senha<input name="password" type="text" autocomplete="off"></label>
+      </div>
+      <div data-type="text" hidden>
+        <label>Arquivo .m3u / .m3u8<input name="file" type="file" accept=".m3u,.m3u8,.txt"></label>
+        <label>ou cole o conteúdo<textarea name="text" rows="6" placeholder="#EXTM3U&#10;#EXTINF:-1 ..."></textarea></label>
+      </div>
 
-// ---------- tela ----------
-async function show(){
-  const isCfg=tab==='cfg'; $('#mainv').hidden=isCfg; $('#cfg').hidden=!isCfg;
-  document.querySelectorAll('#tabs button').forEach(b=>b.classList.toggle('on',b.dataset.t===tab));
-  if(isCfg||!sources.length){ if(!isCfg)$('#list').innerHTML='<p class="note">Nenhuma lista. Abra Config e adicione uma.</p>'; return; }
-  $('#list').innerHTML='<p class="note">Carregando…</p>'; $('#cats').innerHTML='';
-  try{const d=await ensure(tab); render(d);}
-  catch(e){$('#list').innerHTML=`<p class="err">Não foi possível carregar: ${esc(e.message)}.<br>Confira se o proxy está rodando e o tipo de proxy em Config.</p>`;}
-}
-function render(d){
-  const cnt={}; d.items.forEach(i=>cnt[i.cat]=(cnt[i.cat]||0)+1);
-  $('#cats').innerHTML=`<button data-c="all" class="${cat==='all'?'on':''}">Todos <small>${d.items.length}</small></button>`+
-    d.cats.filter(c=>cnt[c.id]).map(c=>`<button data-c="${esc(c.id)}" class="${cat===c.id?'on':''}">${esc(c.name)} <small>${cnt[c.id]}</small></button>`).join('');
-  const q=$('#q').value.toLowerCase();
-  const f=d.items.filter(i=>(cat==='all'||i.cat===cat)&&(!q||i.name.toLowerCase().includes(q)));
-  const view=f.slice(0,240);
-  $('#list').className=tab==='live'?'live':'';
-  $('#list').innerHTML=(f.length?`<div class="grid">${view.map((i,n)=>`<button class="card" data-n="${n}"><div class="im" style="${i.logo?`background-image:url('${esc(i.logo)}')`:''}">${i.logo?'':'▶'}</div><span>${esc(i.name)}</span></button>`).join('')}</div>`:'<p class="note">Nada encontrado.</p>')+
-    (f.length>240?`<p class="note">Mostrando 240 de ${f.length}. Use a busca para refinar.</p>`:'');
-  $('#list').onclick=e=>{const b=e.target.closest('.card'); if(!b)return; const it=view[+b.dataset.n]; it.sid!==undefined||it.eps?openSeries(it):play(it.url,it.name);};
-}
-async function openSeries(it){
-  $('#et').textContent=it.name; $('#eps').innerHTML='<p class="note">Carregando episódios…</p>'; $('#epd').showModal();
-  try{
-    let eps=[];
-    if(it.eps)eps=it.eps;
-    else{const j=await api(sources[cur],'get_series_info',`&series_id=${it.sid}`); const s=sources[cur];
-      for(const k in j.episodes||{})(j.episodes[k]).forEach(e=>eps.push({title:e.title||`Episódio ${e.episode_num}`,s:+k,e:+e.episode_num,url:`${s.base}/series/${s.user}/${s.pass}/${e.id}.${e.container_extension||'mp4'}`}));}
-    const bs={}; eps.sort((a,b)=>a.s-b.s||a.e-b.e).forEach(e=>(bs[e.s]=bs[e.s]||[]).push(e));
-    const flat=[]; $('#eps').innerHTML=Object.keys(bs).map(s=>`<h3>Temporada ${s}</h3>`+bs[s].map(e=>{flat.push(e);return `<button class="ep" data-i="${flat.length-1}">E${e.e} · ${esc(e.title)}</button>`}).join('')).join('')||'<p class="note">Sem episódios.</p>';
-    $('#eps').onclick=ev=>{const b=ev.target.closest('.ep'); if(b){const e=flat[+b.dataset.i]; play(e.url,`${it.name} · T${e.s}E${e.e}`);}};
-  }catch(e){$('#eps').innerHTML=`<p class="err">${esc(e.message)}</p>`;}
-}
+      <label class="check"><input type="checkbox" name="save" checked> Salvar neste navegador</label>
+      <menu>
+        <button type="button" id="addCancel" class="btn">Cancelar</button>
+        <button type="submit" class="btn primary">Adicionar</button>
+      </menu>
+    </form>
+  </dialog>
 
-// ---------- player ----------
-const msg=t=>$('#msg').textContent=t;
-function stop(){if(hls){hls.destroy();hls=null;} const v=$('#v'); v.pause(); v.removeAttribute('src'); v.load();}
-function play(url,title){last={url,title}; $('#pt').textContent=title; if(!$('#pl').open)$('#pl').showModal(); start(url,false);}
-function start(url,retried,force){
-  stop(); const v=$('#v'), mode=force||cfg.mode;
-  const saved=cfg.mode; cfg.mode=mode; const src=wrap(url); cfg.mode=saved;
-  const isH=/\.m3u8(\?|$)/i.test(url); msg('Carregando…');
-  v.onerror=()=>{ if(!isH)msg('Formato não suportado pelo navegador (MKV/HEVC costumam falhar) ou link indisponível.'); };
-  if(isH&&window.Hls&&Hls.isSupported()){
-    hls=new Hls({maxBufferLength:30,manifestLoadingMaxRetry:2,levelLoadingMaxRetry:3,fragLoadingMaxRetry:4});
-    hls.loadSource(src); hls.attachMedia(v);
-    hls.on(Hls.Events.MANIFEST_PARSED,()=>{msg('');v.play().catch(()=>{});});
-    hls.on(Hls.Events.ERROR,(_,d)=>{
-      if(!d.fatal)return;
-      if(d.type===Hls.ErrorTypes.MEDIA_ERROR){hls.recoverMediaError();return;}
-      if(mode==='direct'&&!retried){msg('Falhou direto, tentando pelo proxy local…');return start(url,true,'full');}
-      msg(`Erro (${d.details}). Verifique o proxy e o tipo escolhido em Config, ou limpe o cache.`);
-    });
-  }else{v.src=src; v.play().catch(()=>{}); v.onplaying=()=>msg('');}
-}
-$('#close').onclick=()=>{stop();$('#pl').close();};
-$('#pl').addEventListener('cancel',stop);
-$('#retry').onclick=()=>last&&start(last.url,false);
-$('#eclose').onclick=()=>$('#epd').close();
+  <!-- Proxy e cache -->
+  <dialog id="dlgSettings">
+    <form id="formSettings" class="dlg">
+      <h2>Proxy e cache</h2>
 
-// ---------- config ----------
-function fillCfg(){
-  document.querySelectorAll('input[name=mode]').forEach(r=>r.checked=r.value===cfg.mode);
-  $('#proxy').value=cfg.proxy; $('#custom').value=cfg.custom; $('#deflist').value=cfg.deflist;
-  $('#mine').innerHTML=mine.map((m,i)=>`<div class="row"><span style="flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${esc(m.slice(0,70))}</span><button data-r="${i}">Remover</button></div>`).join('');
-}
-$('#save').onclick=()=>{
-  cfg.mode=(document.querySelector('input[name=mode]:checked')||{}).value||'full';
-  cfg.proxy=$('#proxy').value.trim()||'http://127.0.0.1:8787'; cfg.custom=$('#custom').value.trim(); cfg.deflist=$('#deflist').value.trim()||DEF;
-  LS('cfg',cfg); $('#tres').textContent='Salvo.';
-};
-$('#test').onclick=async()=>{
-  const el=$('#tres'); el.textContent='Testando…';
-  try{const j=await (await fetch(`${$('#proxy').value.replace(/\/$/,'')}/status`)).json(); el.textContent=`Proxy ativo (cache: ${j.cache} item(ns)).`;}
-  catch{el.textContent='Sem resposta. Rode "node proxy/server.js" e confira o endereço (Chrome pode pedir permissão de rede local).';}
-};
-$('#clear').onclick=async()=>{
-  mem.clear(); store={}; let r='Cache da página limpo.';
-  try{const j=await (await fetch(`${cfg.proxy.replace(/\/$/,'')}/cache/clear`)).json(); r+=` Proxy: ${j.cleared} item(ns) removido(s).`;}catch{r+=' Proxy não respondeu.';}
-  $('#cres').textContent=r;
-};
-$('#add').onclick=()=>{const t=$('#newlist').value.trim(); if(!t)return; mine.push(t); LS('mine',mine); $('#newlist').value=''; fillCfg(); loadSources();};
-$('#mine').onclick=e=>{const b=e.target.closest('[data-r]'); if(b){mine.splice(+b.dataset.r,1);LS('mine',mine);fillCfg();loadSources();}};
-$('#reload').onclick=()=>{cfg.deflist=$('#deflist').value.trim()||DEF; LS('cfg',cfg); mem.clear(); loadSources();};
+      <fieldset>
+        <legend>Tipo de proxy</legend>
+        <label class="radio"><input type="radio" name="proxyMode" value="auto">
+          <span><b>Automático</b><small>Direto quando possível; usa o proxy local se o link for http (bloqueado em página https) ou se falhar.</small></span></label>
+        <label class="radio"><input type="radio" name="proxyMode" value="local">
+          <span><b>Proxy local (completo)</b><small>Reescreve o manifest e passa os segmentos pelo proxy. Resolve CORS e links quebrados.</small></span></label>
+        <label class="radio"><input type="radio" name="proxyMode" value="local-manifest">
+          <span><b>Proxy local (só manifest)</b><small>Manifest com URLs absolutas pelo proxy; segmentos vão direto (menos banda, exige CORS na origem).</small></span></label>
+        <label class="radio"><input type="radio" name="proxyMode" value="direct">
+          <span><b>Direto</b><small>Sem proxy.</small></span></label>
+        <label class="radio"><input type="radio" name="proxyMode" value="custom">
+          <span><b>Personalizado</b><small>Seu próprio proxy, usando o template com {url}.</small></span></label>
+      </fieldset>
 
-$('#tabs').onclick=e=>{const b=e.target.closest('button'); if(b){tab=b.dataset.t;cat='all';show();}};
-$('#cats').onclick=e=>{const b=e.target.closest('button'); if(b){cat=b.dataset.c;ensure(tab).then(render);}};
-$('#src').onchange=e=>{cur=+e.target.value;cat='all';show();};
-$('#q').oninput=()=>tab!=='cfg'&&ensure(tab).then(render);
-async function checkProxy(){
-  const el=$('#px');
-  if(cfg.mode==='direct'||cfg.mode==='custom'){el.textContent='';return;}
-  try{const c=new AbortController(); setTimeout(()=>c.abort(),2500);
-    const j=await (await fetch(`${cfg.proxy.replace(/\/$/,'')}/status`,{signal:c.signal})).json();
-    el.textContent='Proxy online'; el.style.color='#7fd99a';
-  }catch{el.textContent='Proxy offline'; el.style.color='var(--bad)';}
-}
-if(location.protocol==='https:')$('#httpsnote').hidden=false;
-$('#save').addEventListener('click',checkProxy); $('#test').addEventListener('click',checkProxy);
-fillCfg(); loadSources(); checkProxy();
-</script>
+      <label>Endereço do proxy local<input name="proxyBase" type="text" placeholder="http://localhost:8080"></label>
+      <label>Template do proxy personalizado<input name="customTemplate" type="text" placeholder="https://meu-proxy.exemplo/?u={url}"></label>
+      <label>User-Agent (opcional, enviado pelo proxy local)<input name="userAgent" type="text" placeholder="VLC/3.0.20 LibVLC/3.0.20"></label>
+      <label>Formato do ao vivo (Xtream)
+        <select name="liveFormat">
+          <option value="m3u8">HLS (.m3u8) — recomendado</option>
+          <option value="ts">MPEG-TS (.ts)</option>
+        </select>
+      </label>
+      <label class="check"><input type="checkbox" name="preferApi"> Usar a API Xtream quando o link for get.php</label>
+      <label>Validade do cache das listas (minutos)<input name="cacheTtl" type="number" min="0" step="1"></label>
+      <label>URL do índice de listas<input name="indexUrl" type="text"></label>
+
+      <div id="proxyStatus" class="status"></div>
+      <menu>
+        <button type="button" id="btnTestProxy" class="btn">Testar proxy</button>
+        <button type="button" id="btnClearCache" class="btn danger">Limpar cache</button>
+        <span class="spacer"></span>
+        <button type="button" id="btnCloseSettings" class="btn">Fechar</button>
+        <button type="submit" class="btn primary">Salvar</button>
+      </menu>
+    </form>
+  </dialog>
+
+  <div id="toasts"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/hls.js@1"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mpegts.js@1"></script>
+  <script type="module" src="js/app.js"></script>
 </body>
 </html>
