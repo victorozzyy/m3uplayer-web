@@ -53,6 +53,8 @@ function prepare(d) {
   return d;
 }
 function friendlyError(e, url) {
+  if (location.protocol === 'https:' && /^http:\/\//i.test(url))
+    return `Este servidor só oferece http e o navegador bloqueia vídeo http em página https (${e.message}). Use "Copiar link" e abra no VLC.`;
   if (/\.(mkv|avi|wmv|flv)(\?|$)/i.test(url))
     return `Formato não suportado pelo navegador (${e.message}). Use "Copiar link" e abra no VLC.`;
   return `${e.message}. Tente outro tipo de proxy em ⚙ ou limpe o cache.`;
@@ -376,6 +378,8 @@ function openSettings() {
   f.preferApi.checked = settings.preferApi;
   f.cacheTtl.value = settings.cacheTtlMin;
   f.indexUrl.value = settings.indexUrl;
+  f.useWebProxy.checked = settings.useWebProxy;
+  f.webProxy.value = settings.webProxy;
   setProxyStatus('');
   if (!dlgSet.open) dlgSet.showModal();
 }
@@ -398,6 +402,8 @@ formSet.addEventListener('submit', async (e) => {
     preferApi: f.preferApi.checked,
     cacheTtlMin: Math.max(0, Number(f.cacheTtl.value) || 0),
     indexUrl: f.indexUrl.value.trim() || settings.indexUrl,
+    useWebProxy: f.useWebProxy.checked,
+    webProxy: f.webProxy.value.trim() || settings.webProxy,
   });
   dlgSet.close();
   toast('Configurações salvas', 'ok');
