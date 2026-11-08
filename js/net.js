@@ -13,6 +13,16 @@ const viaLocal = (endpoint, url, extra = {}) =>
   `${base()}/${endpoint}?${qs({ url, ua: settings.userAgent, ...extra })}`;
 const viaCustom = (url) => settings.customTemplate.replace('{url}', encodeURIComponent(url));
 
+// http://host[:80]/... -> https://host/... (null se não der para tentar)
+function upgrade(u) {
+  try {
+    const x = new URL(u);
+    if (x.protocol !== 'http:' || (x.port && x.port !== '80')) return null;
+    x.protocol = 'https:'; x.port = '';
+    return x.href;
+  } catch { return null; }
+}
+
 /**
  * Rotas candidatas para uma URL, em ordem de tentativa.
  * kind 'stream' -> /stream (reescreve manifest HLS); 'data' -> /raw (listas e API, com cache)
@@ -31,14 +41,26 @@ export function routes(url, { kind = 'stream' } = {}) {
       return settings.customTemplate.includes('{url}')
         ? [{ url: viaCustom(url), label: 'proxy personalizado', proxied: true }] : [direct];
     default: // auto
-      return PAGE_HTTPS && isHttp(url) ? [full] : [direct, full];
+      if (!(PAGE_HTTPS && isHttp(url))) return [direct, full];
+      {
+        // página https + link http: o navegador bloqueia o acesso direto
+        const out = [];
+        const up = upgrade(url);
+        if (up) out.push({ url: up, label: 'https', proxied: false });
+        if (kind === 'data' && settings.useWebProxy && (settings.webProxy || '').includes('{url}'))
+          out.push({ url: settings.webProxy.replace('{url}', encodeURIComponent(url)), label: 'proxy web', proxied: true });
+        out.push(full);
+        return out;
+      }
   }
 }
 
 export function imageUrl(u) {
   if (!u) return '';
-  if (PAGE_HTTPS && isHttp(u) && ['auto', 'local', 'local-manifest'].includes(settings.proxyMode))
-    return viaLocal('stream', u);
+  if (PAGE_HTTPS && isHttp(u)) {
+    if (['local', 'local-manifest'].includes(settings.proxyMode)) return viaLocal('stream', u);
+    if (settings.proxyMode === 'auto') return upgrade(u) || u;
+  }
   return u;
 }
 
@@ -61,7 +83,9 @@ export async function fetchText(url, { nocache = false, timeout = 120000 } = {})
     } catch (e) {
       const why = e.name === 'AbortError' ? 'tempo esgotado'
         : e instanceof TypeError
-          ? (r.proxied ? `proxy inacessível em ${base()} (rodando? navegador permitiu acesso à rede local?)` : 'bloqueado por CORS/rede')
+          ? (r.label === 'proxy local' ? `proxy local inacessível em ${base()}`
+            : r.label === 'proxy web' ? 'proxy web indisponível ou bloqueado'
+            : r.label === 'https' ? 'servidor sem https' : 'bloqueado por CORS/rede')
           : e.message;
       lastErr = new Error(`Falha (${r.label}): ${why}`);
     } finally { clearTimeout(timer); }
