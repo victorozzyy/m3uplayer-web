@@ -40,18 +40,18 @@ export function routes(url, { kind = 'stream' } = {}) {
     case 'custom':
       return settings.customTemplate.includes('{url}')
         ? [{ url: viaCustom(url), label: 'proxy personalizado', proxied: true }] : [direct];
-    default: // auto
-      if (!(PAGE_HTTPS && isHttp(url))) return [direct, full];
-      {
-        // página https + link http: o navegador bloqueia o acesso direto
-        const out = [];
-        const up = upgrade(url);
-        if (up) out.push({ url: up, label: 'https', proxied: false });
-        if (kind === 'data' && settings.useWebProxy && (settings.webProxy || '').includes('{url}'))
-          out.push({ url: settings.webProxy.replace('{url}', encodeURIComponent(url)), label: 'proxy web', proxied: true });
-        out.push(full);
-        return out;
-      }
+    default: { // auto
+      if (!PAGE_HTTPS) return [direct, full];
+      if (!isHttp(url)) return [direct];
+      // página https + link http: o navegador bloqueia o acesso direto
+      const out = [];
+      const up = upgrade(url);
+      if (up) out.push({ url: up, label: 'https', proxied: false });
+      if (kind === 'data' && settings.useWebProxy && (settings.webProxy || '').includes('{url}'))
+        out.push({ url: settings.webProxy.replace('{url}', encodeURIComponent(url)), label: 'proxy web', proxied: true });
+      if (!out.length) out.push(direct);
+      return out;
+    }
   }
 }
 
@@ -59,7 +59,7 @@ export function imageUrl(u) {
   if (!u) return '';
   if (PAGE_HTTPS && isHttp(u)) {
     if (['local', 'local-manifest'].includes(settings.proxyMode)) return viaLocal('stream', u);
-    if (settings.proxyMode === 'auto') return upgrade(u) || u;
+    if (settings.proxyMode === 'auto') return `https://wsrv.nl/?url=${encodeURIComponent(u)}&w=300`;
   }
   return u;
 }
