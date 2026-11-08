@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>IPTV Player</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <h1 class="brand">📺 IPTV Player</h1>
+    <div class="source-picker">
+      <select id="sourceSelect" aria-label="Lista"></select>
+      <button id="btnRemoveList" class="icon-btn" title="Remover esta lista" hidden>🗑</button>
+      <button id="btnAddList" class="btn">+ Lista</button>
+      <button id="btnReload" class="icon-btn" title="Recarregar (ignora cache)">⟳</button>
+      <button id="btnSettings" class="icon-btn" title="Proxy e cache">⚙</button>
+    </div>
+  </header>
+
+  <nav class="tabs">
+    <button class="tab active" data-section="live">Ao vivo</button>
+    <button class="tab" data-section="movies">Filmes</button>
+    <button class="tab" data-section="series">Séries</button>
+    <input id="search" type="search" placeholder="Buscar nesta aba…" autocomplete="off">
+  </nav>
+
+  <main class="layout">
+    <aside id="categories" class="panel categories"></aside>
+    <section id="content" class="panel content"></section>
+
+    <section class="player-panel">
+      <div class="video-wrap">
+        <video id="video" controls playsinline></video>
+        <div id="videoOverlay" class="video-overlay">Selecione um conteúdo para assistir</div>
+      </div>
+      <div class="now-playing">
+        <div id="nowTitle" class="now-title">—</div>
+        <div id="nowStatus" class="now-status"></div>
+        <div class="np-actions">
+          <button id="btnCopy" class="btn">Copiar link</button>
+          <button id="btnStop" class="btn">Parar</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Adicionar lista -->
+  <dialog id="dlgAdd">
+    <form id="formAdd" class="dlg">
+      <h2>Adicionar lista</h2>
+      <label>Nome (opcional)<input name="name" type="text" autocomplete="off"></label>
+      <label>Tipo
+        <select name="type" id="addType">
+          <option value="url">Link M3U / M3U8 (inclui links get.php)</option>
+          <option value="xtream">Xtream (servidor, usuário e senha)</option>
+          <option value="text">Colar conteúdo / enviar arquivo</option>
+        </select>
+      </label>
+
+      <div data-type="url">
+        <label>URL da lista
+          <input name="url" type="text" placeholder="http://servidor/get.php?username=...&password=...&type=m3u_plus">
+        </label>
+      </div>
+      <div data-type="xtream" hidden>
+        <label>Servidor<input name="server" type="text" placeholder="http://servidor:porta"></label>
+        <label>Usuário<input name="username" type="text" autocomplete="off"></label>
+        <label>Senha<input name="password" type="text" autocomplete="off"></label>
+      </div>
+      <div data-type="text" hidden>
+        <label>Arquivo .m3u / .m3u8<input name="file" type="file" accept=".m3u,.m3u8,.txt"></label>
+        <label>ou cole o conteúdo<textarea name="text" rows="6" placeholder="#EXTM3U&#10;#EXTINF:-1 ..."></textarea></label>
+      </div>
+
+      <label class="check"><input type="checkbox" name="save" checked> Salvar neste navegador</label>
+      <menu>
+        <button type="button" id="addCancel" class="btn">Cancelar</button>
+        <button type="submit" class="btn primary">Adicionar</button>
+      </menu>
+    </form>
+  </dialog>
+
+  <!-- Proxy e cache -->
+  <dialog id="dlgSettings">
+    <form id="formSettings" class="dlg">
+      <h2>Proxy e cache</h2>
+
+      <fieldset>
+        <legend>Tipo de proxy</legend>
+        <label class="radio"><input type="radio" name="proxyMode" value="auto">
+          <span><b>Automático</b><small>Direto quando possível; usa o proxy local se o link for http (bloqueado em página https) ou se falhar.</small></span></label>
+        <label class="radio"><input type="radio" name="proxyMode" value="local">
+          <span><b>Proxy local (completo)</b><small>Reescreve o manifest e passa os segmentos pelo proxy. Resolve CORS e links quebrados.</small></span></label>
+        <label class="radio"><input type="radio" name="proxyMode" value="local-manifest">
+          <span><b>Proxy local (só manifest)</b><small>Manifest com URLs absolutas pelo proxy; segmentos vão direto (menos banda, exige CORS na origem).</small></span></label>
+        <label class="radio"><input type="radio" name="proxyMode" value="direct">
+          <span><b>Direto</b><small>Sem proxy.</small></span></label>
+        <label class="radio"><input type="radio" name="proxyMode" value="custom">
+          <span><b>Personalizado</b><small>Seu próprio proxy, usando o template com {url}.</small></span></label>
+      </fieldset>
+
+      <label>Endereço do proxy local<input name="proxyBase" type="text" placeholder="http://localhost:8080"></label>
+      <label>Template do proxy personalizado<input name="customTemplate" type="text" placeholder="https://meu-proxy.exemplo/?u={url}"></label>
+      <label>User-Agent (opcional, enviado pelo proxy local)<input name="userAgent" type="text" placeholder="VLC/3.0.20 LibVLC/3.0.20"></label>
+      <label>Formato do ao vivo (Xtream)
+        <select name="liveFormat">
+          <option value="m3u8">HLS (.m3u8) — recomendado</option>
+          <option value="ts">MPEG-TS (.ts)</option>
+        </select>
+      </label>
+      <label class="check"><input type="checkbox" name="preferApi"> Usar a API Xtream quando o link for get.php</label>
+      <label>Validade do cache das listas (minutos)<input name="cacheTtl" type="number" min="0" step="1"></label>
+      <label>URL do índice de listas<input name="indexUrl" type="text"></label>
+
+      <div id="proxyStatus" class="status"></div>
+      <menu>
+        <button type="button" id="btnTestProxy" class="btn">Testar proxy</button>
+        <button type="button" id="btnClearCache" class="btn danger">Limpar cache</button>
+        <span class="spacer"></span>
+        <button type="button" id="btnCloseSettings" class="btn">Fechar</button>
+        <button type="submit" class="btn primary">Salvar</button>
+      </menu>
+    </form>
+  </dialog>
+
+  <div id="toasts"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/hls.js@1"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mpegts.js@1"></script>
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
