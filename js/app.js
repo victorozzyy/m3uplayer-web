@@ -57,6 +57,8 @@ function friendlyError(e, url) {
     return `Este servidor só oferece http e o navegador bloqueia vídeo http em página https (${e.message}). Use "Copiar link" e abra no VLC.`;
   if (/\.(mkv|avi|wmv|flv)(\?|$)/i.test(url))
     return `Formato não suportado pelo navegador (${e.message}). Use "Copiar link" e abra no VLC.`;
+  if (location.protocol === 'https:' && settings.proxyMode === 'auto')
+    return `${e.message}. Se o console mostrar "Mixed Content", o servidor entrega o vídeo por http (ou redireciona para um IP http) e o navegador bloqueia isso em páginas https. Só um proxy https resolve; veja ⚙. Ou use "Copiar link" no VLC.`;
   return `${e.message}. Tente outro tipo de proxy em ⚙ ou limpe o cache.`;
 }
 
