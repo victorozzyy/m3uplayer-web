@@ -12,6 +12,8 @@ export const DEFAULTS = {
   liveFormat: 'm3u8',              // m3u8 | ts
   preferApi: true,
   cacheTtlMin: 360,
+  useWebProxy: true,               // proxy web público p/ listas e API (só em página https)
+  webProxy: 'https://api.allorigins.win/raw?url={url}',
 };
 
 function load() {
